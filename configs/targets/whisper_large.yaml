@@ -1,0 +1,7 @@
+# Explicit choice large-v2; paper's 'large' version is unspecified.
+name: whisper-large-v2-independent-choice
+kind: whisper
+checkpoint: artifacts/whisper/large-v2.pt
+language: en
+decoding: {beam_size: 5, temperature: 0.0}
+

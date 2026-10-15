@@ -1,0 +1,9 @@
+# Independent multilingual raw Whisper target; author checkpoint IDs unavailable.
+name: whisper-medium-raw-independent-choice
+kind: whisper
+checkpoint: artifacts/whisper/medium.pt
+language: en
+nll_reduction: mean
+decoding:
+  beam_size: 5
+  temperature: 0.0

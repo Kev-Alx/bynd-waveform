@@ -1,0 +1,7 @@
+# This independent LPF is not the unidentified Table 1 LPF configuration.
+name: whisper-small-independent-lpf
+kind: whisper
+checkpoint: artifacts/whisper/small.pt
+language: en
+decoding: {beam_size: 5, temperature: 0.0}
+defense: {kind: lpf, cutoff_hz: 6000, q: 0.70710678}

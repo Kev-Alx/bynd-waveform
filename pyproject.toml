@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beyondwaveform"
+version = "0.1.0"
+description = "Auditable independent implementation of Beyond Waveform Robustness"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.4,<2.5", "torchaudio>=2.4,<2.5", "numpy<2", "soundfile", "PyYAML", "requests", "tqdm", "openai-whisper==20240930", "transformers==4.46.3", "jiwer==3.0.5", "torchmetrics==1.6.1", "onnxruntime", "librosa"]
+
+[project.scripts]
+beyondwaveform = "beyondwaveform.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["beyondwaveform*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+

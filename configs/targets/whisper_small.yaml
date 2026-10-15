@@ -1,0 +1,7 @@
+name: whisper-small-raw
+kind: whisper
+checkpoint: artifacts/whisper/small.pt
+language: en
+nll_reduction: mean
+decoding: {beam_size: 5, temperature: 0.0}
+

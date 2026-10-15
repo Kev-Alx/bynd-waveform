@@ -1,0 +1,27 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+artifacts/
+runs/
+.cache/
+
+# Generated experiment outputs
+reproduction-runs/
+
+# Local access and session files
+authorized_keys
+session_dump.txt
+
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.ssh/
+.venv/
+venv/
+
+# Editor and operating system files
+.DS_Store

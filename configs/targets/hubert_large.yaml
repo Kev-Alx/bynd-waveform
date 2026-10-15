@@ -1,0 +1,17 @@
+name: facebook/hubert-large-ls960-ft
+kind: ctc
+model_id: /workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8
+revision: ece5fabbf034c1073acae96d5401b25be96709d8
+repo_id: facebook/hubert-large-ls960-ft
+language: en
+sample_rate: 16000
+decoding:
+  kind: greedy
+  external_language_model: false
+artifact_hashes:
+  config.json: f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429
+  preprocessor_config.json: a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335
+  pytorch_model.bin: 9cf43abec3f0410ad6854afa4d376c69ccb364b48ddddfd25c4c5aa16398eab0
+  special_tokens_map.json: bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675
+  tokenizer_config.json: d773cde8c2ca89ab86892f0b5e670c5ebed4dc72e20ed647f6cb843ad2c0bd26
+  vocab.json: 19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64
