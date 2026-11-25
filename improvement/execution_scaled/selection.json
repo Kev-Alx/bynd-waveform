@@ -1,0 +1,30 @@
+{
+  "status": "stop",
+  "created_at_utc": "2026-10-24T14:02:54.095303+00:00",
+  "candidate": null,
+  "control": {
+    "name": "fv_quality50",
+    "method": "quality",
+    "step": 50,
+    "phase": "fvpilot",
+    "score": {
+      "count": 48,
+      "substitutions": 379,
+      "deletions": 32,
+      "insertions": 84,
+      "reference_units": 994,
+      "error_percent": 49.798792756539235,
+      "quality": {
+        "dnsmos": 3.1738890871498,
+        "nisqa": 4.069769814610481,
+        "utmos": 3.5789116074641547
+      }
+    }
+  },
+  "candidate_is_known_baseline": false,
+  "methods": {},
+  "quality_admissible_points": [],
+  "reason": "Complete-cohort sourceWER strictly above75 and unchanged quality floors; no target outcomes used",
+  "primary_source_only": true,
+  "target_models_evaluated": []
+}

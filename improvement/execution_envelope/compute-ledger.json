@@ -1,0 +1,23 @@
+{
+  "scope": "Scheduled generation/source/MOS process wall; earlier gaps disclosed by prior ledger; no idle chat interval charged",
+  "prior_ledger": "/workspace/improvement/execution_refine/compute-ledger.json",
+  "prior_ledger_sha256": "7515f0949b3c6d3c9d56230cd2c5c151658cef32cc215b7af338d27346faf9bc",
+  "prior_recorded_seconds": 7660.072,
+  "new_completed_jobs": [
+    {
+      "path": "/workspace/improvement/execution_refine/jobs/pilot-generation/job.json",
+      "sha256": "f36b9354c3bfd09a0d0a697a1cf795fdb6bed6db21d4eecb7b6bcb5e95c6819c",
+      "seconds": 4136.128129
+    },
+    {
+      "path": "/workspace/improvement/execution_refine/jobs/pilot-native-evaluation/job.json",
+      "sha256": "19f6c73687d0e42ef18e3d7657cfece2377d0ffd08f234c47938708cd081b5ce",
+      "seconds": 411.006874
+    }
+  ],
+  "recorded_subtotal_seconds": 12207.207003,
+  "initial_envelope_seconds": 21600,
+  "continuation_ceiling_seconds": 7200,
+  "remaining_after_ceiling_seconds": 2192.7929970000005,
+  "note": "Prior7660.072-second subtotal is rounded to milliseconds; do not claim exact certified total. Initial receipt timer gaps remain."
+}

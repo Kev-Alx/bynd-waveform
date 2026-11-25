@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-21",
+  "timezone": "Asia/Taipei",
+  "scope": "Step3 literature for steps1-4 only; no experiments",
+  "resource_constraint": "One TITAN RTX24576MiB; no APIs/new data assumed",
+  "sources": [
+    {
+      "id": "daa2025",
+      "title": "Diffusion-based Adversarial Attack to Automatic Speech Recognition",
+      "authors": [
+        "Ying Wang",
+        "Yuchuan Luo",
+        "Shaojing Fu",
+        "Zhenyu Qiu",
+        "Lin Liu"
+      ],
+      "year": 2025,
+      "dates_as_verified": "PMLR 260 (2025)",
+      "primary_url": "https://proceedings.mlr.press/v260/wang25f.html",
+      "verified_on": "2026-10-21",
+      "evidence": "DiffVC latent perturbation with a speech-generative prior. Direct predecessor to unrestricted generative/latent ASR search.",
+      "relevance_and_novelty_collision": "DiffVC latent perturbation with a speech-generative prior. Direct predecessor to unrestricted generative/latent ASR search.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "No attack repo verified; full PDF fetch unsupported.",
+      "checkpoint_and_comparison_caveat": "No identifiable author attack repository found; DiffVC existence does not supply DAA code. Paper-level competitor; reproduction and 24 GB memory are unproven. Targeted setting differs."
+    },
+    {
+      "id": "smack2023",
+      "title": "SMACK: Semantically Meaningful Adversarial Audio Attack",
+      "authors": [
+        "Zhiyuan Yu",
+        "Yuanhaur Chang",
+        "Ning Zhang",
+        "Chaowei Xiao"
+      ],
+      "year": 2023,
+      "dates_as_verified": "USENIX Security,2023-08",
+      "primary_url": "https://www.usenix.org/conference/usenixsecurity23/presentation/yu-zhiyuan-smack",
+      "verified_on": "2026-10-21",
+      "evidence": "Alters inherent speech attributes, including prosody, to preserve human meaning. Direct collision with “noise-free” semantic/prosody novelty.",
+      "relevance_and_novelty_collision": "Alters inherent speech attributes, including prosody, to preserve human meaning. Direct collision with “noise-free” semantic/prosody novelty.",
+      "code_or_artifact_url": "https://github.com/WUSTL-CSPL/SMACK",
+      "availability_and_license_caveat": "MIT code; supplementary weights and API-dependent original ASR.",
+      "checkpoint_and_comparison_caveat": "[Official MIT code](https://github.com/WUSTL-CSPL/SMACK); supplementary TTS/WaveGlow weights required. Repository ASR routes use Google/iFlytek queries. Its stated 8 GB GPU minimum is not an estimate for the proposed FV pipeline."
+    },
+    {
+      "id": "audioshield2025",
+      "title": "Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems",
+      "authors": [
+        "Weifei Jin",
+        "Yuxin Cao",
+        "Junjie Su",
+        "Derui Wang",
+        "Yedi Zhang",
+        "Minhui Xue",
+        "Jie Hao",
+        "Jin Song Dong",
+        "Yixian Yang"
+      ],
+      "year": 2025,
+      "dates_as_verified": "arXiv2025-04-01;USENIX Security2025-08",
+      "primary_url": "https://www.usenix.org/conference/usenixsecurity25/presentation/jin-weifei",
+      "verified_on": "2026-10-21",
+      "evidence": "Learns transferable universal perturbations in VITS latent space with target feature adaptation. Closest mandatory collision for latent amortization/universality.",
+      "relevance_and_novelty_collision": "Learns transferable universal perturbations in VITS latent space with target feature adaptation. Closest mandatory collision for latent amortization/universality.",
+      "code_or_artifact_url": "https://github.com/WeifeiJin/AudioShield",
+      "availability_and_license_caveat": "MIT code; VITS/DeepSpeech2 links; third-party terms separate.",
+      "checkpoint_and_comparison_caveat": "[Official MIT code](https://github.com/WeifeiJin/AudioShield) names pretrained VITS/DeepSpeech2 and LibriSpeech dev-clean. Own perturbation must be trained; evaluate local adaptation, not its commercial-API numbers."
+    },
+    {
+      "id": "aro2025",
+      "title": "Boosting the Transferability of Audio Adversarial Examples with Acoustic Representation Optimization",
+      "authors": [
+        "Weifei Jin",
+        "Junjie Su",
+        "Hejia Wang",
+        "Yulin Ye",
+        "Jie Hao"
+      ],
+      "year": 2025,
+      "dates_as_verified": "arXiv2025-03-25;ICME2025",
+      "primary_url": "https://arxiv.org/abs/2503.19591v1",
+      "verified_on": "2026-10-21",
+      "evidence": "Adds low-level speech-representation alignment to improve transfer. WavLM auxiliary losses/shared acoustic representation arguments have prior art.",
+      "relevance_and_novelty_collision": "Adds low-level speech-representation alignment to improve transfer. WavLM auxiliary losses/shared acoustic representation arguments have prior art.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "No author code verified.",
+      "checkpoint_and_comparison_caveat": "No author attack code identified. The targeted feature-alignment loss is not an established untargeted content constraint; adapting it requires an explicit formulation and ablation."
+    },
+    {
+      "id": "sago2024",
+      "title": "Transferable Adversarial Attacks against ASR",
+      "authors": [
+        "Xiaoxue Gao",
+        "Zexin Li",
+        "Yiming Chen",
+        "Cong Liu",
+        "Haizhou Li"
+      ],
+      "year": 2024,
+      "dates_as_verified": "IEEE SPL2024;arXiv2024-11-14",
+      "primary_url": "https://arxiv.org/abs/2411.09220",
+      "verified_on": "2026-10-21",
+      "evidence": "Differentiable front end, momentum/variance time-domain attacks and speech-activity-aware gradient optimization. Strong waveform competitor missing from a generic PGD-only comparison.",
+      "relevance_and_novelty_collision": "Differentiable front end, momentum/variance time-domain attacks and speech-activity-aware gradient optimization. Strong waveform competitor missing from a generic PGD-only comparison.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "No author attack code or checkpoint verified.",
+      "checkpoint_and_comparison_caveat": "Author publication page verified; no code/checkpoint release established. Existing local MI/VMI runs do not establish SAGO parity."
+    },
+    {
+      "id": "pretrain2022",
+      "title": "Watch What You Pretrain For: Targeted, Transferable Adversarial Examples on Self-Supervised Speech Recognition models",
+      "authors": [
+        "Raphael Olivier",
+        "Hadi Abdullah",
+        "Bhiksha Raj"
+      ],
+      "year": 2022,
+      "dates_as_verified": "arXiv2022-09-17",
+      "primary_url": "https://arxiv.org/abs/2209.13523",
+      "verified_on": "2026-10-21",
+      "evidence": "Demonstrates targeted transfer across SSL-pretrained ASR. Shared SSL features are not by themselves a new transfer mechanism.",
+      "relevance_and_novelty_collision": "Demonstrates targeted transfer across SSL-pretrained ASR. Shared SSL features are not by themselves a new transfer mechanism.",
+      "code_or_artifact_url": "https://github.com/RaphaelOlivier/asr_transferability",
+      "availability_and_license_caveat": "Apache-2.0 code; configs/data; reject target-dependent stopping.",
+      "checkpoint_and_comparison_caveat": "[Official Apache-2.0 code](https://github.com/RaphaelOlivier/asr_transferability), attack/model configs and adversarial dataset. Some upstream configurations use another model for stopping: do not import target-dependent stopping into a no-target-query comparison."
+    },
+    {
+      "id": "qin2019",
+      "title": "Imperceptible, Robust, and Targeted Adversarial Examples for Automatic Speech Recognition",
+      "authors": [
+        "Yao Qin",
+        "Nicholas Carlini",
+        "Garrison Cottrell",
+        "Ian Goodfellow",
+        "Colin Raffel"
+      ],
+      "year": 2019,
+      "dates_as_verified": "ICML2019-06-09/2019-06-15",
+      "primary_url": "https://proceedings.mlr.press/v97/qin19a.html",
+      "verified_on": "2026-10-21",
+      "evidence": "Psychoacoustic masking and simulated environmental robustness; essential established quality-oriented waveform baseline. “IRT” here abbreviates this verified full title.",
+      "relevance_and_novelty_collision": "Psychoacoustic masking and simulated environmental robustness; essential established quality-oriented waveform baseline. “IRT” here abbreviates this verified full title.",
+      "code_or_artifact_url": "https://github.com/yaq007/cleverhans/tree/master/examples/adversarial_asr",
+      "availability_and_license_caveat": "Author code linked; exact example/weights license unresolved.",
+      "checkpoint_and_comparison_caveat": "PMLR links [author code](https://github.com/yaq007/cleverhans/tree/master/examples/adversarial_asr). Original Lingvo/TensorFlow dependencies and model differ; exact example/weight licenses need inspection. Its targeted success is not untargeted transfer WER."
+    },
+    {
+      "id": "kenansville2021",
+      "title": "Hear \"No Evil\", See \"Kenansville\": Efficient and Transferable Black-Box Attacks on Speech Recognition and Voice Identification Systems",
+      "authors": [
+        "Hadi Abdullah",
+        "Muhammad Sajidur Rahman",
+        "Washington Garcia",
+        "Logan Blue",
+        "Kevin Warren",
+        "Anurag Swarnim Yadav",
+        "Tom Shrimpton",
+        "Patrick Traynor"
+      ],
+      "year": 2021,
+      "dates_as_verified": "arXiv2019-10-11;IEEE S&P2021",
+      "primary_url": "https://arxiv.org/abs/1910.05262",
+      "verified_on": "2026-10-21",
+      "evidence": "Model-independent spectral deletion gives a signal-processing baseline outside additive small-noise optimization.",
+      "relevance_and_novelty_collision": "Model-independent spectral deletion gives a signal-processing baseline outside additive small-noise optimization.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Author examples verified; original source/license not established.",
+      "checkpoint_and_comparison_caveat": "Author examples verified; no original code license established. RobustSpeech/ART implementations would be separately identified adaptations. Report intelligibility loss, not only ASR error."
+    },
+    {
+      "id": "advpulse2020",
+      "title": "AdvPulse: Universal, Synchronization-free, and Targeted Audio Adversarial Attacks via Subsecond Perturbations",
+      "authors": [
+        "Zhuohang Li",
+        "Yi Wu",
+        "Jian Liu",
+        "Yingying Chen",
+        "Bo Yuan"
+      ],
+      "year": 2020,
+      "dates_as_verified": "CCS2020-11-09/2020-11-13",
+      "primary_url": "https://mosis.eecs.utk.edu/publications/li2020advpulse.pdf",
+      "verified_on": "2026-10-21",
+      "evidence": "Universal subsecond perturbation with time-delay robustness. Strong prior for temporal invariance/universal audio, chiefly command/speaker tasks.",
+      "relevance_and_novelty_collision": "Universal subsecond perturbation with time-delay robustness. Strong prior for temporal invariance/universal audio, chiefly command/speaker tasks.",
+      "code_or_artifact_url": "https://mosis.eecs.utk.edu/advpulse.html",
+      "availability_and_license_caveat": "Author examples; source/weights/license not established.",
+      "checkpoint_and_comparison_caveat": "[Author project](https://mosis.eecs.utk.edu/advpulse.html) has examples; attack source/weights/license not established. Not a directly comparable sentence-ASR transfer benchmark."
+    },
+    {
+      "id": "universal2019",
+      "title": "Universal Adversarial Perturbations for Speech Recognition Systems",
+      "authors": [
+        "Paarth Neekhara",
+        "Shehzeen Hussain",
+        "Prakhar Pandey",
+        "Shlomo Dubnov",
+        "Julian McAuley",
+        "Farinaz Koushanfar"
+      ],
+      "year": 2019,
+      "dates_as_verified": "arXiv2019-05-09;Interspeech2019",
+      "primary_url": "https://arxiv.org/abs/1905.03828",
+      "verified_on": "2026-10-21",
+      "evidence": "Untargeted universal waveform perturbations and transfer from DeepSpeech to WaveNet.",
+      "relevance_and_novelty_collision": "Untargeted universal waveform perturbations and transfer from DeepSpeech to WaveNet.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Original attack repository/license not established.",
+      "checkpoint_and_comparison_caveat": "Paper/examples verified; original attack repository not established. Generic UAP wrappers are not proof of reproduction."
+    },
+    {
+      "id": "fapg2021",
+      "title": "Enabling Fast and Universal Audio Adversarial Attack Using Generative Model",
+      "authors": [
+        "Yi Xie",
+        "Zhuohang Li",
+        "Cong Shi",
+        "Jian Liu",
+        "Yingying Chen",
+        "Bo Yuan"
+      ],
+      "year": 2021,
+      "dates_as_verified": "arXiv2020-04-26;AAAI2021",
+      "primary_url": "https://arxiv.org/abs/2004.12261",
+      "verified_on": "2026-10-21",
+      "evidence": "Single-forward audio perturbation generator and universal generator. A generator alone is an old idea.",
+      "relevance_and_novelty_collision": "Single-forward audio perturbation generator and universal generator. A generator alone is an old idea.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Author generator code/weights not established.",
+      "checkpoint_and_comparison_caveat": "No author generator weights/code established. Audio-system misclassification setting limits direct sentence-ASR applicability."
+    },
+    {
+      "id": "muting2024",
+      "title": "Muting Whisper: A Universal Acoustic Adversarial Attack on Speech Foundation Models",
+      "authors": [
+        "Vyas Raina",
+        "Rao Ma",
+        "Charles McGhee",
+        "Kate Knill",
+        "Mark Gales"
+      ],
+      "year": 2024,
+      "dates_as_verified": "arXiv2024-05-09;EMNLP2024-11",
+      "primary_url": "https://aclanthology.org/2024.emnlp-main.430/",
+      "verified_on": "2026-10-21",
+      "evidence": "Universal short acoustic prefix exploits decoder special tokens.",
+      "relevance_and_novelty_collision": "Universal short acoustic prefix exploits decoder special tokens.",
+      "code_or_artifact_url": "https://github.com/rainavyas/prepend_acoustic_attack",
+      "availability_and_license_caveat": "Code/audio segments verified; license not established by README.",
+      "checkpoint_and_comparison_caveat": "[Official code and learned audio segments](https://github.com/rainavyas/prepend_acoustic_attack). License terms not established by README inspection; naming maps multilingual `small` to a different code label from `small.en`. Preserve decoder/token settings."
+    },
+    {
+      "id": "sloth2023",
+      "title": "SlothSpeech: Denial-of-service Attack Against Speech Recognition Models",
+      "authors": [
+        "Mirazul Haque",
+        "Rutvij Shah",
+        "Simin Chen",
+        "Berrak Şişman",
+        "Cong Liu",
+        "Wei Yang"
+      ],
+      "year": 2023,
+      "dates_as_verified": "arXiv2023-06-01;Interspeech2023",
+      "primary_url": "https://arxiv.org/abs/2306.00794",
+      "verified_on": "2026-10-21",
+      "evidence": "Output-token probability attacks on inference latency. WER-only evaluation does not measure its original objective.",
+      "relevance_and_novelty_collision": "Output-token probability attacks on inference latency. WER-only evaluation does not measure its original objective.",
+      "code_or_artifact_url": "https://github.com/0xrutvij/SlothSpeech",
+      "availability_and_license_caveat": "MIT code; models require exact revision pinning.",
+      "checkpoint_and_comparison_caveat": "[Official MIT code](https://github.com/0xrutvij/SlothSpeech). No extra attack weights required by basic code; exact model revisions still need pinning."
+    },
+    {
+      "id": "more2026",
+      "title": "MORE: Multi-Objective Adversarial Attacks on Speech Recognition",
+      "authors": [
+        "Xiaoxue Gao",
+        "Zexin Li",
+        "Yiming Chen",
+        "Nancy F. Chen"
+      ],
+      "year": 2026,
+      "dates_as_verified": "arXivv12026-01-05;v22026-01-14",
+      "primary_url": "https://arxiv.org/abs/2601.01852v2",
+      "verified_on": "2026-10-21",
+      "evidence": "Repulsion on decoded hypotheses followed by EOS suppression/repetition; close decoder-objective prior.",
+      "relevance_and_novelty_collision": "Repulsion on decoded hypotheses followed by EOS suppression/repetition; close decoder-objective prior.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Paper promises code later; repository not verified.",
+      "checkpoint_and_comparison_caveat": "Current paper promises later code release; no author repository verified. Proposed WER-risk objective must be compared with its accuracy stage and avoid counting output-length inflation as sufficient evidence."
+    },
+    {
+      "id": "codecattack2026",
+      "title": "Codec-Robust Attacks on Audio LLMs",
+      "authors": [
+        "Jaechul Roh",
+        "Jean-Philippe Monteuuis",
+        "Jonathan Petit",
+        "Amir Houmansadr"
+      ],
+      "year": 2026,
+      "dates_as_verified": "arXivv12026-05-19;v22026-05-21",
+      "primary_url": "https://arxiv.org/abs/2605.20519v2",
+      "verified_on": "2026-10-21",
+      "evidence": "Continuous EnCodec-latent perturbations plus multi-bitrate straight-through EOT. Direct collision for codec-latent+EOT novelty.",
+      "relevance_and_novelty_collision": "Continuous EnCodec-latent perturbations plus multi-bitrate straight-through EOT. Direct collision for codec-latent+EOT novelty.",
+      "code_or_artifact_url": "https://github.com/jrohsc/CodecAttack",
+      "availability_and_license_caveat": "Review release; MIT/CC-BY-4.0 only future promise.",
+      "checkpoint_and_comparison_caveat": "[Paper-linked repository](https://github.com/jrohsc/CodecAttack) exists; README currently describes a review release and only promises MIT code/CC-BY-4.0 data after deanonymization. Large Audio LLMs and some unavailable carriers make full reproduction unsuitable for this 24 GB/local-data project."
+    },
+    {
+      "id": "gatas2026",
+      "title": "Generative Testing of Automated Speech Recognition Systems",
+      "authors": [
+        "Yanis Xabier Wilbrand Peña",
+        "Oliver Weißl",
+        "Andrea Stocco"
+      ],
+      "year": 2026,
+      "dates_as_verified": "arXivv12026-07-10",
+      "primary_url": "https://arxiv.org/abs/2607.09833v1",
+      "verified_on": "2026-10-21",
+      "evidence": "Phoneme-level TTS-latent interpolation with semantic/perceptual objectives. Very near local-manifold/content-constrained editing.",
+      "relevance_and_novelty_collision": "Phoneme-level TTS-latent interpolation with semantic/perceptual objectives. Very near local-manifold/content-constrained editing.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Paper CC-BY4; replication package URL unresolved.",
+      "checkpoint_and_comparison_caveat": "Paper claims anonymized replication package, but usable external package URL not resolved. Query-based search on Whisper-tiny/single-speaker TTS differs from zero-target-query transfer. Its success definition includes any transcript change, so the reported 98% cannot be treated as high WER."
+    },
+    {
+      "id": "codeceval2026",
+      "title": "Attack-Dependent Robustness of Neural Audio Codecs for Adversarial ASR",
+      "authors": [
+        "Jordan Prescott",
+        "Thanathai Lertpetchpun",
+        "Shrikanth Narayanan"
+      ],
+      "year": 2026,
+      "dates_as_verified": "arXivv12026-03-10;v22026-09-22;acceptedSLT2026",
+      "primary_url": "https://arxiv.org/abs/2603.09034v2",
+      "verified_on": "2026-10-21",
+      "evidence": "Discrete bottleneck robustness depends on adaptive attack choice; identity-gradient BPDA+EOT can overestimate it relative to RVQ-relaxed attack.",
+      "relevance_and_novelty_collision": "Discrete bottleneck robustness depends on adaptive attack choice; identity-gradient BPDA+EOT can overestimate it relative to RVQ-relaxed attack.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "v1 title differs; code/weights not established.",
+      "checkpoint_and_comparison_caveat": "Search snippets retain v1's different title *Trade-offs Between Capacity and Robustness...*. Use current title/version. Code/checkpoint release not established. Discreteness is neither a guarantee of content preservation nor of robust gradients."
+    },
+    {
+      "id": "tfpa2026",
+      "title": "TFPA: Enhancing adversarial attack on speech recognition via Time–Frequency Pre-alignment",
+      "authors": [
+        "Xiangyu Ye",
+        "Yatie Xiao",
+        "Kongyang Chen",
+        "Qingxiao Guan",
+        "Zhenbang Liu"
+      ],
+      "year": 2026,
+      "dates_as_verified": "publisher2026-06-15;doi10.1016/j.knosys.2026.115992",
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0950705126007185",
+      "verified_on": "2026-10-21",
+      "evidence": "Target-acoustic time/frequency pre-alignment improves initialization and universal generalization. Collides with claims that feature-informed initialization or universality alone is new.",
+      "relevance_and_novelty_collision": "Target-acoustic time/frequency pre-alignment improves initialization and universal generalization. Collides with claims that feature-informed initialization or universality alone is new.",
+      "code_or_artifact_url": "https://github.com/dislab-gzhu/TFPA",
+      "availability_and_license_caveat": "MIT source; weight/reproduction not tested.",
+      "checkpoint_and_comparison_caveat": "[Official MIT code](https://github.com/dislab-gzhu/TFPA) verified; weights/reproduction not tested. Targeted setup and target-audio requirement need a declared local adaptation."
+    },
+    {
+      "id": "transferbreaker2026",
+      "title": "Breaking Adversarial Transferability in Fine-Tuned Speech Recognition",
+      "authors": [
+        "Mojtaba Nafez",
+        "Aref Mousavi",
+        "Mohammad Ebrahim Mahdavi",
+        "Mobina Poulaei",
+        "Kiarash Kiani Feriz",
+        "Mohammad Hossein Rohban"
+      ],
+      "year": 2026,
+      "dates_as_verified": "arXivv12026-10-06",
+      "primary_url": "https://arxiv.org/abs/2610.09109",
+      "verified_on": "2026-10-21",
+      "evidence": "Recent transfer-specific defense with latent Jacobian regularization and adaptive fine-tuning.",
+      "relevance_and_novelty_collision": "Recent transfer-specific defense with latent Jacobian regularization and adaptive fine-tuning.",
+      "code_or_artifact_url": "https://github.com/rohban-lab/TransferBreaker",
+      "availability_and_license_caveat": "Author repo linked; defended checkpoints/license not audited.",
+      "checkpoint_and_comparison_caveat": "Paper links [author code](https://github.com/rohban-lab/TransferBreaker); defended checkpoints/license not audited. Context for robustness claims, not an executable defense result or permission to add costly defense training."
+    },
+    {
+      "id": "beyondwaveform2026",
+      "title": "Beyond Waveform Robustness: Robust Feature-Vocoder Adversarial Attacks on Automatic Speech Recognition",
+      "authors": [
+        "Yifan Liao",
+        "Zongmin Zhang",
+        "Zhen Sun",
+        "Yuhui Sun",
+        "Xinhu Zheng",
+        "Xinlei He"
+      ],
+      "year": 2026,
+      "primary_url": "https://arxiv.org/abs/2606.05678",
+      "dates_as_verified": "v1 submitted2026-06-04",
+      "verified_on": "2026-10-21",
+      "evidence": "Primary metadata matches supplied manuscript.",
+      "relevance_and_novelty_collision": "Supplied base method; numerical claims not independently verified.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "No author implementation/checkpoint identified; unknown license.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "knnvc2023",
+      "title": "Voice Conversion With Just Nearest Neighbors",
+      "authors": [
+        "Matthew Baas",
+        "Benjamin van Niekerk",
+        "Herman Kamper"
+      ],
+      "year": 2023,
+      "primary_url": "https://arxiv.org/abs/2305.18975",
+      "dates_as_verified": "submitted2023-05-30",
+      "verified_on": "2026-10-21",
+      "evidence": "Nearest-neighbor SSL features with vocoder.",
+      "relevance_and_novelty_collision": "R2 local manifold component; no guaranteed content invariance.",
+      "code_or_artifact_url": "https://github.com/bshall/knn-vc",
+      "availability_and_license_caveat": "Public checkpoints; modified MIT with extra first-download clause.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "speechtokenizer2024",
+      "title": "SpeechTokenizer: Unified Speech Tokenizer for Speech Large Language Models",
+      "authors": [
+        "Xin Zhang",
+        "Dong Zhang",
+        "Shimin Li",
+        "Yaqian Zhou",
+        "Xipeng Qiu"
+      ],
+      "year": 2024,
+      "primary_url": "https://arxiv.org/abs/2308.16692v2",
+      "dates_as_verified": "v12023-08-31;v22024-01-23",
+      "verified_on": "2026-10-21",
+      "evidence": "Hierarchical semantic/acoustic RVQ.",
+      "relevance_and_novelty_collision": "Discrete content/residual factorization precedes proposed extension.",
+      "code_or_artifact_url": "https://github.com/ZhangXInFD/SpeechTokenizer",
+      "availability_and_license_caveat": "Apache-2.0 code; checkpoints public, exact terms separate.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "vec2wav2024",
+      "title": "vec2wav 2.0: Advancing Voice Conversion via Discrete Token Vocoders",
+      "authors": [
+        "Yiwei Guo",
+        "Zhihan Li",
+        "Junjie Li",
+        "Chenpeng Du",
+        "Hankun Wang",
+        "Shuai Wang",
+        "Xie Chen",
+        "Kai Yu"
+      ],
+      "year": 2024,
+      "primary_url": "https://arxiv.org/abs/2409.01995",
+      "dates_as_verified": "2024",
+      "verified_on": "2026-10-21",
+      "evidence": "Discrete token vocoding with acoustic prompts.",
+      "relevance_and_novelty_collision": "Not a drop-in arbitrary WavLM-layer decoder.",
+      "code_or_artifact_url": "https://github.com/cantabile-kwok/vec2wav2.0",
+      "availability_and_license_caveat": "vq-wav2vec-conditioned weights public; licenses not audited.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "encodec2022",
+      "title": "High Fidelity Neural Audio Compression",
+      "authors": [
+        "Alexandre Défossez",
+        "Jade Copet",
+        "Gabriel Synnaeve",
+        "Yossi Adi"
+      ],
+      "year": 2022,
+      "primary_url": "https://arxiv.org/abs/2210.13438",
+      "dates_as_verified": "submitted2022-10-24",
+      "verified_on": "2026-10-21",
+      "evidence": "Neural residual-vector-quantized audio codec.",
+      "relevance_and_novelty_collision": "Codec representation prior; resampling/reconstruction controls needed.",
+      "code_or_artifact_url": "https://github.com/facebookresearch/encodec",
+      "availability_and_license_caveat": "MIT code; public24k/48k models; checkpoint terms separate.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "mwer2018",
+      "title": "Minimum Word Error Rate Training for Attention-based Sequence-to-Sequence Models",
+      "authors": [
+        "Rohit Prabhavalkar",
+        "Tara N. Sainath",
+        "Yonghui Wu",
+        "Patrick Nguyen",
+        "Zhifeng Chen",
+        "Chung-Cheng Chiu",
+        "Anjuli Kannan"
+      ],
+      "year": 2018,
+      "primary_url": "https://arxiv.org/abs/1712.01818",
+      "dates_as_verified": "submitted2017-12-05;ICASSP2018",
+      "verified_on": "2026-10-21",
+      "evidence": "Expected word-error objective using sampling and N-best hypotheses.",
+      "relevance_and_novelty_collision": "R1 reverses direction; expected-WER/N-best objective is prior art.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "No original training-code or checkpoint release established.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "eot2018",
+      "title": "Synthesizing Robust Adversarial Examples",
+      "authors": [
+        "Anish Athalye",
+        "Logan Engstrom",
+        "Andrew Ilyas",
+        "Kevin Kwok"
+      ],
+      "year": 2018,
+      "primary_url": "https://proceedings.mlr.press/v80/athalye18b.html",
+      "dates_as_verified": "ICML2018-07-10/2018-07-15",
+      "verified_on": "2026-10-21",
+      "evidence": "Expectation over chosen transformations.",
+      "relevance_and_novelty_collision": "EOT general principle precedes ASR proposals; original tasks vision.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Code/weights not established in this review.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "sabre2024",
+      "title": "Sabre: Cutting through Adversarial Noise with Adaptive Spectral Filtering and Input Reconstruction",
+      "authors": [
+        "Alec F. Diallo",
+        "Paul Patras"
+      ],
+      "year": 2024,
+      "primary_url": "https://homepages.inf.ed.ac.uk/ppatras/pub/sp24.pdf",
+      "dates_as_verified": "IEEE S&P2024",
+      "verified_on": "2026-10-21",
+      "evidence": "Spectral filtering/reconstruction defense includes SpeechCommands.",
+      "relevance_and_novelty_collision": "Defense rather than sentence-ASR attack; include adaptive critique.",
+      "code_or_artifact_url": "https://github.com/Mobile-Intelligence-Lab/SABRE",
+      "availability_and_license_caveat": "License/checkpoint availability not audited.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    },
+    {
+      "id": "carlini2024",
+      "title": "Cutting through buggy adversarial example defenses: fixing 1 line of code breaks Sabre",
+      "authors": [
+        "Nicholas Carlini"
+      ],
+      "year": 2024,
+      "primary_url": "https://arxiv.org/abs/2405.03672v3",
+      "dates_as_verified": "v12024-05-06;v32024-07-01",
+      "verified_on": "2026-10-21",
+      "evidence": "Evaluation bugs and gradient masking in Sabre.",
+      "relevance_and_novelty_collision": "Adaptive-evaluation caution; no local ASR failure rate implied.",
+      "code_or_artifact_url": null,
+      "availability_and_license_caveat": "Code changes described in paper; separate release not audited.",
+      "checkpoint_and_comparison_caveat": "Exact checkpoints must be pinned; no published effect size is treated as a local result."
+    }
+  ],
+  "recommendations": [
+    "R1 bounded lexical N-best sequence risk; EOT independent factor",
+    "R2 content-constrained compatible SSL local manifold",
+    "R3 input-conditioned waveform Conv-U-Net residual generator; optional matched FV temporal head"
+  ],
+  "search_coverage": {
+    "representative_queries": [
+      "Beyond Waveform Robustness exact title github",
+      "2606.05678 authors code",
+      "AdvPulse speech adversarial attack",
+      "SABRE ASR audio",
+      "IRT Imperceptible speech",
+      "ASR adversarial semantic prosody codec discrete units 2025 2026",
+      "speech adversarial sequence-level decoding transfer",
+      "speech adversarial amortized universal generator",
+      "ASR transferable attack2026 codec latent",
+      "AMAA speech attack"
+    ],
+    "latest_relevant_submission_verified": "2026-10-06",
+    "latest_relevant_revision_verified": "2026-09-22",
+    "limits": [
+      "Focused review, not systematic or exhaustive novelty proof",
+      "No author contact",
+      "DAA raw PDF endpoint unsupported; abstract/proceedings verified",
+      "AMAA unresolved; not treated as a verified method",
+      "Unknown licenses/releases are not proven absences"
+    ]
+  },
+  "claim_boundary": "No SOTA claim or direct transfer of published effect sizes to local results."
+}

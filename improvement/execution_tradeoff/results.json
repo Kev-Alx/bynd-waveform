@@ -1,0 +1,182 @@
+{
+  "status": "complete",
+  "count": 48,
+  "audio_seconds": 360.0099375000001,
+  "source_only": true,
+  "target_models_evaluated": [],
+  "human_intelligibility_established": false,
+  "joint_gates": {
+    "raw50": {
+      "quality_pass": false,
+      "wer_above75": true,
+      "joint_pass": false
+    },
+    "stft_identity": {
+      "quality_pass": false,
+      "wer_above75": true,
+      "joint_pass": false
+    },
+    "anchor25": {
+      "quality_pass": false,
+      "wer_above75": false,
+      "joint_pass": false
+    }
+  },
+  "quality_delta_anchor_vs_raw": {
+    "wer_percentage_points": -11.066398390342059,
+    "quality": {
+      "dnsmos": 0.05245068130353836,
+      "nisqa": 0.05063722034295415,
+      "utmos": 0.16235250979661942
+    }
+  },
+  "loops": {
+    "twice": {
+      "count": 48,
+      "audio_seconds": 360.0099375000001,
+      "wall_seconds": 943.150612086989,
+      "gpu_event_seconds": 940.4897474553883,
+      "latency_seconds": {
+        "mean": 19.648971085145604,
+        "p50": 18.907863679341972,
+        "p95": 27.42643473641947,
+        "min": 13.724595106206834,
+        "max": 34.193609778769314
+      },
+      "seconds_per_audio_second": 2.619790494219312,
+      "per_recording_seconds_per_audio_second": {
+        "mean": 3.3504706232291532,
+        "p50": 3.1466626390618844,
+        "p95": 6.050058689827857,
+        "min": 1.422955046973338,
+        "max": 7.074533559900431
+      },
+      "peak_allocated_bytes": 7392204288,
+      "peak_reserved_bytes": 7973371904,
+      "phase_wall_seconds": {
+        "decoder_no_grad": 147.46907376497984,
+        "decoder_graph": 149.09637859743088,
+        "source_forward_backward": 448.13887623511255,
+        "decoder_vjp_penalties": 192.16848139837384,
+        "optimizer_projection": 0.8366423789411783,
+        "final_render": 2.96219567861408
+      },
+      "phase_gpu_event_seconds": {
+        "decoder_no_grad": 147.45267565155024,
+        "decoder_graph": 149.07877620506284,
+        "source_forward_backward": 448.07594834899896,
+        "decoder_vjp_penalties": 192.1030730133057,
+        "optimizer_projection": 0.8173220479786397,
+        "final_render": 2.9619521884918214
+      },
+      "source_forward_backward_pairs": 2400,
+      "decoder_forwards": 4848,
+      "decoder_backwards": 2400
+    },
+    "once": {
+      "count": 48,
+      "audio_seconds": 360.0099375000001,
+      "wall_seconds": 805.1484629595652,
+      "gpu_event_seconds": 802.3932430873812,
+      "latency_seconds": {
+        "mean": 16.773926311657608,
+        "p50": 16.19084251113236,
+        "p95": 21.582981291692704,
+        "min": 12.720770850777626,
+        "max": 26.29464600700885
+      },
+      "seconds_per_audio_second": 2.2364617725575004,
+      "per_recording_seconds_per_audio_second": {
+        "mean": 2.947896712959127,
+        "p50": 2.77299485753316,
+        "p95": 5.550125862796722,
+        "min": 1.0942424472329941,
+        "max": 6.557098376689498
+      },
+      "peak_allocated_bytes": 7438534144,
+      "peak_reserved_bytes": 8009023488,
+      "phase_wall_seconds": {
+        "decoder_no_grad": 0.0,
+        "decoder_graph": 148.88255199603736,
+        "source_forward_backward": 452.9384503029287,
+        "decoder_vjp_penalties": 196.8843038212508,
+        "optimizer_projection": 0.9070259612053633,
+        "final_render": 2.9637762624770403
+      },
+      "phase_gpu_event_seconds": {
+        "decoder_no_grad": 0.0,
+        "decoder_graph": 148.86625469779966,
+        "source_forward_backward": 452.82749974060056,
+        "decoder_vjp_penalties": 196.84713804244998,
+        "optimizer_projection": 0.8888659835755823,
+        "final_render": 2.9634846229553213
+      },
+      "source_forward_backward_pairs": 2400,
+      "decoder_forwards": 2448,
+      "decoder_backwards": 2400
+    }
+  },
+  "paired_speed_reduction_fraction": 0.14632037275791487,
+  "paired_speed_reduction_bootstrap95_ci": [
+    0.1288111865576747,
+    0.1619305019313946
+  ],
+  "bootstrap_scope": "48 exposed recordings resampled as pairs, conditional on this GPU/order/session; not independent system repetitions",
+  "efficiency_target_pass": true,
+  "quality_mechanism_signal": false,
+  "costs": {
+    "teacher_generation": 805.1484629595652,
+    "feature_preprocessing": 1.104950943030417,
+    "training_seconds": 0,
+    "spectral_repair": 0.5633713230490685,
+    "model_loading": 6.288217985071242,
+    "warmup": 0.9332614252343774,
+    "formal_evaluation": {
+      "elapsed_wall_seconds": 764.500093284063,
+      "loading_wall_seconds": 3.842078193090856,
+      "asr_wall_seconds": 609.2584218578413,
+      "quality_wall_seconds": 149.71114436909556,
+      "asr_gpu_event_seconds": 609.2589558105469,
+      "quality_gpu_event_seconds": 149.70757611083985,
+      "peak_allocated_bytes": 1211880960,
+      "peak_reserved_bytes": 1600126976,
+      "peak_process_rss_kib": 3006252
+    },
+    "measured_generation_process_gpu_allocation_wall_seconds": 1772.6251187361777,
+    "measured_full_cycle_wall_seconds": 2543.791012208909,
+    "gpu_job_process_wall_upper_bound_seconds": 2537.1252120202407,
+    "measured_experiment_gpu_event_elapsed_seconds": 2502.95420374906,
+    "candidate_steady_generation_seconds_excluding_loading": 814.4039432760328,
+    "candidate_compute_seconds_excluding_io_loading": 806.8167852256447,
+    "shared_record_io_setup_comparison_overhead_seconds": 7.587158050388098,
+    "candidate_end_to_end_scope": "Conservative forecast charges all measured shared paired-record setup/comparison/output overhead to one candidate; direct single-path deployment end-to-end was not separately benchmarked",
+    "timing_limits": "CUDA stream events can include host dispatch gaps; process allocation time includes idle/I/O and setup. No exact kernel-active hours or energy meter. Candidate endpoint omits instrumentation/IO differences at deployment."
+  },
+  "forecasts": {
+    "basis": "measured 48-point once loop + feature extraction + fixed repair + all shared paired-record IO/setup/comparison overhead conservatively charged once, same duration/text distribution, batch1 float32 TITAN RTX",
+    "new48_seconds_plus_measured_load_warmup": 821.6254226863384,
+    "new1000_similar_recordings_hours": 4.714991749350275,
+    "teacher1_audio_hour_allocation_hours": 2.262170730428886,
+    "teacher10_audio_hours_allocation_hours": 22.62170730428886,
+    "teacher_corpus_evaluation": "not included; quality/ASR evaluation measured separately",
+    "future_student_training": "not measured; no trained student in this cycle",
+    "student_break_even": "teacher-data hours + measured training hours divided by measured per-input teacher-minus-student hours; student latency/retention currently unknown",
+    "scaling_limit": "Clip-length/token distributions can change padded Whisper/decoder work; 10h is a conditional extrapolation, not authorization to launch from this pilot alone."
+  },
+  "decision": "scientific_stop_no_joint_pass",
+  "candidate": null,
+  "signal_diagnostics": {
+    "raw50": {
+      "mean_logmag_error_to_reconstruction": 0.6875733633836111,
+      "mean_relative_magnitude_error_to_reconstruction": 0.6209832479556402
+    },
+    "stft_identity": {
+      "mean_logmag_error_to_reconstruction": 0.6875731957455476,
+      "mean_relative_magnitude_error_to_reconstruction": 0.620983241746823
+    },
+    "anchor25": {
+      "mean_logmag_error_to_reconstruction": 0.5938368054727713,
+      "mean_relative_magnitude_error_to_reconstruction": 0.5217006324479977
+    }
+  }
+}

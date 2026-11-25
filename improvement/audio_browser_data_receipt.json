@@ -1,0 +1,171 @@
+{
+  "status": "complete",
+  "generated_at_utc": "2026-10-27T21:28:07.062332+00:00",
+  "conditions": 78,
+  "scored_recordings": 3192,
+  "unique_recordings": 48,
+  "unique_audio_assets": 2082,
+  "audio_bytes": 992480736,
+  "seconds": 24.208965363912284,
+  "metric_validation": "All condition counts, pooled S/D/I/reference words and arithmetic mean quality reconciled.",
+  "audio_policy": "Original WAV bytes, with no normalization, resampling, trimming or lossy encoding. PCM-identical files share an asset.",
+  "snapshot_sha256": "368c4b174db8d637de7d484a39734313abc2bd7c50799948312689cf63c01278",
+  "provenance": [
+    {
+      "study": "r1",
+      "summary_file": "/workspace/improvement/execution/r1-deletion-development24/source-summary.json",
+      "summary_sha256": "9c814a75c1a3757da596b85572d607cf10668ba9547a2d1028d22cb67b09c97b",
+      "generated_file": "/workspace/improvement/execution/r1-deletion-development24/generated.jsonl",
+      "generated_sha256": "c35b3471b89e76b833b769e51bd9930fa09fff2297f2c63eaf062fba30957298",
+      "score_file": "/workspace/improvement/execution/r1-deletion-development24/source-scores.jsonl",
+      "score_sha256": "d47832dc763343fa5eebfedbcd4224c55025b49f2e2263205ebcb9a137145689"
+    },
+    {
+      "study": "r2",
+      "summary_file": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "summary_sha256": "15c50ca689d7b0834945daccf4a594542472e6fea258e1d2c792f7e7ca9d55f1",
+      "generated_file": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/generated.jsonl",
+      "generated_sha256": "aa53ca8cb1c25f0897a58590faa73c877fc0ed4de174858ec276edf302317b85",
+      "score_file": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-scores.jsonl",
+      "score_sha256": "5038c2407dfa1f64bd3a6894fcea3e30fe0480dd86a33cf63a67b6e27dd47694"
+    },
+    {
+      "study": "r3-checkpoint-500",
+      "summary_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-summary.json",
+      "summary_sha256": "9d072876a4868e14c5572e4561f20f8f09243259cd4fa7f0fa49ecf6c7c8af02",
+      "generated_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/generated.jsonl",
+      "generated_sha256": "f9d9ba4f2f93c482ab3aa7b47b5f9b5879905f6c3c664e6d134e04d2fa91c9bd",
+      "score_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-scores.jsonl",
+      "score_sha256": "3b7616462c406684fc0a4890cd832045a61b15dbf9f09f1eb455615ab4a68c3b"
+    },
+    {
+      "study": "r3-checkpoint-1000",
+      "summary_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-summary.json",
+      "summary_sha256": "eefbdd7330af0a5c239aa0f3226a3930ad1919f14cf0d7cdb064eca239146d84",
+      "generated_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/generated.jsonl",
+      "generated_sha256": "b018a5df70458771cec5cacc80c078c0d8737aae6a9ae8c671fba1079225d22c",
+      "score_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-scores.jsonl",
+      "score_sha256": "263d3d2817c772469c25921592f43f52e61e52b70d460cc085955eb6156fde12"
+    },
+    {
+      "study": "r3-checkpoint-1500",
+      "summary_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-summary.json",
+      "summary_sha256": "e3435caf730071c4f85a7dcae4f62b4cacf675ba9784509a41a9751a20193ff9",
+      "generated_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/generated.jsonl",
+      "generated_sha256": "0ed72b4bd12d4b9e05f626c20b5cbc32550a1e0fc5469e25102bf49bba788f7a",
+      "score_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-scores.jsonl",
+      "score_sha256": "1090b08428f8e0761641c4f1c8554a9ac2627e8ba6257859b66a9da1431a582d"
+    },
+    {
+      "study": "r3",
+      "summary_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-summary.json",
+      "summary_sha256": "94c9b742baa1d734eff262d7948964d8ce56c780464baad765da9fb92af118a4",
+      "generated_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/generated.jsonl",
+      "generated_sha256": "d6f0180fa23ea6b152cd7351ead2afa501c5d04b79c6e500bb9f141f1ab6ff93",
+      "score_file": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-scores.jsonl",
+      "score_sha256": "e561ab0714681be37e63903501361e9eaeafb3837361f6ed2c521eebd2d22e94"
+    },
+    {
+      "study": "mechanism",
+      "summary_file": "/workspace/improvement/execution48/mechanism-pilot48/source-summary.json",
+      "summary_sha256": "c7ead5892c8a40d25973482861f0027e478bd2b015e79a370a7a6cbfc1538fad",
+      "generated_file": "/workspace/improvement/execution48/mechanism-pilot48/generated.jsonl",
+      "generated_sha256": "0e9a35d5de2adcb1b070cad8fd4bb6a808f9b17d2315052e6468ab710c3c822b",
+      "score_file": "/workspace/improvement/execution48/mechanism-pilot48/source-scores.jsonl",
+      "score_sha256": "dddeec570497d97212e341f63aeea043ca410465028a283ff3be62ee7542c3ea"
+    },
+    {
+      "study": "envelope",
+      "summary_file": "/workspace/improvement/execution_envelope/pilot/source-summary.json",
+      "summary_sha256": "6320b24c3e42a5d6e08be550ad0712887d8a865bc1e72d532814e6bc41498b40",
+      "generated_file": "/workspace/improvement/execution_envelope/pilot/generated.jsonl",
+      "generated_sha256": "3b1e4a83c6f02bf195f3283c435e053dd3c665f01bdc7cdd04b6dbc228590731",
+      "score_file": "/workspace/improvement/execution_envelope/pilot/source-scores.jsonl",
+      "score_sha256": "d21f17ef1a2f388f05b90e308b257fad8229ef0b3bc5ef8d3c5b6666b6604b49"
+    },
+    {
+      "study": "learned-policy",
+      "summary_file": "/workspace/improvement/execution_model_v1/pilot/source-summary.json",
+      "summary_sha256": "d748a955e127b90491b6a6ecd504e8fe584abc60a10f56a800989566c52cdb40",
+      "generated_file": "/workspace/improvement/execution_model_v1/pilot/generated.jsonl",
+      "generated_sha256": "3d8f061035f8c20df7a5dcd8f90c52750089c047b2af2282d4c440acd3b2109b",
+      "score_file": "/workspace/improvement/execution_model_v1/pilot/source-scores.jsonl",
+      "score_sha256": "1127be8a3e9465bdcbebb2da25e892b86425655fecdf12c10d1e303eeffaccc8"
+    },
+    {
+      "study": "refinement",
+      "summary_file": "/workspace/improvement/execution_refine/pilot/source-summary.json",
+      "summary_sha256": "3db90455b885582f4ea8d5c0546d31587e2abbe5c0e1facf408e979d55b08c17",
+      "generated_file": "/workspace/improvement/execution_refine/pilot/generated.jsonl",
+      "generated_sha256": "31f289fc4b66c93ac9a50cd164ed985bb515e73c35809704775ad41e006f34f3",
+      "score_file": "/workspace/improvement/execution_refine/pilot/source-scores.jsonl",
+      "score_sha256": "b42213c3961707f8effe8d7925456e9acfa857c2d7a4ccea007cb2e48a685deb"
+    },
+    {
+      "study": "scaled-fv",
+      "summary_file": "/workspace/improvement/execution_scaled/fvpilot/source-summary.json",
+      "summary_sha256": "618e52fb5dec6bb657994ae741e3723155d3fe9f6acc7b1660666ab3af2c9d26",
+      "generated_file": "/workspace/improvement/execution_scaled/fvpilot/generated.jsonl",
+      "generated_sha256": "23ea8f1b6c30360345f0f8e25bf3ea2efea7f0c6ce7abef7a12b7336e79c747c",
+      "score_file": "/workspace/improvement/execution_scaled/fvpilot/source-scores.jsonl",
+      "score_sha256": "2de6ec81f5239d3c7d733b605d64745f4a315ba0c98a457300a05f6bbcc1a27a"
+    },
+    {
+      "study": "scaled-mel",
+      "summary_file": "/workspace/improvement/execution_scaled/melpilot/source-summary.json",
+      "summary_sha256": "f0730a91492f8a4374bdb1a3f1c6e34c6a6085d291b86fce6c40ca0ea253f3aa",
+      "generated_file": "/workspace/improvement/execution_scaled/melpilot/generated.jsonl",
+      "generated_sha256": "222e2d21fab2a012b3c2739717a027523461c72b2ab52be16e8ac67e7da8bdb9",
+      "score_file": "/workspace/improvement/execution_scaled/melpilot/source-scores.jsonl",
+      "score_sha256": "119908a6eef1fee23a0f0d08be6e16a021d42e00d2d75a02e4cb63aef02acd2e"
+    },
+    {
+      "study": "decoder",
+      "summary_file": "/workspace/improvement/execution_scaled/qualification/source-summary.json",
+      "summary_sha256": "f3944402c9c85737132449e63578675e9009824c2addb67c4be10dc7d5b42ec5",
+      "generated_file": "/workspace/improvement/execution_scaled/qualification/generated.jsonl",
+      "generated_sha256": "e8b5071f9cd1f6e9e4862597143350f1bb0aa7f24982e949dd104558292e203b",
+      "score_file": "/workspace/improvement/execution_scaled/qualification/source-scores.jsonl",
+      "score_sha256": "b9b3bbe7df21e585c111b700658496daec43f250affafce983f89c700e1a0ff5"
+    },
+    {
+      "study": "tradeoff",
+      "summary_file": "/workspace/improvement/execution_tradeoff/pilot/source-summary.json",
+      "summary_sha256": "3a1b2c699704f05b3a283ef53f6f0e72bd6306f099e8162047b11c59522b44e6",
+      "generated_file": "/workspace/improvement/execution_tradeoff/pilot/generated.jsonl",
+      "generated_sha256": "29a3daa13f9a376b9b806f44079f361534670c4b2575eb63e639f492ef56c62c",
+      "score_file": "/workspace/improvement/execution_tradeoff/pilot/source-scores.jsonl",
+      "score_sha256": "4164ca8f052bdf1d0c64dfe9511e302355bb0d3111ca5a367176ae0ce8a73350"
+    },
+    {
+      "study": "original-0.02",
+      "summary_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/summary.json",
+      "summary_sha256": "7046aeb6d63561e7bd7bf62fb5500f4a55ac213d799e2e1464815ccaca28c50c",
+      "generated_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/generated.jsonl",
+      "generated_sha256": "055353c48d7e8012954b4413314ce3b1fb6092cb1618581572f2152f060c76f0",
+      "score_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/utterances.jsonl",
+      "score_sha256": "81ec332e9ee60f6ae6902c47357ce6fd8c1fcafc46587fb1b9c8a794191a81f9"
+    },
+    {
+      "study": "original-0.05",
+      "summary_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation/summary.json",
+      "summary_sha256": "968873054d4350959e9f9ce412b0487fac5dfe25be6e3fa418bcd821f2327852",
+      "generated_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/generated.jsonl",
+      "generated_sha256": "63b8d35080d4abf8c6ed9d08dfebeba2ffa8457b338f40cb63ae198f756008b3",
+      "score_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation/utterances.jsonl",
+      "score_sha256": "1593ec67312ae747711a2f0a38036dacdfc8c3258d7a3099b82a92df55f7a3fe"
+    },
+    {
+      "study": "original-0.1",
+      "summary_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation/summary.json",
+      "summary_sha256": "1d55105eb69b82cfc6fe75a75444536d23484f3d38bd57e34858babac5c10298",
+      "generated_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/generated.jsonl",
+      "generated_sha256": "2ca50325fcf69cf67f250eb17720c5a1dcc30c56ba6aa0226171b5dccbcc8dfd",
+      "score_file": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation/utterances.jsonl",
+      "score_sha256": "f4732b8a6c19f1a9296d2a723a97a99cf9fb9b22d0e1a937c399af8f1c05a94d"
+    }
+  ],
+  "runtime_condition_rows": 14,
+  "extension_reproducer": "/workspace/improvement/execution_tradeoff/refresh_interface.py",
+  "model_extension": "/workspace/improvement/execution_model_v1/report.py"
+}

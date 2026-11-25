@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "build_status": "complete",
+  "atomic_index_replace": true,
+  "atomic_exchange": false,
+  "filesystem": "NFS; directory exchange unsupported, staged immutable assets and retained old sidecars",
+  "audio_assets": 2082,
+  "referenced_assets": 2082,
+  "missing_assets": 0,
+  "prior_served_metadata_preserved": "/workspace/improvement/execution_model_v1/served_before",
+  "staged_build_preserved": "/workspace/improvement/execution_model_v1/interface_build/dist",
+  "source_snapshot_sha256": "368c4b174db8d637de7d484a39734313abc2bd7c50799948312689cf63c01278"
+}

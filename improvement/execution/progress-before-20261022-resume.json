@@ -1,0 +1,13 @@
+{
+  "phase": "step5_initial_development",
+  "baseline_exact_updates": 150,
+  "final_reserve_count": 200,
+  "final_reserve_speakers": 33,
+  "final_targets_evaluated": [],
+  "r1_canonical": "negative: first full-development clip has only word-correct beam candidates; three calibration clips completed50updates each",
+  "r1_repair": "single deterministic source-word-deletion candidate; implementation under CPU test",
+  "r2": "canonical full24 generation running; source-quality evaluation follows",
+  "r3": "implementation ready; waiting for data and exclusive GPU",
+  "training_data": "official train-clean100 checksum verified; extraction/indexing in progress",
+  "maximum_initial_gpu_hours": 6
+}

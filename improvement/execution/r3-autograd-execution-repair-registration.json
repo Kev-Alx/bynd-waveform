@@ -1,0 +1,19 @@
+{
+  "registered_at_utc": "2026-10-22T02:10:16.673941+00:00",
+  "reason": "Actual pinned WavLM backward failed before calibration/training because an inplace addition invalidated the positional Conv1d saved input",
+  "same_forward_weights_layer_normalization_loss_optimizer_and_budget": true,
+  "preserved_failures": [
+    "/workspace/improvement/execution/r3-waveform/preflight.json",
+    "/workspace/improvement/execution/r3-waveform-reference-repair/run-failure.json"
+  ],
+  "source_only": true,
+  "target_models_evaluated": [],
+  "files": {
+    "/workspace/improvement/r3_encoder_repair.py": "ae7ef8830fd6dc8cc4457d34c0aae56a8a6be16f8d7cebfee6de52d705a74d7d",
+    "/workspace/improvement/r3_real_runner_v2.py": "fa4dff2b2a08ee455ea8bbe66d65433c81461d5b6bfee6c29135ed557491780d",
+    "/workspace/improvement/test_r3_encoder_repair.py": "cb9c89234fd49565653ddffc4d8e7613cc1c7e0d116ae365a04e942c5803c422",
+    "/workspace/improvement/execution/r3-encoder-repair-tests.log": "a6ee7bebe35f812220b818d912a7622018fd5881568f67a70f734f9432863259",
+    "/workspace/improvement/execution/plan.json": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+    "/workspace/improvement/run_autograd_repair.py": "20ed18203ae1f8e3b19cbbc6873a36d2529598012c8be1a04ad307a7d5b76748"
+  }
+}

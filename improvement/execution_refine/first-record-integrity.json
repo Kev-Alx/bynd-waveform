@@ -1,0 +1,134 @@
+{
+  "checked_at_utc": "2026-10-22T08:07:52.820746+00:00",
+  "scope": "First real recording only; full cohort audit and performance scoring remain queued",
+  "id": "1673-143397-0019",
+  "status": "pass",
+  "original_fv50_exact_replay": true,
+  "record_sha256": "2a60e4575791782c491ffb4cf2b1ff9bec1e2ad0069b32ccc50b6bb9f58e4551",
+  "auditor_sha256": "261c8b6329e089c9a5e04dda1be75afa71dadbcb398470ff2062610ab3d15041",
+  "checks": {
+    "weighted100": {
+      "status": "pass",
+      "issues": [],
+      "completed_updates": 50,
+      "counts": {
+        "source_forward_calls": 52,
+        "source_backward_calls": 50,
+        "stft_forward_calls": 52,
+        "stft_backward_calls": 50,
+        "content_forward_calls": 52,
+        "content_backward_calls": 50,
+        "clean_reference_forward_calls": 0,
+        "completed_updates": 50,
+        "accepted_updates": 50,
+        "noop_updates": 0,
+        "line_search_trials": 0,
+        "zero_margin_fallbacks": 0,
+        "source_initial_forward_calls": 1,
+        "stft_initial_forward_calls": 1,
+        "content_initial_forward_calls": 1,
+        "source_gradient_forward_calls": 50,
+        "stft_gradient_forward_calls": 50,
+        "content_gradient_forward_calls": 50,
+        "source_final_forward_calls": 1,
+        "stft_final_forward_calls": 1,
+        "content_final_forward_calls": 1
+      },
+      "final_metrics": {
+        "source_sum_nll": 372.7054443359375,
+        "stft_loss": 0.43336182832717896,
+        "content_loss": 0.07354088127613068,
+        "full_r3_objective": -330.7770261068675,
+        "residual_linf": 0.003000020980834961,
+        "residual_rms": 0.0017177000408992171,
+        "audio_peak": 0.842620849609375,
+        "constraint_roundoff_tolerance": 4.76837158203125e-07,
+        "objective_condition": "weighted_control",
+        "initial_metrics": {
+          "source_sum_nll": 312.77484130859375,
+          "stft_loss": 0.3717897832393646,
+          "content_loss": 0.06370219588279724,
+          "full_r3_objective": -276.6897784218695
+        },
+        "quality_caps": {
+          "stft_loss": 0.3717897832393646,
+          "content_loss": 0.06370219588279724
+        },
+        "selected_iterate": 100,
+        "initial_updates": 50,
+        "additional_updates": 50,
+        "selection": "last feasible iterate after 50 registered additional updates; no decoding-based selection",
+        "quality_cap_roundoff_tolerance": {
+          "stft_loss": 1.4182654695105157e-06,
+          "content_loss": 2.4300459244841477e-07
+        },
+        "source_nondecrease_from_initial": true,
+        "stft_cap_satisfied": false,
+        "content_cap_satisfied": false
+      }
+    },
+    "constrained100": {
+      "status": "pass",
+      "issues": [],
+      "completed_updates": 50,
+      "counts": {
+        "source_forward_calls": 450,
+        "source_backward_calls": 50,
+        "stft_forward_calls": 450,
+        "stft_backward_calls": 50,
+        "content_forward_calls": 450,
+        "content_backward_calls": 50,
+        "clean_reference_forward_calls": 0,
+        "completed_updates": 50,
+        "accepted_updates": 50,
+        "noop_updates": 0,
+        "line_search_trials": 398,
+        "zero_margin_fallbacks": 0,
+        "source_initial_forward_calls": 1,
+        "stft_initial_forward_calls": 1,
+        "content_initial_forward_calls": 1,
+        "source_gradient_forward_calls": 50,
+        "stft_gradient_forward_calls": 50,
+        "content_gradient_forward_calls": 50,
+        "source_trial_forward_calls": 398,
+        "stft_trial_forward_calls": 398,
+        "content_trial_forward_calls": 398,
+        "source_final_forward_calls": 1,
+        "stft_final_forward_calls": 1,
+        "content_final_forward_calls": 1
+      },
+      "final_metrics": {
+        "source_sum_nll": 316.43505859375,
+        "stft_loss": 0.3717910945415497,
+        "content_loss": 0.06369338184595108,
+        "full_r3_objective": -280.3515551707314,
+        "residual_linf": 0.003000020980834961,
+        "residual_rms": 0.001376318628899753,
+        "audio_peak": 0.8436729311943054,
+        "constraint_roundoff_tolerance": 4.76837158203125e-07,
+        "objective_condition": "constrained",
+        "initial_metrics": {
+          "source_sum_nll": 312.77484130859375,
+          "stft_loss": 0.3717897832393646,
+          "content_loss": 0.06370219588279724,
+          "full_r3_objective": -276.6897784218695
+        },
+        "quality_caps": {
+          "stft_loss": 0.3717897832393646,
+          "content_loss": 0.06370219588279724
+        },
+        "selected_iterate": 100,
+        "initial_updates": 50,
+        "additional_updates": 50,
+        "selection": "last feasible iterate after 50 registered additional updates; no decoding-based selection",
+        "quality_cap_roundoff_tolerance": {
+          "stft_loss": 1.4182654695105157e-06,
+          "content_loss": 2.4300459244841477e-07
+        },
+        "source_nondecrease_from_initial": true,
+        "stft_cap_satisfied": true,
+        "content_cap_satisfied": true
+      }
+    }
+  }
+}

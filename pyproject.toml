@@ -12,10 +12,12 @@ dependencies = ["torch>=2.4,<2.5", "torchaudio>=2.4,<2.5", "numpy<2", "soundfile
 [project.scripts]
 beyondwaveform = "beyondwaveform.cli:main"
 
+[project.optional-dependencies]
+defenses = ["resampy==0.4.3"]
+
 [tool.setuptools.packages.find]
 include = ["beyondwaveform*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
-

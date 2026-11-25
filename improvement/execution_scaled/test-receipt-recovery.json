@@ -1,0 +1,7 @@
+{
+  "status": "byte_exact_restoration_verified",
+  "expected_sha256": "d6d141717efcc29f78a73d0e2656c7fc1dd9d7bec93d8dea2398126acc0ab65b",
+  "source": "Previously captured initial pytest stdout; verified against frozen engineering-probe registration",
+  "reason": "Expanded tests had reused the earlier log path; subsequent runs use expanded-tests.log",
+  "failed_expanded_test": "Synthetic fixture initially omitted original projection epsilon; corrected fixture, original model/optimizer unchanged"
+}

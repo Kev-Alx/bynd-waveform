@@ -1,0 +1,75 @@
+{
+  "utterance_id": "1089-134686-0000",
+  "verified_checkpoint_hashes": {
+    "DNSMOS/DNSMOS/sig_bak_ovr.onnx": "269fbebdb513aa23cddfbb593542ecc540284a91849ac50516870e1ac78f6edd",
+    "DNSMOS/DNSMOS/model_v8.onnx": "9246480c58567bc6affd4200938e77eef49468c8bc7ed3776d109c07456f6e91",
+    "NISQA/nisqa.tar": "7ec4cf937514dd3f8860b21e66fabd8ca87a168572675ef8d979c4c4ad2e805c",
+    "artifacts/torchhub/checkpoints/utmos22_strong_step7459_v1.pt": "38aa51ab79e2a4e09a1449758a4b37e9cbb2e8235a49662a732d33a9ba1e9bff"
+  },
+  "fixtures": {
+    "clean": {
+      "audio_sha256": "359cc7f287756817243e36a652de7b0a9fd718d9a73b327c0cf337115eb5f447",
+      "samples": 166960,
+      "scores": {
+        "dnsmos": 3.460631194306357,
+        "nisqa": 4.510672569274902,
+        "utmos": 4.319918632507324
+      },
+      "historical_scores": {
+        "dnsmos": 3.460631194306357,
+        "nisqa": 4.510672569274902,
+        "utmos": 4.319918632507324
+      },
+      "difference_from_historical": {
+        "dnsmos": 0.0,
+        "nisqa": 0.0,
+        "utmos": 0.0
+      },
+      "dnsmos_all_channels_p808_sig_bak_ovrl": [
+        4.052797794342041,
+        3.6705457883761863,
+        4.222771307180213,
+        3.460631194306357
+      ],
+      "nisqa_all_channels_mos_noi_dis_col_loud": [
+        4.510672569274902,
+        4.34599494934082,
+        4.5275959968566895,
+        4.229393482208252,
+        4.527168273925781
+      ]
+    },
+    "adversarial": {
+      "audio_sha256": "e73bb21f0c75d34448a37663b9b9383fceede3fecb5b9022901552517f8e6fea",
+      "samples": 166720,
+      "scores": {
+        "dnsmos": 3.343834552789788,
+        "nisqa": 4.557481288909912,
+        "utmos": 3.3845715522766113
+      },
+      "historical_scores": {
+        "dnsmos": 3.343834552789788,
+        "nisqa": 4.5574822425842285,
+        "utmos": 3.3845715522766113
+      },
+      "difference_from_historical": {
+        "dnsmos": 0.0,
+        "nisqa": -9.5367431640625e-07,
+        "utmos": 0.0
+      },
+      "dnsmos_all_channels_p808_sig_bak_ovrl": [
+        3.951118230819702,
+        3.5773707240068635,
+        4.132946743863008,
+        3.343834552789788
+      ],
+      "nisqa_all_channels_mos_noi_dis_col_loud": [
+        4.557481288909912,
+        4.3365397453308105,
+        4.618522644042969,
+        4.242742538452148,
+        4.504270553588867
+      ]
+    }
+  }
+}

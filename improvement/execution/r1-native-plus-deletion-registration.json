@@ -1,0 +1,39 @@
+{
+  "name": "R1-native-plus-deletion",
+  "created_at_utc": "2026-10-21T12:46:44.979217+00:00",
+  "status": "registered_before_repair_outputs",
+  "maximum_repairs": 1,
+  "rule": {
+    "name": "R1-native-plus-deletion",
+    "maximum_synthetic_candidates": 1,
+    "source": "highest-ranked nonempty native beam hypothesis text",
+    "operation": "split on whitespace; delete words[len(words)//2]; join remaining words with one space",
+    "preserve": "all remaining words, case and punctuation",
+    "tokenization": "same frozen public Whisper-small tokenizer encode",
+    "empty_deletion_result": "retain and score actual EOS probability",
+    "deduplication": "if token path already exists, add nothing and try no other deletion",
+    "origin": "synthetic_source_best_middle_word_deletion",
+    "posterior_beam_hypothesis": false,
+    "additional_fallbacks": false
+  },
+  "same_k4_reference_eos_refresh_optimizer_constraints": true,
+  "calibration_clips": [
+    "6345-93302-0028",
+    "8842-302196-0004",
+    "2035-152373-0013"
+  ],
+  "scale": "recalibrate once on same three clips; same finite/nonzero/median/bounds guards",
+  "canonical_stop_sha256": "ffb3ae5f746accf12a2ed073a0fc0aff0bf55e3b4efb44eb3e62c7f4c0e451e1",
+  "plan_sha256": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+  "code_hashes": {
+    "/workspace/improvement/r1_deletion_runner.py": "62fd097671981ee17963235890c3b409a22c8c7e56447a7e7f20811b3a62876c",
+    "/workspace/improvement/r1_deletion_repair.py": "452401a794fcce5f37b408ef36ccb810749eba9c3385eb20a89e21b8e6aa35a2",
+    "/workspace/improvement/r1_sequence.py": "38004ce812f8a47f9630491c562e407219ef59965712188281857923922ae411",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d"
+  },
+  "test_source_sha256": "c7dd623a05e5fa01abe4fbe44701d77fb5fd02dd5a9b89fa0af9ff993c990dee",
+  "caveat": "The deletion is a synthetic counterfactual, not a posterior beam hypothesis; no novelty or preserved human audio-content claim follows.",
+  "target_models_permitted": [],
+  "confirmation_or_final_inference": false,
+  "stop": "One repair only; any degeneracy stops it without another candidate or condition"
+}

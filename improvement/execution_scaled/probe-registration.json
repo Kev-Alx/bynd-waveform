@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-10-22T15:18:23.389481+00:00",
+  "ids": [
+    "6345-93302-0028",
+    "6313-76958-0022",
+    "2035-152373-0005"
+  ],
+  "scope": "Three duration-selected engineering fit cases, not a pilot performance estimate; no decoding",
+  "target_models_evaluated": [],
+  "bindings": {
+    "/workspace/improvement/scaled_probe.py": "f00ae8bdc12f042295758e59d4b0481c72a266435d05a6d420f1c1af398e8534",
+    "/workspace/improvement/scaled_components.py": "d03948f74880cf7cb31637f724928559db3d67b9a23d8f63c211e4478f516c00",
+    "/workspace/improvement/execution_scaled/component-tests.log": "d6d141717efcc29f78a73d0e2656c7fc1dd9d7bec93d8dea2398126acc0ab65b",
+    "/workspace/improvement/execution_scaled/assets.json": "691b37b3a46da8f67d213496f91a0b77301d9a244eb34e5b3e6df2983473d13d",
+    "/workspace/artifacts/whisper/large-v2.pt": "81f7c96c852ee8fc832187b0132e569d6c3065a3252ed18e56effd0b6a73e524"
+  }
+}

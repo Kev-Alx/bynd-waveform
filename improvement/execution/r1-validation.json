@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-21T12:42:57.476328+00:00",
+  "cpu_only": true,
+  "new_model_inference": false,
+  "calibration_probes": 3,
+  "pilot_updates_verified": 150,
+  "refresh_candidate_sets_verified": 30,
+  "candidate_rows_verified": 170,
+  "saved_waveforms_verified": 9,
+  "all_zero_cost_initial_stop_verified": true,
+  "source_files_immutable": true,
+  "validation_source_sha256": "baeb00b181031e4833de56342cf13b416a1261f05239d8e850b9d2f145397016"
+}

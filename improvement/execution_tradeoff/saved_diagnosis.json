@@ -1,0 +1,286 @@
+{
+  "frozen_condition_rows": 67,
+  "joint_passes": 0,
+  "timing_scope": "saved cumulative optimization loops only; excludes loading/calibration/preprocessing; not GPU-active seconds",
+  "audio_seconds": 360.0099375000001,
+  "methods": {
+    "single_50": {
+      "count": 48,
+      "S": 520,
+      "D": 82,
+      "I": 232,
+      "wer": 83.90342052313883,
+      "quality": {
+        "dnsmos": 3.1055698029400935,
+        "nisqa": 3.976609687010447,
+        "utmos": 3.198076764742533
+      },
+      "optimization_seconds": 941.1058583389968,
+      "mean_seconds_per_recording": 19.6063720487291,
+      "p50_seconds": 18.822785719297826,
+      "p95_seconds": 27.610686342511325,
+      "seconds_per_audio_second": 2.614110779480904,
+      "new_1000_recordings_hours": 5.446214457980306,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 26.141107794809038
+    },
+    "single_150": {
+      "count": 48,
+      "S": 605,
+      "D": 80,
+      "I": 281,
+      "wer": 97.1830985915493,
+      "quality": {
+        "dnsmos": 3.0512396058753954,
+        "nisqa": 3.9500466684500375,
+        "utmos": 3.086575319369634
+      },
+      "optimization_seconds": 2828.1361366147175,
+      "mean_seconds_per_recording": 58.91950284613995,
+      "p50_seconds": 56.56538883084431,
+      "p95_seconds": 82.77960324017332,
+      "seconds_per_audio_second": 7.855716862301104,
+      "new_1000_recordings_hours": 16.366528568372207,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 78.55716862301105
+    },
+    "single_1500": {
+      "count": 48,
+      "S": 710,
+      "D": 89,
+      "I": 209,
+      "wer": 101.40845070422536,
+      "quality": {
+        "dnsmos": 3.0195675386613066,
+        "nisqa": 3.8260260969400406,
+        "utmos": 2.9436830108364425
+      },
+      "optimization_seconds": 28210.968365031295,
+      "mean_seconds_per_recording": 587.7285076048187,
+      "p50_seconds": 565.1486652288586,
+      "p95_seconds": 824.1804191320203,
+      "seconds_per_audio_second": 78.36163790626276,
+      "new_1000_recordings_hours": 163.2579187791163,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 783.6163790626276
+    },
+    "ensemble_raw_50": {
+      "count": 48,
+      "S": 517,
+      "D": 31,
+      "I": 131,
+      "wer": 68.30985915492958,
+      "quality": {
+        "dnsmos": 3.1269725791219534,
+        "nisqa": 4.0664650822679205,
+        "utmos": 3.3671043068170547
+      },
+      "optimization_seconds": 3453.3128269426525,
+      "mean_seconds_per_recording": 71.94401722797193,
+      "p50_seconds": 70.59200292406604,
+      "p95_seconds": 85.58326281295157,
+      "seconds_per_audio_second": 9.592270843753171,
+      "new_1000_recordings_hours": 19.9844492299922,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 95.92270843753171
+    },
+    "ensemble_raw_200": {
+      "count": 48,
+      "S": 615,
+      "D": 32,
+      "I": 168,
+      "wer": 81.99195171026157,
+      "quality": {
+        "dnsmos": 3.0532461573164995,
+        "nisqa": 3.951745331287384,
+        "utmos": 3.16360209385554
+      },
+      "optimization_seconds": 13807.472084872425,
+      "mean_seconds_per_recording": 287.6556684348422,
+      "p50_seconds": 282.19066071277484,
+      "p95_seconds": 341.9515797764063,
+      "seconds_per_audio_second": 38.353030421201694,
+      "new_1000_recordings_hours": 79.90435234301172,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 383.530304212017
+    },
+    "ensemble_raw_500": {
+      "count": 48,
+      "S": 670,
+      "D": 41,
+      "I": 188,
+      "wer": 90.44265593561369,
+      "quality": {
+        "dnsmos": 3.099689564392096,
+        "nisqa": 3.929499271015326,
+        "utmos": 3.0556989113489785
+      },
+      "optimization_seconds": 34511.7687752191,
+      "mean_seconds_per_recording": 718.9951828170646,
+      "p50_seconds": 705.1767552653328,
+      "p95_seconds": 854.5768728205468,
+      "seconds_per_audio_second": 95.86337814694099,
+      "new_1000_recordings_hours": 199.72088411585128,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 958.6337814694099
+    },
+    "ensemble_eot_50": {
+      "count": 48,
+      "S": 495,
+      "D": 39,
+      "I": 109,
+      "wer": 64.68812877263582,
+      "quality": {
+        "dnsmos": 3.174841361558608,
+        "nisqa": 4.092136000593503,
+        "utmos": 3.3770904491345086
+      },
+      "optimization_seconds": 3455.5321368919685,
+      "mean_seconds_per_recording": 71.99025285191601,
+      "p50_seconds": 70.54144743317738,
+      "p95_seconds": 85.67087246086449,
+      "seconds_per_audio_second": 9.598435423444299,
+      "new_1000_recordings_hours": 19.99729245886556,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 95.98435423444299
+    },
+    "ensemble_eot_200": {
+      "count": 48,
+      "S": 604,
+      "D": 44,
+      "I": 165,
+      "wer": 81.7907444668008,
+      "quality": {
+        "dnsmos": 3.1707724660962766,
+        "nisqa": 4.067204395929973,
+        "utmos": 3.2345118348797164
+      },
+      "optimization_seconds": 13821.20676810667,
+      "mean_seconds_per_recording": 287.94180766888894,
+      "p50_seconds": 282.15856072027236,
+      "p95_seconds": 342.63281363523566,
+      "seconds_per_audio_second": 38.39118126595232,
+      "new_1000_recordings_hours": 79.98383546358026,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 383.9118126595232
+    },
+    "ensemble_eot_500": {
+      "count": 48,
+      "S": 678,
+      "D": 37,
+      "I": 175,
+      "wer": 89.53722334004024,
+      "quality": {
+        "dnsmos": 3.147634291188515,
+        "nisqa": 4.021122269332409,
+        "utmos": 3.084961660206318
+      },
+      "optimization_seconds": 34547.969698349014,
+      "mean_seconds_per_recording": 719.7493687156044,
+      "p50_seconds": 705.8043266292661,
+      "p95_seconds": 856.7487209385727,
+      "seconds_per_audio_second": 95.96393349099984,
+      "new_1000_recordings_hours": 199.930380198779,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 959.6393349099983
+    },
+    "mel_eot_50": {
+      "count": 48,
+      "S": 246,
+      "D": 42,
+      "I": 49,
+      "wer": 33.903420523138834,
+      "quality": {
+        "dnsmos": 3.123613105761591,
+        "nisqa": 3.754864700138569,
+        "utmos": 3.250829870502154
+      },
+      "optimization_seconds": 6577.673490440473,
+      "mean_seconds_per_recording": 137.03486438417653,
+      "p50_seconds": 123.86679489770904,
+      "p95_seconds": 223.30735941375605,
+      "seconds_per_audio_second": 18.27081090071429,
+      "new_1000_recordings_hours": 38.065240106715706,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 182.70810900714292
+    },
+    "mel_eot_200": {
+      "count": 48,
+      "S": 500,
+      "D": 51,
+      "I": 246,
+      "wer": 80.18108651911469,
+      "quality": {
+        "dnsmos": 2.8826554866618723,
+        "nisqa": 3.309120610356331,
+        "utmos": 2.2950601801276207
+      },
+      "optimization_seconds": 26261.18026257865,
+      "mean_seconds_per_recording": 547.1079221370552,
+      "p50_seconds": 494.3793343831785,
+      "p95_seconds": 891.4899665849749,
+      "seconds_per_audio_second": 72.94570934608893,
+      "new_1000_recordings_hours": 151.97442281584867,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 729.4570934608894
+    },
+    "mel_eot_500": {
+      "count": 48,
+      "S": 600,
+      "D": 62,
+      "I": 121,
+      "wer": 78.77263581488934,
+      "quality": {
+        "dnsmos": 2.6037602847753143,
+        "nisqa": 2.7068347881237664,
+        "utmos": 1.6527891208728154
+      },
+      "optimization_seconds": 65632.82170963753,
+      "mean_seconds_per_recording": 1367.3504522841151,
+      "p50_seconds": 1235.7621942781843,
+      "p95_seconds": 2227.4588061291724,
+      "seconds_per_audio_second": 182.30836116749558,
+      "new_1000_recordings_hours": 379.8195700789209,
+      "teacher_10_audio_hours_gpu_allocated_hours_loop_only": 1823.0836116749558
+    }
+  },
+  "signals": {
+    "ensemble_eot_200": {
+      "log_magnitude_distance": 0.6423685985306898,
+      "relative_magnitude_error": 0.6780086892346541,
+      "energy_ratio": 0.9534278487165769,
+      "envelope_relative_error": 0.294398526661098,
+      "quiet_energy_ratio": 1.198382891714573,
+      "utmos_vs_logmag_spearman": -0.3287016934433348
+    },
+    "ensemble_eot_500": {
+      "log_magnitude_distance": 0.6411925386637449,
+      "relative_magnitude_error": 0.694597240537405,
+      "energy_ratio": 0.9423675326009592,
+      "envelope_relative_error": 0.2870188985640804,
+      "quiet_energy_ratio": 1.1798652783036232,
+      "utmos_vs_logmag_spearman": -0.3467216673903604
+    },
+    "fv_quality50": {
+      "log_magnitude_distance": 0.6141537595540285,
+      "relative_magnitude_error": 0.5338606331497431,
+      "energy_ratio": 1.0752298993368943,
+      "envelope_relative_error": 0.267472717911005,
+      "quiet_energy_ratio": 1.1682263786594074,
+      "utmos_vs_logmag_spearman": -0.34650455927051677
+    },
+    "fv_reconstruction": {
+      "log_magnitude_distance": 0.5382650500784317,
+      "relative_magnitude_error": 0.3301860233768821,
+      "energy_ratio": 0.9009390063583851,
+      "envelope_relative_error": 0.13325973243142167,
+      "quiet_energy_ratio": 0.9065931774675846,
+      "utmos_vs_logmag_spearman": -0.4582066869300912
+    },
+    "single_1500": {
+      "log_magnitude_distance": 0.6518409264584383,
+      "relative_magnitude_error": 0.6652563009411097,
+      "energy_ratio": 0.7581153704474369,
+      "envelope_relative_error": 0.2861460776378711,
+      "quiet_energy_ratio": 1.1094161483148735,
+      "utmos_vs_logmag_spearman": -0.39068606165870595
+    },
+    "single_50": {
+      "log_magnitude_distance": 0.6463004406541586,
+      "relative_magnitude_error": 0.6336752406011025,
+      "energy_ratio": 0.9395711235702038,
+      "envelope_relative_error": 0.27644284286846715,
+      "quiet_energy_ratio": 1.2182252059380214,
+      "utmos_vs_logmag_spearman": -0.28419452887537994
+    }
+  }
+}

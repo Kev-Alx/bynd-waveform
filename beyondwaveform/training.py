@@ -32,6 +32,7 @@ def finetune(config, train_manifest, validation_manifest, output, device="cuda")
     if accumulation < 1 or epochs < 1:
         raise ValueError("Positive accumulation and epochs required")
     history, best = [], float("inf")
+    epoch_checkpoints = []
     atomic_json(output / "training.json", {"status": "running", "config": config, "split_audit": split_audit,
                 "model": provenance, "environment": environment(), "status_of_recipe": "independent engineering choice"})
     for epoch in range(epochs):
@@ -60,10 +61,19 @@ def finetune(config, train_manifest, validation_manifest, output, device="cuda")
         state = {"dims": vars(model.model.dims), "model_state_dict": model.model.state_dict()}
         torch.save(state, output / "last.pt")
         torch.save({"optimizer": optimizer.state_dict(), "epoch": epoch + 1, "config": config}, output / "optimizer.pt")
+        if config.get("save_epoch_checkpoints", False):
+            checkpoint = output / f"epoch-{epoch + 1:03d}.pt"
+            torch.save(state, checkpoint)
+            epoch_checkpoints.append({"epoch": epoch + 1, "path": str(checkpoint.resolve()),
+                                      "sha256": digest(checkpoint)})
+            atomic_json(output / "epoch-checkpoints.json", epoch_checkpoints)
         if val < best:
             best = val
             torch.save(state, output / "best.pt")
         atomic_json(output / "history.json", history)
-    atomic_json(output / "training.json", {"status": "complete", "config": config, "split_audit": split_audit,
+    metadata = {"status": "complete", "config": config, "split_audit": split_audit,
                 "model": provenance, "environment": environment(), "history": history,
-                "best_sha256": digest(output / "best.pt"), "status_of_recipe": "independent engineering choice"})
+                "best_sha256": digest(output / "best.pt"), "status_of_recipe": "independent engineering choice"}
+    if config.get("save_epoch_checkpoints", False):
+        metadata["epoch_checkpoints"] = epoch_checkpoints
+    atomic_json(output / "training.json", metadata)

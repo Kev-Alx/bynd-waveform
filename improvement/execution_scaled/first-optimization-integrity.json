@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "issues": [],
+  "check": {
+    "method": "single",
+    "steps": 50,
+    "source_backward_calls": 50,
+    "calibration_calls": 0
+  },
+  "scope": "First real optimization endpoint only; sourceWER/quality require complete cohort"
+}

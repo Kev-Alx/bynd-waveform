@@ -1,0 +1,7 @@
+# Set revision to an immutable Hugging Face commit before use.
+name: wav2vec2-independent-checkpoint-choice
+kind: ctc
+model_id: facebook/wav2vec2-large-960h-lv60-self
+revision: null
+# Alternative: facebook/hubert-large-ls960-ft, with its OWN resolved commit.
+

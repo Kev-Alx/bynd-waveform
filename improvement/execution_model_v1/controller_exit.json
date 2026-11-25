@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-27T14:59:11.506145+00:00",
+  "command": [
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=15s",
+    "46785s",
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/execution_model_v1/supervise.py"
+  ],
+  "cwd": "/workspace",
+  "supervisor_pid": 200624,
+  "log": "/workspace/improvement/execution_model_v1/controller.log",
+  "child_pid": 200626,
+  "exit_code": 1,
+  "finished_at": "2026-10-27T21:29:04.371013+00:00"
+}

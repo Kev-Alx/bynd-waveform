@@ -1,0 +1,7 @@
+{
+  "supervisor_pid": 178926,
+  "maximum_wall_seconds": 2700,
+  "detached": true,
+  "log": "/workspace/improvement/execution_tradeoff/supervisor.log",
+  "status": "/workspace/improvement/execution_tradeoff/status.json"
+}

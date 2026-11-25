@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "source_wer_increase": -0.10060362173038184,
+  "utmos_delta_vs_fv_reconstruction": -0.026307736833890427,
+  "quality_floors_pass": true,
+  "scope": "48-point reconstruction qualification; no attack effect inferred"
+}

@@ -1,0 +1,465 @@
+{
+  "scope": "Read-only Consensus search/fetch receipts; no GPU jobs. Citation numbers follow fetched_papers order.",
+  "searches": [
+    {
+      "key": 0,
+      "text": {
+        "results": [
+          {
+            "id": "8b04f38e8b275fffa6acdc46cb488b3b",
+            "title": "Targeted Universal Adversarial Perturbations for Automatic Speech Recognition",
+            "text": "Automatic speech recognition (ASR) is an essential technology used in commercial products nowadays. However, the underlying deep learning models used in ASR systems are vulnerable to adversarial examp...",
+            "url": "https://consensus.app/papers/details/8b04f38e8b275fffa6acdc46cb488b3b/?utm_source=chatgpt"
+          },
+          {
+            "id": "dce19ad0b6945dffb59f8616cc6854c6",
+            "title": "Enabling Fast and Universal Audio Adversarial Attack Using Generative Model",
+            "text": "Recently, the vulnerability of deep neural network (DNN)-based audio systems to adversarial attacks has obtained increasing attention. However, the existing audio adversarial attacks allow the adversa...",
+            "url": "https://consensus.app/papers/details/dce19ad0b6945dffb59f8616cc6854c6/?utm_source=chatgpt"
+          },
+          {
+            "id": "d071dcf057de5c41a8b36624b82a097f",
+            "title": "Imperceptible, Robust, and Targeted Adversarial Examples for Automatic Speech Recognition",
+            "text": "Adversarial examples are inputs to machine learning models designed by an adversary to cause an incorrect output. So far, adversarial examples have been studied most extensively in the image domain. I...",
+            "url": "https://consensus.app/papers/details/d071dcf057de5c41a8b36624b82a097f/?utm_source=chatgpt"
+          },
+          {
+            "id": "a5d69a244a79599da47a2f65b310c75f",
+            "title": "Universal Adversarial Perturbations for Speech Recognition Systems",
+            "text": "In this work, we demonstrate the existence of universal adversarial audio perturbations that cause mis-transcription of audio signals by automatic speech recognition (ASR) systems. We propose an algor...",
+            "url": "https://consensus.app/papers/details/a5d69a244a79599da47a2f65b310c75f/?utm_source=chatgpt"
+          },
+          {
+            "id": "ef378b4ff5795d4daa9f6fc3265a3e35",
+            "title": "Wave-U-Net Discriminator: Fast and Lightweight Discriminator for Generative Adversarial Network-Based Speech Synthesis",
+            "text": "In speech synthesis, a generative adversarial network (GAN), training a generator (speech synthesizer) and a discriminator in a min-max game, is widely used to improve speech quality. An ensemble of d...",
+            "url": "https://consensus.app/papers/details/ef378b4ff5795d4daa9f6fc3265a3e35/?utm_source=chatgpt"
+          },
+          {
+            "id": "b0fa9221ade4564e811ffbb021d77bb7",
+            "title": "Generating Targeted Universal Adversarial Perturbation against Automatic Speech Recognition via Phoneme Tailoring",
+            "text": "There is a growing concern about adversarial attacks against automatic speech recognition (ASR) systems. Although research into targeted universal adversarial examples (AEs) has progressed, current me...",
+            "url": "https://consensus.app/papers/details/b0fa9221ade4564e811ffbb021d77bb7/?utm_source=chatgpt"
+          },
+          {
+            "id": "eded4a15d3d558159ca4cf5ae93a750e",
+            "title": "Perceptually Constrained Fast Adversarial Audio Attacks",
+            "text": "Audio adversarial attacks on deep learning models are of great interest given the commercial success and proliferation of these technologies. These types of attacks have been successfully demonstrated...",
+            "url": "https://consensus.app/papers/details/eded4a15d3d558159ca4cf5ae93a750e/?utm_source=chatgpt"
+          },
+          {
+            "id": "2cba000b4d895ebf8d26e4a747900dc4",
+            "title": "Audio Adversarial Examples: Targeted Attacks on Speech-to-Text",
+            "text": "We construct targeted audio adversarial examples on automatic speech recognition. Given any audio waveform, we can produce another that is over 99.9% similar, but transcribes as any phrase we choose (...",
+            "url": "https://consensus.app/papers/details/2cba000b4d895ebf8d26e4a747900dc4/?utm_source=chatgpt"
+          },
+          {
+            "id": "ef8c57f8b5e15545b18069d40a4e0a2a",
+            "title": "Imperceptible black-box waveform-level adversarial attack towards automatic speaker recognition",
+            "text": "Automatic speaker recognition is an important biometric authentication approach with emerging applications. However, recent research has shown its vulnerability on adversarial attacks. In this paper, ...",
+            "url": "https://consensus.app/papers/details/ef8c57f8b5e15545b18069d40a4e0a2a/?utm_source=chatgpt"
+          },
+          {
+            "id": "6f324870d5605e4896df12d9c4315c5a",
+            "title": "Beyond Waveform Robustness: Robust Feature-Vocoder Adversarial Attacks on Automatic Speech Recognition",
+            "text": "Automatic speech recognition (ASR) systems have become widely used for multilingual speech-to-text transcription. Their robustness to adversarial attacks has become an important topic for the communit...",
+            "url": "https://consensus.app/papers/details/6f324870d5605e4896df12d9c4315c5a/?utm_source=chatgpt"
+          }
+        ]
+      }
+    },
+    {
+      "key": 1,
+      "text": {
+        "results": [
+          {
+            "id": "8f56ca23fa9d5614b16eacadb6da26ce",
+            "title": "Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems",
+            "text": "The widespread application of automatic speech recognition (ASR) supports large-scale voice surveillance, raising concerns about privacy among users. In this paper, we concentrate on using adversarial...",
+            "url": "https://consensus.app/papers/details/8f56ca23fa9d5614b16eacadb6da26ce/?utm_source=chatgpt"
+          },
+          {
+            "id": "a5d69a244a79599da47a2f65b310c75f",
+            "title": "Universal Adversarial Perturbations for Speech Recognition Systems",
+            "text": "In this work, we demonstrate the existence of universal adversarial audio perturbations that cause mis-transcription of audio signals by automatic speech recognition (ASR) systems. We propose an algor...",
+            "url": "https://consensus.app/papers/details/a5d69a244a79599da47a2f65b310c75f/?utm_source=chatgpt"
+          },
+          {
+            "id": "5d494f6e56e55b17aa52c684a38ddbfe",
+            "title": "UniAP: Protecting Speech Privacy With Non-Targeted Universal Adversarial Perturbations",
+            "text": "Ubiquitous microphones on smart devices considerably raise users’ concerns about speech privacy. Since the microphones are primarily controlled by hardware/software developers, profit-driven organizat...",
+            "url": "https://consensus.app/papers/details/5d494f6e56e55b17aa52c684a38ddbfe/?utm_source=chatgpt"
+          },
+          {
+            "id": "b0fa9221ade4564e811ffbb021d77bb7",
+            "title": "Generating Targeted Universal Adversarial Perturbation against Automatic Speech Recognition via Phoneme Tailoring",
+            "text": "There is a growing concern about adversarial attacks against automatic speech recognition (ASR) systems. Although research into targeted universal adversarial examples (AEs) has progressed, current me...",
+            "url": "https://consensus.app/papers/details/b0fa9221ade4564e811ffbb021d77bb7/?utm_source=chatgpt"
+          },
+          {
+            "id": "a840acda9d54560a9adc3201e8e3080f",
+            "title": "SpeechShield: Latency-Efficient and Robust Timbre-Aware Voice Protection Against Speech Synthesis Deepfake Attacks",
+            "text": "Speech synthesis models can generate highly realistic cloned voices by capturing the phonetic features of a speaker. However, adversaries may exploit this capability by collecting users’ speech sample...",
+            "url": "https://consensus.app/papers/details/a840acda9d54560a9adc3201e8e3080f/?utm_source=chatgpt"
+          },
+          {
+            "id": "8b04f38e8b275fffa6acdc46cb488b3b",
+            "title": "Targeted Universal Adversarial Perturbations for Automatic Speech Recognition",
+            "text": "Automatic speech recognition (ASR) is an essential technology used in commercial products nowadays. However, the underlying deep learning models used in ASR systems are vulnerable to adversarial examp...",
+            "url": "https://consensus.app/papers/details/8b04f38e8b275fffa6acdc46cb488b3b/?utm_source=chatgpt"
+          },
+          {
+            "id": "d071dcf057de5c41a8b36624b82a097f",
+            "title": "Imperceptible, Robust, and Targeted Adversarial Examples for Automatic Speech Recognition",
+            "text": "Adversarial examples are inputs to machine learning models designed by an adversary to cause an incorrect output. So far, adversarial examples have been studied most extensively in the image domain. I...",
+            "url": "https://consensus.app/papers/details/d071dcf057de5c41a8b36624b82a097f/?utm_source=chatgpt"
+          },
+          {
+            "id": "cb0bf2f6882658b49c6920a5b8858aa9",
+            "title": "DUAP: Disentanglement-Based Universal Adversarial Perturbations for Robust Multilingual Speech Privacy Protection",
+            "text": "The rapid advancement of automatic speech recognition (ASR) models has significantly bolstered their multilingual proficiency and robustness, amplifying concerns over user speech privacy. Attackers ma...",
+            "url": "https://consensus.app/papers/details/cb0bf2f6882658b49c6920a5b8858aa9/?utm_source=chatgpt"
+          },
+          {
+            "id": "eeab2110ec705f0c808a910d7e2dabd4",
+            "title": "CommanderUAP: a practical and transferable universal adversarial attacks on speech recognition models",
+            "text": "Most of the adversarial attacks against speech recognition systems focus on specific adversarial perturbations, which are generated by adversaries for each normal example to achieve the attack. Univer...",
+            "url": "https://consensus.app/papers/details/eeab2110ec705f0c808a910d7e2dabd4/?utm_source=chatgpt"
+          },
+          {
+            "id": "6f324870d5605e4896df12d9c4315c5a",
+            "title": "Beyond Waveform Robustness: Robust Feature-Vocoder Adversarial Attacks on Automatic Speech Recognition",
+            "text": "Automatic speech recognition (ASR) systems have become widely used for multilingual speech-to-text transcription. Their robustness to adversarial attacks has become an important topic for the communit...",
+            "url": "https://consensus.app/papers/details/6f324870d5605e4896df12d9c4315c5a/?utm_source=chatgpt"
+          }
+        ]
+      }
+    },
+    {
+      "key": 2,
+      "text": {
+        "results": [
+          {
+            "id": "7105bc673bf45e19b245cc39e08a4059",
+            "title": "End-to-End Adversarial Text-to-Speech",
+            "text": "Modern text-to-speech synthesis pipelines typically involve multiple processing stages, each of which is designed or learnt independently from the rest. In this work, we take on the challenging task o...",
+            "url": "https://consensus.app/papers/details/7105bc673bf45e19b245cc39e08a4059/?utm_source=chatgpt"
+          },
+          {
+            "id": "2cba000b4d895ebf8d26e4a747900dc4",
+            "title": "Audio Adversarial Examples: Targeted Attacks on Speech-to-Text",
+            "text": "We construct targeted audio adversarial examples on automatic speech recognition. Given any audio waveform, we can produce another that is over 99.9% similar, but transcribes as any phrase we choose (...",
+            "url": "https://consensus.app/papers/details/2cba000b4d895ebf8d26e4a747900dc4/?utm_source=chatgpt"
+          },
+          {
+            "id": "ad67179b662a565e997b45c01718e5c9",
+            "title": "Towards Understanding and Mitigating Audio Adversarial Examples for Speaker Recognition",
+            "text": "Speaker recognition systems (SRSs) have recently been shown to be vulnerable to adversarial attacks, raising significant security concerns. In this work, we systematically investigate transformation a...",
+            "url": "https://consensus.app/papers/details/ad67179b662a565e997b45c01718e5c9/?utm_source=chatgpt"
+          },
+          {
+            "id": "46f957b3a2e75a2d98d8d248f299a2ec",
+            "title": "EvilHarmony: Stealthy Adversarial Attacks Against Black-Box Speech Recognition Systems",
+            "text": "Automatic Speech Recognition (ASR) systems are vulnerable to adversarial examples (AEs), where small, carefully designed perturbations are added to original audio to mislead the systems into generatin...",
+            "url": "https://consensus.app/papers/details/46f957b3a2e75a2d98d8d248f299a2ec/?utm_source=chatgpt"
+          },
+          {
+            "id": "6d45f5fd8f7c5a689c937010aee9a47e",
+            "title": "Statistical Parametric Speech Synthesis Incorporating Generative Adversarial Networks",
+            "text": "A method for statistical parametric speech synthesis incorporating generative adversarial networks (GANs) is proposed. Although powerful deep neural networks techniques can be applied to artificially ...",
+            "url": "https://consensus.app/papers/details/6d45f5fd8f7c5a689c937010aee9a47e/?utm_source=chatgpt"
+          },
+          {
+            "id": "d071dcf057de5c41a8b36624b82a097f",
+            "title": "Imperceptible, Robust, and Targeted Adversarial Examples for Automatic Speech Recognition",
+            "text": "Adversarial examples are inputs to machine learning models designed by an adversary to cause an incorrect output. So far, adversarial examples have been studied most extensively in the image domain. I...",
+            "url": "https://consensus.app/papers/details/d071dcf057de5c41a8b36624b82a097f/?utm_source=chatgpt"
+          },
+          {
+            "id": "bf830c90b93e504793b722655987762b",
+            "title": "Targeted Speech Adversarial Example Generation With Generative Adversarial Network",
+            "text": "Although neural network-based speech recognition models have enjoyed significant success in many acoustic systems, they are susceptible to be attacked by the adversarial examples. In this work, we mak...",
+            "url": "https://consensus.app/papers/details/bf830c90b93e504793b722655987762b/?utm_source=chatgpt"
+          },
+          {
+            "id": "ef8c57f8b5e15545b18069d40a4e0a2a",
+            "title": "Imperceptible black-box waveform-level adversarial attack towards automatic speaker recognition",
+            "text": "Automatic speaker recognition is an important biometric authentication approach with emerging applications. However, recent research has shown its vulnerability on adversarial attacks. In this paper, ...",
+            "url": "https://consensus.app/papers/details/ef8c57f8b5e15545b18069d40a4e0a2a/?utm_source=chatgpt"
+          },
+          {
+            "id": "c339787a96565d7ab35340b688a01020",
+            "title": "Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech",
+            "text": "Several recent end-to-end text-to-speech (TTS) models enabling single-stage training and parallel sampling have been proposed, but their sample quality does not match that of two-stage TTS systems. In...",
+            "url": "https://consensus.app/papers/details/c339787a96565d7ab35340b688a01020/?utm_source=chatgpt"
+          },
+          {
+            "id": "869ee7f1df23526aaa916dc17b62e634",
+            "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+            "text": "Several recent work on speech synthesis have employed generative adversarial networks (GANs) to produce raw waveforms. Although such methods improve the sampling efficiency and memory usage, their sam...",
+            "url": "https://consensus.app/papers/details/869ee7f1df23526aaa916dc17b62e634/?utm_source=chatgpt"
+          }
+        ]
+      }
+    },
+    {
+      "key": 3,
+      "text": "Rate limit exceeded. Please wait a moment before searching again."
+    }
+  ],
+  "ddsp_search": {
+    "results": [
+      {
+        "id": "5e50d2e7f5b05503a37f167d440d91ad",
+        "title": "DENT-DDSP: Data-efficient noisy speech generator using differentiable digital signal processors for explicit distortion modelling and noise-robust speech recognition",
+        "text": "The performances of automatic speech recognition (ASR) systems degrade drastically under noisy conditions. Explicit distortion modelling (EDM), as a feature compensation step, is able to enhance ASR s...",
+        "url": "https://consensus.app/papers/details/5e50d2e7f5b05503a37f167d440d91ad/?utm_source=chatgpt"
+      },
+      {
+        "id": "409ffcdfda315f1f97164fd2a12841b3",
+        "title": "DDSP: Differentiable Digital Signal Processing",
+        "text": "Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utiliz...",
+        "url": "https://consensus.app/papers/details/409ffcdfda315f1f97164fd2a12841b3/?utm_source=chatgpt"
+      },
+      {
+        "id": "37141057b7d458759a85770df661eb3c",
+        "title": "Fast, High-Quality and Parameter-Efficient Articulatory Synthesis Using Differentiable DSP",
+        "text": "Articulatory trajectories like electromagnetic articulography (EMA) provide a low-dimensional representation of the vocal tract filter and have been used as natural, grounded features for speech synth...",
+        "url": "https://consensus.app/papers/details/37141057b7d458759a85770df661eb3c/?utm_source=chatgpt"
+      },
+      {
+        "id": "65b7fb60eaaa515782e212752b3c0db4",
+        "title": "Improving Resource-Efficient Speech Enhancement via Neural Differentiable DSP Vocoder Refinement",
+        "text": "Deploying speech enhancement (SE) systems in wearable devices, such as smart glasses, is challenging due to the limited computational resources on the device. Although deep learning methods have achie...",
+        "url": "https://consensus.app/papers/details/65b7fb60eaaa515782e212752b3c0db4/?utm_source=chatgpt"
+      },
+      {
+        "id": "0a854e5ae03f585ea5602778faee7733",
+        "title": "A Review of Differentiable Digital Signal Processing for Music & Speech Synthesis",
+        "text": "The term “differentiable digital signal processing” describes a family of techniques in which loss function gradients are backpropagated through digital signal processors, facilitating their integrati...",
+        "url": "https://consensus.app/papers/details/0a854e5ae03f585ea5602778faee7733/?utm_source=chatgpt"
+      },
+      {
+        "id": "0acebc4430a3545a802f76fd8059cdc6",
+        "title": "DDSP-QbE++: Improving Speech Quality for Speech Anonymisation for Atypical Speech",
+        "text": "Differentiable Digital Signal Processing (DDSP) pipelines for voice conversion rely on subtractive synthesis, where a periodic excitation signal is shaped by a learned spectral envelope to reconstruct...",
+        "url": "https://consensus.app/papers/details/0acebc4430a3545a802f76fd8059cdc6/?utm_source=chatgpt"
+      },
+      {
+        "id": "5c4422857cb756f1a5a754237b022222",
+        "title": "NaturalL2S: End-to-End High-quality Multispeaker Lip-to-Speech Synthesis with Differential Digital Signal Processing",
+        "text": "Recent advancements in visual speech recognition (VSR) have promoted progress in lip-to-speech synthesis, where pre-trained VSR models enhance the intelligibility of synthesized speech by providing va...",
+        "url": "https://consensus.app/papers/details/5c4422857cb756f1a5a754237b022222/?utm_source=chatgpt"
+      },
+      {
+        "id": "d450cfc81640519791ed08bca58480f0",
+        "title": "Speech Synthesis and Control Using Differentiable DSP",
+        "text": "Modern text-to-speech systems are able to produce natural and high-quality speech, but speech contains factors of variation (e.g. pitch, rhythm, loudness, timbre)\\ that text alone cannot contain. In t...",
+        "url": "https://consensus.app/papers/details/d450cfc81640519791ed08bca58480f0/?utm_source=chatgpt"
+      },
+      {
+        "id": "4fb34071e9fb5305ab293e845fca8edc",
+        "title": "Speech Signal Improvement Using Causal Generative Diffusion Models",
+        "text": "In this paper, we present a causal speech signal improvement system that is designed to handle different types of distortions. The method is based on a generative diffusion model which has been shown ...",
+        "url": "https://consensus.app/papers/details/4fb34071e9fb5305ab293e845fca8edc/?utm_source=chatgpt"
+      },
+      {
+        "id": "d752ff69ad935268b6ef0e3585b51088",
+        "title": "Beyond Noise Suppression: Dynamic Distortion Control Loss for Speech Enhancement and Robust Automatic Speech Recognition",
+        "text": "In severe noise conditions, employing a speech enhancement (SE) model as a front-end serves as a computationally efficient strategy for robust automatic speech recognition (ASR), offering a practical ...",
+        "url": "https://consensus.app/papers/details/d752ff69ad935268b6ef0e3585b51088/?utm_source=chatgpt"
+      }
+    ]
+  },
+  "fetched_papers": [
+    {
+      "citation": 1,
+      "id": "dce19ad0b6945dffb59f8616cc6854c6",
+      "paper": {
+        "id": "dce19ad0b6945dffb59f8616cc6854c6",
+        "title": "Enabling Fast and Universal Audio Adversarial Attack Using Generative Model",
+        "text": "Recently, the vulnerability of deep neural network (DNN)-based audio systems to adversarial attacks has obtained increasing attention. However, the existing audio adversarial attacks allow the adversary to possess the entire user's audio input as well as granting sufficient time budget to generate the adversarial perturbations. These idealized assumptions, however, make the existing audio adversarial attacks mostly impossible to be launched in a timely fashion in practice (e.g., playing unnoticeable adversarial perturbations along with user's streaming input). To overcome these limitations, in this paper we propose fast audio adversarial perturbation generator (FAPG), which uses generative model to generate adversarial perturbations for the audio input in a single forward pass, thereby drastically improving the perturbation generation speed. Built on the top of FAPG, we further propose universal audio adversarial perturbation generator (UAPG), a scheme to craft universal adversarial perturbation that can be imposed on arbitrary benign audio input to cause misclassification. Extensive experiments on DNN-based audio systems show that our proposed FAPG can achieve high success rate with up to 214X speedup over the existing audio adversarial attack methods. Also our proposed UAPG generates universal adversarial perturbations that can achieve much better attack performance than the state-of-the-art solutions.",
+        "url": "https://consensus.app/papers/enabling-fast-and-universal-audio-adversarial-attack-xie-li/dce19ad0b6945dffb59f8616cc6854c6/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Yi Xie, Zhuohang Li, Cong Shi, Jian Liu, Y. Chen, Bo Yuan",
+          "publish_year": "2020",
+          "pages": "14129-14137",
+          "citation_count": "87"
+        }
+      }
+    },
+    {
+      "citation": 2,
+      "id": "8f56ca23fa9d5614b16eacadb6da26ce",
+      "paper": {
+        "id": "8f56ca23fa9d5614b16eacadb6da26ce",
+        "title": "Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems",
+        "text": "The widespread application of automatic speech recognition (ASR) supports large-scale voice surveillance, raising concerns about privacy among users. In this paper, we concentrate on using adversarial examples to mitigate unauthorized disclosure of speech privacy thwarted by potential eavesdroppers in speech communications. While audio adversarial examples have demonstrated the capability to mislead ASR models or evade ASR surveillance, they are typically constructed through time-intensive offline optimization, restricting their practicality in real-time voice communication. Recent work overcame this limitation by generating universal adversarial perturbations (UAPs) and enhancing their transferability for black-box scenarios. However, they introduced excessive noise that significantly degrades audio quality and affects human perception, thereby limiting their effectiveness in practical scenarios. To address this limitation and protect live users' speech against ASR systems, we propose a novel framework, AudioShield. Central to this framework is the concept of Transferable Universal Adversarial Perturbations in the Latent Space (LS-TUAP). By transferring the perturbations to the latent space, the audio quality is preserved to a large extent. Additionally, we propose target feature adaptation to enhance the transferability of UAPs by embedding target text features into the perturbations. Comprehensive evaluation on four commercial ASR APIs (Google, Amazon, iFlytek, and Alibaba), three voice assistants, two LLM-powered ASR and one NN-based ASR demonstrates the protection superiority of AudioShield over existing competitors, and both objective and subjective evaluations indicate that AudioShield significantly improves the audio quality. Moreover, AudioShield also shows high effectiveness in real-time end-to-end scenarios, and demonstrates strong resilience against adaptive countermeasures.",
+        "url": "https://consensus.app/papers/whispering-under-the-eaves-protecting-user-privacy-jin-cao/8f56ca23fa9d5614b16eacadb6da26ce/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Wei-Fei Jin, Yuxin Cao, Junjie Su, Derui Wang, Ye-Di Zhang, Minhui Xue, Jie Hao, Jin-Song Dong, Yixian Yang",
+          "publish_year": "2025",
+          "journal": "ArXiv",
+          "volume": "abs/2504.00858",
+          "citation_count": "9"
+        }
+      }
+    },
+    {
+      "citation": 3,
+      "id": "eded4a15d3d558159ca4cf5ae93a750e",
+      "paper": {
+        "id": "eded4a15d3d558159ca4cf5ae93a750e",
+        "title": "Perceptually Constrained Fast Adversarial Audio Attacks",
+        "text": "Audio adversarial attacks on deep learning models are of great interest given the commercial success and proliferation of these technologies. These types of attacks have been successfully demonstrated, however, artifacts introduced in the adversarial audio are easily detectable by a human observer. In this work, an expansion of the fast audio adversarial perturbation framework is proposed that can produce an adversarial attack that is imperceptible to a human observer in near-real time using black-box attacks. This is achieved by proposing a perceptually motivated penalty function. We propose a perceptual fast audio adversarial perturbation generator (PFAPG) that employs a loudness constrained loss function, in lieu of a conventional L-2 norm, between the adversarial example and original audio signal. We compare the performance of PFAPG against the conventional constraint based on the MSE on three audio recognition datasets: speaker recognition, speech command, and the Ryerson audiovisual database of emotional speech and song. Our results indicate that, on average, PFAPG equipped with the loudness-constrained loss function yields a 11% higher success rate, while reducing the undesirable distortion artifacts in adversarial audio by 10% dB compared to the prevalent MSE constraints.",
+        "url": "https://consensus.app/papers/perceptually-constrained-fast-adversarial-audio-attacks-henry-ergezer/eded4a15d3d558159ca4cf5ae93a750e/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "J. Henry, Mehmet Ergezer, M. Orescanin",
+          "publish_year": "2021",
+          "journal": "2021 20th IEEE International Conference on Machine Learning and Applications (ICMLA)",
+          "pages": "819-824",
+          "citation_count": "4"
+        }
+      }
+    },
+    {
+      "citation": 4,
+      "id": "bf830c90b93e504793b722655987762b",
+      "paper": {
+        "id": "bf830c90b93e504793b722655987762b",
+        "title": "Targeted Speech Adversarial Example Generation With Generative Adversarial Network",
+        "text": "Although neural network-based speech recognition models have enjoyed significant success in many acoustic systems, they are susceptible to be attacked by the adversarial examples. In this work, we make first step towards using generative adversarial network (GAN) for constructing the targeted speech adversarial examples. Specifically, we integrate the target speech recognition network with GAN framework, which can then be formulated as a three-party game. The generator in GAN aims at generating perturbation that could make the target network misclassified to a specific target, while simultaneously fooling the discriminator treating the adversarial example as a beguine one. The discriminator is to distinguish the crafted examples from the geniue samples. The classification error of the target network is back-propagated via gradient flow to the generator for updating. The target network is responsible for back-propagating the classification error via gradients to the generator for updating, but the target network itself is freezed. With the carefully designed network architecture, loss function and training strategy, we successfully train a generator that could generate the adversarial perturbation for a given speech clip and a target label. Experiential results show that the generated adversarial examples could effectively fool the state-of-the-art speech classification networks, while attaining an acceptable auditory perception quality. In addition, our proposed method runs much faster than the prevalent optimization-based schemes. To facilitate reproducible research, codes, models and data are publicly available at https://github.com/winterwindwang/SpeechAdvGan.",
+        "url": "https://consensus.app/papers/targeted-speech-adversarial-example-generation-with-wang-dong/bf830c90b93e504793b722655987762b/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Donghua Wang, Li Dong, Rangding Wang, Diqun Yan, Jie Wang",
+          "publish_year": "2020",
+          "journal": "IEEE Access",
+          "volume": "8",
+          "pages": "124503-124513",
+          "citation_count": "33"
+        }
+      }
+    },
+    {
+      "citation": 5,
+      "id": "cb0bf2f6882658b49c6920a5b8858aa9",
+      "paper": {
+        "id": "cb0bf2f6882658b49c6920a5b8858aa9",
+        "title": "DUAP: Disentanglement-Based Universal Adversarial Perturbations for Robust Multilingual Speech Privacy Protection",
+        "text": "The rapid advancement of automatic speech recognition (ASR) models has significantly bolstered their multilingual proficiency and robustness, amplifying concerns over user speech privacy. Attackers may use hidden microphones or network attacks to capture and transcribe sensitive user interactions. Whisper, a state-of-the-art (SOTA) multilingual speech recognition model, delivers exceptional transcription accuracy across diverse languages. However, its superior performance also extends privacy leakage risks to multilingual contexts. Previous privacy-preserving methods based on adversarial examples were primarily optimized for monolingual models, limiting their effectiveness in multilingual settings. Moreover, as these perturbation mechanisms were predominantly tailored for English, their transferability to other languages remains constrained. To address this vulnerability, we propose the Disentanglement-based Universal Adversarial Perturbation (DUAP), a privacy-preserving method designed to counteract the Whisper model. Unlike optimization-based approaches, DUAP embeds language-specific features in the latent space to generate robust adversarial perturbations, providing consistent protection across multiple languages and effectively mitigating privacy risks in multilingual contexts. The method employs a two-stage language attack: first, a Language Feature Disentanglement model disentangles and reconstructs language-specific features to produce adversarial examples (AEs); second, gradient-based optimization refines AEs to disrupt Whisper’s language identification module. DUAP’s perturbations, effective in physical and digital settings, achieve SNRs from 40 dB (lightest) to above 17 dB (strongest). Across three Whisper model sizes, DUAP yields WERs over 95% (English), 85% (other languages), and 87% (physical settings), maintaining above 96% under AAC (64, 72 kbps) and MP3 (32, 96 kbps) compressions.",
+        "url": "https://consensus.app/papers/duap-disentanglementbased-universal-adversarial-ma-zhang/cb0bf2f6882658b49c6920a5b8858aa9/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Qianli Ma, Wenjie Zhang, Jia-Hao Chen, Jiazhen Jia, Rangding Wang, Diqun Yan",
+          "publish_year": "2026",
+          "journal": "IEEE Transactions on Information Forensics and Security",
+          "volume": "21",
+          "pages": "3703-3718",
+          "citation_count": "0"
+        }
+      }
+    },
+    {
+      "citation": 6,
+      "id": "5d494f6e56e55b17aa52c684a38ddbfe",
+      "paper": {
+        "id": "5d494f6e56e55b17aa52c684a38ddbfe",
+        "title": "UniAP: Protecting Speech Privacy With Non-Targeted Universal Adversarial Perturbations",
+        "text": "Ubiquitous microphones on smart devices considerably raise users’ concerns about speech privacy. Since the microphones are primarily controlled by hardware/software developers, profit-driven organizations can easily collect and analyze individuals’ daily conversations on a large scale with deep learning models, and users have no means to stop such privacy-violating behavior. In this article, we propose UniAP to empower users with the capability of protecting their speech privacy from the large-scale analysis without affecting their routine voice activities. Based on our observation of the recognition model, we utilize adversarial learning to generate quasi-imperceptible perturbations to disturb speech signals captured by nearby microphones, thus obfuscating the recognition results of recordings into meaningless contents. As validated in experiments, our perturbations can protect user privacy regardless of what users speak and when they speak. The jamming performance stability is further improved by training optimization. Additionally, the perturbations are robust against noise removal techniques. Extensive evaluations show that our perturbations achieve successful jamming rates of more than 87% in the digital domain and at least 90% and 70% for common and challenging settings, respectively, in the real-life chatting scenario. Moreover, our perturbations, solely trained on DeepSpeech, exhibit good transferability over other models based on similar architecture.",
+        "url": "https://consensus.app/papers/uniap-protecting-speech-privacy-with-nontargeted-cheng-wu/5d494f6e56e55b17aa52c684a38ddbfe/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Peng Cheng, Yuexin Wu, Yuan Hong, Zhong-Jie Ba, Feng Lin, Li Lu, Kui Ren",
+          "publish_year": "2024",
+          "journal": "IEEE Transactions on Dependable and Secure Computing",
+          "volume": "21",
+          "pages": "31-46",
+          "citation_count": "20"
+        }
+      }
+    },
+    {
+      "citation": 7,
+      "id": "eeab2110ec705f0c808a910d7e2dabd4",
+      "paper": {
+        "id": "eeab2110ec705f0c808a910d7e2dabd4",
+        "title": "CommanderUAP: a practical and transferable universal adversarial attacks on speech recognition models",
+        "text": "Most of the adversarial attacks against speech recognition systems focus on specific adversarial perturbations, which are generated by adversaries for each normal example to achieve the attack. Universal adversarial perturbations (UAPs), which are independent of the examples, have recently received wide attention for their enhanced real-time applicability and expanded threat range. However, most of the UAP research concentrates on the image domain, and less on speech. In this paper, we propose a staged perturbation generation method that constructs CommanderUAP, which achieves a high success rate of universal adversarial attack against speech recognition models. Moreover, we apply some methods from model training to improve the generalization in attack and we control the imperceptibility of the perturbation in both time and frequency domains. In specific scenarios, CommanderUAP can also transfer attack some commercial speech recognition APIs.",
+        "url": "https://consensus.app/papers/commanderuap-a-practical-and-transferable-universal-sun-zhao/eeab2110ec705f0c808a910d7e2dabd4/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Zhengyi Sun, Jinxiao Zhao, Feng Guo, Yuxuan Chen, Lei Ju",
+          "publish_year": "2024",
+          "journal": "Cybersecurity",
+          "volume": "7",
+          "citation_count": "12"
+        }
+      }
+    },
+    {
+      "citation": 8,
+      "id": "46f957b3a2e75a2d98d8d248f299a2ec",
+      "paper": {
+        "id": "46f957b3a2e75a2d98d8d248f299a2ec",
+        "title": "EvilHarmony: Stealthy Adversarial Attacks Against Black-Box Speech Recognition Systems",
+        "text": "Automatic Speech Recognition (ASR) systems are vulnerable to adversarial examples (AEs), where small, carefully designed perturbations are added to original audio to mislead the systems into generating target commands. Existing adversarial attacks typically initialize perturbations either as zero or as Text-to-Speech clips of the target command. The former accumulates the features of the command in the perturbed audio, while the latter constantly reduces the features of the command, resulting in the generation of AEs. Although most target commands in the AEs are imperceptible to humans, the audio often exhibits noticeable distortions or disruptions, making it apparent that the sound has been tampered with. This work aims to retain only the essential features of adversarial audio, minimizing distortions from unnecessary elements to improve quality and make the attack less detectable. Our findings highlight the importance of formants as critical features for black-box adversarial attacks, motivating the development of a novel Formant Filter Bank (FFB) tailored to the target command. By inputting musical audio into the FFB, we utilize the filtered output as the perturbation seed, which retains the formant features of the target command and blends in certain features of the original music. Then we search for a minimum enhancement factor for the perturbation seed to generate high-quality AEs. Our perturbation can be regarded as local amplitude modulation of the music, so we define the AE as EvilHarmony. Experimental results demonstrate that our method successfully attacks commercial black-box ASR models, including Microsoft, Google, Amazon, Tencentyun, Aliyun, and OpenAI Whisper-V3. Compared to existing approaches, our AEs achieve significantly greater stealth, with 53% to 77% of participants perceiving them as indistinguishable from normal audio across the six ASR API services. Additionally, our approach successfully attacks Google Assistant and voice assistants on Surface Pro 9 in the real world. Demos are uploaded at https://sites.google.com/view/evilharmony.",
+        "url": "https://consensus.app/papers/evilharmony-stealthy-adversarial-attacks-against-yuan-zhang/46f957b3a2e75a2d98d8d248f299a2ec/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Xuejing Yuan, Jiang-Shan Zhang, Feng Guo, Kai Chen, Xiao-Feng Wang, Sheng-Zhi Zhang, Yuxuan Chen, Dun Liu, Pan Li, Zi-Hao Wang, Runnan Zhu",
+          "publish_year": "2025",
+          "journal": "2025 IEEE Symposium on Security and Privacy (SP)",
+          "pages": "4569-4587",
+          "citation_count": "3"
+        }
+      }
+    },
+    {
+      "citation": 9,
+      "id": "b0fa9221ade4564e811ffbb021d77bb7",
+      "paper": {
+        "id": "b0fa9221ade4564e811ffbb021d77bb7",
+        "title": "Generating Targeted Universal Adversarial Perturbation against Automatic Speech Recognition via Phoneme Tailoring",
+        "text": "There is a growing concern about adversarial attacks against automatic speech recognition (ASR) systems. Although research into targeted universal adversarial examples (AEs) has progressed, current methods are constrained by inefficient exploitation of audio features, demonstrating insufficient attack ability and robustness in the physical world. To solve this problem, we propose a phoneme-tailored attack (PTA) to improve the quality of the generated AEs. Specifically, to improve attack ability, we propose a Diverse Audio Composition Enrichment method, which enhances the utilization of audio features through phoneme-level slicing and recombination. To adapt AEs to complex environments, we propose a Natural Noise Pattern Guidance method to align AEs with natural noise patterns to improve their robustness. Experiments show that our method achieves an average accuracy of more than 72.34% and 98% with and without a norm constraint, and also demonstrates excellent performance in terms of generalization across datasets and resilience to MP3 compression.",
+        "url": "https://consensus.app/papers/generating-targeted-universal-adversarial-perturbation-zhang-chen/b0fa9221ade4564e811ffbb021d77bb7/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Yujun Zhang, Yanqu Chen, Jiakai Wang, Jin Hu, Renshuai Tao, Xianglong Liu",
+          "publish_year": "2025",
+          "journal": "ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+          "pages": "1-5",
+          "citation_count": "3"
+        }
+      }
+    },
+    {
+      "citation": 10,
+      "id": "5e50d2e7f5b05503a37f167d440d91ad",
+      "paper": {
+        "id": "5e50d2e7f5b05503a37f167d440d91ad",
+        "title": "DENT-DDSP: Data-efficient noisy speech generator using differentiable digital signal processors for explicit distortion modelling and noise-robust speech recognition",
+        "text": "The performances of automatic speech recognition (ASR) systems degrade drastically under noisy conditions. Explicit distortion modelling (EDM), as a feature compensation step, is able to enhance ASR systems under such conditions by simulating the in-domain noisy speeches from the clean counterparts. Yet, existing distortion models are either non-trainable or unexplainable and often lack controllability and generalization ability. In this paper, we propose a fully explainable and controllable model: DENT-DDSP to achieve EDM. DENT-DDSP utilizes novel differentiable digital signal processing (DDSP) components and requires only 10 seconds of training data to achieve high fidelity. The experiment shows that the simulated noisy data from DENT-DDSP achieves the highest simulation fidelity compared to other baseline models in terms of multi-scale spectral loss (MSSL). Moreover, to validate whether the data simulated by DENT-DDSP are able to replace the scarce in-domain noisy data in the noise-robust ASR tasks, several downstream ASR models with the same architecture are trained using the simulated data and the real data. The experiment shows that the model trained with the simulated noisy data from DENT-DDSP achieves similar performances to the benchmark with a 2.7\\% difference in terms of word error rate (WER). The code of the model is released online.",
+        "url": "https://consensus.app/papers/dentddsp-dataefficient-noisy-speech-generator-using-guo-chen/5e50d2e7f5b05503a37f167d440d91ad/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Zi-Xun Guo, Chen Chen, Chng Eng Siong",
+          "publish_year": "2022",
+          "journal": "ArXiv",
+          "volume": "abs/2208.00987",
+          "citation_count": "6"
+        }
+      }
+    },
+    {
+      "citation": 11,
+      "id": "409ffcdfda315f1f97164fd2a12841b3",
+      "paper": {
+        "id": "409ffcdfda315f1f97164fd2a12841b3",
+        "title": "DDSP: Differentiable Digital Signal Processing",
+        "text": "Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize existing knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto-differentiation-based machine learning methods. In this paper, we introduce the Differentiable Digital Signal Processing (DDSP) library, which enables direct integration of classic signal processing elements with deep learning methods. Focusing on audio synthesis, we achieve high-fidelity generation without the need for large autoregressive models or adversarial losses, demonstrating that DDSP enables utilizing strong inductive biases without losing the expressive power of neural networks. Further, we show that combining interpretable modules permits manipulation of each separate model component, with applications such as independent control of pitch and loudness, realistic extrapolation to pitches not seen during training, blind dereverberation of room acoustics, transfer of extracted room acoustics to new environments, and transformation of timbre between disparate sources. In short, DDSP enables an interpretable and modular approach to generative modeling, without sacrificing the benefits of deep learning. The library will be made available upon paper acceptance and we encourage further contributions from the community and domain experts.",
+        "url": "https://consensus.app/papers/ddsp-differentiable-digital-signal-processing-engel-hantrakul/409ffcdfda315f1f97164fd2a12841b3/?utm_source=chatgpt",
+        "metadata": {
+          "authors": "Jesse Engel, Lamtharn Hantrakul, Chenjie Gu, Adam Roberts",
+          "publish_year": "2020",
+          "journal": "ArXiv",
+          "volume": "abs/2001.04643",
+          "citation_count": "535"
+        }
+      }
+    }
+  ]
+}

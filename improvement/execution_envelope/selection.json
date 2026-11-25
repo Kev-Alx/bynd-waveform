@@ -1,0 +1,18 @@
+{
+  "status": "stop",
+  "candidate": "envelope_nll50",
+  "control": "fv50",
+  "findings": {
+    "automatic_quality_floors_pass": true,
+    "failures": [],
+    "primary_source_quality_screen": false,
+    "exploratory_shape_signal": false,
+    "earns_larger_validation": false,
+    "source_wer_delta_points": -20.62374245472837,
+    "utmos_delta": 0.3351358249783516,
+    "source_wer_delta_vs_rms_matched": -10.764587525150905,
+    "nisqa_delta_vs_global_full50": 0.25179741283257817
+  },
+  "created_at_utc": "2026-10-22T14:43:06.275980+00:00",
+  "scope": "Fixed primary candidate; mechanism-only continuation is exploratory, not primary superiority"
+}

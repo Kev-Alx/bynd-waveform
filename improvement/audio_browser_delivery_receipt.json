@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "verified_at_utc": "2026-10-26T07:55:07.859274+00:00",
+  "url": "http://localhost:8888/",
+  "bind": "0.0.0.0:8888",
+  "conditions": 67,
+  "recordings": 2664,
+  "unique_sentences": 48,
+  "unique_audio_assets": 1602,
+  "missing_audio_assets": 0,
+  "html_sha256": "33f2705792b0dc2d1bfbfd988b7105eeb3bcc60fcf83d334a9485249fbb2713e",
+  "snapshot_sha256": "30ff22d024bd96a6f847886db433bda3cd249cc2cd3206c018e02147330ddddf",
+  "browser_functional_checks": "pass",
+  "csv_rows": 67,
+  "build_status": "complete",
+  "local_container_delivery": true,
+  "final_render_check": "pass",
+  "final_wav_playback_check": "pass"
+}

@@ -1,0 +1,18 @@
+{
+  "pid": 147837,
+  "started_at_utc": "2026-10-22T15:08:57.607453+00:00",
+  "detached": true,
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/scripts/run_logged.py",
+    "--log",
+    "/workspace/improvement/execution_scaled/jobs/asset-acquisition/stage.log",
+    "--status",
+    "/workspace/improvement/execution_scaled/jobs/asset-acquisition/job.json",
+    "--",
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/execution_scaled/download_assets.py"
+  ]
+}

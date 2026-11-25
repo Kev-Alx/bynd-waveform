@@ -25,3 +25,60 @@ venv/
 
 # Editor and operating system files
 .DS_Store
+
+# Local Discord GPU notifier credential
+.discord-gpu.json
+
+# Python build products and additional tool caches
+*.py[cod]
+*.nbc
+*.nbi
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Browser dependencies and local test installations
+node_modules/
+.vite/
+npm-cache/
+/improvement/audio_browser_qa/apt/
+/improvement/audio_browser_qa/browsers/
+/improvement/audio_browser_qa/debs/
+/improvement/audio_browser_qa/libs/
+
+# Generated audio and model tensors; keep source code and paper figures
+/improvement/**/*.wav
+/improvement/**/*.flac
+/improvement/**/*.mp3
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Experiment output directories (scripts and reports beside them stay visible)
+/improvement/execution/baseline-preflight/
+/improvement/execution/r1-*/
+/improvement/execution/r2-*/
+/improvement/execution/r3-*/
+/improvement/execution*/jobs/
+/improvement/execution*/pilot/
+/improvement/execution*/mechanism-pilot*/
+/improvement/execution*/qualification/
+/improvement/execution*/fvpilot/
+/improvement/execution*/melpilot/
+/improvement/execution*/training/
+/improvement/execution*/training_cache/
+/improvement/execution*/cache/
+/improvement/execution*/runtime-cache/
+/improvement/execution*/models/
+/improvement/execution*/qa/
+/improvement/execution*/qa_tmp/
+/improvement/execution*/audit-test-tmp/
+/improvement/execution*/served_before/
+
+# Local process and experiment logs
+*.log
+/improvement/execution*/*.lock

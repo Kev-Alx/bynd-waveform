@@ -1,0 +1,16 @@
+"""Conditional length-aware forecasts for prepared training sets; no models run."""
+import pathlib,json,numpy as np
+P=pathlib.Path('/workspace/improvement');D=P/'execution_tradeoff'
+def lines(p):return [json.loads(s) for s in p.read_text().splitlines()]
+def main():
+ result=json.loads((D/'results.json').read_text());rs=json.loads((D/'pilot/generation-result.json').read_text())['records'];pre=json.loads((D/'pilot/generation-result.json').read_text())['preprocessing']['records'];pp={r['id']:r['wall_seconds'] for r in pre};x=np.array([r['audio_seconds'] for r in rs]);y=np.array([r['runs']['once']['wall_seconds']+r['postprocessing']['anchor25']['wall_seconds']+pp[r['id']]+max(0.,r['wall_seconds_including_both_paths']-sum(r['runs'][k]['wall_seconds'] for k in ['once','twice'])-sum(v['wall_seconds'] for v in r['postprocessing'].values())) for r in rs]);X=np.column_stack([np.ones(48),x]);coef=np.linalg.lstsq(X,y,rcond=None)[0];assert (coef>=0).all();pred=X@coef;loo=[]
+ for i in range(48):
+  keep=np.arange(48)!=i;loo.append(float(X[i]@np.linalg.lstsq(X[keep],y[keep],rcond=None)[0]))
+ residual=y-np.array(loo);metrics={'leave_one_recording_out_mae_seconds':float(np.mean(np.abs(residual))),'leave_one_recording_out_mape_percent':float(np.mean(np.abs(residual)/y)*100),'r_squared_in_sample':float(1-np.sum((y-pred)**2)/np.sum((y-y.mean())**2))};datasets={};rng=np.random.default_rng(20261026)
+ for filename in ['train-1h.jsonl','train-10h.jsonl']:
+  rows=lines(P/'execution/data'/filename);dur=np.array([r['duration'] for r in rows]);design=np.array([len(rows),dur.sum()]);est=float(design@coef);boot=[]
+  for _ in range(5000):
+   ix=rng.integers(0,48,48);beta=np.linalg.lstsq(X[ix],y[ix],rcond=None)[0];boot.append(float(design@beta)/3600)
+  datasets[filename]={'count':len(rows),'audio_seconds':float(dur.sum()),'mean_duration':float(dur.mean()),'duration_range':[float(dur.min()),float(dur.max())],'predicted_teacher_generation_hours_excluding_loading_evaluation_training':est/3600,'bootstrap_parameter95_interval_hours':np.percentile(boot,[2.5,97.5]).tolist(),'count_only_sensitivity_hours':len(rows)*y.mean()/3600,'audio_duration_only_sensitivity_hours':dur.sum()*y.sum()/x.sum()/3600,'clips_outside_measured_duration_range':int(np.sum((dur<x.min())|(dur>x.max()))),'sensitivity_scope':'count-only and duration-only are sensitivity arithmetic, not confidence bounds; bootstrap interval omits system/session/text-distribution shifts'}
+ receipt={'method':'nonnegative observed ordinary least-squares intercept + audio duration, fit to 48 measured paired once-path latencies + feature extraction + repair + all shared paired-record overhead charged conservatively','equation_seconds':{'intercept_per_clip':float(coef[0]),'seconds_per_audio_second_slope':float(coef[1])},'pilot_duration_range':[float(x.min()),float(x.max())],'diagnostics':metrics,'datasets':datasets,'limits':'Conditional forecasts, not measured training-set throughput. Fixed Whisper context creates per-clip overhead; text length and actual hardware throughput can shift. Rebenchmark intended workload before a long teacher/training launch. No targets or untouched evaluation outcomes read.'};(D/'prepared_data_forecast.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
+if __name__=='__main__':main()

@@ -1,0 +1,270 @@
+{
+  "status": "complete",
+  "phase": "no_candidate_earned_validation",
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "maximum_cycle_wall_seconds": 12600,
+  "heartbeat_seconds": 30,
+  "supervisor_pid": 138912,
+  "stages": [
+    {
+      "name": "registration",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/refine_runner.py",
+        "register"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/registration/job.json",
+      "started_at_utc": "2026-10-22T08:05:23.714181+00:00",
+      "wrapper_pid": 138914,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T08:05:25.449786+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T08:05:23.763059+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/refine_runner.py",
+          "register"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 138914,
+        "log": "/workspace/improvement/execution_refine/jobs/registration/stage.log",
+        "child_pid": 138915,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T08:05:25.406731+00:00"
+      }
+    },
+    {
+      "name": "pilot-generation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/refine_runner.py",
+        "generate",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/pilot-generation/job.json",
+      "started_at_utc": "2026-10-22T08:05:25.464749+00:00",
+      "wrapper_pid": 138919,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T09:14:21.697177+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T08:05:25.505740+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/refine_runner.py",
+          "generate",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 138919,
+        "log": "/workspace/improvement/execution_refine/jobs/pilot-generation/stage.log",
+        "child_pid": 138920,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T09:14:21.633869+00:00"
+      }
+    },
+    {
+      "name": "pilot-native-evaluation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/source_evaluate_refine.py",
+        "--name",
+        "pilot",
+        "--output-dir",
+        "/workspace/improvement/execution_refine/pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/pilot-native-evaluation/job.json",
+      "started_at_utc": "2026-10-22T09:14:21.780114+00:00",
+      "wrapper_pid": 141198,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T09:21:12.957813+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T09:14:21.897930+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/source_evaluate_refine.py",
+          "--name",
+          "pilot",
+          "--output-dir",
+          "/workspace/improvement/execution_refine/pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 141198,
+        "log": "/workspace/improvement/execution_refine/jobs/pilot-native-evaluation/stage.log",
+        "child_pid": 141199,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T09:21:12.904804+00:00"
+      }
+    },
+    {
+      "name": "pilot-independent-audit",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_refine/audit_refinement.py",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/pilot-independent-audit/job.json",
+      "started_at_utc": "2026-10-22T09:21:12.981523+00:00",
+      "wrapper_pid": 141292,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T09:21:18.526222+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T09:21:13.030428+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/execution_refine/audit_refinement.py",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 141292,
+        "log": "/workspace/improvement/execution_refine/jobs/pilot-independent-audit/stage.log",
+        "child_pid": 141293,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T09:21:18.504133+00:00"
+      }
+    },
+    {
+      "name": "pilot-selection",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/postprocess_refinement.py",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/pilot-selection/job.json",
+      "started_at_utc": "2026-10-22T09:21:18.546791+00:00",
+      "wrapper_pid": 141334,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T09:21:18.777718+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T09:21:18.590419+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/postprocess_refinement.py",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 141334,
+        "log": "/workspace/improvement/execution_refine/jobs/pilot-selection/stage.log",
+        "child_pid": 141335,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T09:21:18.719016+00:00"
+      }
+    },
+    {
+      "name": "package-validation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/validate_package.py"
+      ],
+      "job_file": "/workspace/improvement/execution_refine/jobs/package-validation/job.json",
+      "started_at_utc": "2026-10-22T09:21:18.800431+00:00",
+      "wrapper_pid": 141339,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T09:21:19.126588+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T09:21:18.839629+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/validate_package.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 141339,
+        "log": "/workspace/improvement/execution_refine/jobs/package-validation/stage.log",
+        "child_pid": 141340,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T09:21:19.070419+00:00"
+      }
+    }
+  ],
+  "started_at_utc": "2026-10-22T08:05:23.710348+00:00",
+  "updated_at": "2026-10-22T17:21:19+08:00",
+  "timezone": "Asia/Taipei",
+  "cohort": "validation",
+  "count": 76,
+  "generation": {},
+  "scored_variant_waveforms": 0,
+  "total_variant_waveforms": 456,
+  "independent_audit_status": "pending",
+  "selection": {
+    "status": "stop",
+    "candidate": null,
+    "control": "fv50",
+    "selection_scope": "Frozen source-only48-point decision before validation76",
+    "reason": "Primary screen or preregistered mechanism frontier signal; the latter is exploratory, not primary superiority",
+    "findings": {
+      "constrained100": {
+        "source_wer_delta_points": -6.338028169014088,
+        "utmos_delta": 0.308193857471148,
+        "automatic_quality_floors_pass": true,
+        "failures": [],
+        "primary_source_quality_screen": false,
+        "source_gain_vs_full50": 0.0,
+        "utmos_gain_vs_full50": -0.0002422680457434545,
+        "mechanism_frontier_signal": false,
+        "earns_larger_validation": false,
+        "descriptive_speaker_95": {
+          "source_wer_delta": [
+            -14.385623148781047,
+            1.3123503161667154
+          ],
+          "utmos_delta": [
+            0.2278153277117785,
+            0.3884529544694131
+          ],
+          "replicates": 10000,
+          "seed": 20261022,
+          "scope": "Source/cohort variation only; no training/human/transfer inference"
+        }
+      },
+      "weighted100": {
+        "source_wer_delta_points": 3.6217303822937623,
+        "utmos_delta": 0.26009632647037506,
+        "automatic_quality_floors_pass": false,
+        "failures": [],
+        "primary_source_quality_screen": false,
+        "source_gain_vs_full50": 9.95975855130785,
+        "utmos_gain_vs_full50": -0.04833979904651642,
+        "mechanism_frontier_signal": false,
+        "earns_larger_validation": false,
+        "descriptive_speaker_95": {
+          "source_wer_delta": [
+            -4.353341532560663,
+            11.435558790162036
+          ],
+          "utmos_delta": [
+            0.17822150051884528,
+            0.3397861994737348
+          ],
+          "replicates": 10000,
+          "seed": 20261022,
+          "scope": "Source/cohort variation only; no training/human/transfer inference"
+        }
+      }
+    },
+    "created_at_utc": "2026-10-22T09:21:18.692183+00:00"
+  },
+  "scientific_status": "No qualifying improvement; stop this method rather than repeat pilots"
+}

@@ -1,6 +1,7 @@
 """Per-example attacks. Generation has no target/defense model dependency."""
 from __future__ import annotations
 from dataclasses import dataclass
+import math
 import time
 import torch
 from .config import AttackConfig, SpectralConfig
@@ -36,6 +37,16 @@ class AttackResult:
     seconds: float
 
 
+def learning_rate_at_step(config, step):
+    if config.lr_schedule == "constant":
+        return config.learning_rate
+    if config.lr_schedule == "two_stage":
+        return config.learning_rate * (1 if step < max(1, config.steps // 2) else config.lr_final_ratio)
+    progress = step / max(1, config.steps - 1)
+    return config.learning_rate * (config.lr_final_ratio +
+        (1 - config.lr_final_ratio) * (1 + math.cos(math.pi * progress)) / 2)
+
+
 def feature_attack(x, transcript, encoder, vocoder, surrogate,
                    config=AttackConfig(), spectral=SpectralConfig()):
     for module in (encoder, vocoder, surrogate):
@@ -56,6 +67,8 @@ def feature_attack(x, transcript, encoder, vocoder, surrogate,
     optimizer = optimizer_class([delta], lr=config.learning_rate)
     trace = []
     for step in range(config.steps):
+        if config.lr_schedule != "constant":
+            optimizer.param_groups[0]["lr"] = learning_rate_at_step(config, step)
         optimizer.zero_grad(set_to_none=True)
         z = q + delta
         audio = vocoder(z)  # frozen weights, live input gradients
@@ -72,7 +85,11 @@ def feature_attack(x, transcript, encoder, vocoder, surrogate,
             gradient = torch.zeros_like(delta)
         if not torch.isfinite(gradient).all():
             raise FloatingPointError(f"Nonfinite gradient at step {step}")
-        delta.grad = gradient
+        if config.optimizer == "l2_pgd":
+            # For L2 PGD, LR is a relative feature step: eta * ||q||.
+            delta.grad = gradient * ((q.norm() + config.eps) / (gradient.norm() + config.eps))
+        else:
+            delta.grad = gradient
         optimizer.step()
         project_relative_ball_(delta, q, config.rho, config.eps)
         radius = relative_radius(delta, q, config.eps).item()
@@ -81,6 +98,8 @@ def feature_attack(x, transcript, encoder, vocoder, surrogate,
         trace.append({"step": step + 1, "loss_before_update": loss.item(), "nll_before_update": nll.item(),
                       "tv_ratio": tv.item(), "hf_ratio": hf.item(), "gradient_norm": gradient.norm().item(),
                       "radius_after_update": radius})
+        if config.optimizer == "l2_pgd" or config.lr_schedule != "constant":
+            trace[-1]["learning_rate"] = optimizer.param_groups[0]["lr"]
     with torch.no_grad():
         final = vocoder(q + delta).detach()
     if x.is_cuda:

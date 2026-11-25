@@ -1,0 +1,13 @@
+{
+  "basis": "measured frozen single50 48-point loop; engineering speed ratio not pilot evidence",
+  "original_loop48_seconds": 941.1058583389968,
+  "retained_loop48_seconds_conditional": 871.0273747330496,
+  "paired_loops_seconds_conditional": 1812.1332330720463,
+  "teacher_1h_loop_hours": 2.614110779480904,
+  "teacher_10h_loop_hours": 26.141107794809038,
+  "new_1000_recordings_loop_hours": 5.446214457980306,
+  "training_hours": 0,
+  "ceiling_seconds": 2700,
+  "extra_budget_seconds": 480,
+  "excludes": "future student training, transfer, evaluation of large teacher corpus, data acquisition"
+}

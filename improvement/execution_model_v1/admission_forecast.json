@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-10-27T16:56:20.116998+00:00",
+  "measured_profile": "/workspace/improvement/execution_model_v1/profile.json",
+  "forecast_initial_experiment_seconds_with_margins": 19598.873027192174,
+  "remaining_overall_seconds": 39741.420740622096,
+  "training_admitted": true,
+  "no_performance_claim_from_engineering": true
+}

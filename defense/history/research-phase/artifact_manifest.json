@@ -1,0 +1,69 @@
+{
+  "root": "/workspace/defense",
+  "files": [
+    {
+      "path": "00_RESEARCH_BRIEF.md",
+      "bytes": 4774,
+      "sha256": "84b331d549e01402dba97d6e1ed4e15fc5990f0ceeadaeb7b289a7130e1978d5"
+    },
+    {
+      "path": "01_ORIGINAL_METHOD.md",
+      "bytes": 12346,
+      "sha256": "f8261199505412d16ca30758c8def1955263bc3af0dc42cf005065847c32b661"
+    },
+    {
+      "path": "02_REPOSITORY_AUDIT.md",
+      "bytes": 9848,
+      "sha256": "b8958635abe1db453948b8cd046a653f4b350bcb13246ae306d0e81c3b02c729"
+    },
+    {
+      "path": "03_LITERATURE_REVIEW.md",
+      "bytes": 32438,
+      "sha256": "3ecea9db375c6ac500641a46d5e89700b6427ee90b6fe65110e031b93939e636"
+    },
+    {
+      "path": "04_DEFENSE_DESIGNS.md",
+      "bytes": 13149,
+      "sha256": "ba699c2c72880f23a389d67510623cb015a03384758948d62bdf9ac3c7af5227"
+    },
+    {
+      "path": "05_EXPERIMENTAL_PROTOCOL.md",
+      "bytes": 15964,
+      "sha256": "12b296b8c7555069b624400b7a943fd7ffb0a995b5c545ae9c4bc4ea9e4bfadf"
+    },
+    {
+      "path": "06_PHASE_PLAN.md",
+      "bytes": 8824,
+      "sha256": "c9cae7cdda9e85c95d36347062bdae3adf82b43d3cee9c4e9d1aeb537f9b0288"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 7993,
+      "sha256": "3514b51bb5f373e30a42cfb4b3aabc8cf6f8e45fcef914713a2f0d87b7752bd0"
+    },
+    {
+      "path": "evidence/local_audit.json",
+      "bytes": 32087,
+      "sha256": "7cb997270de4cb917d9dc1db9612968a0131a02546b770271bed5e595293e6f0"
+    },
+    {
+      "path": "literature_sources.json",
+      "bytes": 14987,
+      "sha256": "d89aa0d3b060585cbce633f6f10e4adc586be74df640e0b60bf5fffb56d9d8f2"
+    },
+    {
+      "path": "tools/audit_local_evidence.py",
+      "bytes": 8174,
+      "sha256": "ffe9b064e356b1058e74808ecfcd27d8e1a65553efc4b05311b17874b44ede46"
+    },
+    {
+      "path": "tools/validate_research_package.py",
+      "bytes": 4433,
+      "sha256": "fadb9e8fe8dcf5e75e428fa14c39ce6d6dc41cadf378ac4bbe6e9b80649c49df"
+    }
+  ],
+  "excludes": [
+    "evidence/artifact_manifest.json",
+    "evidence/package_validation.json"
+  ]
+}

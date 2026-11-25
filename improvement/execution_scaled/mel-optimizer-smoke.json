@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "scope": "Additional CPU synthetic engineering check of already-frozen mel optimizer; no model performance estimate",
+  "endpoints": [
+    50,
+    200
+  ],
+  "final_delta_max": 0.6392540564357756,
+  "actual_source_backward_calls": 600
+}

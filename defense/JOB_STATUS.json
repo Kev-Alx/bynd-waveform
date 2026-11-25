@@ -1,0 +1,78 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-22T17:52:07.920144+08:00",
+  "supervisor_pid": 143787,
+  "phase": "adaptive",
+  "stages": [
+    {
+      "name": "clean-ft",
+      "status": "complete",
+      "started_at": "2026-10-22T17:53:23.047562+08:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/defense/run.py",
+        "train",
+        "--condition",
+        "clean_ft"
+      ],
+      "log": "/workspace/defense/runs/pilot-v1/jobs/clean-ft.log",
+      "pid": 143801,
+      "exit_code": 0,
+      "finished_at": "2026-10-22T17:55:38.264831+08:00"
+    },
+    {
+      "name": "reconstruction-ft",
+      "status": "complete",
+      "started_at": "2026-10-22T17:55:38.273104+08:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/defense/run.py",
+        "train",
+        "--condition",
+        "reconstruction_ft"
+      ],
+      "log": "/workspace/defense/runs/pilot-v1/jobs/reconstruction-ft.log",
+      "pid": 143951,
+      "exit_code": 0,
+      "finished_at": "2026-10-22T17:57:53.491165+08:00"
+    },
+    {
+      "name": "union-at",
+      "status": "complete",
+      "started_at": "2026-10-22T17:57:53.499588+08:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/defense/run.py",
+        "train",
+        "--condition",
+        "union_at"
+      ],
+      "log": "/workspace/defense/runs/pilot-v1/jobs/union-at.log",
+      "pid": 144074,
+      "exit_code": 0,
+      "finished_at": "2026-10-22T18:04:24.077576+08:00"
+    },
+    {
+      "name": "adaptive",
+      "status": "failed",
+      "started_at": "2026-10-22T18:04:24.086161+08:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/defense/run.py",
+        "adaptive"
+      ],
+      "log": "/workspace/defense/runs/pilot-v1/jobs/adaptive.log",
+      "pid": 144189,
+      "exit_code": 1,
+      "finished_at": "2026-10-22T18:39:58.661871+08:00"
+    }
+  ],
+  "maximum_seconds": 7200,
+  "notifications": false,
+  "updated_at": "2026-10-22T18:39:58.669146+08:00",
+  "elapsed_seconds": 2870.7489862442017
+}

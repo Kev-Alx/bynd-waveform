@@ -1,0 +1,15 @@
+{
+  "predicted_paired_cycle_seconds_including_extra_allowance": 2292.133233072046,
+  "actual_cycle_seconds": 2543.791012208909,
+  "forecast_error_percent": 10.97919507931817,
+  "evaluation_allowance_seconds": 300,
+  "actual_evaluation_seconds": 764.500093284063,
+  "evaluation_actual_over_allowance_ratio": 2.54833364428021,
+  "raw50_source_decode_mean_seconds": 4.297552943734142,
+  "raw50_source_decode_median_seconds": 3.318164963275194,
+  "all144_source_decode_mean_seconds": 4.230961262901676,
+  "ten_beam5_refreshes_added_seconds_per_recording_conditional": 42.97552943734142,
+  "five_beam5_refreshes_added_seconds_per_recording_conditional": 21.48776471867071,
+  "once_loop_mean_seconds": 16.773926311657608,
+  "limit": "Formal beam5 decoding time is measured on saved outputs. Different intermediate states or greedy feedback are unmeasured. Do not insert frequent full decoding and assume it is cheap."
+}

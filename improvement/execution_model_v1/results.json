@@ -1,0 +1,1580 @@
+{
+  "status": "failed_execution",
+  "stage_history": [
+    {
+      "name": "engineering-profile",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T16:55:59.042309+00:00",
+      "maximum_stage_seconds": 900,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "profile"
+      ],
+      "wrapper_pid": 201472,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T16:56:20.107291+00:00",
+      "wall_seconds": 21.060331292450428
+    },
+    {
+      "name": "preprocessing",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T16:56:20.119361+00:00",
+      "maximum_stage_seconds": 1800,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "cache"
+      ],
+      "wrapper_pid": 201519,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T17:08:32.055913+00:00",
+      "wall_seconds": 731.933418430388
+    },
+    {
+      "name": "warmup",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T17:08:32.061844+00:00",
+      "maximum_stage_seconds": 1260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "warmup"
+      ],
+      "wrapper_pid": 201638,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T17:16:45.984045+00:00",
+      "wall_seconds": 493.91872483771294
+    },
+    {
+      "name": "training-source",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T17:16:45.989804+00:00",
+      "maximum_stage_seconds": 7260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "source"
+      ],
+      "wrapper_pid": 201740,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T19:13:42.641581+00:00",
+      "wall_seconds": 7016.648330530152
+    },
+    {
+      "name": "training-quality",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T19:13:42.647712+00:00",
+      "maximum_stage_seconds": 7260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "quality"
+      ],
+      "wrapper_pid": 202516,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:13:18.500100+00:00",
+      "wall_seconds": 7175.849141367711
+    },
+    {
+      "name": "pilot-generation",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T21:13:18.505845+00:00",
+      "maximum_stage_seconds": 900,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_inference.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203306,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:14:21.805713+00:00",
+      "wall_seconds": 63.29626772925258
+    },
+    {
+      "name": "pilot-native-scoring",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T21:14:21.811538+00:00",
+      "maximum_stage_seconds": 7200,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/score.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203358,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:27:39.913327+00:00",
+      "wall_seconds": 798.0982829881832
+    },
+    {
+      "name": "pilot-selection",
+      "status": "failed_execution",
+      "started_at_utc": "2026-10-27T21:27:39.919520+00:00",
+      "maximum_stage_seconds": 180,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/decide.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203493,
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-27T21:27:42.931648+00:00",
+      "wall_seconds": 3.0075619108974934
+    },
+    {
+      "name": "reporting",
+      "status": "running",
+      "started_at_utc": "2026-10-27T21:27:42.942628+00:00",
+      "maximum_stage_seconds": 300,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/report.py"
+      ],
+      "wrapper_pid": 203498
+    }
+  ],
+  "maximum_script_seconds": 46800,
+  "queue_wait_seconds": 7007.501756714657,
+  "active_wall_seconds": 16303.895654574968,
+  "costs": {
+    "profile": {
+      "measured_profile_microbatch_mean_seconds": 0.3652279103278286,
+      "microbatches": 18,
+      "estimated_updates_per7200s_arm_with30pct_margin": 3791,
+      "proposed_arm_wall_seconds": 7200,
+      "common_warmup_updates": 300,
+      "forecast_warmup_seconds": 438.2734923933943,
+      "forecast_two_training_arms_seconds": 11076.632064422385,
+      "forecast_pilot_scoring_seconds": 3058.56,
+      "forecast_feature_preprocessing_seconds": 647.2905355544389,
+      "inference_engineering_probe": [
+        {
+          "id": "8238-274553-0056",
+          "audio_seconds": 2.0,
+          "encoding": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "policy_decoder": {
+            "wall_seconds": 0.02306710835546255,
+            "gpu_stream_elapsed_seconds": 0.02306233596801758
+          }
+        },
+        {
+          "id": "8014-112602-0022",
+          "audio_seconds": 14.115,
+          "encoding": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "policy_decoder": {
+            "wall_seconds": 0.1031072661280632,
+            "gpu_stream_elapsed_seconds": 0.10310243225097657
+          }
+        },
+        {
+          "id": "3699-47246-0007",
+          "audio_seconds": 18.2400625,
+          "encoding": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "policy_decoder": {
+            "wall_seconds": 0.12843729835003614,
+            "gpu_stream_elapsed_seconds": 0.12843344116210936
+          }
+        }
+      ],
+      "forecast_new1000_compute_seconds_excluding_io_loading": 195.46925214429697,
+      "new_audio_forecast_limits": "Three engineering points/unfinished model, excludes IO/loading; actual48 trained timing and WER/quality must be measured before speed claims",
+      "larger_data_forecasts": [
+        {
+          "audio_hours": 10,
+          "assumed_records": 2805.974220004393,
+          "one_full_training_pass_compute_hours": 0.28467225022387865,
+          "preprocessing_hours": 0.17973722000738157,
+          "basis": "Measured short/median/long training microbatch/encoding throughput; same duration distribution, batch1; training loading/optimizer overhead and convergence benefit are not established"
+        },
+        {
+          "audio_hours": 50,
+          "assumed_records": 14029.871100021966,
+          "one_full_training_pass_compute_hours": 1.4233612511193936,
+          "preprocessing_hours": 0.898686100036908,
+          "basis": "Measured short/median/long training microbatch/encoding throughput; same duration distribution, batch1; training loading/optimizer overhead and convergence benefit are not established"
+        },
+        {
+          "audio_hours": 100,
+          "assumed_records": 28059.742200043933,
+          "one_full_training_pass_compute_hours": 2.846722502238787,
+          "preprocessing_hours": 1.797372200073816,
+          "basis": "Measured short/median/long training microbatch/encoding throughput; same duration distribution, batch1; training loading/optimizer overhead and convergence benefit are not established"
+        }
+      ],
+      "teacher_optimized_target_generation_seconds": 0,
+      "training_records": 2807,
+      "training_audio_hours": 10.003655694444427,
+      "memory_peak_allocated_bytes": 6236098048,
+      "memory_peak_reserved_bytes": 6889144320,
+      "wall_seconds": 17.07777401432395,
+      "scope": "engineering correctness/memory/throughput only; no pilot performance claim",
+      "results": [
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": false,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 2.7723445892333984,
+            "source_sum_nll": 16.63406753540039,
+            "spectral": 0.14695829153060913,
+            "envelope": 0.0001275624381378293,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 238.32769623767308,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 238.32769623767308,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.7440359713509679,
+            "gpu_stream_elapsed_seconds": 0.7440171508789063
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 9.697184562683105
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 2.8255691528320312,
+            "source_sum_nll": 16.953414916992188,
+            "spectral": 0.2632790207862854,
+            "envelope": 0.0008490889449603856,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 234.18338255754554,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 234.18338255754554,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.24800224136561155,
+            "gpu_stream_elapsed_seconds": 0.24798629760742188
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 7.9809889793396
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 2.907332420349121,
+            "source_sum_nll": 17.443994522094727,
+            "spectral": 0.2761293053627014,
+            "envelope": 0.0005989448400214314,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000447034836,
+            "source_audio_gradient_norm": 247.4351766012708,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 247.4351766012708,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.2462823949754238,
+            "gpu_stream_elapsed_seconds": 0.2462709503173828
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 14.75932502746582
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 2.9393800099690757,
+            "source_sum_nll": 17.636280059814453,
+            "spectral": 0.295823335647583,
+            "envelope": 0.000709540443494916,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 222.5834206851546,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 222.5834206851546,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.24481881968677044,
+            "gpu_stream_elapsed_seconds": 0.244806884765625
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 5.379679203033447
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": true,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 2.991353670756022,
+            "source_sum_nll": 17.948122024536133,
+            "spectral": 0.3207949101924896,
+            "envelope": 0.001075538108125329,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 220.82210079030992,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 220.82210079030992,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.2461091009899974,
+            "gpu_stream_elapsed_seconds": 0.24609660339355469
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 10.143123626708984
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 3.1251869201660156,
+            "source_sum_nll": 18.751121520996094,
+            "spectral": 0.31366822123527527,
+            "envelope": 0.0010180503595620394,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000447034836,
+            "source_audio_gradient_norm": 185.0354070161865,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 185.0354070161865,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.24701568018645048,
+            "gpu_stream_elapsed_seconds": 0.24700396728515625
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 5.433830738067627
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 3.1532510121663413,
+            "source_sum_nll": 18.919506072998047,
+            "spectral": 0.32313451170921326,
+            "envelope": 0.0015058518620207906,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000447034836,
+            "source_audio_gradient_norm": 201.72157152420579,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 201.72157152420579,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.246836232021451,
+            "gpu_stream_elapsed_seconds": 0.24682298278808593
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 8.637725830078125
+        },
+        {
+          "id": "8238-274553-0056",
+          "duration": 2.0,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 3.160206158955892,
+            "source_sum_nll": 18.96123695373535,
+            "spectral": 0.34323936700820923,
+            "envelope": 0.004184873308986425,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 210.98423756308213,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 210.98423756308213,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.2469256967306137,
+            "gpu_stream_elapsed_seconds": 0.24691465759277345
+          },
+          "feature_encode": {
+            "wall_seconds": 0.23920722026377916,
+            "gpu_stream_elapsed_seconds": 0.23920460510253908
+          },
+          "parameter_preclip_norm": 7.673787593841553
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": false,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 0.5317557129678847,
+            "source_sum_nll": 42.00870132446289,
+            "spectral": 0.2836962938308716,
+            "envelope": 0.002549657365307212,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 21.495042587910106,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 21.495042587910106,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.39533889293670654,
+            "gpu_stream_elapsed_seconds": 0.39532675170898435
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.35273849964141846
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5311702293685719,
+            "source_sum_nll": 41.96244812011719,
+            "spectral": 0.2925914525985718,
+            "envelope": 0.0030281387735158205,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 20.85642690910337,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 20.85642690910337,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.39211928751319647,
+            "gpu_stream_elapsed_seconds": 0.39210794067382815
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.6240218877792358
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5316870484171035,
+            "source_sum_nll": 42.00327682495117,
+            "spectral": 0.2992173433303833,
+            "envelope": 0.003174928016960621,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 34.97056067837165,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 34.97056067837165,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.3908305671066046,
+            "gpu_stream_elapsed_seconds": 0.390820068359375
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.602545440196991
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5311876127991495,
+            "source_sum_nll": 41.96382141113281,
+            "spectral": 0.30401885509490967,
+            "envelope": 0.0029442303348332644,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 44.40575281429296,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 44.40575281429296,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.3959922594949603,
+            "gpu_stream_elapsed_seconds": 0.39597955322265627
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.6382606625556946
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": true,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 0.5342417849770075,
+            "source_sum_nll": 42.205101013183594,
+            "spectral": 0.3098255395889282,
+            "envelope": 0.0025870371609926224,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 39.009824078033226,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 39.009824078033226,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.3923722906038165,
+            "gpu_stream_elapsed_seconds": 0.3923621520996094
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.41769537329673767
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5359514453743077,
+            "source_sum_nll": 42.34016418457031,
+            "spectral": 0.3143661320209503,
+            "envelope": 0.0025908888783305883,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 41.82327474129664,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 41.82327474129664,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.3926483020186424,
+            "gpu_stream_elapsed_seconds": 0.39263726806640625
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.4617568850517273
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5378691274908525,
+            "source_sum_nll": 42.491661071777344,
+            "spectral": 0.31778743863105774,
+            "envelope": 0.0027141666505485773,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 34.34442508218293,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 34.34442508218293,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.3922423254698515,
+            "gpu_stream_elapsed_seconds": 0.3922313232421875
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.41913700103759766
+        },
+        {
+          "id": "8014-112602-0022",
+          "duration": 14.115,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5397160204151009,
+            "source_sum_nll": 42.63756561279297,
+            "spectral": 0.3203607201576233,
+            "envelope": 0.002837854903191328,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 44.34049077950092,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 44.34049077950092,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.39254807587713003,
+            "gpu_stream_elapsed_seconds": 0.39253619384765626
+          },
+          "feature_encode": {
+            "wall_seconds": 0.04173355735838413,
+            "gpu_stream_elapsed_seconds": 0.04172748947143555
+          },
+          "parameter_preclip_norm": 0.4176236391067505
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": false,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 0.5601106552850632,
+            "source_sum_nll": 58.81161880493164,
+            "spectral": 0.2865259647369385,
+            "envelope": 0.0015848531620576978,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 3.537520266388984,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.537520266388984,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.44627540465444326,
+            "gpu_stream_elapsed_seconds": 0.44626300048828127
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.2979062795639038
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5611188252766927,
+            "source_sum_nll": 58.917476654052734,
+            "spectral": 0.2913307547569275,
+            "envelope": 0.0016888121608644724,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 3.4995216756183525,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.4995216756183525,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.5097751757130027,
+            "gpu_stream_elapsed_seconds": 0.5097567443847656
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.6172666549682617
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5627613612583705,
+            "source_sum_nll": 59.089942932128906,
+            "spectral": 0.29765594005584717,
+            "envelope": 0.0017055294010788202,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000819563866,
+            "source_audio_gradient_norm": 3.5555154002445604,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.5555154002445604,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.4449805561453104,
+            "gpu_stream_elapsed_seconds": 0.444970458984375
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.3884679675102234
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": false,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5633678254627046,
+            "source_sum_nll": 59.153621673583984,
+            "spectral": 0.3043842911720276,
+            "envelope": 0.0018300507217645645,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000819563866,
+            "source_audio_gradient_norm": 3.4964208910463905,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.4964208910463905,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.44486874993890524,
+            "gpu_stream_elapsed_seconds": 0.4448589477539063
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.30337756872177124
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": true,
+          "warmup": true,
+          "microbatch": {
+            "token_mean_nll": 0.5634895324707031,
+            "source_sum_nll": 59.16640090942383,
+            "spectral": 0.3110489249229431,
+            "envelope": 0.002048984868451953,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 3.531017625789724,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.531017625789724,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.4454442076385021,
+            "gpu_stream_elapsed_seconds": 0.4454328002929687
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.3189353048801422
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5640155247279576,
+            "source_sum_nll": 59.22163009643555,
+            "spectral": 0.31729716062545776,
+            "envelope": 0.002154548652470112,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000819563866,
+            "source_audio_gradient_norm": 3.4795638966304767,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.4795638966304767,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.4461788544431329,
+            "gpu_stream_elapsed_seconds": 0.4461695251464844
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.2473902404308319
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5651143028622582,
+            "source_sum_nll": 59.33700180053711,
+            "spectral": 0.3229236602783203,
+            "envelope": 0.0021533186081796885,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.04999999701976776,
+            "source_audio_gradient_norm": 3.468795480469896,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.468795480469896,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.4456395339220762,
+            "gpu_stream_elapsed_seconds": 0.4456277770996094
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.2391548752784729
+        },
+        {
+          "id": "3699-47246-0007",
+          "duration": 18.2400625,
+          "quality": true,
+          "warmup": false,
+          "microbatch": {
+            "token_mean_nll": 0.5659779503231956,
+            "source_sum_nll": 59.42768478393555,
+            "spectral": 0.32752272486686707,
+            "envelope": 0.00213350891135633,
+            "quality_hinge": 0.0,
+            "quality_active": false,
+            "rho": 0.05,
+            "actual_relative_radius": 0.05000000074505806,
+            "source_audio_gradient_norm": 3.4583651087158955,
+            "quality_audio_gradient_norm": 0.0,
+            "combined_audio_gradient_norm": 3.4583651087158955,
+            "projection_fraction": 0.0,
+            "quality_correction_relative_norm": 0.0,
+            "cosine": null,
+            "source_backward_calls": 1,
+            "decoder_backward_calls": 1,
+            "decoder_forward_calls": 1,
+            "augmentation": "identity"
+          },
+          "timing": {
+            "wall_seconds": 0.44639763329178095,
+            "gpu_stream_elapsed_seconds": 0.44638858032226564
+          },
+          "feature_encode": {
+            "wall_seconds": 0.0508553059771657,
+            "gpu_stream_elapsed_seconds": 0.05084908676147461
+          },
+          "parameter_preclip_norm": 0.27058708667755127
+        }
+      ],
+      "status": "pass",
+      "source_metadata": {
+        "checkpoint": "/workspace/artifacts/whisper/small.pt",
+        "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+        "dimensions": {
+          "n_mels": 80,
+          "n_audio_ctx": 1500,
+          "n_audio_state": 768,
+          "n_audio_head": 12,
+          "n_audio_layer": 12,
+          "n_vocab": 51865,
+          "n_text_ctx": 448,
+          "n_text_state": 768,
+          "n_text_head": 12,
+          "n_text_layer": 12
+        },
+        "language": "en",
+        "nll_reduction": "sum",
+        "decoding": {
+          "beam_size": 5,
+          "temperature": 0.0
+        }
+      },
+      "encoder_metadata": {
+        "checkpoint_path": "/workspace/artifacts/checkpoints/WavLM-Large.pt",
+        "checkpoint_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+        "source_revision": "c616845c4e309e24d5927f15adbdf277a3d65358",
+        "layer": 6,
+        "normalize": false,
+        "vocoder_loaded": false,
+        "adapter": "same frozen inference path; bypass no_grad/GradMultiply only",
+        "content_execution": "strict_math",
+        "native_feature_grad_mult": 1.0,
+        "autograd_repair": "temporary positional-conv input clone in gradient-enabled calls; original forward operations retained"
+      },
+      "backend": {
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_allow_tf32": false,
+        "flash_sdp_enabled": false,
+        "efficient_sdp_enabled": false,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": false,
+        "whisper_use_sdpa": true,
+        "whisper_sdpa_available": true,
+        "float32_matmul_precision": "highest",
+        "cublas_workspace_config": ":4096:8",
+        "cpu_threads": 4,
+        "interop_threads": 16
+      }
+    },
+    "preprocessing": {
+      "status": "complete",
+      "count": 2807,
+      "training_hours": 10.003655694444427,
+      "wall_seconds": 728.94251357764,
+      "compute_wall_seconds": 350.1046616770327,
+      "gpu_stream_elapsed_seconds": 350.0796107902526,
+      "peak_allocated_bytes": 1998755840,
+      "peak_reserved_bytes": 4154458112,
+      "manifest_sha256": "63e422c14d09b66d088ad18aee1d355b857f576c3caf4cf69f72f41c784b217a",
+      "optimized_teacher_targets_generated": false,
+      "encoder_metadata": {
+        "checkpoint_path": "/workspace/artifacts/checkpoints/WavLM-Large.pt",
+        "checkpoint_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+        "source_revision": "c616845c4e309e24d5927f15adbdf277a3d65358",
+        "layer": 6,
+        "normalize": false,
+        "vocoder_loaded": false,
+        "adapter": "same frozen inference path; bypass no_grad/GradMultiply only",
+        "content_execution": "strict_math",
+        "native_feature_grad_mult": 1.0,
+        "autograd_repair": "temporary positional-conv input clone in gradient-enabled calls; original forward operations retained"
+      }
+    },
+    "train_warmup": {
+      "status": "complete",
+      "arm": "warmup",
+      "updates": 300,
+      "microbatches": 1200,
+      "wall_seconds": 489.33455714955926,
+      "data_loading_wall_seconds": 8.906908287666738,
+      "microbatch_gpu_stream_elapsed_seconds": 474.67167480468765,
+      "peak_allocated_bytes": 6256233472,
+      "peak_reserved_bytes": 7816085504,
+      "gradient_clip_fraction": 0.01,
+      "maximum_wall_seconds": 1200,
+      "stop_reason": "update_cap",
+      "model": {
+        "path": "/workspace/improvement/execution_model_v1/training/warmup/final.pt",
+        "sha256": "e5f3b88aa9011c43844e4bf2cba9722d6bc9ffc3fb0b0895ddb0dce67fcb9f3f"
+      },
+      "source_metadata": {
+        "checkpoint": "/workspace/artifacts/whisper/small.pt",
+        "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+        "dimensions": {
+          "n_mels": 80,
+          "n_audio_ctx": 1500,
+          "n_audio_state": 768,
+          "n_audio_head": 12,
+          "n_audio_layer": 12,
+          "n_vocab": 51865,
+          "n_text_ctx": 448,
+          "n_text_state": 768,
+          "n_text_head": 12,
+          "n_text_layer": 12
+        },
+        "language": "en",
+        "nll_reduction": "sum",
+        "decoding": {
+          "beam_size": 5,
+          "temperature": 0.0
+        }
+      },
+      "policy": {
+        "type": "amortized input-conditioned temporal feature policy",
+        "features": 1024,
+        "width": 384,
+        "blocks": 8,
+        "dilations": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          1
+        ],
+        "kernel": 5,
+        "global_context": true,
+        "bias_free_output": true,
+        "fixed_nonzero_relative_radii": [
+          0.025,
+          0.05,
+          0.1
+        ],
+        "parameters": 5070464,
+        "inference": "one frozen WavLM6 encoding, one policy forward, one HiFi-GAN decode; no ASR or per-input optimization"
+      },
+      "frozen_source_decoder_gradients_absent": true,
+      "teacher_optimized_data_cost_seconds": 0,
+      "formal_evaluation_cost_excluded": true,
+      "training_manifest_sha256": "63e422c14d09b66d088ad18aee1d355b857f576c3caf4cf69f72f41c784b217a"
+    },
+    "train_source": {
+      "status": "complete",
+      "arm": "source",
+      "updates": 3791,
+      "microbatches": 15164,
+      "wall_seconds": 7013.7841854747385,
+      "data_loading_wall_seconds": 122.30228922981769,
+      "microbatch_gpu_stream_elapsed_seconds": 6856.085888946552,
+      "peak_allocated_bytes": 6255337984,
+      "peak_reserved_bytes": 8575254528,
+      "gradient_clip_fraction": 0.0013189132155104195,
+      "maximum_wall_seconds": 7200,
+      "stop_reason": "update_cap",
+      "model": {
+        "path": "/workspace/improvement/execution_model_v1/training/source/final.pt",
+        "sha256": "298725cd03e457915770b50b1be5a38b99307785797a7c46a5c55dbe1d256c4e"
+      },
+      "source_metadata": {
+        "checkpoint": "/workspace/artifacts/whisper/small.pt",
+        "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+        "dimensions": {
+          "n_mels": 80,
+          "n_audio_ctx": 1500,
+          "n_audio_state": 768,
+          "n_audio_head": 12,
+          "n_audio_layer": 12,
+          "n_vocab": 51865,
+          "n_text_ctx": 448,
+          "n_text_state": 768,
+          "n_text_head": 12,
+          "n_text_layer": 12
+        },
+        "language": "en",
+        "nll_reduction": "sum",
+        "decoding": {
+          "beam_size": 5,
+          "temperature": 0.0
+        }
+      },
+      "policy": {
+        "type": "amortized input-conditioned temporal feature policy",
+        "features": 1024,
+        "width": 384,
+        "blocks": 8,
+        "dilations": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          1
+        ],
+        "kernel": 5,
+        "global_context": true,
+        "bias_free_output": true,
+        "fixed_nonzero_relative_radii": [
+          0.025,
+          0.05,
+          0.1
+        ],
+        "parameters": 5070464,
+        "inference": "one frozen WavLM6 encoding, one policy forward, one HiFi-GAN decode; no ASR or per-input optimization"
+      },
+      "frozen_source_decoder_gradients_absent": true,
+      "teacher_optimized_data_cost_seconds": 0,
+      "formal_evaluation_cost_excluded": true,
+      "training_manifest_sha256": "63e422c14d09b66d088ad18aee1d355b857f576c3caf4cf69f72f41c784b217a"
+    },
+    "train_quality": {
+      "status": "complete",
+      "arm": "quality",
+      "updates": 3680,
+      "microbatches": 14720,
+      "wall_seconds": 7172.688269264996,
+      "data_loading_wall_seconds": 121.47355145867914,
+      "microbatch_gpu_stream_elapsed_seconds": 7016.168076141386,
+      "peak_allocated_bytes": 6255337984,
+      "peak_reserved_bytes": 8575254528,
+      "gradient_clip_fraction": 0.00923913043478261,
+      "maximum_wall_seconds": 7200,
+      "stop_reason": "declared_training_wall_cap",
+      "model": {
+        "path": "/workspace/improvement/execution_model_v1/training/quality/final.pt",
+        "sha256": "ef9e91d8527c91bd60db1b7390ee4da60fcc900d16c30ab205197f39b0a5a1bf"
+      },
+      "source_metadata": {
+        "checkpoint": "/workspace/artifacts/whisper/small.pt",
+        "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+        "dimensions": {
+          "n_mels": 80,
+          "n_audio_ctx": 1500,
+          "n_audio_state": 768,
+          "n_audio_head": 12,
+          "n_audio_layer": 12,
+          "n_vocab": 51865,
+          "n_text_ctx": 448,
+          "n_text_state": 768,
+          "n_text_head": 12,
+          "n_text_layer": 12
+        },
+        "language": "en",
+        "nll_reduction": "sum",
+        "decoding": {
+          "beam_size": 5,
+          "temperature": 0.0
+        }
+      },
+      "policy": {
+        "type": "amortized input-conditioned temporal feature policy",
+        "features": 1024,
+        "width": 384,
+        "blocks": 8,
+        "dilations": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          1
+        ],
+        "kernel": 5,
+        "global_context": true,
+        "bias_free_output": true,
+        "fixed_nonzero_relative_radii": [
+          0.025,
+          0.05,
+          0.1
+        ],
+        "parameters": 5070464,
+        "inference": "one frozen WavLM6 encoding, one policy forward, one HiFi-GAN decode; no ASR or per-input optimization"
+      },
+      "frozen_source_decoder_gradients_absent": true,
+      "teacher_optimized_data_cost_seconds": 0,
+      "formal_evaluation_cost_excluded": true,
+      "training_manifest_sha256": "63e422c14d09b66d088ad18aee1d355b857f576c3caf4cf69f72f41c784b217a"
+    },
+    "pilot_generation": {
+      "status": "complete",
+      "cohort": "pilot",
+      "count": 48,
+      "wall_seconds": 58.97735152486712,
+      "model_loading_wall_seconds": 5.255742572247982,
+      "encoder_metadata": {
+        "checkpoint_path": "/workspace/artifacts/checkpoints/WavLM-Large.pt",
+        "checkpoint_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+        "source_revision": "c616845c4e309e24d5927f15adbdf277a3d65358",
+        "layer": 6,
+        "normalize": false,
+        "vocoder_loaded": false,
+        "adapter": "same frozen inference path; bypass no_grad/GradMultiply only",
+        "content_execution": "strict_math",
+        "native_feature_grad_mult": 1.0,
+        "autograd_repair": "temporary positional-conv input clone in gradient-enabled calls; original forward operations retained"
+      },
+      "policy_checkpoints": {
+        "initial": "/workspace/improvement/execution_model_v1/training/initial.pt",
+        "source": "/workspace/improvement/execution_model_v1/training/source/final.pt",
+        "quality": "/workspace/improvement/execution_model_v1/training/quality/final.pt"
+      },
+      "target_models_evaluated": [],
+      "inference_scope": "Input IO +fresh WavLM6 encoding +single policy/decoder +WAV output IO. Hash verification and shared diagnosis/reference/shuffle work are outside per-variant latency; no ASR queries except separately labelled validation control.",
+      "validation_control_source_calls": 0
+    },
+    "pilot_evaluation": {
+      "wall_seconds": 793.7329325918108,
+      "loading_wall_seconds": 4.483546316623688,
+      "asr_wall_seconds": 341.752270760946,
+      "quality_wall_seconds": 443.83203282393515,
+      "asr_gpu_stream_elapsed_seconds": 341.74497091674846,
+      "quality_gpu_stream_elapsed_seconds": 443.819374847412,
+      "peak_allocated_bytes": 1178872320,
+      "peak_reserved_bytes": 1600126976
+    }
+  },
+  "new_optimized_teacher_targets_seconds": 0,
+  "source_goal_and_quality_demonstrated": false,
+  "transfer_defense_preservation": "not_measured",
+  "human_intelligibility_established": false,
+  "runtime": [
+    {
+      "id": "initial_r050",
+      "variant": "initial_r050",
+      "count": 48,
+      "latencySeconds": 0.14242332108551636,
+      "p50Seconds": 0.11712439125403762,
+      "p95Seconds": 0.2900749552994966,
+      "secondsPerAudioSecond": 0.01898925196225947,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 4.325955734406438,
+      "dnsmos": 3.302505749177012,
+      "nisqa": 4.182726226747036,
+      "utmos": 4.017659584681193,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "source_r025",
+      "variant": "source_r025",
+      "count": 48,
+      "latencySeconds": 0.14778516707398617,
+      "p50Seconds": 0.11906102998182178,
+      "p95Seconds": 0.3425853526219725,
+      "secondsPerAudioSecond": 0.019704145026694812,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 3.9235412474849096,
+      "dnsmos": 3.2931964881915974,
+      "nisqa": 4.110562967757384,
+      "utmos": 3.8986365546782813,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "source_r050",
+      "variant": "source_r050",
+      "count": 48,
+      "latencySeconds": 0.1412926089251414,
+      "p50Seconds": 0.11476256884634495,
+      "p95Seconds": 0.2914770665578544,
+      "secondsPerAudioSecond": 0.018838494502410187,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 4.0241448692152915,
+      "dnsmos": 3.2665347344109694,
+      "nisqa": 4.038715749979019,
+      "utmos": 3.6630098869403205,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "source_r100",
+      "variant": "source_r100",
+      "count": 48,
+      "latencySeconds": 0.1405824480073837,
+      "p50Seconds": 0.1193183190189302,
+      "p95Seconds": 0.29181052683852604,
+      "secondsPerAudioSecond": 0.018743808993757057,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 8.35010060362173,
+      "dnsmos": 3.2005334543085113,
+      "nisqa": 3.891512860854467,
+      "utmos": 2.7783268516262374,
+      "qualityPass": false,
+      "jointPass": false
+    },
+    {
+      "id": "quality_r025",
+      "variant": "quality_r025",
+      "count": 48,
+      "latencySeconds": 0.13930222492975494,
+      "p50Seconds": 0.11610488127917051,
+      "p95Seconds": 0.2920297246426343,
+      "secondsPerAudioSecond": 0.01857311729520865,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 3.9235412474849096,
+      "dnsmos": 3.289003304013225,
+      "nisqa": 4.211652497450511,
+      "utmos": 4.007223213712375,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "quality_r050",
+      "variant": "quality_r050",
+      "count": 48,
+      "latencySeconds": 0.1394804926821962,
+      "p50Seconds": 0.11539645865559578,
+      "p95Seconds": 0.290594210056588,
+      "secondsPerAudioSecond": 0.01859688567276123,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 3.8229376257545273,
+      "dnsmos": 3.290773839217222,
+      "nisqa": 4.219768740236759,
+      "utmos": 3.9104405591885247,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "quality_r100",
+      "variant": "quality_r100",
+      "count": 48,
+      "latencySeconds": 0.1389598860987462,
+      "p50Seconds": 0.11446038400754333,
+      "p95Seconds": 0.28955382429994636,
+      "secondsPerAudioSecond": 0.018527473377703125,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 4.124748490945674,
+      "dnsmos": 3.2307892145506383,
+      "nisqa": 4.205107716222604,
+      "utmos": 3.6824930161237717,
+      "qualityPass": true,
+      "jointPass": false
+    },
+    {
+      "id": "quality_shuffled_r050",
+      "variant": "quality_shuffled_r050",
+      "count": 48,
+      "latencySeconds": 0.13983712844007337,
+      "p50Seconds": 0.11620464641600847,
+      "p95Seconds": 0.29272040547803035,
+      "secondsPerAudioSecond": 0.018644435794563367,
+      "peakAllocatedGiB": 2.113161087036133,
+      "peakReservedGiB": 3.095703125,
+      "sourceQueriesPerRecording": 0,
+      "perRecordingOptimizationUpdates": 0,
+      "wer": 4.0241448692152915,
+      "dnsmos": 3.289645268763369,
+      "nisqa": 4.215773470699787,
+      "utmos": 3.9657697627941766,
+      "qualityPass": true,
+      "jointPass": false
+    }
+  ],
+  "selection": {
+    "status": "unselected",
+    "candidate": null
+  },
+  "validation": null,
+  "transfer": null,
+  "forecast": {
+    "basis": "Measured fresh-encoding/policy/decoder/IO latency on48; same duration/hardware/precision, excluding one-time loading and checks",
+    "selected_or_display_variant": "quality_r050",
+    "new1000_inference_hours": 0.03874458130061006,
+    "new10000_inference_hours": 0.38744581300610054,
+    "selected_training_plus_preprocessing_hours": 2.330823705553388,
+    "all_research_training_plus_preprocessing_hours": 4.279097090407482,
+    "selected_training_break_even_recordings": 504.4331161558968,
+    "comparison": "Iterative strongFV50 latency16.7739s; it failed quality. Amortization does not establish retained WER/quality/transfer.",
+    "lifetime1000_selected_hours": 2.3695682868539976,
+    "lifetime10000_selected_hours": 2.718269518559488
+  },
+  "efficiency_and_source_quality_demonstrated": false
+}

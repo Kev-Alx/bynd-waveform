@@ -1,0 +1,1 @@
+{"verification_only": true, "issue": "read_jsonl requires unique utterance IDs, but source-score rows intentionally repeat each ID across three variants", "repair": "parse score rows and verify unique (ID, variant) pairs and complete cohort", "experiment_data_changed": false}

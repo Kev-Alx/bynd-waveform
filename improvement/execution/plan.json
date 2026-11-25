@@ -1,0 +1,310 @@
+{
+  "created_at_utc": "2026-10-21T12:32:45.986889+00:00",
+  "status": "registered_development_phase",
+  "authorization": "User said Continue after steps 1–4; isolated implementation and bounded first-stage experiments.",
+  "scope": "G0/G1 development only. No confirmation48, final200 inference, held-out target models, human recruitment, notifications or external messages.",
+  "maximum_initial_gpu_hours": 6,
+  "r3_initial_training_seconds": 3600,
+  "development_manifest": "/workspace/improvement/execution/development-24.jsonl",
+  "calibration_manifest": "/workspace/improvement/execution/calibration-3.jsonl",
+  "calibration_strata": {
+    "6345-93302-0028": "short",
+    "8842-302196-0004": "median",
+    "2035-152373-0013": "long"
+  },
+  "final_reserve": "/workspace/improvement/execution/data/final-reserve-200.jsonl",
+  "final_reserve_sha256": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b",
+  "base_config": {
+    "seed": 2026,
+    "method": "feature",
+    "save_delta": true,
+    "features": {
+      "artifact_root": "artifacts",
+      "layer": 6,
+      "normalize": false,
+      "vocoder_variant": "regular"
+    },
+    "surrogate": {
+      "checkpoint": "artifacts/whisper/small.pt",
+      "language": "en",
+      "nll_reduction": "sum",
+      "decoding": {
+        "beam_size": 5,
+        "temperature": 0.0
+      }
+    },
+    "attack": {
+      "steps": 50,
+      "rho": 0.1,
+      "lambda_perc": 1.0,
+      "alpha_hf": 1.0,
+      "eps": 1e-08,
+      "optimizer": "adam",
+      "learning_rate": 0.1,
+      "initialization": "zero",
+      "init_fraction": 0.01,
+      "attack": true,
+      "temporal": true,
+      "high_frequency": true
+    },
+    "spectral": {
+      "sample_rate": 16000,
+      "cutoff_hz": 6000.0,
+      "n_fft": 1024,
+      "hop_length": 256,
+      "win_length": 1024,
+      "center": true
+    }
+  },
+  "cache_audit": "/workspace/reproduction-runs/feature-delta-diagnostics/parent-audits/pilot.json",
+  "feature_artifacts": {
+    "source_revision": "c616845c4e309e24d5927f15adbdf277a3d65358",
+    "encoder_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+    "vocoder_sha256": "f98b760e0e5fd0019cffd3a9d22bab5c4c2fe38491532d7680a8ad07eaf3e8dd",
+    "vocoder_variant": "regular",
+    "layer": 6,
+    "normalize": false,
+    "encoder_config": {
+      "extractor_mode": "layer_norm",
+      "encoder_layers": 24,
+      "encoder_embed_dim": 1024,
+      "encoder_ffn_embed_dim": 4096,
+      "encoder_attention_heads": 16,
+      "activation_fn": "gelu",
+      "dropout": 0.0,
+      "attention_dropout": 0.0,
+      "activation_dropout": 0.0,
+      "encoder_layerdrop": 0.0,
+      "dropout_input": 0.0,
+      "dropout_features": 0.0,
+      "layer_norm_first": true,
+      "conv_feature_layers": "[(512,10,5)] + [(512,3,2)] * 4 + [(512,2,2)] * 2",
+      "conv_bias": false,
+      "feature_grad_mult": 1.0,
+      "mask_length": 10,
+      "mask_prob": 0.8,
+      "mask_selection": "static",
+      "mask_other": 0.0,
+      "no_mask_overlap": false,
+      "mask_min_space": 1,
+      "mask_channel_length": 10,
+      "mask_channel_prob": 0.0,
+      "mask_channel_selection": "static",
+      "mask_channel_other": 0.0,
+      "no_mask_channel_overlap": false,
+      "mask_channel_min_space": 1,
+      "conv_pos": 128,
+      "conv_pos_groups": 16,
+      "relative_position_embedding": true,
+      "num_buckets": 320,
+      "max_distance": 800,
+      "gru_rel_pos": true,
+      "normalize": true
+    },
+    "vocoder_config": {
+      "resblock": "1",
+      "num_gpus": 0,
+      "batch_size": 16,
+      "learning_rate": 0.0002,
+      "adam_b1": 0.8,
+      "adam_b2": 0.99,
+      "lr_decay": 0.999,
+      "seed": 1234,
+      "upsample_rates": [
+        10,
+        8,
+        2,
+        2
+      ],
+      "upsample_kernel_sizes": [
+        20,
+        16,
+        4,
+        4
+      ],
+      "upsample_initial_channel": 512,
+      "resblock_kernel_sizes": [
+        3,
+        7,
+        11
+      ],
+      "resblock_dilation_sizes": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "hubert_dim": 1024,
+      "hifi_dim": 512,
+      "segment_size": 7040,
+      "num_mels": 80,
+      "num_freq": 1025,
+      "n_fft": 1024,
+      "hop_size": 320,
+      "win_size": 1024,
+      "sampling_rate": 16000,
+      "fmin": 0,
+      "fmax": 8000,
+      "fmax_for_loss": null,
+      "num_workers": 4,
+      "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "tcp://localhost:54321",
+        "world_size": 1
+      }
+    },
+    "output_samples": "320 * feature_frames (native, no duration warping)",
+    "status": "compatible upstream independent choice; author checkpoint unspecified"
+  },
+  "quality": {
+    "cache": "/workspace/artifacts/quality-research-scorers",
+    "hashes": {
+      "/workspace/artifacts/quality-research-scorers/DNSMOS/DNSMOS/sig_bak_ovr.onnx": "269fbebdb513aa23cddfbb593542ecc540284a91849ac50516870e1ac78f6edd",
+      "/workspace/artifacts/quality-research-scorers/DNSMOS/DNSMOS/model_v8.onnx": "9246480c58567bc6affd4200938e77eef49468c8bc7ed3776d109c07456f6e91",
+      "/workspace/artifacts/quality-research-scorers/NISQA/nisqa.tar": "7ec4cf937514dd3f8860b21e66fabd8ca87a168572675ef8d979c4c4ad2e805c",
+      "/workspace/artifacts/torchhub/checkpoints/utmos22_strong_step7459_v1.pt": "38aa51ab79e2a4e09a1449758a4b37e9cbb2e8235a49662a732d33a9ba1e9bff"
+    },
+    "download_sources": {
+      "DNSMOS/DNSMOS/sig_bak_ovr.onnx": {
+        "url": "https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/DNSMOS/DNSMOS/sig_bak_ovr.onnx",
+        "sha256": "269fbebdb513aa23cddfbb593542ecc540284a91849ac50516870e1ac78f6edd"
+      },
+      "DNSMOS/DNSMOS/model_v8.onnx": {
+        "url": "https://raw.githubusercontent.com/microsoft/DNS-Challenge/master/DNSMOS/DNSMOS/model_v8.onnx",
+        "sha256": "9246480c58567bc6affd4200938e77eef49468c8bc7ed3776d109c07456f6e91"
+      },
+      "NISQA/nisqa.tar": {
+        "url": "https://raw.githubusercontent.com/gabrielmittag/NISQA/master/weights/nisqa.tar",
+        "sha256": "7ec4cf937514dd3f8860b21e66fabd8ca87a168572675ef8d979c4c4ad2e805c"
+      }
+    },
+    "runtime": {
+      "packages": {
+        "torch": "2.4.1+cu121",
+        "torchaudio": "2.4.1+cu121",
+        "numpy": "1.26.4",
+        "openai-whisper": "20240930",
+        "transformers": "4.46.3",
+        "torchmetrics": "1.6.1",
+        "jiwer": "3.0.5",
+        "librosa": "0.10.2.post1",
+        "onnxruntime": "1.20.1",
+        "resampy": "0.4.3",
+        "scipy": "1.14.1",
+        "soundfile": "0.12.1"
+      },
+      "cuda": "12.1",
+      "gpu": "NVIDIA TITAN RTX"
+    },
+    "dnsmos": {
+      "channel": "OVRL",
+      "personalized": false,
+      "short_audio": "native repeat to 9.01 seconds",
+      "window_hop_seconds": 1
+    },
+    "nisqa": {
+      "channel": "MOS",
+      "segmentation": "native checkpoint parameters"
+    },
+    "utmos": {
+      "variant": "utmos22_strong",
+      "channel": "native calibrated mean"
+    },
+    "input": "saved mono float32 16 kHz WAV; no amplitude normalization/clipping or defense",
+    "aggregation": "arithmetic utterance mean"
+  },
+  "baseline_run": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1",
+  "execution": {
+    "mode": "strict_math",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "explicit_reflection": true
+  },
+  "frozen_files": {
+    "/workspace/reproduction-runs/feature-delta-diagnostics/parent-audits/pilot.json": "1701decefc9fc9c9520bab45fc5961fa3c75ec570f19346395eb1e88785b027b",
+    "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/run.json": "a561f121bf34ce1c406eff8ade1d7bdf5306b42136a848d486c044c119c62323",
+    "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/generated.jsonl": "2ca50325fcf69cf67f250eb17720c5a1dcc30c56ba6aa0226171b5dccbcc8dfd",
+    "/workspace/improvement/execution/development-24.jsonl": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+    "/workspace/improvement/execution/calibration-3.jsonl": "8cf1fb9a5c824993842b3621289ba8083c9fa37b762ea2115109046f7b83a22d",
+    "/workspace/improvement/execution/data/final-reserve-200.jsonl": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b",
+    "/workspace/improvement/04_experimental_plan.md": "b052ba2fd86a511d8c8684311535369904550d45f9ffbb2291c341fd62378e08",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d",
+    "/workspace/beyondwaveform/__init__.py": "d9afadfdee47a8824b303793eabb9d2ecb0c8125487c6154e6320c05aeed700d",
+    "/workspace/beyondwaveform/io.py": "6fe8936c2c66e47c909f2224f1508f38a32fe448a30545dee86084799b215a45",
+    "/workspace/beyondwaveform/config.py": "247b131f92472123c86acb789b218315fac38b86771861b73d16003e5cd728b9",
+    "/workspace/beyondwaveform/losses.py": "065535e8797f4fa61f05a7fbd7b4e570f5fbd2cff25aed952bdeb3401481b534",
+    "/workspace/beyondwaveform/attacks.py": "bca14da423ba3b3bad603fe6b844385f965ff1db0d059a0e08c9e70ed927d7c7",
+    "/workspace/beyondwaveform/assets.py": "17d68c98352c5daee6d2a1fc2eada355cefe28c8341acf8f543bd395ae02a14f",
+    "/workspace/beyondwaveform/data.py": "eacb38acd9cb7e8429c0ffc7272bdb9a9766ce86616f952d1f8a63b76fa0fca3",
+    "/workspace/beyondwaveform/evaluation.py": "47ffe359ae65d8c1539aac6d5cf2d09999ba7b55413432101134011808ea5655",
+    "/workspace/beyondwaveform/pipeline.py": "08e96f4f59d5acc41e82ece347709e5248088110750266d1c3bd7d02fc8e342a",
+    "/workspace/beyondwaveform/selection.py": "c12f4a5bde8a6116b0f7b5088760e273630dd4f1da9f8fed7e2fbbce6f57945b",
+    "/workspace/beyondwaveform/training.py": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0",
+    "/workspace/beyondwaveform/experiments.py": "c6c3d98f9c983e0affcb7bffc26c9f955e97b279fecf55c6bdcfb8d2ccc1b127",
+    "/workspace/beyondwaveform/cli.py": "56d75a7a86f3a11ad1a68d9bb930f5a2e104752c0fc8632990c17b9a5df6610a",
+    "/workspace/beyondwaveform/references.py": "13b90498faa84d450bcd9681e05d4102c5e60f2b210d83d218384d118d747e90",
+    "/workspace/beyondwaveform/defenses.py": "ccf6255ef56f61d86879fc973bdd5c7a2bcc337efb9124fd5dc57f33682c07b7",
+    "/workspace/beyondwaveform/feature_transforms.py": "b8dd26ee9832f8b59ffc1835ade14cc2045d7315060d13364d0a3ee3b0b11101",
+    "/workspace/beyondwaveform/trajectory_diagnostics.py": "0c471bfcd8ca9be2e708f38288475e701b4cd732531e80f92d54ab56ae1ab03d",
+    "/workspace/beyondwaveform/adam_diagnostics.py": "acc8a39e6525ad13fb3b2ca168500346fe4f41184f3d4d86276eb8ff7dcc6f6d",
+    "/workspace/beyondwaveform/deterministic_frontend.py": "2eaf167deb7aa54b9afee16a5051f227306a86a565e4f75cdbeaa564808eeb5e",
+    "/workspace/beyondwaveform/hf_pooling_diagnostics.py": "d06de9b9ac0a831eb3c5d6cf46fb28ae1d2c961f30996d5707772ec0b3d670ad",
+    "/workspace/beyondwaveform/coordinate_diagnostics.py": "959871f69a96b49761167c5d0d0027fe20c813ff70a128422b24c1f956ddd4ff",
+    "/workspace/beyondwaveform/models/__init__.py": "2ebcaa5b267d2f98d09e6132079d6862b61362d94d30a1113dd2b6f211a640d0",
+    "/workspace/beyondwaveform/models/feature.py": "5c68f45cf897f232effbae19472403eca2f9fd20aea785f80a4659842b628a61",
+    "/workspace/beyondwaveform/models/whisper.py": "731d774eebc282c6533f80c0332f90262744339aabee50da00cb9a0d16cafb55",
+    "/workspace/beyondwaveform/models/targets.py": "de8333c2d67c39e38d456c6ed7fcaf2c11be789580cab371e9c664a019c7337f",
+    "/workspace/artifacts/whisper/small.pt": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794"
+  },
+  "runtime": {
+    "packages": {
+      "torch": "2.4.1+cu121",
+      "torchaudio": "2.4.1+cu121",
+      "numpy": "1.26.4",
+      "openai-whisper": "20240930",
+      "transformers": "4.46.3",
+      "torchmetrics": "1.6.1",
+      "jiwer": "3.0.5"
+    },
+    "cuda": "12.1",
+    "gpu": "NVIDIA TITAN RTX"
+  },
+  "r1": {
+    "k": 4,
+    "refresh_every": 5,
+    "tau": 1,
+    "include_eos": true,
+    "learning_rate": 0.1,
+    "steps": 50,
+    "fallback": "None in canonical calibration; a degenerate result stops this condition."
+  },
+  "r2": {
+    "learning_rate": 0.1,
+    "steps": 50,
+    "rho": 0.1,
+    "cosine_floor": 0.95,
+    "initialization": "a=0, uniform logits",
+    "gradient_bootstrap": false
+  },
+  "r3": {
+    "seed": 11,
+    "linf": 0.003,
+    "rms_limit": 0.003,
+    "training_hours_data": 1,
+    "maximum_training_seconds": 3600,
+    "maximum_updates": 12000,
+    "accumulation": 4
+  },
+  "no_target_model_selection": true,
+  "discord_enabled": false
+}

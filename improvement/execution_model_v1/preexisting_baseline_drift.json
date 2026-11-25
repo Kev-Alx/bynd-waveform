@@ -1,0 +1,13 @@
+{
+  "baseline_plan": "/workspace/improvement/execution/plan.json",
+  "changed_files": [
+    {
+      "path": "/workspace/beyondwaveform/training.py",
+      "registered_sha256": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0",
+      "current_sha256": "f26a405c92cdfd58ed135be5f4619e423b7abe68d6f58b40c61d51311efdeb5c",
+      "mtime_unix": 1793015706.0951056
+    }
+  ],
+  "action": "Investigate and bind explicitly without changing original frozen registration or current shared code.",
+  "decision": "Only beyondwaveform/training.py differed before this experiment. Its optional epoch-checkpoint finetune changes are unrelated to the new direct feature-policy trainer; this experiment never calls that finetune function. Preserve both original registration and current shared workspace. Bind and copy the pre-existing current file explicitly; any additional drift aborts."
+}

@@ -1,0 +1,82 @@
+{
+  "created_at_utc": "2026-10-22T14:20:05.473352+00:00",
+  "cohorts": {
+    "pilot": {
+      "count": 48,
+      "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a"
+    },
+    "validation": {
+      "count": 76,
+      "manifest": "/workspace/improvement/execution_refine/validation-76.jsonl",
+      "sha256": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a"
+    }
+  },
+  "variants": [
+    "clean",
+    "fv50",
+    "global_full50",
+    "global_nll50",
+    "envelope_nll50",
+    "envelope_full50",
+    "attenuated_global_nll50"
+  ],
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "maximum_cycle_wall_seconds": 7200,
+  "candidate": "envelope_nll50",
+  "control": "fv50",
+  "algorithm": {
+    "epsilon": 0.003,
+    "frame_samples": 400,
+    "hop_samples": 160,
+    "local_snr_db": 30,
+    "tail": "Additional end-aligned frame unless already present",
+    "bound": "minimum cap of every covering frame",
+    "updates": 50,
+    "initialization": "zero",
+    "step": "2*pointwise_bound/50",
+    "selection": "final iterate",
+    "full_objective_ablation_weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    }
+  },
+  "validation_gate": "Failure-free primary candidate passes all quality floors and primary G1 vsFV50 OR exploratory quality/frontier rule: WER>=global_full50-2pp, NISQA>=global_full50+.10, UTMOS>=global_full50-.05, WER>=attenuated_global_nll50+3pp. Fixed single candidate; no validation reselection.",
+  "scientific_limits": "Engineering feasible-set/coordinate-step intervention, not auditory masking or novelty. Historical-exposure source validation; no human or held-out inference.",
+  "bindings": {
+    "/workspace/improvement/envelope_pgd.py": "711b71f4a6821bfe0c73619f8424759ec6ffd1d20a55bf4ae39d7eed9299f425",
+    "/workspace/improvement/envelope_experiment.py": "3eb714d73b7113e8ab7333e90ce1c1df3972592965f7480b6e2ba9ccc3ab4d0b",
+    "/workspace/improvement/source_evaluate_envelope.py": "0a3ef269008ccd532755eee7cc2e27246dbe7cd38c6dc44344ad33b56f3e024e",
+    "/workspace/improvement/source_evaluate_refine.py": "10ae56bb0bb273321f89172881aaceee3a016863c5f67dc40249a9cc7926f369",
+    "/workspace/improvement/supervise_envelope.py": "4d8d0b8a188769ab4ac0bdbba242d19a0cd2c174a1dcc064422ab0228ebfd506",
+    "/workspace/improvement/postprocess_envelope.py": "08467b68f25d63a725e536fd1df1c1487213fec3d61d15fd27b61c331c4a9af7",
+    "/workspace/improvement/test_envelope_pgd.py": "722eab9464eae22905bc87e7673d1b2cea8c44a02f1ddf479e2ff5121d9b5b19",
+    "/workspace/improvement/12_envelope_protocol.md": "fd3d45fa2f8e87e391e4876d4fdcd227deae9e8d441dc3dc8a05761062ec31e5",
+    "/workspace/improvement/waveform_pgd.py": "76862ea275e36fd99741f8841aa24cf506b4b2cfa15f6cd52777cc157b1e7daf",
+    "/workspace/improvement/r3_waveform.py": "41f710cebb79a543912f356a051ee1aacbdf8ebe00631f34364a8ba52dc87289",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d",
+    "/workspace/improvement/r3_real_runner_v2.py": "fa4dff2b2a08ee455ea8bbe66d65433c81461d5b6bfee6c29135ed557491780d",
+    "/workspace/improvement/r3_encoder_repair.py": "ae7ef8830fd6dc8cc4457d34c0aae56a8a6be16f8d7cebfee6de52d705a74d7d",
+    "/workspace/improvement/supervise_pilot48.py": "afe00460e1103da4cc3072eabc267efaac476665e278f9e70629c342059d25d5",
+    "/workspace/improvement/execution48/audit_pilot48.py": "d0671b270bf849c6f5b33ce30ba420b7087bf583dabfd6b84f2d8dd1ba6f5265",
+    "/workspace/improvement/execution_refine/audit_refinement.py": "261c8b6329e089c9a5e04dda1be75afa71dadbcb398470ff2062610ab3d15041",
+    "/workspace/improvement/execution48/mechanism-pilot48/generated.jsonl": "0e9a35d5de2adcb1b070cad8fd4bb6a808f9b17d2315052e6468ab710c3c822b",
+    "/workspace/improvement/execution48/mechanism-pilot48/source-summary.json": "c7ead5892c8a40d25973482861f0027e478bd2b015e79a370a7a6cbfc1538fad",
+    "/workspace/improvement/execution_refine/pilot/generated.jsonl": "31f289fc4b66c93ac9a50cd164ed985bb515e73c35809704775ad41e006f34f3",
+    "/workspace/improvement/execution_refine/pilot/source-summary.json": "3db90455b885582f4ea8d5c0546d31587e2abbe5c0e1facf408e979d55b08c17",
+    "/workspace/improvement/execution_refine/selection.json": "508119f57ab9811302c2c6625a66ed411b352972004514d8524994a1b1a54efd",
+    "/workspace/improvement/execution_refine/validation-76.receipt.json": "ca16e1dbe29358a29dc7431bcb20f89996cf17d3ced1e3853bd957c8753793f2",
+    "/workspace/improvement/execution_refine/create_validation76.py": "ccc7edbcd445baaac69cc802fafefcb223cac0d8cc7a28fc1062b477a0797b15",
+    "/workspace/improvement/execution_envelope/prior-work.md": "e29b67b9a17e8314b80e440c221727c614086d665c144525770ed9666b61acc1",
+    "/workspace/improvement/execution_envelope/audit_envelope.py": "27619002eca9a175c96fa229d43c1c849cead81b6273ce8c9f7855368c4bd3df",
+    "/workspace/improvement/execution_envelope/tests.log": "2531fb921b5a0277b8897f5d420d741d1ecc0162b97c575b04a593153fac4f73",
+    "/workspace/improvement/execution_envelope/test_audit_envelope.py": "2a051f8254aa6ecf0658d7a2904b85270517c2e230c4ebf1f2b7e8afffa9afd3",
+    "/workspace/improvement/execution_envelope/audit-tests.log": "4437626702f65f5fcd5a76809629a3581b0274e7b0391cafbeb4d55c654e5e1f",
+    "/workspace/improvement/execution_envelope/compute-ledger.json": "c0d6cda9aace124a4d12f35b2149a8fca863ea59e828a167b4823b68ff3f28ea",
+    "/workspace/improvement/execution48/development-48.jsonl": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+    "/workspace/improvement/execution_refine/validation-76.jsonl": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a",
+    "/workspace/scripts/run_logged.py": "9b85ac3d44f420bb26fb10225d07a55f9a04357781d6a068f3c711f8b4ef5669"
+  }
+}

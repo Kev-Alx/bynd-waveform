@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-10-26T09:16:08.893254+00:00",
+  "count": 48,
+  "audio_seconds": 360.01,
+  "source_only": true,
+  "target_models_evaluated": [],
+  "training": false,
+  "maximum_wall_seconds": 2700,
+  "anchor_fraction": 0.25,
+  "efficiency_target": "10% aggregate matched wall reduction, exact output parity, <20GiB allocated",
+  "fixed_gate": {
+    "wer_strict_gt": 75,
+    "dnsmos_min": 3,
+    "nisqa_min": 3.75,
+    "utmos_min": 3.5
+  },
+  "bindings": {
+    "/workspace/improvement/execution_tradeoff/method.py": "380e7e8b13fbb3c23da2021c24428fc23833a41b2ea5e29a613294746afd4d21",
+    "/workspace/improvement/execution_tradeoff/pilot.py": "5ac1127797f9d67c7b8f648e740a6df263ced662b3425f8a605a9d4cba7b43b1",
+    "/workspace/improvement/execution_tradeoff/score.py": "eb9ce5378b5aff9d32f1760cf5177c6aafbe184270257f1ca29296bfdb43835b",
+    "/workspace/improvement/execution_tradeoff/supervise.py": "6d2d6471ec04cb8dbbfc5da760c2bf2c48ec55e4163278ece565089d79916789",
+    "/workspace/improvement/execution_tradeoff/engineering.json": "5af39e6eceb2633f763d9d1bdfb7ef6e3536d2b01326270eb4008a4916cbeb63",
+    "/workspace/improvement/execution_tradeoff/saved_diagnosis.json": "070ca54237c4e5af6973de9115ddd0515e0f8e7209d7a5fdd126b74db399feba",
+    "/workspace/improvement/20_quality_efficiency_protocol.md": "1c3f4b10065d663e8978b3ec02558c6a6bd28a650bbddd19fdc629c75d9f4f1e",
+    "/workspace/improvement/execution48/development-48.jsonl": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+    "/workspace/improvement/execution_scaled/fvpilot/generated.jsonl": "23ea8f1b6c30360345f0f8e25bf3ea2efea7f0c6ce7abef7a12b7336e79c747c",
+    "/workspace/improvement/execution_scaled/fvpilot/source-summary.json": "618e52fb5dec6bb657994ae741e3723155d3fe9f6acc7b1660666ab3af2c9d26",
+    "/workspace/improvement/execution/plan.json": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+    "/workspace/improvement/scaled_components.py": "d03948f74880cf7cb31637f724928559db3d67b9a23d8f63c211e4478f516c00",
+    "/workspace/improvement/source_evaluate_refine.py": "10ae56bb0bb273321f89172881aaceee3a016863c5f67dc40249a9cc7926f369",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d"
+  }
+}

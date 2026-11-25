@@ -1,0 +1,170 @@
+{
+  "status": "failed_execution",
+  "pid": 200627,
+  "started_at_utc": "2026-10-27T14:59:11.537768+00:00",
+  "deadline_at_utc": "2026-10-28T03:59:11.537782+00:00",
+  "maximum_overall_seconds": 46800,
+  "queue_counts_against_ceiling": true,
+  "heartbeat_seconds": 30,
+  "stages": [
+    {
+      "name": "engineering-profile",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T16:55:59.042309+00:00",
+      "maximum_stage_seconds": 900,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "profile"
+      ],
+      "wrapper_pid": 201472,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T16:56:20.107291+00:00",
+      "wall_seconds": 21.060331292450428
+    },
+    {
+      "name": "preprocessing",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T16:56:20.119361+00:00",
+      "maximum_stage_seconds": 1800,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "cache"
+      ],
+      "wrapper_pid": 201519,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T17:08:32.055913+00:00",
+      "wall_seconds": 731.933418430388
+    },
+    {
+      "name": "warmup",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T17:08:32.061844+00:00",
+      "maximum_stage_seconds": 1260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "warmup"
+      ],
+      "wrapper_pid": 201638,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T17:16:45.984045+00:00",
+      "wall_seconds": 493.91872483771294
+    },
+    {
+      "name": "training-source",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T17:16:45.989804+00:00",
+      "maximum_stage_seconds": 7260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "source"
+      ],
+      "wrapper_pid": 201740,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T19:13:42.641581+00:00",
+      "wall_seconds": 7016.648330530152
+    },
+    {
+      "name": "training-quality",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T19:13:42.647712+00:00",
+      "maximum_stage_seconds": 7260,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_runtime.py",
+        "train",
+        "--arm",
+        "quality"
+      ],
+      "wrapper_pid": 202516,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:13:18.500100+00:00",
+      "wall_seconds": 7175.849141367711
+    },
+    {
+      "name": "pilot-generation",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T21:13:18.505845+00:00",
+      "maximum_stage_seconds": 900,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/feature_inference.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203306,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:14:21.805713+00:00",
+      "wall_seconds": 63.29626772925258
+    },
+    {
+      "name": "pilot-native-scoring",
+      "status": "complete",
+      "started_at_utc": "2026-10-27T21:14:21.811538+00:00",
+      "maximum_stage_seconds": 7200,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/score.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203358,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-27T21:27:39.913327+00:00",
+      "wall_seconds": 798.0982829881832
+    },
+    {
+      "name": "pilot-selection",
+      "status": "failed_execution",
+      "started_at_utc": "2026-10-27T21:27:39.919520+00:00",
+      "maximum_stage_seconds": 180,
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_model_v1/decide.py",
+        "pilot"
+      ],
+      "wrapper_pid": 203493,
+      "exit_code": 1,
+      "finished_at_utc": "2026-10-27T21:27:42.931648+00:00",
+      "wall_seconds": 3.0075619108974934
+    }
+  ],
+  "queue_wait_seconds": 7007.501756714657,
+  "active_wall_seconds": 16303.895654574968,
+  "updated_at_utc": "2026-10-27T21:27:42.931692+00:00",
+  "overall_wall_seconds": 23311.39742567856,
+  "gpu": {
+    "updated_at_utc": "2026-10-27T21:27:33.885822+00:00",
+    "elapsed_seconds": 23302.322823939845,
+    "owned_gpu_phase": true,
+    "stage": "pilot-native-scoring",
+    "utilization_percent": 88.0,
+    "memory_used_mib": 6209.0
+  },
+  "gpu_acquired_at_utc": "2026-10-27T16:55:59.039523+00:00",
+  "stage": "pilot-selection",
+  "progress": {
+    "updated_at_utc": "2026-10-27T21:27:37.619574+00:00",
+    "stage": "evaluation",
+    "cohort": "pilot",
+    "status": "complete",
+    "completed": 48
+  },
+  "exit_code": 1,
+  "error_type": "RuntimeError",
+  "error": "pilot-selection exited1; see persistent stage/exit logs",
+  "finished_at_utc": "2026-10-27T21:27:42.935178+00:00"
+}

@@ -1,0 +1,203 @@
+{
+  "created_at_utc": "2026-10-22T07:40:51.663508+00:00",
+  "status": "recorded_time_reconciled_with_explicit_coverage_gaps",
+  "script": "/workspace/improvement/execution_refine/build_compute_ledger.py",
+  "script_sha256": "8ba143da22125e8d5a0669e5a9d5e7028deeaaf89b16f27ef18df869f03af84f",
+  "definition": "Sum nonoverlapping recorded process/operation wall intervals for scheduled GPU research jobs. Charge all source inference and CPU MOS wall time inside those jobs. Chat/limit idle gaps do not count. This is not profiler-measured GPU active time.",
+  "entries": [
+    {
+      "name": "Baseline exact-control preflight:150 updates and final waveforms",
+      "seconds": 44.717410693876445,
+      "timer_scope": "Sum of3 nonoverlapping clip optimization regions; model/Python startup not recorded",
+      "evidence": "/workspace/improvement/execution/baseline-preflight/result.json",
+      "evidence_sha256": "f4bde1faee5ba368245419d9744b3752849c768ed328f40881113d6e87fe8cb4",
+      "evidence_field": "sum(items[].seconds)",
+      "hours": 0.012421502970521235
+    },
+    {
+      "name": "R1 canonical calibration",
+      "seconds": 9.022992971353233,
+      "hours": 0.0025063869364870092,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-calibration/result.json",
+      "evidence_sha256": "3da2ffe146777b87550ff426544de69cf71a414ffab46195d1d9945f67f01b36",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R1 canonical initial3 mechanism check",
+      "seconds": 176.68335452023894,
+      "hours": 0.04907870958895526,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-calibrated-pilot3/result.json",
+      "evidence_sha256": "788676ad0a7618becc492cd0033ad4dcb50dedc022bef90b5219ab8a5df311c5",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R1 canonical development24 flat-risk stop",
+      "seconds": 4.683699677698314,
+      "hours": 0.0013010276882495318,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-calibrated-development24/result.json",
+      "evidence_sha256": "ffb3ae5f746accf12a2ed073a0fc0aff0bf55e3b4efb44eb3e62c7f4c0e451e1",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R1 deletion calibration",
+      "seconds": 6.439244064502418,
+      "hours": 0.0017886789068062273,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-deletion-calibration/result.json",
+      "evidence_sha256": "eeeb303207f53a3000ea20649917c2bb0095ee33560b2bf7f6a02b2ac186e56b",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R1 deletion initial3 mechanism check",
+      "seconds": 130.97006265446544,
+      "hours": 0.03638057295957373,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-deletion-pilot3/result.json",
+      "evidence_sha256": "fab764855db44d66f1a7fc30da5f64f449b575347a91b4f8af79541b53d0e469",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R1 deletion development24 generation",
+      "seconds": 939.6386452950537,
+      "hours": 0.2610107348041816,
+      "timer_scope": "Runner wall timer, including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r1-deletion-development24/result.json",
+      "evidence_sha256": "00233e9426d02e95732bafc861bed7a25c357241c7b3d4fea0aa9b7409e695ed",
+      "evidence_field": "seconds"
+    },
+    {
+      "name": "R2 initial3 geometry check",
+      "seconds": 35.38660552818328,
+      "hours": 0.009829612646717579,
+      "timer_scope": "Runner wall timer including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r2-canonical-zero-uniform-smoke3/generation-status.json",
+      "evidence_sha256": "97137317672796827051b504be9e1ee37be32bca00ac6879c6116c952065ddcd",
+      "evidence_field": "wall_seconds"
+    },
+    {
+      "name": "R2 development24 generation",
+      "seconds": 298.04787061549723,
+      "hours": 0.08279107517097145,
+      "timer_scope": "Runner wall timer including model load; excludes Python import/startup",
+      "evidence": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/generation-status.json",
+      "evidence_sha256": "40a07188c38a488c7cbffd47fa4dde85e7291ec5c613f49f0899fb6fa0226924",
+      "evidence_field": "wall_seconds"
+    },
+    {
+      "name": "R2 native source recognition plus all MOS scoring",
+      "seconds": 193.79671194870025,
+      "hours": 0.05383241998575007,
+      "timer_scope": "Complete evaluator timed region including source recognition and CPU MOS work",
+      "evidence": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "evidence_sha256": "15c50ca689d7b0834945daccf4a594542472e6fea258e1d2c792f7e7ca9d55f1",
+      "evidence_field": "resources.elapsed_wall_seconds"
+    },
+    {
+      "name": "r1-deletion-native-evaluation",
+      "seconds": 108.325372,
+      "hours": 0.030090381111111113,
+      "timer_scope": "Whole detached child-process wall interval including startup, failures, and nested CPU/source scoring",
+      "evidence": "/workspace/improvement/execution/jobs/r1-deletion-native-evaluation/job.json",
+      "evidence_sha256": "c9bfa21b0d0ff8e027d6d37fa46c0494399d11cdb5f1c06078e0669157ff132b",
+      "evidence_field": "finished_at - started_at"
+    },
+    {
+      "name": "r3-native-reference-preflight",
+      "seconds": 8.317131,
+      "hours": 0.0023103141666666665,
+      "timer_scope": "Whole detached child-process wall interval including startup, failures, and nested CPU/source scoring",
+      "evidence": "/workspace/improvement/execution/jobs/r3-native-reference-preflight/job.json",
+      "evidence_sha256": "351a5bff2f48c27f4cb06cb076ead23bc2c773684cf9500b5e7f5519dc996b29",
+      "evidence_field": "finished_at - started_at"
+    },
+    {
+      "name": "r3-waveform-reference-repair-bounded-run",
+      "seconds": 8.550447,
+      "hours": 0.0023751241666666667,
+      "timer_scope": "Whole detached child-process wall interval including startup, failures, and nested CPU/source scoring",
+      "evidence": "/workspace/improvement/execution/jobs/r3-waveform-reference-repair-bounded-run/job.json",
+      "evidence_sha256": "57a97032e82e6e14f3cfa77cf5c5d3d2ab6599c0555203468a1ed6e4d48b8f9b",
+      "evidence_field": "finished_at - started_at"
+    },
+    {
+      "name": "r3-waveform-autograd-repair-bounded-run",
+      "seconds": 3661.900388,
+      "hours": 1.0171945522222223,
+      "timer_scope": "Whole detached child-process wall interval including startup, failures, and nested CPU/source scoring",
+      "evidence": "/workspace/improvement/execution/jobs/r3-waveform-autograd-repair-bounded-run/job.json",
+      "evidence_sha256": "9d3a3e43dcd66bb8cac0ef1267085138c2eb52745a6f43f23db939835c7548eb",
+      "evidence_field": "finished_at - started_at"
+    },
+    {
+      "name": "generation48",
+      "seconds": 1564.634739,
+      "hours": 0.43462076083333334,
+      "timer_scope": "Whole detached child-process wall interval including startup and all CPU/source scoring",
+      "evidence": "/workspace/improvement/execution48/jobs/generation48/job.json",
+      "evidence_sha256": "b3d8f7b4a1e4a75ad7365cde84b4049fe6a41fd84415bc57500e0764ed85e1bc",
+      "evidence_field": "finished_at - started_at"
+    },
+    {
+      "name": "native-evaluation48",
+      "seconds": 468.957714,
+      "hours": 0.13026603166666667,
+      "timer_scope": "Whole detached child-process wall interval including startup and all CPU/source scoring",
+      "evidence": "/workspace/improvement/execution48/jobs/native-evaluation48/job.json",
+      "evidence_sha256": "fd6aa2509be3270cf17f5b6f7a78a0942af4286e90f0ef5448ced4b7096e8d24",
+      "evidence_field": "finished_at - started_at"
+    }
+  ],
+  "recorded_scheduled_seconds": 7660.07238896957,
+  "recorded_scheduled_hours": 2.1277978858248807,
+  "initial_development24_and_r3_seconds": 5626.47993596957,
+  "pilot48_cycle_seconds": 2033.5924530000002,
+  "original_six_hour_envelope_seconds": 21600,
+  "six_hour_envelope_minus_recorded_seconds": 13939.92761103043,
+  "budget_caveat": "This subtraction is recorded headroom, not a certified remaining balance: coverage gaps prevent an exact historical total. Reserve additional time for unknown early startup/repeated attempts. Later jobs need explicit detached whole-process timers.",
+  "coverage_gaps": [
+    "Some early baseline/R1/R2 runs have operation-region timers rather than externally recorded whole-process start/stop; Python imports/startup and baseline model loading are not fully covered.",
+    "An early R1 failure was rerun with logging-only receipt changes; only the currently preserved result timer is counted. Any overwritten earlier invocation timer cannot be recovered from these JSON receipts.",
+    "The scope is newly produced improvement/execution and improvement/execution48 research work, not the older historical reproduction-runs study or unrecorded commands."
+  ],
+  "nested_timers_excluded_from_sum": [
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/training.json",
+      "training_wall_seconds": 3541.8877668259665,
+      "reason": "Contained in whole R3 bounded-run process; includes3 checkpoint source/MOS evaluations. Never add the one-hour limit or nested checkpoint durations again."
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-summary.json",
+      "reason": "Final evaluation already inside whole R3 process."
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/preflight.json",
+      "reason": "Successful encoder conformance/calibration/fit already inside whole R3 process."
+    },
+    {
+      "path": "/workspace/improvement/execution/r1-deletion-development24/source-summary.json",
+      "reason": "Already inside whole R1 native-evaluation process."
+    },
+    {
+      "path": "/workspace/improvement/execution48/mechanism-pilot48/generation-result.json",
+      "reason": "Already inside generation48 process."
+    },
+    {
+      "path": "/workspace/improvement/execution48/mechanism-pilot48/source-summary.json",
+      "reason": "Already inside native-evaluation48 process."
+    }
+  ],
+  "cpu_only_operations_excluded": [
+    "Dataset downloads/extraction/metadata selection",
+    "CPU unit tests and artifact audits",
+    "Report generation and package validation",
+    "Chat idle time and user-limit interruption"
+  ],
+  "uncounted_configured_caps": [
+    "6-hour initial research envelope",
+    "2-hour pilot48 cycle cap",
+    "1-hour R3 training ceiling; count actual whole process instead"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "updated_at_utc": "2026-10-27T21:28:07.324331+00:00",
+  "status": "complete",
+  "generated_at_utc": "2026-10-27T21:28:07.062332+00:00",
+  "conditions": 78,
+  "scored_recordings": 3192,
+  "unique_recordings": 48,
+  "unique_audio_assets": 2082,
+  "audio_bytes": 992480736,
+  "seconds": 24.208965363912284,
+  "metric_validation": "All condition counts, pooled S/D/I/reference words and arithmetic mean quality reconciled.",
+  "audio_policy": "Original WAV bytes, with no normalization, resampling, trimming or lossy encoding. PCM-identical files share an asset.",
+  "snapshot_sha256": "983bd463366082452fe1c88715c03a2c80b6ec0bb80abd89edc26e1b14259b30"
+}

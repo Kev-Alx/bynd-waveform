@@ -1,0 +1,1034 @@
+{
+  "created_at_utc": "2026-10-22T04:54:06.669164+00:00",
+  "status": "frozen_metadata_and_audio_verified",
+  "seed": 20261022,
+  "selection": "Preserve previous24 order; append first24 eligible sorted by SHA256(\"20261022:\" + id), then id. Transcript/hash deduplication in that order.",
+  "count": 48,
+  "previous_count": 24,
+  "additional_count": 24,
+  "speakers": 30,
+  "duration_seconds": 360.0099375000001,
+  "minimum_seconds": 1.94,
+  "maximum_seconds": 24.03,
+  "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+  "manifest_sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+  "script": "/workspace/improvement/execution48/create_pilot48.py",
+  "script_sha256": "b3efdaf690fa5cb1e6fcfff4e33916a98c0ff655beead6a568d002603dc393ab",
+  "input_files": {
+    "previous_development24": {
+      "path": "/workspace/improvement/execution/development-24.jsonl",
+      "sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3"
+    },
+    "historically_exposed_validation100": {
+      "path": "/workspace/data/manifests/english-validation.jsonl",
+      "sha256": "616c42dd50a68e95e8595e2865e13963d794d304534c47f6057158c1584270c4"
+    },
+    "sealed_confirmation48": {
+      "path": "/workspace/reproduction-runs/paper-quality-finalization/data/confirmation/confirmation-48.jsonl",
+      "sha256": "377a51cacce705ee4e6d5777aad4d53c042cb473e4b0a4dd001273a8d640a713"
+    },
+    "sealed_final200": {
+      "path": "/workspace/improvement/execution/data/final-reserve-200.jsonl",
+      "sha256": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b"
+    },
+    "train1h": {
+      "path": "/workspace/improvement/execution/data/train-1h.jsonl",
+      "sha256": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d"
+    },
+    "train10h": {
+      "path": "/workspace/improvement/execution/data/train-10h.jsonl",
+      "sha256": "d7a1d0ba556d26efc48de686ae99f1970536ecc780c0cb1cf41e89c7927f0dae"
+    },
+    "known_layer6_cache_audit": {
+      "path": "/workspace/reproduction-runs/feature-delta-diagnostics/parent-audits/pilot.json",
+      "sha256": "1701decefc9fc9c9520bab45fc5961fa3c75ec570f19346395eb1e88785b027b"
+    }
+  },
+  "cpu_only": true,
+  "models_loaded": false,
+  "model_outcomes_used_for_selection": false,
+  "audio_transformations": "none; no resampling, truncation, or amplitude normalization",
+  "admissibility": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "minimum_seconds": 0.045,
+    "maximum_seconds": 30
+  },
+  "historical_validation_pool_count": 100,
+  "eligible_addition_count": 100,
+  "metadata_rejections": [],
+  "old_ids_in_order": [
+    "1673-143397-0019",
+    "174-50561-0003",
+    "174-84280-0015",
+    "1919-142785-0051",
+    "2035-147960-0004",
+    "2035-147961-0008",
+    "2035-152373-0013",
+    "2412-153954-0006",
+    "2428-83705-0001",
+    "251-136532-0018",
+    "251-137823-0000",
+    "2803-161169-0008",
+    "3000-15664-0027",
+    "3081-166546-0048",
+    "3752-4944-0015",
+    "6295-64301-0009",
+    "6345-93302-0004",
+    "6345-93302-0028",
+    "777-126732-0040",
+    "777-126732-0064",
+    "7976-110124-0013",
+    "8297-275154-0019",
+    "84-121123-0023",
+    "8842-302196-0004"
+  ],
+  "new_ids_in_order": [
+    "2902-9006-0012",
+    "652-130726-0016",
+    "5694-64038-0009",
+    "3081-166546-0077",
+    "2035-147960-0011",
+    "5536-43359-0015",
+    "6313-76958-0008",
+    "652-129742-0006",
+    "3170-137482-0005",
+    "2078-142845-0042",
+    "652-130726-0025",
+    "8297-275155-0017",
+    "5536-43363-0012",
+    "3576-138058-0004",
+    "8842-302196-0001",
+    "3081-166546-0075",
+    "2035-152373-0005",
+    "6241-66616-0019",
+    "2428-83699-0028",
+    "6313-76958-0022",
+    "6319-64726-0002",
+    "1988-148538-0005",
+    "1272-128104-0010",
+    "3000-15664-0005"
+  ],
+  "exposure": "Development data already used in historical study; not fresh confirmation or a final-test estimate. Selection never reads per-clip model outcomes.",
+  "protected_overlap": {
+    "sealed_confirmation48": {
+      "id": 0,
+      "speaker": 21,
+      "audio_sha256": 0,
+      "normalized_transcript": 0
+    },
+    "sealed_final200": {
+      "id": 0,
+      "speaker": 0,
+      "audio_sha256": 0,
+      "normalized_transcript": 0
+    },
+    "train1h": {
+      "id": 0,
+      "speaker": 0,
+      "audio_sha256": 0,
+      "normalized_transcript": 0
+    },
+    "train10h": {
+      "id": 0,
+      "speaker": 0,
+      "audio_sha256": 0,
+      "normalized_transcript": 0
+    }
+  },
+  "confirmation_speaker_overlap_policy": "Confirmation utterances/audio/text excluded; shared dev-clean speakers allowed and reported. Final200 and training speakers excluded.",
+  "near_duplicate_limit": "ID, exact compressed-audio SHA256 and normalized-transcript checks; no claim of perceptual deduplication.",
+  "audio_verification": [
+    {
+      "id": "1673-143397-0019",
+      "path": "/workspace/data/LibriSpeech/dev-clean/1673/143397/1673-143397-0019.flac",
+      "audio_sha256": "d24ff2cf91f1a992101841c4f3e96d9904072fd933b3716ce0d8f81a4c245720",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 251120,
+      "duration_seconds": 15.695,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "174-50561-0003",
+      "path": "/workspace/data/LibriSpeech/dev-clean/174/50561/174-50561-0003.flac",
+      "audio_sha256": "e9297505e740f8196d4903ef38414bfbf8082f06a31af4474ad6446a44992faa",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 53440,
+      "duration_seconds": 3.34,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "174-84280-0015",
+      "path": "/workspace/data/LibriSpeech/dev-clean/174/84280/174-84280-0015.flac",
+      "audio_sha256": "9c044050d125298d54a7186f9771608ad2dc43b5e9605ec8fd6024b0cbb17680",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 219680,
+      "duration_seconds": 13.73,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "1919-142785-0051",
+      "path": "/workspace/data/LibriSpeech/dev-clean/1919/142785/1919-142785-0051.flac",
+      "audio_sha256": "1177aa322fd968741c5279d7ac436c875272cba3ae6720b1a5c375e9400341ea",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 148640,
+      "duration_seconds": 9.29,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2035-147960-0004",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2035/147960/2035-147960-0004.flac",
+      "audio_sha256": "7a0d780be28f78c1dfc79d24537e9119cea4359a4c4258e0ed47e37529926f7b",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 66720,
+      "duration_seconds": 4.17,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2035-147961-0008",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2035/147961/2035-147961-0008.flac",
+      "audio_sha256": "f64db01ded0348fda0972cc32622386e0d2d7ccd889ac2a496597d4d7617fd32",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 68000,
+      "duration_seconds": 4.25,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2035-152373-0013",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2035/152373/2035-152373-0013.flac",
+      "audio_sha256": "aaa615b41c4e11cf552e2d39cdb06ae733bae2c53cb6ce5fa27a07e9fabb8bb7",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 327520,
+      "duration_seconds": 20.47,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2412-153954-0006",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2412/153954/2412-153954-0006.flac",
+      "audio_sha256": "3feac5890500534685cde5eca5835e47d06bb2b7d0923b2ae3a544f2d68e30d1",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 163520,
+      "duration_seconds": 10.22,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2428-83705-0001",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2428/83705/2428-83705-0001.flac",
+      "audio_sha256": "a7cfd2d49bd00d7ade17541a2abf885e295ba9155efcf9e800d65afab9a8c5ca",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 109520,
+      "duration_seconds": 6.845,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "251-136532-0018",
+      "path": "/workspace/data/LibriSpeech/dev-clean/251/136532/251-136532-0018.flac",
+      "audio_sha256": "ef7975b40540016f4bad0ba5f01638e2313041ba1994d3efb8ad4a7441324b60",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 110000,
+      "duration_seconds": 6.875,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "251-137823-0000",
+      "path": "/workspace/data/LibriSpeech/dev-clean/251/137823/251-137823-0000.flac",
+      "audio_sha256": "0d414255c68f617ca56f32d1c3521e6c22686ed92e99559bb903da5aea5be602",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 54960,
+      "duration_seconds": 3.435,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2803-161169-0008",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2803/161169/2803-161169-0008.flac",
+      "audio_sha256": "a8e6541fe83e19d096cf298811bbd5778c2e7c3c86a2e57efa2374611c829af7",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 226240,
+      "duration_seconds": 14.14,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3000-15664-0027",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3000/15664/3000-15664-0027.flac",
+      "audio_sha256": "fc9ee6da5425f794b2e5bf5de50b7c7574ffa9d31917f74a0f7a8cee14c9de8f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 64720,
+      "duration_seconds": 4.045,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3081-166546-0048",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3081/166546/3081-166546-0048.flac",
+      "audio_sha256": "30595865552fd32665056354e4e002fc9472e78c9ebbe65d377b14168fe39eee",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 76960,
+      "duration_seconds": 4.81,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3752-4944-0015",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3752/4944/3752-4944-0015.flac",
+      "audio_sha256": "c1b8b0adadf569873ccb5d6c9717fdb5a5849bfcd7c4e5b87db9404fbf2d47f1",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 66160,
+      "duration_seconds": 4.135,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6295-64301-0009",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6295/64301/6295-64301-0009.flac",
+      "audio_sha256": "d0393a23285fe4063666362685c384bfcdb56bfd83ecc5eeb1270268ca634d34",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 48080,
+      "duration_seconds": 3.005,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6345-93302-0004",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6345/93302/6345-93302-0004.flac",
+      "audio_sha256": "6286249d34ba7dd1da463bacbe2b1f4f6490750b093abc19276680352dfb9676",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 70640,
+      "duration_seconds": 4.415,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6345-93302-0028",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6345/93302/6345-93302-0028.flac",
+      "audio_sha256": "743d713400a50573dae930e5accc5da524d56e9fb48d1fc4771d3eafe6a933bb",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 31040,
+      "duration_seconds": 1.94,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "777-126732-0040",
+      "path": "/workspace/data/LibriSpeech/dev-clean/777/126732/777-126732-0040.flac",
+      "audio_sha256": "b18c3bedc9c4f06919959d896de9fbf719934f2339cd010c06b336dc7d592a88",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 79760,
+      "duration_seconds": 4.985,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "777-126732-0064",
+      "path": "/workspace/data/LibriSpeech/dev-clean/777/126732/777-126732-0064.flac",
+      "audio_sha256": "001aff4f8622c8a7ada9a4b573bd710ff7ecab6970ba789025561921a7fd8481",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 93759,
+      "duration_seconds": 5.8599375,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "7976-110124-0013",
+      "path": "/workspace/data/LibriSpeech/dev-clean/7976/110124/7976-110124-0013.flac",
+      "audio_sha256": "c2dc16808b08d915de18156e2cc69db3596bf4f8a3156a740582f206bc53139a",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 104880,
+      "duration_seconds": 6.555,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "8297-275154-0019",
+      "path": "/workspace/data/LibriSpeech/dev-clean/8297/275154/8297-275154-0019.flac",
+      "audio_sha256": "6557ca40c916bcc774a5219f9d9f7465b43c0497adaf63e9548b3e0b5c2bb27d",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 126080,
+      "duration_seconds": 7.88,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "84-121123-0023",
+      "path": "/workspace/data/LibriSpeech/dev-clean/84/121123/84-121123-0023.flac",
+      "audio_sha256": "de5ac89fdba6009de9ca8b9cacd6e8d3604c35985d412deb7dc7bb61dc0872c0",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 74960,
+      "duration_seconds": 4.685,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "8842-302196-0004",
+      "path": "/workspace/data/LibriSpeech/dev-clean/8842/302196/8842-302196-0004.flac",
+      "audio_sha256": "2ce3543f12ba2033a869fbce7434e74f149722db31ed5e494cad6d1bf9462ae4",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 91840,
+      "duration_seconds": 5.74,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2902-9006-0012",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2902/9006/2902-9006-0012.flac",
+      "audio_sha256": "45192a4292b6019e3092dc2600b9090bb95fe0c372076f706a87ddb44ccf7a24",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 102720,
+      "duration_seconds": 6.42,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "652-130726-0016",
+      "path": "/workspace/data/LibriSpeech/dev-clean/652/130726/652-130726-0016.flac",
+      "audio_sha256": "7f0d5975bc207ee2d7f13e39edd607f7d3b9277a70a3fb1b8a45fedaf9925142",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 166560,
+      "duration_seconds": 10.41,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "5694-64038-0009",
+      "path": "/workspace/data/LibriSpeech/dev-clean/5694/64038/5694-64038-0009.flac",
+      "audio_sha256": "1ed390325c6bd012a7ce345fc53cb290d12a6cc7bb71b61794eed639ebd962a0",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 38160,
+      "duration_seconds": 2.385,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3081-166546-0077",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3081/166546/3081-166546-0077.flac",
+      "audio_sha256": "21d0e66ba6683b1de2ad50b0d45c3efcb7fd541103de3f0284720f72f61d26cd",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 166800,
+      "duration_seconds": 10.425,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2035-147960-0011",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2035/147960/2035-147960-0011.flac",
+      "audio_sha256": "cb8d215dfb1e6207d1dd6e972a3c315882b4302a930d668ae9f0346417a94d88",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 70080,
+      "duration_seconds": 4.38,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "5536-43359-0015",
+      "path": "/workspace/data/LibriSpeech/dev-clean/5536/43359/5536-43359-0015.flac",
+      "audio_sha256": "0eb3ca6b3b5f0418b1b7bdc0d11b97a3538b2f0d8e118abe24cb52f82352af4c",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 74000,
+      "duration_seconds": 4.625,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6313-76958-0008",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6313/76958/6313-76958-0008.flac",
+      "audio_sha256": "9aa12af5b01852344229a8300b1a88624e22a9051742c248e3d026e91d3b875c",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 37520,
+      "duration_seconds": 2.345,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "652-129742-0006",
+      "path": "/workspace/data/LibriSpeech/dev-clean/652/129742/652-129742-0006.flac",
+      "audio_sha256": "081f8aed018bb8324cf490f95df9efbeab37e002d81b4400a66e3166c4b6c21c",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 145840,
+      "duration_seconds": 9.115,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3170-137482-0005",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3170/137482/3170-137482-0005.flac",
+      "audio_sha256": "84b89d841afc3e6756e9e10794a83157fc0ae6f12cc5b6a40d538b79a00cb135",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 139520,
+      "duration_seconds": 8.72,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2078-142845-0042",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2078/142845/2078-142845-0042.flac",
+      "audio_sha256": "c3e269f4257f0ea0b78488472c98c65ae355372a31f9fcf601b8c4f5f42caa3a",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 67680,
+      "duration_seconds": 4.23,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "652-130726-0025",
+      "path": "/workspace/data/LibriSpeech/dev-clean/652/130726/652-130726-0025.flac",
+      "audio_sha256": "8f95d73c1992f90b45678cfbbbb26e8afd0ec4553b87d38f3a04a0d5e40700fa",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 42080,
+      "duration_seconds": 2.63,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "8297-275155-0017",
+      "path": "/workspace/data/LibriSpeech/dev-clean/8297/275155/8297-275155-0017.flac",
+      "audio_sha256": "5f31c91f40f018dd590e752c6ccbaab4f2d2cafe9244229675c7c48602b9c87a",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 142560,
+      "duration_seconds": 8.91,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "5536-43363-0012",
+      "path": "/workspace/data/LibriSpeech/dev-clean/5536/43363/5536-43363-0012.flac",
+      "audio_sha256": "5878d8fb8806d95b381b05d1b9c544f21ab4668f99eeccffb20bf4edee9cb7e9",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 52240,
+      "duration_seconds": 3.265,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3576-138058-0004",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3576/138058/3576-138058-0004.flac",
+      "audio_sha256": "72f8e00fab6549759c480d14cc01603952f08d2c3ca150a4478b7054f95fe8b1",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 264960,
+      "duration_seconds": 16.56,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "8842-302196-0001",
+      "path": "/workspace/data/LibriSpeech/dev-clean/8842/302196/8842-302196-0001.flac",
+      "audio_sha256": "2cd03509d9dd0acaa969fc0df956e62e078c1cf6cc6e6383f52cb3438ab0185f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 149600,
+      "duration_seconds": 9.35,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3081-166546-0075",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3081/166546/3081-166546-0075.flac",
+      "audio_sha256": "2d7344eaf407105044ec7d66ce4d526e3668cb1241d0bb41b3f566024c41355d",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 39600,
+      "duration_seconds": 2.475,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2035-152373-0005",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2035/152373/2035-152373-0005.flac",
+      "audio_sha256": "2678f3763a53fddda4d39fcf946ce2f4304b14f0f26ce2691eb6f16dacf66212",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 384480,
+      "duration_seconds": 24.03,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6241-66616-0019",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6241/66616/6241-66616-0019.flac",
+      "audio_sha256": "afc72bf36c56d5fc30295c782f495dbea947bec1538b04f24c8c64eb7551cf36",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 101040,
+      "duration_seconds": 6.315,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "2428-83699-0028",
+      "path": "/workspace/data/LibriSpeech/dev-clean/2428/83699/2428-83699-0028.flac",
+      "audio_sha256": "2631b5d8c8fff74aeeb271dcff9251615036379a26bec4abce1eddf3d377fa0f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 64000,
+      "duration_seconds": 4.0,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6313-76958-0022",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6313/76958/6313-76958-0022.flac",
+      "audio_sha256": "b59d5865442b691d30a8d1cfe030d0106343eb746ef8854f7769239023e9aa85",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 100720,
+      "duration_seconds": 6.295,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "6319-64726-0002",
+      "path": "/workspace/data/LibriSpeech/dev-clean/6319/64726/6319-64726-0002.flac",
+      "audio_sha256": "08fc4f9436c858ba7ca4690fe8f07844010957f521350fb979670c660931ba5f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 195200,
+      "duration_seconds": 12.2,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "1988-148538-0005",
+      "path": "/workspace/data/LibriSpeech/dev-clean/1988/148538/1988-148538-0005.flac",
+      "audio_sha256": "ccc930526a17dce4bc5ddbd410daa4b2ab9ccb2901bcb90b62314f3fa778a10b",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 261600,
+      "duration_seconds": 16.35,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "1272-128104-0010",
+      "path": "/workspace/data/LibriSpeech/dev-clean/1272/128104/1272-128104-0010.flac",
+      "audio_sha256": "2ebbcaa44f14c15fd8afd0e4a71cae494377d30812a0ba05d6be07c55d00bbea",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 89600,
+      "duration_seconds": 5.6,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    },
+    {
+      "id": "3000-15664-0005",
+      "path": "/workspace/data/LibriSpeech/dev-clean/3000/15664/3000-15664-0005.flac",
+      "audio_sha256": "22ae23cb7d7437d9916911660709a0a2baaf9180562d88f471ceb0ac102b6c2f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "samples": 135360,
+      "duration_seconds": 8.46,
+      "format": "FLAC",
+      "subtype": "PCM_16",
+      "metadata_matches_manifest": true,
+      "admissible": true
+    }
+  ],
+  "known_layer6_query_cache": [
+    {
+      "id": "1673-143397-0019",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/1673-143397-0019.q.pt",
+      "q_sha256": "6084fe9ad11d4caefd70d9e71829a4df325e566e33fa47cdb4c9157f65a83128"
+    },
+    {
+      "id": "174-50561-0003",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/174-50561-0003.q.pt",
+      "q_sha256": "e658633d52c60c82807ff68faf0824683ae372816b9bd8c6f7941c19dc91b466"
+    },
+    {
+      "id": "174-84280-0015",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/174-84280-0015.q.pt",
+      "q_sha256": "15ccc9d62ba1150694392d798ac4c6f0e40c73595bae8dcc679f99f2aba28855"
+    },
+    {
+      "id": "1919-142785-0051",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/1919-142785-0051.q.pt",
+      "q_sha256": "e070ba9029fa64f9b871c4959659400cdeef79525d8c152720552a5b457252fe"
+    },
+    {
+      "id": "2035-147960-0004",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2035-147960-0004.q.pt",
+      "q_sha256": "3d773670357a2f51d515f3b97e04db1cdf2227c2e20a3ac944f5c53b6a62c83f"
+    },
+    {
+      "id": "2035-147961-0008",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2035-147961-0008.q.pt",
+      "q_sha256": "47e1e2bb43a342431cb1da6f9944cfaf2432c5a105d1942e9d43302b6bb40585"
+    },
+    {
+      "id": "2035-152373-0013",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2035-152373-0013.q.pt",
+      "q_sha256": "63bfdd1f04e7e179b5b21bb53626e7aa44588f45f0e5f57274d4f2c726750b03"
+    },
+    {
+      "id": "2412-153954-0006",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2412-153954-0006.q.pt",
+      "q_sha256": "9c7dae0cb3e0edd3761b3a21c951340bcbbe060f7520e5f8c0a5b11fc1cea038"
+    },
+    {
+      "id": "2428-83705-0001",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2428-83705-0001.q.pt",
+      "q_sha256": "5d63d9ee230c38032de36f761b4fff1328e3accaefe99d11ca7ad9d9f2f20a4f"
+    },
+    {
+      "id": "251-136532-0018",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/251-136532-0018.q.pt",
+      "q_sha256": "c3de89c15a6cb2b3256bc64def106122c689a00418df66ab6f7a2de5631efb82"
+    },
+    {
+      "id": "251-137823-0000",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/251-137823-0000.q.pt",
+      "q_sha256": "ca6554c8f65599d3fe003b64c7909786d0115adb29b45bd255bd52ae580f08b2"
+    },
+    {
+      "id": "2803-161169-0008",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/2803-161169-0008.q.pt",
+      "q_sha256": "e4ed03bed2734a22b5472f3bf2237dace3a8387d4027f377555322c890ff1a33"
+    },
+    {
+      "id": "3000-15664-0027",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/3000-15664-0027.q.pt",
+      "q_sha256": "c6d69c34811a6fad4346d898466cab6b79d6728971a66dc94ea8be4cd3820313"
+    },
+    {
+      "id": "3081-166546-0048",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/3081-166546-0048.q.pt",
+      "q_sha256": "ef3c9cc98ccf603e6f3bcf006928ba0acb00dff3d3bee061ba04c747b2d4a382"
+    },
+    {
+      "id": "3752-4944-0015",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/3752-4944-0015.q.pt",
+      "q_sha256": "611f85f71670abb50d2409e58c99290f6bca8665415c44f70c7fc5ccad41a02b"
+    },
+    {
+      "id": "6295-64301-0009",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/6295-64301-0009.q.pt",
+      "q_sha256": "7519a734727ed38c0b1f9976fe6dcaa8d2deb155955f4e0993e2c45ce690966a"
+    },
+    {
+      "id": "6345-93302-0004",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/6345-93302-0004.q.pt",
+      "q_sha256": "08c8077366b0791cb70c0689e51c3a4cf107dafa537ea4b933c31186804ca3fb"
+    },
+    {
+      "id": "6345-93302-0028",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/6345-93302-0028.q.pt",
+      "q_sha256": "f8f68973b8908924c9133838c217f91e5a45b7932e7656fa931232c2e1a72cd8"
+    },
+    {
+      "id": "777-126732-0040",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/777-126732-0040.q.pt",
+      "q_sha256": "1d692b06b9a50ffb1b589fc664717bb0a7742b8f44ae732084f4cdfc7b88282b"
+    },
+    {
+      "id": "777-126732-0064",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/777-126732-0064.q.pt",
+      "q_sha256": "84cd450c8e586fb084c8ea8e6651bc0941da20b595d09cc66389493e89923228"
+    },
+    {
+      "id": "7976-110124-0013",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/7976-110124-0013.q.pt",
+      "q_sha256": "1cf3f38f0d36299c1b533d5b275f12bae5fbbea0c58853d816f3999d95c73df6"
+    },
+    {
+      "id": "8297-275154-0019",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/8297-275154-0019.q.pt",
+      "q_sha256": "acca5d407513aef05c32628834e22b48e80b2f534d8e61b30bfc4bba72c9b850"
+    },
+    {
+      "id": "84-121123-0023",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/84-121123-0023.q.pt",
+      "q_sha256": "1f124ce8dac7e185516e5d17ac5f8c5ef8137ff313a3485158479a58a065b905"
+    },
+    {
+      "id": "8842-302196-0004",
+      "status": "verified_historical_layer6_cache",
+      "q_path": "/workspace/reproduction-runs/feature-delta-diagnostics/feature-cache/pilot/8842-302196-0004.q.pt",
+      "q_sha256": "8334dd235f3aadbe9a6c0db6ea17773c91d72ba4aea48ffc68a0274c5dabff45"
+    },
+    {
+      "id": "2902-9006-0012",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "652-130726-0016",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "5694-64038-0009",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "3081-166546-0077",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "2035-147960-0011",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "5536-43359-0015",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "6313-76958-0008",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "652-129742-0006",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "3170-137482-0005",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "2078-142845-0042",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "652-130726-0025",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "8297-275155-0017",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "5536-43363-0012",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "3576-138058-0004",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "8842-302196-0001",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "3081-166546-0075",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "2035-152373-0005",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "6241-66616-0019",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "2428-83699-0028",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "6313-76958-0022",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "6319-64726-0002",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "1988-148538-0005",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "1272-128104-0010",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    },
+    {
+      "id": "3000-15664-0005",
+      "status": "not_in_known_audited_layer6_cache",
+      "action": "fresh feature extraction required before feature-space experiments"
+    }
+  ],
+  "known_layer6_query_cache_available": 24
+}

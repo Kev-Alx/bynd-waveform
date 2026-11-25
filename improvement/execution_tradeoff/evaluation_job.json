@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-26T09:45:59.190668+00:00",
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/execution_tradeoff/score.py"
+  ],
+  "cwd": "/workspace",
+  "supervisor_pid": 181226,
+  "log": "/workspace/improvement/execution_tradeoff/evaluation.log",
+  "child_pid": 181229,
+  "exit_code": 0,
+  "finished_at": "2026-10-26T09:58:45.885433+00:00"
+}

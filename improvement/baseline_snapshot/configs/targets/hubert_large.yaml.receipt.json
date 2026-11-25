@@ -1,0 +1,46 @@
+{
+  "repo": "facebook/hubert-large-ls960-ft",
+  "revision": "ece5fabbf034c1073acae96d5401b25be96709d8",
+  "snapshot": "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8",
+  "files": {
+    "config.json": "f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429",
+    "preprocessor_config.json": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335",
+    "pytorch_model.bin": "9cf43abec3f0410ad6854afa4d376c69ccb364b48ddddfd25c4c5aa16398eab0",
+    "special_tokens_map.json": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+    "tokenizer_config.json": "d773cde8c2ca89ab86892f0b5e670c5ebed4dc72e20ed647f6cb843ad2c0bd26",
+    "vocab.json": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64"
+  },
+  "upstream_files": {
+    "config.json": {
+      "bytes": 1376,
+      "git_blob_sha1": "2cd99ac14fa1cde977c292af904d66aaa607120f",
+      "lfs_sha256": null
+    },
+    "preprocessor_config.json": {
+      "bytes": 212,
+      "git_blob_sha1": "36ebe8b7c1cc967b3059f0494ae8a1069dd67655",
+      "lfs_sha256": null
+    },
+    "pytorch_model.bin": {
+      "bytes": 1262057559,
+      "git_blob_sha1": "61899118e0e2775cd5a5e64dfd8865957bc8906e",
+      "lfs_sha256": "9cf43abec3f0410ad6854afa4d376c69ccb364b48ddddfd25c4c5aa16398eab0"
+    },
+    "special_tokens_map.json": {
+      "bytes": 85,
+      "git_blob_sha1": "25bc39604f72700b3b8e10bd69bb2f227157edd1",
+      "lfs_sha256": null
+    },
+    "tokenizer_config.json": {
+      "bytes": 138,
+      "git_blob_sha1": "43772fe82c516617b389124d359003795a06ce95",
+      "lfs_sha256": null
+    },
+    "vocab.json": {
+      "bytes": 291,
+      "git_blob_sha1": "88181b954aa14df68be9b444b3c36585f3078c0a",
+      "lfs_sha256": null
+    }
+  },
+  "source": "https://huggingface.co/facebook/hubert-large-ls960-ft/tree/ece5fabbf034c1073acae96d5401b25be96709d8"
+}

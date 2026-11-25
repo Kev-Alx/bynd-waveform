@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "plan_bindings_preserved": true,
+  "base_and_expanded_frozen_bindings_preserved": true,
+  "cohort48_and_994_words_per_condition": true,
+  "scores144_reconciled": true,
+  "catalogue_conditions": 70,
+  "catalogue_recordings": 2808,
+  "protected_runtime_unchanged": true,
+  "browser_QA_pass": true,
+  "port8888_HTTP200": true,
+  "server_pid": 174742,
+  "actual_heldout_targets_evaluated": [],
+  "note": "No unseen, confirmation/final or human performance claims; forecasts are conditional"
+}

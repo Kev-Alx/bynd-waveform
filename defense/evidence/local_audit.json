@@ -1,0 +1,944 @@
+{
+  "created_at_taipei": "2026-10-22T16:43:25.844602+08:00",
+  "artifact_root": "/workspace/defense",
+  "scope": "Research-only saved-artifact inspection; no new model results.",
+  "git_head": {
+    "returncode": 0,
+    "stdout": "d7f70e8a717db7feba35b69dacabade7de196b25",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "## main...origin/main\n M .gitignore\n M README.md\n M beyondwaveform/attacks.py\n M beyondwaveform/config.py\n M beyondwaveform/io.py\n M beyondwaveform/models/whisper.py\n M docs/HANDOFF.md\n M pyproject.toml\n M scripts/parallel_jobs.py\n M scripts/run_logged.py\n M tests/test_attacks.py\n M tests/test_whisper.py\n?? AGENTS.md\n?? beyondwaveform/adam_diagnostics.py\n?? beyondwaveform/coordinate_diagnostics.py\n?? beyondwaveform/defenses.py\n?? beyondwaveform/deterministic_frontend.py\n?? beyondwaveform/feature_transforms.py\n?? beyondwaveform/hf_pooling_diagnostics.py\n?? beyondwaveform/trajectory_diagnostics.py\n?? defense/\n?? docs/COLAB.md\n?? docs/DEFENSE_RESEARCH.md\n?? docs/DETERMINISTIC_EXECUTION_VALIDATION.md\n?? docs/DISCORD_GPU_REPORTER.md\n?? docs/EQUATION_IMPLEMENTATION_MAP.md\n?? docs/QUALITY_CONTRACTS.md\n?? docs/QUALITY_COORDINATE_RESEARCH.md\n?? docs/QUALITY_DECODER_ALIGNMENT.md\n?? docs/QUALITY_DELTA_DIAGNOSTICS.md\n?? docs/QUALITY_FEATURE_LAYERS.md\n?? docs/QUALITY_FEATURE_LAYERS_V2.md\n?? docs/QUALITY_FINALIZATION.md\n?? docs/QUALITY_OPTIMIZER_DIAGNOSTICS.md\n?? docs/QUALITY_OVERNIGHT.md\n?? docs/QUALITY_REFINEMENT.md\n?? docs/QUALITY_RESEARCH.md\n?? docs/QUALITY_STABLE_ABLATIONS.md\n?? docs/QUALITY_STABLE_EXECUTION.md\n?? docs/STRICT_PARITY_AUDIT.md\n?? docs/STUDY_AND_CONFIGURATION_EXPLANATIONS.md\n?? docs/THREAD_SUMMARY_AND_PLAN.md\n?? docs/WEEKLY_PROGRESS_REPORT.md\n?? docs/WEEKLY_PROGRESS_REPORT.pdf\n?? docs/agents/\n?? improvement/\n?? notebooks/\n?? scripts/discord_gpu_report.py\n?? scripts/finalization_pool.py\n?? scripts/probe_adam_contributions.py\n?? scripts/probe_decoder_alignment.py\n?? scripts/probe_deterministic_execution.py\n?? scripts/probe_feature_gradients.py\n?? scripts/probe_numerical_repeatability.py\n?? scripts/run_coordinate_research.py\n?? scripts/run_decoder_diagnostics.py\n?? scripts/run_defense_suite.py\n?? scripts/run_deterministic_execution.py\n?? scripts/run_encoder_execution_diagnostics.py\n?? scripts/run_feature_diagnostics.py\n?? scripts/run_feature_layer_research.py\n?? scripts/run_feature_layer_research_v2.py\n?? scripts/run_finalization_research.py\n?? scripts/run_optimizer_diagnostics.py\n?? scripts/run_overnight_research.py\n?? scripts/run_quality_contracts.py\n?? scripts/run_quality_refinement.py\n?? scripts/run_quality_research.py\n?? scripts/run_stable_ablation_research.py\n?? scripts/run_stable_quality_research.py\n?? scripts/update_job_status.py\n?? tests/test_adam_contributions.py\n?? tests/test_adam_diagnostics.py\n?? tests/test_config.py\n?? tests/test_coordinate_diagnostics.py\n?? tests/test_coordinate_research.py\n?? tests/test_decoder_alignment_probe.py\n?? tests/test_decoder_diagnostics.py\n?? tests/test_defense_suite.py\n?? tests/test_defenses.py\n?? tests/test_deterministic_execution.py\n?? tests/test_deterministic_frontend.py\n?? tests/test_discord_gpu_report.py\n?? tests/test_feature_diagnostics.py\n?? tests/test_feature_gradient_probe.py\n?? tests/test_feature_layer_research.py\n?? tests/test_feature_layer_research_v2.py\n?? tests/test_feature_transforms.py\n?? tests/test_finalization_pool.py\n?? tests/test_finalization_research.py\n?? tests/test_hf_pooling_diagnostics.py\n?? tests/test_job_status.py\n?? tests/test_numerical_repeatability.py\n?? tests/test_optimizer_diagnostics.py\n?? tests/test_overnight_research.py\n?? tests/test_quality_contracts.py\n?? tests/test_quality_refinement.py\n?? tests/test_quality_research.py\n?? tests/test_stable_ablation_research.py\n?? tests/test_stable_quality_research.py\n?? tests/test_trajectory_diagnostics.py\n?? tests/test_unicode_io.py\n?? verification/author-artifact-search-20261019.md\n?? verification/defense-research/\n?? verification/strict-parity-audit/",
+    "stderr": ""
+  },
+  "gpu_snapshot": {
+    "returncode": 0,
+    "stdout": "NVIDIA TITAN RTX, 24576 MiB, 10327 MiB, 92 %",
+    "stderr": ""
+  },
+  "input_files": {
+    "/workspace/BeyondWaveform.pdf": {
+      "sha256": "fa1754d1f985d2791c1119fa906fe3baafa340db8a5f9a85ed97be83abf17eee",
+      "bytes": 738098
+    },
+    "/workspace/paper/BeyondWaveform.md": {
+      "sha256": "ca16b30b9a09d0d504065cbb4bfcf65d36f6449bc9c0485c29f8d2ff1d6de0cd",
+      "bytes": 52818
+    },
+    "/workspace/AGENTS.md": {
+      "sha256": "cb27d3f792f691f64ddbdcd3250c53d0fc6f36f3e77fb59f402ab882b17556da",
+      "bytes": 519
+    },
+    "/workspace/docs/agents/domain.md": {
+      "sha256": "cd9c03468ba2debb7922248bf4aa20b860fdd6803ec207756e60233037a66a9a",
+      "bytes": 849
+    },
+    "/workspace/docs/agents/issue-tracker.md": {
+      "sha256": "446b78a111403cb5de6b0f952526243821567780a85369f31d2268a1df8b3ea3",
+      "bytes": 4543
+    },
+    "/workspace/BeyondWaveform_Reproduction_Spec.md": {
+      "sha256": "aa394c2a5943f7f07192cfdefe949dcc8c97d25c900f1559af606db00ef5170a",
+      "bytes": 74607
+    },
+    "/workspace/docs/STRICT_PARITY_AUDIT.md": {
+      "sha256": "02707ebe5e89f3b16f32d688e069dd9b4719f11512811df123c33d4b7b3bc9a1",
+      "bytes": 24698
+    },
+    "/workspace/docs/DEFENSE_RESEARCH.md": {
+      "sha256": "2fbdfa8e2a7ed4a2dc4fe42a642f0b9ea3e396562cfa1b226ccb216dd63fa06d",
+      "bytes": 10185
+    },
+    "/workspace/docs/THREAD_SUMMARY_AND_PLAN.md": {
+      "sha256": "c819e46e72885f88080e299898c9075ce41fdb07ba2e0da301dc161bad994570",
+      "bytes": 53675
+    },
+    "/workspace/beyondwaveform/attacks.py": {
+      "sha256": "bca14da423ba3b3bad603fe6b844385f965ff1db0d059a0e08c9e70ed927d7c7",
+      "bytes": 6824
+    },
+    "/workspace/beyondwaveform/losses.py": {
+      "sha256": "065535e8797f4fa61f05a7fbd7b4e570f5fbd2cff25aed952bdeb3401481b534",
+      "bytes": 2884
+    },
+    "/workspace/beyondwaveform/defenses.py": {
+      "sha256": "ccf6255ef56f61d86879fc973bdd5c7a2bcc337efb9124fd5dc57f33682c07b7",
+      "bytes": 2690
+    },
+    "/workspace/beyondwaveform/models/feature.py": {
+      "sha256": "5c68f45cf897f232effbae19472403eca2f9fd20aea785f80a4659842b628a61",
+      "bytes": 3463
+    },
+    "/workspace/beyondwaveform/models/whisper.py": {
+      "sha256": "731d774eebc282c6533f80c0332f90262744339aabee50da00cb9a0d16cafb55",
+      "bytes": 5187
+    },
+    "/workspace/beyondwaveform/models/targets.py": {
+      "sha256": "de8333c2d67c39e38d456c6ed7fcaf2c11be789580cab371e9c664a019c7337f",
+      "bytes": 1622
+    },
+    "/workspace/beyondwaveform/config.py": {
+      "sha256": "247b131f92472123c86acb789b218315fac38b86771861b73d16003e5cd728b9",
+      "bytes": 2333
+    },
+    "/workspace/beyondwaveform/training.py": {
+      "sha256": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0",
+      "bytes": 4204
+    },
+    "/workspace/beyondwaveform/evaluation.py": {
+      "sha256": "47ffe359ae65d8c1539aac6d5cf2d09999ba7b55413432101134011808ea5655",
+      "bytes": 4947
+    },
+    "/workspace/configs/english_selected.yaml": {
+      "sha256": "7a4d61aa1d5d03c36c2d6e3fa2f61303c896b96041a0a3661df6df1e0770f59a",
+      "bytes": 772
+    },
+    "/workspace/scripts/run_defense_suite.py": {
+      "sha256": "8b039ed7ae8a8978ea35d9cd357a0fdba30ca959515cc9edf1ae01e84c95dd77",
+      "bytes": 16154
+    },
+    "/workspace/reproduction-runs/english-defenses-999/results.json": {
+      "sha256": "ad40da735cca39eed3a4387a93c8f68c18d8baf33d2356b5bb644f8bb683fa7e",
+      "bytes": 13196
+    },
+    "/workspace/reproduction-runs/english-defenses-999/plan.json": {
+      "sha256": "d20d5acb97a480ba367a0ba587180de787ace3007c496ee0da861031604ab071",
+      "bytes": 33068
+    },
+    "/workspace/reproduction-runs/paper-quality-research/paper-setting-test-999/evaluation/summary.json": {
+      "sha256": "583e8a34b40a2cd44e9ad92dc6c1756a4e07ffebfc0607b5c069d95a70345b40",
+      "bytes": 28693
+    },
+    "/workspace/improvement/data_and_evaluation_constraints.md": {
+      "sha256": "42dca46d3630d973be2e12c5dff930970d395037ec08efd5af07581c5662ca57",
+      "bytes": 8337
+    },
+    "/workspace/improvement/08_pilot48_results.md": {
+      "sha256": "ff5770b0aa290e2d53ae3af02816c7314332925856c574c796633588e72d34d2",
+      "bytes": 2715
+    },
+    "/workspace/improvement/09_refinement_protocol.md": {
+      "sha256": "20945f9bd5fdf15cc4d23300cd514ae0d30a299e1cd7dc76fa8dcedfea6e697d",
+      "bytes": 6944
+    },
+    "/workspace/improvement/10_refinement_results.md": {
+      "sha256": "4529d5de514575917c441d2010731b9c27ae693cc3019968655f34894f6e4c29",
+      "bytes": 970
+    },
+    "/workspace/improvement/baseline_evidence.json": {
+      "sha256": "1ad2160828dcaa9c0f4a199b791e795afca2be5b446c218fe54d9bcfa9a5bb0e",
+      "bytes": 1632331
+    },
+    "/workspace/data/manifests/pilot.jsonl": {
+      "sha256": "6f03f64d343dd5fa59b04a7ea6ab90b932dfc4f154aeb5c58dba37dad25b7921",
+      "bytes": 8493
+    },
+    "/workspace/data/manifests/reconstruction-pilot.jsonl": {
+      "sha256": "4948fb6376902a7fd6ca074b829a7cc5bf0709ed3c869763906691c8c5d40b71",
+      "bytes": 5359
+    },
+    "/workspace/data/manifests/english-validation.jsonl": {
+      "sha256": "616c42dd50a68e95e8595e2865e13963d794d304534c47f6057158c1584270c4",
+      "bytes": 47447
+    },
+    "/workspace/data/manifests/english-test-999.jsonl": {
+      "sha256": "3ad09278b9a5160add8ad37a81fafd6cfbf5510ae164b3ffefef17e6fbf32148",
+      "bytes": 472611
+    },
+    "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl": {
+      "sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "bytes": 11272
+    },
+    "/workspace/reproduction-runs/paper-quality-finalization/data/confirmation/confirmation-48.jsonl": {
+      "sha256": "377a51cacce705ee4e6d5777aad4d53c042cb473e4b0a4dd001273a8d640a713",
+      "bytes": 22478
+    },
+    "/workspace/improvement/execution/data/train-1h.jsonl": {
+      "sha256": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d",
+      "bytes": 163892
+    },
+    "/workspace/improvement/execution/data/train-10h.jsonl": {
+      "sha256": "d7a1d0ba556d26efc48de686ae99f1970536ecc780c0cb1cf41e89c7927f0dae",
+      "bytes": 1618023
+    },
+    "/workspace/improvement/execution/data/final-reserve-200.jsonl": {
+      "sha256": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b",
+      "bytes": 94412
+    },
+    "/workspace/improvement/execution48/development-48.jsonl": {
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+      "bytes": 22833
+    },
+    "/workspace/improvement/execution_refine/validation-76.jsonl": {
+      "sha256": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a",
+      "bytes": 35766
+    }
+  },
+  "cohorts": {
+    "pilot20": {
+      "path": "/workspace/data/manifests/pilot.jsonl",
+      "exists": true,
+      "sha256": "6f03f64d343dd5fa59b04a7ea6ab90b932dfc4f154aeb5c58dba37dad25b7921",
+      "count": 20,
+      "speakers": 18,
+      "roles": [
+        "pilot"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 80.765,
+      "source_audio_files_present": 20,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "reconstruction12": {
+      "path": "/workspace/data/manifests/reconstruction-pilot.jsonl",
+      "exists": true,
+      "sha256": "4948fb6376902a7fd6ca074b829a7cc5bf0709ed3c869763906691c8c5d40b71",
+      "count": 12,
+      "speakers": 12,
+      "roles": [
+        "pilot"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 62.62500000000001,
+      "source_audio_files_present": 12,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "validation100": {
+      "path": "/workspace/data/manifests/english-validation.jsonl",
+      "exists": true,
+      "sha256": "616c42dd50a68e95e8595e2865e13963d794d304534c47f6057158c1584270c4",
+      "count": 100,
+      "speakers": 36,
+      "roles": [
+        "validation"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 714.4,
+      "source_audio_files_present": 100,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "test999": {
+      "path": "/workspace/data/manifests/english-test-999.jsonl",
+      "exists": true,
+      "sha256": "3ad09278b9a5160add8ad37a81fafd6cfbf5510ae164b3ffefef17e6fbf32148",
+      "count": 999,
+      "speakers": 40,
+      "roles": [
+        "test"
+      ],
+      "splits": [
+        "test-clean"
+      ],
+      "duration_seconds_sum": 7402.945375000006,
+      "source_audio_files_present": 999,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "reused_dev24": {
+      "path": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "exists": true,
+      "sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "count": 24,
+      "speakers": 18,
+      "roles": [
+        "pilot"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 170.51493750000003,
+      "source_audio_files_present": 24,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "prospective48": {
+      "path": "/workspace/reproduction-runs/paper-quality-finalization/data/confirmation/confirmation-48.jsonl",
+      "exists": true,
+      "sha256": "377a51cacce705ee4e6d5777aad4d53c042cb473e4b0a4dd001273a8d640a713",
+      "count": 48,
+      "speakers": 28,
+      "roles": [
+        "validation"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 319.72506250000004,
+      "source_audio_files_present": 48,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "attack_train_1h": {
+      "path": "/workspace/improvement/execution/data/train-1h.jsonl",
+      "exists": true,
+      "sha256": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d",
+      "count": 286,
+      "speakers": 251,
+      "roles": [
+        "train"
+      ],
+      "splits": [
+        "train-clean-100"
+      ],
+      "duration_seconds_sum": 3609.1751249999993,
+      "source_audio_files_present": 286,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "attack_train_10h": {
+      "path": "/workspace/improvement/execution/data/train-10h.jsonl",
+      "exists": true,
+      "sha256": "d7a1d0ba556d26efc48de686ae99f1970536ecc780c0cb1cf41e89c7927f0dae",
+      "count": 2807,
+      "speakers": 251,
+      "roles": [
+        "train"
+      ],
+      "splits": [
+        "train-clean-100"
+      ],
+      "duration_seconds_sum": 36013.16049999994,
+      "source_audio_files_present": 2807,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "other_project_final_reserve200": {
+      "path": "/workspace/improvement/execution/data/final-reserve-200.jsonl",
+      "exists": true,
+      "sha256": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b",
+      "count": 200,
+      "speakers": 33,
+      "roles": [
+        "test"
+      ],
+      "splits": [
+        "test-other"
+      ],
+      "duration_seconds_sum": 1320.9300625000008,
+      "source_audio_files_present": 200,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "exposed_attack_development48": {
+      "path": "/workspace/improvement/execution48/development-48.jsonl",
+      "exists": true,
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+      "count": 48,
+      "speakers": 30,
+      "roles": [
+        "pilot"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 360.0099375000001,
+      "source_audio_files_present": 48,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    },
+    "exposed_attack_validation76": {
+      "path": "/workspace/improvement/execution_refine/validation-76.jsonl",
+      "exists": true,
+      "sha256": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a",
+      "count": 76,
+      "speakers": 34,
+      "roles": [
+        "validation"
+      ],
+      "splits": [
+        "dev-clean"
+      ],
+      "duration_seconds_sum": 524.9050000000001,
+      "source_audio_files_present": 76,
+      "audit_scope": "manifest metadata and file existence; source audio not rehashed"
+    }
+  },
+  "cohort_overlaps": [
+    {
+      "a": "pilot20",
+      "b": "reconstruction12",
+      "id_overlap": 12,
+      "recorded_audio_sha256_overlap": 12,
+      "speaker_overlap": 12
+    },
+    {
+      "a": "pilot20",
+      "b": "validation100",
+      "id_overlap": 2,
+      "recorded_audio_sha256_overlap": 2,
+      "speaker_overlap": 17
+    },
+    {
+      "a": "pilot20",
+      "b": "test999",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "pilot20",
+      "b": "reused_dev24",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 7
+    },
+    {
+      "a": "pilot20",
+      "b": "prospective48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 13
+    },
+    {
+      "a": "pilot20",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "pilot20",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "pilot20",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "pilot20",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 14
+    },
+    {
+      "a": "pilot20",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 2,
+      "recorded_audio_sha256_overlap": 2,
+      "speaker_overlap": 16
+    },
+    {
+      "a": "reconstruction12",
+      "b": "validation100",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 11
+    },
+    {
+      "a": "reconstruction12",
+      "b": "test999",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reconstruction12",
+      "b": "reused_dev24",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 5
+    },
+    {
+      "a": "reconstruction12",
+      "b": "prospective48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 8
+    },
+    {
+      "a": "reconstruction12",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reconstruction12",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reconstruction12",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reconstruction12",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 10
+    },
+    {
+      "a": "reconstruction12",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 10
+    },
+    {
+      "a": "validation100",
+      "b": "test999",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "validation100",
+      "b": "reused_dev24",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 16
+    },
+    {
+      "a": "validation100",
+      "b": "prospective48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 27
+    },
+    {
+      "a": "validation100",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "validation100",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "validation100",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "validation100",
+      "b": "exposed_attack_development48",
+      "id_overlap": 24,
+      "recorded_audio_sha256_overlap": 24,
+      "speaker_overlap": 28
+    },
+    {
+      "a": "validation100",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 76,
+      "recorded_audio_sha256_overlap": 76,
+      "speaker_overlap": 34
+    },
+    {
+      "a": "test999",
+      "b": "reused_dev24",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "prospective48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "test999",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reused_dev24",
+      "b": "prospective48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 13
+    },
+    {
+      "a": "reused_dev24",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reused_dev24",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reused_dev24",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "reused_dev24",
+      "b": "exposed_attack_development48",
+      "id_overlap": 24,
+      "recorded_audio_sha256_overlap": 24,
+      "speaker_overlap": 18
+    },
+    {
+      "a": "reused_dev24",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 15
+    },
+    {
+      "a": "prospective48",
+      "b": "attack_train_1h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "prospective48",
+      "b": "attack_train_10h",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "prospective48",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "prospective48",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 21
+    },
+    {
+      "a": "prospective48",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 26
+    },
+    {
+      "a": "attack_train_1h",
+      "b": "attack_train_10h",
+      "id_overlap": 286,
+      "recorded_audio_sha256_overlap": 286,
+      "speaker_overlap": 251
+    },
+    {
+      "a": "attack_train_1h",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "attack_train_1h",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "attack_train_1h",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "attack_train_10h",
+      "b": "other_project_final_reserve200",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "attack_train_10h",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "attack_train_10h",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "other_project_final_reserve200",
+      "b": "exposed_attack_development48",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "other_project_final_reserve200",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 0
+    },
+    {
+      "a": "exposed_attack_development48",
+      "b": "exposed_attack_validation76",
+      "id_overlap": 0,
+      "recorded_audio_sha256_overlap": 0,
+      "speaker_overlap": 26
+    }
+  ],
+  "saved_defense_results": [
+    {
+      "condition": "raw",
+      "variants": {
+        "clean": {
+          "count": 999,
+          "substitutions": 581,
+          "deletions": 106,
+          "insertions": 118,
+          "reference_units": 20310,
+          "error_percent": 3.96356474643033,
+          "quality": {
+            "dnsmos": 3.264184002980711,
+            "nisqa": 4.029122992440148,
+            "utmos": 4.084511429697901
+          },
+          "recomputed_from_saved_counts": 3.96356474643033
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 575,
+          "deletions": 102,
+          "insertions": 80,
+          "reference_units": 20310,
+          "error_percent": 3.727227966518956,
+          "quality": {
+            "dnsmos": 3.2723379281758214,
+            "nisqa": 4.141564767759244,
+            "utmos": 4.0283984390942305
+          },
+          "recomputed_from_saved_counts": 3.727227966518956
+        },
+        "adversarial": {
+          "count": 999,
+          "substitutions": 11294,
+          "deletions": 796,
+          "insertions": 2961,
+          "reference_units": 20310,
+          "error_percent": 74.10635155096011,
+          "quality": {
+            "dnsmos": 2.963822380765212,
+            "nisqa": 3.8711315010403013,
+            "utmos": 2.7923767282678797
+          },
+          "recomputed_from_saved_counts": 74.10635155096011
+        }
+      }
+    },
+    {
+      "condition": "lpf-6000",
+      "variants": {
+        "adversarial": {
+          "count": 999,
+          "substitutions": 11276,
+          "deletions": 776,
+          "insertions": 2884,
+          "reference_units": 20310,
+          "error_percent": 73.54012801575578,
+          "recomputed_from_saved_counts": 73.54012801575578
+        },
+        "clean": {
+          "count": 999,
+          "substitutions": 581,
+          "deletions": 104,
+          "insertions": 94,
+          "reference_units": 20310,
+          "error_percent": 3.8355489906450027,
+          "recomputed_from_saved_counts": 3.8355489906450027
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 596,
+          "deletions": 105,
+          "insertions": 127,
+          "reference_units": 20310,
+          "error_percent": 4.0768094534711965,
+          "recomputed_from_saved_counts": 4.0768094534711965
+        }
+      }
+    },
+    {
+      "condition": "waveguard-downup-8000",
+      "variants": {
+        "adversarial": {
+          "count": 999,
+          "substitutions": 10838,
+          "deletions": 644,
+          "insertions": 3087,
+          "reference_units": 20310,
+          "error_percent": 71.73313638601674,
+          "recomputed_from_saved_counts": 71.73313638601674
+        },
+        "clean": {
+          "count": 999,
+          "substitutions": 641,
+          "deletions": 109,
+          "insertions": 79,
+          "reference_units": 20310,
+          "error_percent": 4.081733136386017,
+          "recomputed_from_saved_counts": 4.081733136386017
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 656,
+          "deletions": 112,
+          "insertions": 78,
+          "reference_units": 20310,
+          "error_percent": 4.165435745937962,
+          "recomputed_from_saved_counts": 4.165435745937962
+        }
+      }
+    },
+    {
+      "condition": "waveguard-downup-2000",
+      "variants": {
+        "adversarial": {
+          "count": 999,
+          "substitutions": 14068,
+          "deletions": 494,
+          "insertions": 6073,
+          "reference_units": 20310,
+          "error_percent": 101.60019694731659,
+          "recomputed_from_saved_counts": 101.60019694731659
+        },
+        "clean": {
+          "count": 999,
+          "substitutions": 5052,
+          "deletions": 415,
+          "insertions": 1108,
+          "reference_units": 20310,
+          "error_percent": 32.373215164943375,
+          "recomputed_from_saved_counts": 32.373215164943375
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 5374,
+          "deletions": 407,
+          "insertions": 1287,
+          "reference_units": 20310,
+          "error_percent": 34.80059084194978,
+          "recomputed_from_saved_counts": 34.80059084194978
+        }
+      }
+    }
+  ],
+  "saved_paper_setting_test": {
+    "clean": {
+      "count": 999,
+      "substitutions": 581,
+      "deletions": 106,
+      "insertions": 118,
+      "reference_units": 20310,
+      "error_percent": 3.96356474643033,
+      "quality": {
+        "dnsmos": 3.264184002980711,
+        "nisqa": 4.0291229896955905,
+        "utmos": 4.084511504874931
+      }
+    },
+    "reconstruction": {
+      "count": 999,
+      "substitutions": 575,
+      "deletions": 102,
+      "insertions": 80,
+      "reference_units": 20310,
+      "error_percent": 3.727227966518956,
+      "quality": {
+        "dnsmos": 3.2723379281758214,
+        "nisqa": 4.141564767997902,
+        "utmos": 4.028398510691401
+      }
+    },
+    "adversarial": {
+      "count": 999,
+      "substitutions": 9957,
+      "deletions": 728,
+      "insertions": 2464,
+      "reference_units": 20310,
+      "error_percent": 64.74150664697194,
+      "quality": {
+        "dnsmos": 3.1262038537075876,
+        "nisqa": 3.9542390666566454,
+        "utmos": 3.358174245159428
+      }
+    }
+  },
+  "existing_attack_job_observation": {
+    "source": "/workspace/improvement/execution_refine/progress.json",
+    "status": "running",
+    "phase": "pilot-generation",
+    "supervisor_pid": 138912,
+    "pid_exists_at_snapshot": true,
+    "note": "Point-in-time observation only; job not modified or adopted."
+  },
+  "limits": [
+    "No fresh ASR/MOS inference, audio rehash, lexical alignment audit, or training.",
+    "Cohort inventory covers explicitly listed known manifests, not every historical cache.",
+    "Overlap hashes are recorded manifest hashes, not newly decoded PCM hashes.",
+    "Existing reserves belong to prior work and are not allocated to this defense task.",
+    "Metadata availability and independence from defense training do not imply pretrained-model non-exposure."
+  ]
+}

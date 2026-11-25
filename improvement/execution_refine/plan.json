@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-10-22T08:05:25.150931+00:00",
+  "cohorts": {
+    "pilot": {
+      "count": 48,
+      "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a"
+    },
+    "validation": {
+      "count": 76,
+      "manifest": "/workspace/improvement/execution_refine/validation-76.jsonl",
+      "sha256": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a"
+    }
+  },
+  "variants": [
+    "clean",
+    "fv50",
+    "full50",
+    "weighted100",
+    "constrained100",
+    "fv100"
+  ],
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "maximum_cycle_wall_seconds": 12600,
+  "original_initial_gpu_envelope_hours": 6,
+  "authorization": "User requested continued paper improvement and larger validation/full runs when justified; pilots48",
+  "initialization": "Full-R3 waveform PGD50; pilot reuses frozen prior output, validation generates the identical algorithm",
+  "method": {
+    "additional_updates": 50,
+    "step_size": 0.00012,
+    "epsilon": 0.003,
+    "rms_limit": 0.003,
+    "inward_fraction": 0.01,
+    "backtracking_trials": 10,
+    "quality_caps": "Per-example fixed initial full50 STFT and WavLM6 distortion values",
+    "tolerances": "Caps max(1e-12,32*finfo.eps*abs(cap)); source max(1e-7,8*finfo.eps*abs(NLL))",
+    "direction": "Simultaneous2-plane Euclidean projection of box-free source-gradient sign; fixed inward margin, zero-margin fallback; positive Linf normalization; actual nonlinear checks",
+    "selected_iterate": "last feasible after50 attempted additional steps; no decoding/MOS iterate selection"
+  },
+  "fv": {
+    "learning_rate": 0.02,
+    "steps": 100,
+    "rho": 0.1,
+    "full_original_tv_hf": true,
+    "save_steps": [
+      50,
+      100
+    ],
+    "pilot_step50": "Require exact tensor equality with frozen FV50 delta"
+  },
+  "validation_rule": "Freeze one quality-admissible candidate with either primary G1 signal or a>=3pp source gain vs full50 without>0.05UTMOS loss (or>=0.05UTMOS gain with<=2pp source loss); primary superiority is separately labelled. If none, stop rather than repeat pilots.",
+  "selection_rule": "Choose highest source WER among qualifying constrained100/weighted100, then higher UTMOS, then constrained100; select admissible FV50/FV100 control by highest source WER, then UTMOS, then FV50. Freeze before validation.",
+  "scientific_limits": "Source-only exposed-development validation; no human or transfer claim; waveform and feature budgets differ; match source-backward counts but disclose extra line-search forwards.",
+  "bindings": {
+    "/workspace/improvement/runtime_refine.py": "e4caf10babe369fe161ff2622099b422cadbdc3738557975eb49f46562f00c8b",
+    "/workspace/improvement/refine_runner.py": "0b83988f0938ae6280350236d3942b1d13f8322c3950bcf8bb8a6fd996e84337",
+    "/workspace/improvement/source_evaluate_refine.py": "10ae56bb0bb273321f89172881aaceee3a016863c5f67dc40249a9cc7926f369",
+    "/workspace/improvement/constrained_refine.py": "2f6170c0f0c61f30cc44a5e1a075122c294eef0bf68daa9810bfa4f610ecc6c2",
+    "/workspace/improvement/test_constrained_refine.py": "ea450a64b830cd81c57497fd42061218844e30492573476f39830b0b3084878d",
+    "/workspace/improvement/supervise_refinement.py": "0c467fbdf58d806860dfe5b3dc4267e739a3b2a41f46fbe87034b28daaa16e33",
+    "/workspace/improvement/postprocess_refinement.py": "a7787a3eeac4da57824debe89f9837b7874606a79545e29df58f61f92cd3ec6f",
+    "/workspace/improvement/r3_waveform.py": "41f710cebb79a543912f356a051ee1aacbdf8ebe00631f34364a8ba52dc87289",
+    "/workspace/improvement/r3_encoder_repair.py": "ae7ef8830fd6dc8cc4457d34c0aae56a8a6be16f8d7cebfee6de52d705a74d7d",
+    "/workspace/improvement/r3_real_runner_v2.py": "fa4dff2b2a08ee455ea8bbe66d65433c81461d5b6bfee6c29135ed557491780d",
+    "/workspace/improvement/waveform_pgd.py": "76862ea275e36fd99741f8841aa24cf506b4b2cfa15f6cd52777cc157b1e7daf",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d",
+    "/workspace/improvement/supervise_pilot48.py": "afe00460e1103da4cc3072eabc267efaac476665e278f9e70629c342059d25d5",
+    "/workspace/improvement/test_refinement_scope.py": "c62b0b405275ff8cdac11bd01e74e7ad0870573cde5910875eef9a370b1ddec7",
+    "/workspace/improvement/09_refinement_protocol.md": "20945f9bd5fdf15cc4d23300cd514ae0d30a299e1cd7dc76fa8dcedfea6e697d",
+    "/workspace/improvement/execution_refine/validation-76.jsonl": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a",
+    "/workspace/improvement/execution_refine/validation-76.receipt.json": "ca16e1dbe29358a29dc7431bcb20f89996cf17d3ced1e3853bd957c8753793f2",
+    "/workspace/improvement/execution_refine/create_validation76.py": "ccc7edbcd445baaac69cc802fafefcb223cac0d8cc7a28fc1062b477a0797b15",
+    "/workspace/improvement/execution_refine/prior-work.md": "0fe09717ac49e24fd64aae026ef5e68fd4faf007d77423c6382786e08e633818",
+    "/workspace/improvement/execution_refine/core-tests.log": "77add11e41bf551ab35ee5297ff38f21976bad826ac5d1996fa32d44410c47ef",
+    "/workspace/improvement/execution_refine/audit_refinement.py": "261c8b6329e089c9a5e04dda1be75afa71dadbcb398470ff2062610ab3d15041",
+    "/workspace/improvement/execution_refine/test_audit_refinement.py": "77571d0271ab8d83f80cb7c81e7df3bf74bc2c017e49c62d12e92349dbc0f1ef",
+    "/workspace/improvement/execution_refine/audit-tests.log": "5349963571eb4a2990a3b2902e194df37f9065158a8b81a0ab8f67f9708e16d1",
+    "/workspace/improvement/execution_refine/integration-tests.log": "0e8a88202669cfd9e1fc4573f3e2ce2461883b0af352b1d1e5fb93c438b13421",
+    "/workspace/improvement/execution_refine/compute-ledger.json": "7515f0949b3c6d3c9d56230cd2c5c151658cef32cc215b7af338d27346faf9bc",
+    "/workspace/improvement/execution_refine/compute-ledger.md": "bb682d3fbad1445b293ad89136f6307aecbbdabe5adbd96197f5fa61a3ca509d",
+    "/workspace/improvement/execution_refine/build_compute_ledger.py": "8ba143da22125e8d5a0669e5a9d5e7028deeaaf89b16f27ef18df869f03af84f",
+    "/workspace/improvement/execution48/development-48.jsonl": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a",
+    "/workspace/improvement/execution48/audit_pilot48.py": "d0671b270bf849c6f5b33ce30ba420b7087bf583dabfd6b84f2d8dd1ba6f5265",
+    "/workspace/improvement/execution48/plan.json": "0f1a1f552a37fedb3a480430b8f8ead1503a9b2a0b0d6eed64de5d0dd8969bd2",
+    "/workspace/improvement/execution48/mechanism-pilot48/generated.jsonl": "0e9a35d5de2adcb1b070cad8fd4bb6a808f9b17d2315052e6468ab710c3c822b",
+    "/workspace/improvement/execution48/mechanism-pilot48/source-summary.json": "c7ead5892c8a40d25973482861f0027e478bd2b015e79a370a7a6cbfc1538fad",
+    "/workspace/improvement/execution/plan.json": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+    "/workspace/scripts/run_logged.py": "9b85ac3d44f420bb26fb10225d07a55f9a04357781d6a068f3c711f8b4ef5669"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "status": "pass",
+  "scope": "engineering_only",
+  "target_models_evaluated": [],
+  "cases": [
+    {
+      "id": "6345-93302-0028",
+      "duration": 1.94,
+      "status": "pass",
+      "calibration": {
+        "gradient_norms": {
+          "small": 1793.9515860455294,
+          "large": 4513.739761463671,
+          "ctc": 17651.75028332925
+        },
+        "nlls": {
+          "small": 24.923025131225586,
+          "large": 25.99597930908203,
+          "ctc": 57.29436492919922
+        },
+        "fixed_scales": {
+          "small": 1.0,
+          "large": 0.3974424049347064,
+          "ctc": 0.10163023820588385
+        },
+        "rule": "Once per utterance at its unmodified reconstruction; match each audio-gradient norm to small"
+      },
+      "transforms": [
+        {
+          "name": "identity",
+          "seconds": 1.1282723266631365,
+          "components": {
+            "small": {
+              "nll": 24.923025131225586,
+              "gradient_norm": 1793.9515860455294,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 25.99597930908203,
+              "gradient_norm": 4513.739761463671,
+              "fixed_scale": 0.3974424049347064,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 57.29436492919922,
+              "gradient_norm": 17651.75028332925,
+              "fixed_scale": 0.10163023820588385,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "fir6k",
+          "seconds": 1.13110716547817,
+          "components": {
+            "small": {
+              "nll": 25.81766128540039,
+              "gradient_norm": 2290.8694124019135,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 26.784395217895508,
+              "gradient_norm": 3216.8355381772362,
+              "fixed_scale": 0.3974424049347064,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 53.067726135253906,
+              "gradient_norm": 13894.138817451545,
+              "fixed_scale": 0.10163023820588385,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "resample8k",
+          "seconds": 1.1366560813039541,
+          "components": {
+            "small": {
+              "nll": 25.159013748168945,
+              "gradient_norm": 1868.9705158441216,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 26.45768165588379,
+              "gradient_norm": 3177.1128102231146,
+              "fixed_scale": 0.3974424049347064,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 50.289398193359375,
+              "gradient_norm": 9465.134602119968,
+              "fixed_scale": 0.10163023820588385,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        }
+      ],
+      "fv_peak_allocated_bytes": 9311239680,
+      "bigvgan_peak_allocated_bytes": 8558347776,
+      "bigvgan_parameters": 112414512,
+      "bigvgan_original_samples": 31040,
+      "bigvgan_output_samples": 31040,
+      "bigvgan_peak": 0.4013463258743286,
+      "bigvgan_clipped_after_resample": 0,
+      "wall_seconds": 5.746464076451957
+    },
+    {
+      "id": "6313-76958-0022",
+      "duration": 6.295,
+      "status": "pass",
+      "calibration": {
+        "gradient_norms": {
+          "small": 1025.998850986461,
+          "large": 676.4259539100166,
+          "ctc": 2417.3804124510907
+        },
+        "nlls": {
+          "small": 27.895977020263672,
+          "large": 27.01161766052246,
+          "ctc": 60.90999984741211
+        },
+        "fixed_scales": {
+          "small": 1.0,
+          "large": 1.5167940334869934,
+          "ctc": 0.42442589743091147
+        },
+        "rule": "Once per utterance at its unmodified reconstruction; match each audio-gradient norm to small"
+      },
+      "transforms": [
+        {
+          "name": "identity",
+          "seconds": 1.1699500204995275,
+          "components": {
+            "small": {
+              "nll": 27.895977020263672,
+              "gradient_norm": 1025.998850986461,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 27.01161766052246,
+              "gradient_norm": 676.4259539100166,
+              "fixed_scale": 1.5167940334869934,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 60.90999984741211,
+              "gradient_norm": 2417.3804124510907,
+              "fixed_scale": 0.42442589743091147,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "fir6k",
+          "seconds": 1.1746522868052125,
+          "components": {
+            "small": {
+              "nll": 28.950578689575195,
+              "gradient_norm": 1053.0025261432352,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 27.726097106933594,
+              "gradient_norm": 664.9993086598796,
+              "fixed_scale": 1.5167940334869934,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 58.921451568603516,
+              "gradient_norm": 2157.7576126028403,
+              "fixed_scale": 0.42442589743091147,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "resample8k",
+          "seconds": 1.1735064191743731,
+          "components": {
+            "small": {
+              "nll": 30.589365005493164,
+              "gradient_norm": 1046.6730728448704,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 28.807952880859375,
+              "gradient_norm": 512.0593161326094,
+              "fixed_scale": 1.5167940334869934,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 59.48221969604492,
+              "gradient_norm": 1844.7302113500689,
+              "fixed_scale": 0.42442589743091147,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        }
+      ],
+      "fv_peak_allocated_bytes": 9896024064,
+      "bigvgan_peak_allocated_bytes": 9241148928,
+      "bigvgan_parameters": 112414512,
+      "bigvgan_original_samples": 100720,
+      "bigvgan_output_samples": 100720,
+      "bigvgan_peak": 0.6076248288154602,
+      "bigvgan_clipped_after_resample": 0,
+      "wall_seconds": 6.157974283210933
+    },
+    {
+      "id": "2035-152373-0005",
+      "duration": 24.03,
+      "status": "pass",
+      "calibration": {
+        "gradient_norms": {
+          "small": 444.1153281019553,
+          "large": 10299.678350236523,
+          "ctc": 2039.1358445601375
+        },
+        "nlls": {
+          "small": 50.85837173461914,
+          "large": 49.36397171020508,
+          "ctc": 69.66828918457031
+        },
+        "fixed_scales": {
+          "small": 1.0,
+          "large": 0.04311933955605095,
+          "ctc": 0.21779585175099286
+        },
+        "rule": "Once per utterance at its unmodified reconstruction; match each audio-gradient norm to small"
+      },
+      "transforms": [
+        {
+          "name": "identity",
+          "seconds": 1.4514623545110226,
+          "components": {
+            "small": {
+              "nll": 50.85837173461914,
+              "gradient_norm": 444.1153281019553,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 49.36397171020508,
+              "gradient_norm": 10299.678350236523,
+              "fixed_scale": 0.04311933955605095,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 69.66828918457031,
+              "gradient_norm": 2039.1358445601375,
+              "fixed_scale": 0.21779585175099286,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "fir6k",
+          "seconds": 1.4523147651925683,
+          "components": {
+            "small": {
+              "nll": 50.823036193847656,
+              "gradient_norm": 409.38911342266493,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 46.897117614746094,
+              "gradient_norm": 1420.0997998211826,
+              "fixed_scale": 0.04311933955605095,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 70.63723754882812,
+              "gradient_norm": 1623.236255846209,
+              "fixed_scale": 0.21779585175099286,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        },
+        {
+          "name": "resample8k",
+          "seconds": 1.4548472939059138,
+          "components": {
+            "small": {
+              "nll": 50.750770568847656,
+              "gradient_norm": 371.1631077020653,
+              "fixed_scale": 1.0,
+              "weight": 0.5,
+              "source_backward_calls": 1
+            },
+            "large": {
+              "nll": 46.83871078491211,
+              "gradient_norm": 860.0859071964923,
+              "fixed_scale": 0.04311933955605095,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            },
+            "ctc": {
+              "nll": 69.58639526367188,
+              "gradient_norm": 803.7021067207983,
+              "fixed_scale": 0.21779585175099286,
+              "weight": 0.25,
+              "source_backward_calls": 1
+            }
+          }
+        }
+      ],
+      "fv_peak_allocated_bytes": 14528583680,
+      "bigvgan_peak_allocated_bytes": 11996304896,
+      "bigvgan_parameters": 112414512,
+      "bigvgan_original_samples": 384480,
+      "bigvgan_output_samples": 384480,
+      "bigvgan_peak": 0.7187645435333252,
+      "bigvgan_clipped_after_resample": 0,
+      "wall_seconds": 10.635276527144015
+    }
+  ],
+  "source_metadata": {
+    "small": {
+      "checkpoint": "/workspace/artifacts/whisper/small.pt",
+      "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+      "dimensions": {
+        "n_mels": 80,
+        "n_audio_ctx": 1500,
+        "n_audio_state": 768,
+        "n_audio_head": 12,
+        "n_audio_layer": 12,
+        "n_vocab": 51865,
+        "n_text_ctx": 448,
+        "n_text_state": 768,
+        "n_text_head": 12,
+        "n_text_layer": 12
+      },
+      "language": "en",
+      "nll_reduction": "sum",
+      "decoding": {
+        "beam_size": 5,
+        "temperature": 0.0
+      },
+      "activation_checkpointing": "non-reentrant encoder/decoder residual blocks"
+    },
+    "large": {
+      "checkpoint": "/workspace/artifacts/whisper/large-v2.pt",
+      "sha256": "81f7c96c852ee8fc832187b0132e569d6c3065a3252ed18e56effd0b6a73e524",
+      "dimensions": {
+        "n_mels": 80,
+        "n_audio_ctx": 1500,
+        "n_audio_state": 1280,
+        "n_audio_head": 20,
+        "n_audio_layer": 32,
+        "n_vocab": 51865,
+        "n_text_ctx": 448,
+        "n_text_state": 1280,
+        "n_text_head": 20,
+        "n_text_layer": 32
+      },
+      "language": "en",
+      "nll_reduction": "sum",
+      "decoding": {
+        "beam_size": 5,
+        "temperature": 0.0
+      },
+      "activation_checkpointing": "non-reentrant encoder/decoder residual blocks"
+    },
+    "ctc": {
+      "repo": "facebook/data2vec-audio-base-960h",
+      "revision": "32331f3123e703528918aa688a9a38232d58c872",
+      "loss": "CPU summed CTC",
+      "reference_policy": "uppercase, typographic apostrophe to ASCII; unknown labels fail",
+      "normalization": "utterance mean and variance+1e-7",
+      "parameters": 93188896
+    }
+  },
+  "backend": {
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "flash_sdp_enabled": false,
+    "efficient_sdp_enabled": false,
+    "math_sdp_enabled": true,
+    "cudnn_sdp_enabled": false,
+    "whisper_use_sdpa": true,
+    "whisper_sdpa_available": true,
+    "float32_matmul_precision": "highest",
+    "cublas_workspace_config": ":4096:8",
+    "cpu_threads": 4,
+    "interop_threads": 16
+  },
+  "wall_seconds": 36.66433785110712
+}

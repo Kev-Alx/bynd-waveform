@@ -1,0 +1,37 @@
+# All unspecified choices are documented in docs/REPRODUCTION.md.
+seed: 2026
+method: feature
+save_delta: false
+features:
+  artifact_root: artifacts
+  layer: 6
+  normalize: false
+  vocoder_variant: regular
+surrogate:
+  checkpoint: artifacts/whisper/small.pt
+  language: en
+  nll_reduction: mean
+  decoding:
+    beam_size: 5
+    temperature: 0.0
+attack:
+  steps: 50
+  rho: 0.1
+  lambda_perc: 1.0
+  alpha_hf: 1.0
+  eps: 1.0e-8
+  optimizer: adam
+  learning_rate: 0.01
+  initialization: zero
+  init_fraction: 0.01
+  attack: true
+  temporal: true
+  high_frequency: true
+spectral:
+  sample_rate: 16000
+  cutoff_hz: 6000.0
+  n_fft: 1024
+  hop_length: 256
+  win_length: 1024
+  center: true
+

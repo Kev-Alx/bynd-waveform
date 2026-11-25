@@ -17,6 +17,10 @@ The container in `Dockerfile` already includes dependencies. From `/workspace`:
 
 The full 999-utterance attack is compute intensive. Run the included `scripts/real_smoke.py` on a separate `role=pilot` manifest first. `--quality` on `evaluate.py` loads DNSMOS, NISQA, and UTMOS for Table 4 and validation selection; UTMOS needs `download_models.py --components utmos` once. `scripts/run_experiments.py` prepares the full radius/weight, ablation, and waveform baseline grids. Long-running scripts display file, utterance, epoch, or experiment progress. See [docs/REPRODUCTION.md](docs/REPRODUCTION.md) for exact run order, assumptions, evaluation controls, and scope limits.
 
+For the current-implementation defense baseline, see [docs/DEFENSE_RESEARCH.md](docs/DEFENSE_RESEARCH.md). `scripts/run_defense_suite.py` freezes and audits the original 999 clips, measures the existing independent LPF and source-backed WaveGuard resampling conditions, and reports unavailable paper defenses explicitly. Install the `defenses` optional dependency for WaveGuard. This suite does not change attack settings or claim complete Table 1 parity.
+
+The completed [first WER and quality batch](docs/QUALITY_RESEARCH.md), [refinement](docs/QUALITY_REFINEMENT.md), [feature/vocoder study](docs/QUALITY_CONTRACTS.md), and [overnight queue](docs/QUALITY_OVERNIGHT.md) document the remaining joint quality/WER gap. The current [feature-delta diagnostics](docs/QUALITY_DELTA_DIAGNOSTICS.md) compare temporal smoothing with norm-matched controls and measure objective-component gradients using saved perturbations. Live progress is in [JOB_STATUS.md](/workspace/reproduction-runs/JOB_STATUS.md). Discord job notifications are disabled.
+
 For a long job that must outlive the chat terminal, use a detached `tmux` session and `scripts/run_logged.py`. The wrapper appends the live progress to a log and writes a JSON job record with the exit code and `running`, `complete`, `failed`, or `interrupted` status. The validation grid currently uses the learning rate chosen on the disjoint pilot:
 
 ```bash

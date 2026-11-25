@@ -1,0 +1,442 @@
+{
+  "status": "complete",
+  "phase": "initial_development_cycle_finished",
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "maximum_initial_gpu_hours": 6,
+  "maximum_r3_training_seconds": 3600,
+  "supervisor_pid": 122704,
+  "stages": [
+    {
+      "name": "r1-deletion-native-evaluation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/source_evaluate.py",
+        "--name",
+        "r1-deletion-development24"
+      ],
+      "strict_generation_policy": false,
+      "job_file": "/workspace/improvement/execution/jobs/r1-deletion-native-evaluation/job.json",
+      "started_at": "2026-10-22T02:03:48.889110+00:00",
+      "wrapper_pid": 121844,
+      "exit_code": 0,
+      "finished_at": "2026-10-22T02:05:37.316407+00:00",
+      "wrapper_receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T02:03:48.938027+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/source_evaluate.py",
+          "--name",
+          "r1-deletion-development24"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 121844,
+        "log": "/workspace/improvement/execution/jobs/r1-deletion-native-evaluation/stage.log",
+        "child_pid": 121845,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T02:05:37.263399+00:00"
+      }
+    },
+    {
+      "name": "r3-native-reference-preflight",
+      "status": "failed",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/r3_real_runner.py",
+        "preflight"
+      ],
+      "strict_generation_policy": true,
+      "job_file": "/workspace/improvement/execution/jobs/r3-native-reference-preflight/job.json",
+      "started_at": "2026-10-22T02:05:37.332313+00:00",
+      "wrapper_pid": 122181,
+      "exit_code": 1,
+      "finished_at": "2026-10-22T02:05:45.734860+00:00",
+      "wrapper_receipt": {
+        "status": "failed",
+        "started_at": "2026-10-22T02:05:37.378896+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/r3_real_runner.py",
+          "preflight"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 122181,
+        "log": "/workspace/improvement/execution/jobs/r3-native-reference-preflight/stage.log",
+        "child_pid": 122182,
+        "exit_code": 1,
+        "finished_at": "2026-10-22T02:05:45.696027+00:00"
+      }
+    },
+    {
+      "name": "r3-waveform-reference-repair-bounded-run",
+      "status": "failed",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/r3_real_runner.py",
+        "run",
+        "--name",
+        "r3-waveform-reference-repair",
+        "--allow-new-content-reference"
+      ],
+      "strict_generation_policy": true,
+      "job_file": "/workspace/improvement/execution/jobs/r3-waveform-reference-repair-bounded-run/job.json",
+      "started_at": "2026-10-22T02:05:45.760949+00:00",
+      "wrapper_pid": 122227,
+      "exit_code": 1,
+      "finished_at": "2026-10-22T02:05:54.412674+00:00",
+      "wrapper_receipt": {
+        "status": "failed",
+        "started_at": "2026-10-22T02:05:45.801670+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/r3_real_runner.py",
+          "run",
+          "--name",
+          "r3-waveform-reference-repair",
+          "--allow-new-content-reference"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 122227,
+        "log": "/workspace/improvement/execution/jobs/r3-waveform-reference-repair-bounded-run/stage.log",
+        "child_pid": 122228,
+        "exit_code": 1,
+        "finished_at": "2026-10-22T02:05:54.352117+00:00"
+      }
+    },
+    {
+      "name": "r3-waveform-autograd-repair-bounded-run",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/r3_real_runner_v2.py",
+        "run",
+        "--name",
+        "r3-waveform-autograd-repair",
+        "--allow-new-content-reference"
+      ],
+      "strict_generation_policy": true,
+      "job_file": "/workspace/improvement/execution/jobs/r3-waveform-autograd-repair-bounded-run/job.json",
+      "started_at": "2026-10-22T02:10:16.684099+00:00",
+      "wrapper_pid": 122706,
+      "exit_code": 0,
+      "finished_at": "2026-10-22T03:11:18.644415+00:00",
+      "wrapper_receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T02:10:16.725360+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/r3_real_runner_v2.py",
+          "run",
+          "--name",
+          "r3-waveform-autograd-repair",
+          "--allow-new-content-reference"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 122706,
+        "log": "/workspace/improvement/execution/jobs/r3-waveform-autograd-repair-bounded-run/stage.log",
+        "child_pid": 122707,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T03:11:18.625748+00:00"
+      }
+    }
+  ],
+  "heartbeat_seconds": 30,
+  "started_at": "2026-10-22T02:10:16.656883+00:00",
+  "supervisor_sha256": "20ed18203ae1f8e3b19cbbc6873a36d2529598012c8be1a04ad307a7d5b76748",
+  "helper_sha256": "15c21d14af74155021e70d7ee0cc7857553b1eda5ed9dfdc1aea131b7107d1aa",
+  "prior_attempt_receipt": "/workspace/improvement/execution/continuation-first-attempt.json",
+  "r3_name": "r3-waveform-autograd-repair",
+  "execution_repair": "Value-preserving positional-convolution input clone; no method/optimizer/loss/budget change",
+  "updated_at": "2026-10-22T11:11:18+08:00",
+  "timezone": "Asia/Taipei",
+  "r1_generation": {
+    "status": "completed",
+    "seconds": 939.6386452950537,
+    "actual_count": 24,
+    "planned_count": 24
+  },
+  "r1_native_summary": {
+    "adversarial": {
+      "count": 24,
+      "substitutions": 179,
+      "deletions": 56,
+      "insertions": 43,
+      "reference_units": 475,
+      "error_percent": 58.526315789473685,
+      "quality": {
+        "dnsmos": 3.177816114854586,
+        "nisqa": 3.995732764403025,
+        "utmos": 3.3497235476970673
+      }
+    },
+    "clean": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3323443629925413,
+        "nisqa": 4.083788245916367,
+        "utmos": 4.188579469919205
+      }
+    },
+    "reconstruction": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.331731573490439,
+        "nisqa": 4.212428530057271,
+        "utmos": 4.166711787382762
+      }
+    }
+  },
+  "r2_native_summary": {
+    "adversarial": {
+      "count": 24,
+      "substitutions": 14,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.3684210526315788,
+      "quality": {
+        "dnsmos": 3.332028333830355,
+        "nisqa": 4.214219321807225,
+        "utmos": 4.16612634062767
+      }
+    },
+    "baseline_attenuated": {
+      "count": 24,
+      "substitutions": 20,
+      "deletions": 2,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 4.842105263157895,
+      "quality": {
+        "dnsmos": 3.3019925637163214,
+        "nisqa": 4.19263822833697,
+        "utmos": 4.083689133326213
+      }
+    },
+    "baseline_frozen": {
+      "count": 24,
+      "substitutions": 258,
+      "deletions": 24,
+      "insertions": 73,
+      "reference_units": 475,
+      "error_percent": 74.73684210526316,
+      "quality": {
+        "dnsmos": 3.1640392160891886,
+        "nisqa": 4.034993400176366,
+        "utmos": 3.318611820538839
+      }
+    },
+    "clean": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3323443629925413,
+        "nisqa": 4.083788245916367,
+        "utmos": 4.188579469919205
+      }
+    },
+    "reconstruction": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.331731573490439,
+        "nisqa": 4.212428530057271,
+        "utmos": 4.166711787382762
+      }
+    }
+  },
+  "r3_status": {
+    "stage": "run",
+    "status": "completed",
+    "updated_at_utc": "2026-10-22T03:11:18.037504+00:00",
+    "source_only": true,
+    "target_models_evaluated": []
+  },
+  "r3_training": {
+    "status": "completed",
+    "interpretation": "one-seed one-hour feasibility; no generalization or transfer claim",
+    "seed": 11,
+    "updates": 1779,
+    "completed_microbatches": 7116,
+    "discarded_partial_microbatches": 0,
+    "stop_reason": "one_hour_wall_time_cap_conservative_reserve",
+    "epochs_started": 25,
+    "training_wall_seconds": 3541.8877668259665,
+    "maximum_training_wall_seconds": 3600,
+    "cuda_event_microbatch_span_seconds": 3049.627779449463,
+    "cuda_timing_note": "Event spans of microbatch work; not hardware-profiler active-kernel occupancy",
+    "peak_allocated_bytes": 4796456960,
+    "peak_reserved_bytes": 6270484480,
+    "mean_microbatch_losses": {
+      "source_sum_nll": 44.42468687481529,
+      "stft_loss": 0.0003854764696212082,
+      "content_loss": 1.3499597790664795e-06
+    },
+    "terminal_checkpoint": {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/terminal.pt",
+      "sha256": "b2a5c5d8eb0589641b5a988491b30e106ff037b0f3bbb95560d2e0c6a6d76a9c"
+    },
+    "selected_checkpoint": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt",
+    "checkpoint_selection": "automatic source-only proxy",
+    "human_admissibility_established": false,
+    "training_manifest_sha256": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d",
+    "trace_sha256": "ac35079c2790e0dd2672486db0de6ec5d5128717dd25c1a753dff3dfb4d6cd95",
+    "cached_q_parity_claimed": false,
+    "weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    },
+    "generator": {
+      "architecture": "six-level Conv1d linear-upsample U-Net",
+      "encoder_channels": [
+        16,
+        32,
+        64,
+        96,
+        128,
+        128
+      ],
+      "decoder_channels": [
+        128,
+        96,
+        64,
+        32,
+        16,
+        16
+      ],
+      "kernel": 15,
+      "encoder_stride": 2,
+      "head_kernel": 1,
+      "skip": "concatenate corresponding encoder output, except final stage",
+      "activation": "GELU; tanh residual head",
+      "bias": true,
+      "linear_upsample_backward": "native CPU derivative with device copies under strict CUDA; native otherwise",
+      "batch_normalization": false,
+      "dropout": false,
+      "padding": "constant-zero right to multiple of 64; exact original-length crop",
+      "sample_rate": 16000,
+      "linf": 0.003,
+      "rms_limit": 0.003,
+      "parameters": 1590833,
+      "parameter_ceiling": 3000000
+    },
+    "training_crops": null
+  },
+  "r3_native_summary": {
+    "adversarial": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3318309732616203,
+        "nisqa": 4.083795328934987,
+        "utmos": 4.1885553896427155
+      }
+    },
+    "clean": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3323443629925413,
+        "nisqa": 4.083788245916367,
+        "utmos": 4.188579469919205
+      }
+    },
+    "initial-generator": {
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3382760202631268,
+        "nisqa": 4.080785810947418,
+        "utmos": 4.188579797744751
+      }
+    }
+  },
+  "completed_r3_training_microbatches": 7116,
+  "latest_r3_microbatch": {
+    "source_sum_nll": 21.751861572265625,
+    "stft_loss": 4.184744830126874e-05,
+    "content_loss": 7.082329167573675e-11,
+    "weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    },
+    "optimizer_step": true,
+    "updates": 1779,
+    "microbatches": 7116,
+    "preclip_gradient_norm": 5.566600322723389,
+    "source_backward_passes": 1,
+    "content_backward_passes": 1,
+    "generator_forward_passes": 3,
+    "batch_size": 1,
+    "id": "445-123857-0016",
+    "epoch": 25,
+    "duration": 3.965,
+    "wall_seconds": 0.2686543520539999,
+    "elapsed_training_seconds": 3541.4628620985895
+  },
+  "execution_failure_history_preserved": true,
+  "finished_at": "2026-10-22T03:11:18.691099+00:00",
+  "postprocessing": {
+    "status": "complete",
+    "pid": 122974,
+    "checks": [
+      {
+        "script": "/workspace/improvement/execution/resume_audit.py",
+        "returncode": 0,
+        "log": "/workspace/improvement/execution/resume-audit-refresh.log"
+      },
+      {
+        "script": "/workspace/improvement/execution/audit_r3_completed.py",
+        "returncode": 0,
+        "log": "/workspace/improvement/execution/r3-completed-audit.log"
+      },
+      {
+        "script": "/workspace/improvement/validate_package.py",
+        "returncode": 0
+      }
+    ],
+    "result_status": "completed_source_only_initial_cycle",
+    "updated_at_utc": "2026-10-22T03:11:32.742497+00:00"
+  }
+}

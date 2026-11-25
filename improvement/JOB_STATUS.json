@@ -1,0 +1,596 @@
+{
+  "status": "complete",
+  "phase": "expanded_cycle_finished",
+  "source_only_generation": true,
+  "target_models_evaluated": [],
+  "maximum_cycle_wall_seconds": 172800,
+  "heartbeat_seconds": 30,
+  "supervisor_pid": 149186,
+  "started_at_utc": "2026-10-22T16:11:33.112369+00:00",
+  "stages": [
+    {
+      "name": "registration",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_run.py",
+        "register"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/registration/job.json",
+      "started_at_utc": "2026-10-22T16:11:33.120450+00:00",
+      "wrapper_pid": 149220,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:13:18.294541+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:11:33.164356+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_run.py",
+          "register"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149220,
+        "log": "/workspace/improvement/execution_scaled/jobs/registration/stage.log",
+        "child_pid": 149221,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:13:18.259860+00:00"
+      }
+    },
+    {
+      "name": "qualification-generation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_run.py",
+        "generate",
+        "--phase",
+        "qualification"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/qualification-generation/job.json",
+      "started_at_utc": "2026-10-22T16:13:18.309299+00:00",
+      "wrapper_pid": 149263,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:13:57.776768+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:13:18.349897+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_run.py",
+          "generate",
+          "--phase",
+          "qualification"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149263,
+        "log": "/workspace/improvement/execution_scaled/jobs/qualification-generation/stage.log",
+        "child_pid": 149264,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:13:57.739456+00:00"
+      }
+    },
+    {
+      "name": "qualification-native-scoring",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_source_evaluate.py",
+        "--name",
+        "qualification",
+        "--output-dir",
+        "/workspace/improvement/execution_scaled/qualification"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/qualification-native-scoring/job.json",
+      "started_at_utc": "2026-10-22T16:13:57.793811+00:00",
+      "wrapper_pid": 149318,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:18:36.227549+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:13:57.838669+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_source_evaluate.py",
+          "--name",
+          "qualification",
+          "--output-dir",
+          "/workspace/improvement/execution_scaled/qualification"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149318,
+        "log": "/workspace/improvement/execution_scaled/jobs/qualification-native-scoring/stage.log",
+        "child_pid": 149319,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:18:36.189504+00:00"
+      }
+    },
+    {
+      "name": "qualification-independent-audit",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_scaled/audit_scaled.py",
+        "--phase",
+        "qualification"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/qualification-independent-audit/job.json",
+      "started_at_utc": "2026-10-22T16:18:36.247012+00:00",
+      "wrapper_pid": 149446,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:18:44.146692+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:18:36.289760+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/execution_scaled/audit_scaled.py",
+          "--phase",
+          "qualification"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149446,
+        "log": "/workspace/improvement/execution_scaled/jobs/qualification-independent-audit/stage.log",
+        "child_pid": 149447,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:18:44.107670+00:00"
+      }
+    },
+    {
+      "name": "qualification-report",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_postprocess.py",
+        "report"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/qualification-report/job.json",
+      "started_at_utc": "2026-10-22T16:18:44.161823+00:00",
+      "wrapper_pid": 149455,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:18:44.339910+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:18:44.207251+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_postprocess.py",
+          "report"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149455,
+        "log": "/workspace/improvement/execution_scaled/jobs/qualification-report/stage.log",
+        "child_pid": 149456,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:18:44.307584+00:00"
+      }
+    },
+    {
+      "name": "decoder-gate",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_postprocess.py",
+        "decoder"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/decoder-gate/job.json",
+      "started_at_utc": "2026-10-22T16:18:44.355448+00:00",
+      "wrapper_pid": 149460,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T16:18:44.532361+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:18:44.399791+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_postprocess.py",
+          "decoder"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149460,
+        "log": "/workspace/improvement/execution_scaled/jobs/decoder-gate/stage.log",
+        "child_pid": 149461,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T16:18:44.493672+00:00"
+      }
+    },
+    {
+      "name": "fvpilot-generation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_run.py",
+        "generate",
+        "--phase",
+        "fvpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/fvpilot-generation/job.json",
+      "started_at_utc": "2026-10-22T16:18:44.548837+00:00",
+      "wrapper_pid": 149465,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-23T19:22:48.226342+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T16:18:44.592682+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_run.py",
+          "generate",
+          "--phase",
+          "fvpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 149465,
+        "log": "/workspace/improvement/execution_scaled/jobs/fvpilot-generation/stage.log",
+        "child_pid": 149466,
+        "exit_code": 0,
+        "finished_at": "2026-10-23T19:22:48.162943+00:00"
+      }
+    },
+    {
+      "name": "fvpilot-native-scoring",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_source_evaluate.py",
+        "--name",
+        "fvpilot",
+        "--output-dir",
+        "/workspace/improvement/execution_scaled/fvpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/fvpilot-native-scoring/job.json",
+      "started_at_utc": "2026-10-23T19:22:48.242229+00:00",
+      "wrapper_pid": 155936,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-23T19:40:30.712844+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-23T19:22:48.284557+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_source_evaluate.py",
+          "--name",
+          "fvpilot",
+          "--output-dir",
+          "/workspace/improvement/execution_scaled/fvpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 155936,
+        "log": "/workspace/improvement/execution_scaled/jobs/fvpilot-native-scoring/stage.log",
+        "child_pid": 155937,
+        "exit_code": 0,
+        "finished_at": "2026-10-23T19:40:30.693747+00:00"
+      }
+    },
+    {
+      "name": "fvpilot-independent-audit",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_scaled/audit_scaled.py",
+        "--phase",
+        "fvpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/fvpilot-independent-audit/job.json",
+      "started_at_utc": "2026-10-23T19:40:30.736143+00:00",
+      "wrapper_pid": 156024,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-23T19:40:47.157302+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-23T19:40:30.785715+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/execution_scaled/audit_scaled.py",
+          "--phase",
+          "fvpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 156024,
+        "log": "/workspace/improvement/execution_scaled/jobs/fvpilot-independent-audit/stage.log",
+        "child_pid": 156025,
+        "exit_code": 0,
+        "finished_at": "2026-10-23T19:40:47.116117+00:00"
+      }
+    },
+    {
+      "name": "fvpilot-report",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_postprocess.py",
+        "report"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/fvpilot-report/job.json",
+      "started_at_utc": "2026-10-23T19:40:47.176019+00:00",
+      "wrapper_pid": 156034,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-23T19:40:47.354548+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-23T19:40:47.218559+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_postprocess.py",
+          "report"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 156034,
+        "log": "/workspace/improvement/execution_scaled/jobs/fvpilot-report/stage.log",
+        "child_pid": 156035,
+        "exit_code": 0,
+        "finished_at": "2026-10-23T19:40:47.310988+00:00"
+      }
+    },
+    {
+      "name": "melpilot-generation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_run.py",
+        "generate",
+        "--phase",
+        "melpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/melpilot-generation/job.json",
+      "started_at_utc": "2026-10-23T19:40:47.370706+00:00",
+      "wrapper_pid": 156039,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T13:56:49.925313+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-23T19:40:47.409793+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_run.py",
+          "generate",
+          "--phase",
+          "melpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 156039,
+        "log": "/workspace/improvement/execution_scaled/jobs/melpilot-generation/stage.log",
+        "child_pid": 156040,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T13:56:49.885429+00:00"
+      }
+    },
+    {
+      "name": "melpilot-native-scoring",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_source_evaluate.py",
+        "--name",
+        "melpilot",
+        "--output-dir",
+        "/workspace/improvement/execution_scaled/melpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/melpilot-native-scoring/job.json",
+      "started_at_utc": "2026-10-24T13:56:49.943678+00:00",
+      "wrapper_pid": 160292,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T14:02:44.070059+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-24T13:56:50.019236+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_source_evaluate.py",
+          "--name",
+          "melpilot",
+          "--output-dir",
+          "/workspace/improvement/execution_scaled/melpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 160292,
+        "log": "/workspace/improvement/execution_scaled/jobs/melpilot-native-scoring/stage.log",
+        "child_pid": 160293,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T14:02:44.022989+00:00"
+      }
+    },
+    {
+      "name": "melpilot-independent-audit",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/execution_scaled/audit_scaled.py",
+        "--phase",
+        "melpilot"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/melpilot-independent-audit/job.json",
+      "started_at_utc": "2026-10-24T14:02:44.090943+00:00",
+      "wrapper_pid": 160355,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T14:02:53.762081+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-24T14:02:44.154027+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/execution_scaled/audit_scaled.py",
+          "--phase",
+          "melpilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 160355,
+        "log": "/workspace/improvement/execution_scaled/jobs/melpilot-independent-audit/stage.log",
+        "child_pid": 160356,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T14:02:53.702364+00:00"
+      }
+    },
+    {
+      "name": "melpilot-report",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_postprocess.py",
+        "report"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/melpilot-report/job.json",
+      "started_at_utc": "2026-10-24T14:02:53.777035+00:00",
+      "wrapper_pid": 160363,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T14:02:53.954181+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-24T14:02:53.820116+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_postprocess.py",
+          "report"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 160363,
+        "log": "/workspace/improvement/execution_scaled/jobs/melpilot-report/stage.log",
+        "child_pid": 160364,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T14:02:53.938722+00:00"
+      }
+    },
+    {
+      "name": "source-only-selection",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/scaled_postprocess.py",
+        "select"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/source-only-selection/job.json",
+      "started_at_utc": "2026-10-24T14:02:53.970819+00:00",
+      "wrapper_pid": 160368,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T14:02:54.150297+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-24T14:02:54.013642+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/scaled_postprocess.py",
+          "select"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 160368,
+        "log": "/workspace/improvement/execution_scaled/jobs/source-only-selection/stage.log",
+        "child_pid": 160369,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T14:02:54.121063+00:00"
+      }
+    },
+    {
+      "name": "package-check",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/validate_package.py"
+      ],
+      "job_file": "/workspace/improvement/execution_scaled/jobs/package-check/job.json",
+      "started_at_utc": "2026-10-24T14:02:54.167375+00:00",
+      "wrapper_pid": 160373,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-24T14:02:54.745838+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-24T14:02:54.209537+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/validate_package.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 160373,
+        "log": "/workspace/improvement/execution_scaled/jobs/package-check/stage.log",
+        "child_pid": 160374,
+        "exit_code": 0,
+        "finished_at": "2026-10-24T14:02:54.704448+00:00"
+      }
+    }
+  ],
+  "updated_at": "2026-10-24T22:02:54+08:00",
+  "timezone": "Asia/Taipei",
+  "cohort": "melpilot",
+  "count": 48,
+  "generation": {
+    "updated_at_utc": "2026-10-24T13:56:48.659050+00:00",
+    "cohort": "melpilot",
+    "total": 48,
+    "status": "completed",
+    "completed": 48
+  },
+  "transfer_progress": {},
+  "scored_variant_waveforms": 240,
+  "total_variant_waveforms": 240,
+  "decoder_decision": {
+    "status": "pass",
+    "source_wer_increase": -0.10060362173038184,
+    "utmos_delta_vs_fv_reconstruction": -0.026307736833890427,
+    "quality_floors_pass": true,
+    "scope": "48-point reconstruction qualification; no attack effect inferred"
+  },
+  "selection": {
+    "status": "stop",
+    "created_at_utc": "2026-10-24T14:02:54.095303+00:00",
+    "candidate": null,
+    "control": {
+      "name": "fv_quality50",
+      "method": "quality",
+      "step": 50,
+      "phase": "fvpilot",
+      "score": {
+        "count": 48,
+        "substitutions": 379,
+        "deletions": 32,
+        "insertions": 84,
+        "reference_units": 994,
+        "error_percent": 49.798792756539235,
+        "quality": {
+          "dnsmos": 3.1738890871498,
+          "nisqa": 4.069769814610481,
+          "utmos": 3.5789116074641547
+        }
+      }
+    },
+    "candidate_is_known_baseline": false,
+    "methods": {},
+    "quality_admissible_points": [],
+    "reason": "Complete-cohort sourceWER strictly above75 and unchanged quality floors; no target outcomes used",
+    "primary_source_only": true,
+    "target_models_evaluated": []
+  },
+  "transfer_decision": {},
+  "finished_at_utc": "2026-10-24T14:02:54.761849+00:00",
+  "scientific_status": "Inspect separate source, quality, transfer and defense endpoints; completion is not proof of success"
+}

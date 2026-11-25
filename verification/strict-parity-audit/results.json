@@ -1,0 +1,175 @@
+{
+  "paper_sha256": "fa1754d1f985d2791c1119fa906fe3baafa340db8a5f9a85ed97be83abf17eee",
+  "baseline_commit": "d7f70e8a717db7feba35b69dacabade7de196b25",
+  "existing_tests": "59 passed",
+  "summary_sha256": "f2622e41d147a7051d5072d9b15fb38ee10ffc6c16f1c5aa68996d8232976898",
+  "wer_checks": {
+    "clean": {
+      "count": 999,
+      "repository": {
+        "substitutions": 581,
+        "deletions": 106,
+        "insertions": 118,
+        "reference_units": 20310,
+        "error_percent": 3.96356474643033
+      },
+      "whisper_english_normalizer": {
+        "error_percent": 3.407633888943683,
+        "substitutions": 484,
+        "deletions": 87,
+        "insertions": 120,
+        "reference_units": 20278
+      },
+      "macro_utterance_wer_percent": 4.910913925064422,
+      "quality_mean_recomputed": {
+        "dnsmos": 3.264184002980712,
+        "nisqa": 4.029122992440148,
+        "utmos": 4.084511429697901
+      }
+    },
+    "reconstruction": {
+      "count": 999,
+      "repository": {
+        "substitutions": 575,
+        "deletions": 102,
+        "insertions": 80,
+        "reference_units": 20310,
+        "error_percent": 3.727227966518956
+      },
+      "whisper_english_normalizer": {
+        "error_percent": 3.1906499654798304,
+        "substitutions": 479,
+        "deletions": 86,
+        "insertions": 82,
+        "reference_units": 20278
+      },
+      "macro_utterance_wer_percent": 4.779716453679185,
+      "quality_mean_recomputed": {
+        "dnsmos": 3.2723379281758143,
+        "nisqa": 4.141564767759244,
+        "utmos": 4.0283984390942305
+      }
+    },
+    "adversarial": {
+      "count": 999,
+      "repository": {
+        "substitutions": 11294,
+        "deletions": 796,
+        "insertions": 2961,
+        "reference_units": 20310,
+        "error_percent": 74.10635155096011
+      },
+      "whisper_english_normalizer": {
+        "error_percent": 73.69069928000789,
+        "substitutions": 11187,
+        "deletions": 778,
+        "insertions": 2978,
+        "reference_units": 20278
+      },
+      "macro_utterance_wer_percent": 77.03215565001518,
+      "quality_mean_recomputed": {
+        "dnsmos": 2.963822380765211,
+        "nisqa": 3.8711315010403013,
+        "utmos": 2.7923767282678797
+      }
+    }
+  },
+  "normalization_examples": [
+    {
+      "reference": "DON'T",
+      "hypothesis": "do not",
+      "repository_normalized": [
+        "don t",
+        "do not"
+      ],
+      "repository_wer_percent": 100.0,
+      "whisper_normalized": [
+        "do not",
+        "do not"
+      ],
+      "whisper_wer_percent": 0.0
+    },
+    {
+      "reference": "TWENTY ONE",
+      "hypothesis": "21",
+      "repository_normalized": [
+        "twenty one",
+        "21"
+      ],
+      "repository_wer_percent": 100.0,
+      "whisper_normalized": [
+        "21",
+        "21"
+      ],
+      "whisper_wer_percent": 0.0
+    },
+    {
+      "reference": "MISTER SMITH",
+      "hypothesis": "Mr. Smith",
+      "repository_normalized": [
+        "mister smith",
+        "mr smith"
+      ],
+      "repository_wer_percent": 50.0,
+      "whisper_normalized": [
+        "mister smith",
+        "mister smith"
+      ],
+      "whisper_wer_percent": 0.0
+    }
+  ],
+  "teacher_forcing_token_counts": {
+    "raw_mean": 40.354354354354356,
+    "raw_median": 32,
+    "raw_min": 2,
+    "raw_max": 163,
+    "lowercase_mean": 22.685685685685687,
+    "lowercase_median": 19,
+    "all_refs_uppercase": true
+  },
+  "packages": {
+    "torch": "2.4.1+cu121",
+    "torchaudio": "2.4.1+cu121",
+    "openai-whisper": "20240930",
+    "torchmetrics": "1.6.1",
+    "librosa": "0.10.2.post1",
+    "onnxruntime": "1.20.1",
+    "jiwer": "3.0.5",
+    "numpy": "1.26.4"
+  },
+  "recorded_final_radii": {
+    "count": 999,
+    "min": 0.12435390800237656,
+    "median": 0.16680236160755157,
+    "max": 0.1916331797838211,
+    "exceed_paper_radius_0_1": 999,
+    "saved_delta_count": 0,
+    "evidence": "recorded traces; not independently recomputed from delta tensors"
+  },
+  "short_audio_count_below_dnsmos_9_01_seconds": {
+    "clean": 722,
+    "adversarial": 722
+  },
+  "audit_date": "2026-10-15 Asia/Taipei",
+  "scope": "Static source audit, 59 existing tests, saved-score recomputation, one real pretrained pilot gradient probe, two quality fixtures. No full ASR rerun, new attack sweep, or model changes.",
+  "source_sha256": {
+    "beyondwaveform/__init__.py": "d9afadfdee47a8824b303793eabb9d2ecb0c8125487c6154e6320c05aeed700d",
+    "beyondwaveform/assets.py": "17d68c98352c5daee6d2a1fc2eada355cefe28c8341acf8f543bd395ae02a14f",
+    "beyondwaveform/attacks.py": "ced4edf7d4ecaa71c87f480e88b74a7e15dc19ed9858fad1e6b1d37979c195d9",
+    "beyondwaveform/cli.py": "56d75a7a86f3a11ad1a68d9bb930f5a2e104752c0fc8632990c17b9a5df6610a",
+    "beyondwaveform/config.py": "c46417f371c22347529f224723b1024821365e302db20dfdf9ec11331804841d",
+    "beyondwaveform/data.py": "eacb38acd9cb7e8429c0ffc7272bdb9a9766ce86616f952d1f8a63b76fa0fca3",
+    "beyondwaveform/evaluation.py": "47ffe359ae65d8c1539aac6d5cf2d09999ba7b55413432101134011808ea5655",
+    "beyondwaveform/experiments.py": "c6c3d98f9c983e0affcb7bffc26c9f955e97b279fecf55c6bdcfb8d2ccc1b127",
+    "beyondwaveform/io.py": "5c2afa235a05514091fde42520929e7dcfd4fd3cccc4a757be77daa0d5a97b5e",
+    "beyondwaveform/losses.py": "065535e8797f4fa61f05a7fbd7b4e570f5fbd2cff25aed952bdeb3401481b534",
+    "beyondwaveform/models/__init__.py": "2ebcaa5b267d2f98d09e6132079d6862b61362d94d30a1113dd2b6f211a640d0",
+    "beyondwaveform/models/feature.py": "5c68f45cf897f232effbae19472403eca2f9fd20aea785f80a4659842b628a61",
+    "beyondwaveform/models/targets.py": "de8333c2d67c39e38d456c6ed7fcaf2c11be789580cab371e9c664a019c7337f",
+    "beyondwaveform/models/whisper.py": "54576d77f99c8fad530cbf3f1096a46c259e21c4e549588614e2654b301cabd8",
+    "beyondwaveform/pipeline.py": "08e96f4f59d5acc41e82ece347709e5248088110750266d1c3bd7d02fc8e342a",
+    "beyondwaveform/references.py": "13b90498faa84d450bcd9681e05d4102c5e60f2b210d83d218384d118d747e90",
+    "beyondwaveform/selection.py": "c12f4a5bde8a6116b0f7b5088760e273630dd4f1da9f8fed7e2fbbce6f57945b",
+    "beyondwaveform/training.py": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0"
+  }
+}

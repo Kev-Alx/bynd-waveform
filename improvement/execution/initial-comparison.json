@@ -1,0 +1,320 @@
+{
+  "updated_at_utc": "2026-10-22T03:11:32.514414+00:00",
+  "status": "completed_source_only_initial_cycle",
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "cohort_count": 24,
+  "reference_words": 475,
+  "conditions": [
+    {
+      "method": "Original quality control, LR 0.02",
+      "provenance": "historical same24 native-policy saved score audit",
+      "count": 24,
+      "substitutions": 168,
+      "deletions": 12,
+      "insertions": 37,
+      "reference_units": 475,
+      "error_percent": 45.68421052631579,
+      "quality": {
+        "dnsmos": 3.207473259831049,
+        "nisqa": 4.124502023061116,
+        "utmos": 3.676064044237137
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": 0.0,
+        "utmos": 0.0
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "Clean",
+      "provenance": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "variant": "clean",
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3323443629925413,
+        "nisqa": 4.083788245916367,
+        "utmos": 4.188579469919205
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": -42.10526315789473,
+        "utmos": 0.5125154256820679
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "Zero-edit reconstruction",
+      "provenance": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "variant": "reconstruction",
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.331731573490439,
+        "nisqa": 4.212428530057271,
+        "utmos": 4.166711787382762
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": -42.10526315789473,
+        "utmos": 0.4906477431456251
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "Original strong control, LR 0.1",
+      "provenance": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "variant": "baseline_frozen",
+      "count": 24,
+      "substitutions": 258,
+      "deletions": 24,
+      "insertions": 73,
+      "reference_units": 475,
+      "error_percent": 74.73684210526316,
+      "quality": {
+        "dnsmos": 3.1640392160891886,
+        "nisqa": 4.034993400176366,
+        "utmos": 3.318611820538839
+      },
+      "automatic_quality_floors_pass": false,
+      "versus_primary_control": {
+        "source_wer_points": 29.052631578947377,
+        "utmos": -0.357452223698298
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "R2 local geometry",
+      "provenance": "/workspace/improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json",
+      "variant": "adversarial",
+      "count": 24,
+      "substitutions": 14,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.3684210526315788,
+      "quality": {
+        "dnsmos": 3.332028333830355,
+        "nisqa": 4.214219321807225,
+        "utmos": 4.16612634062767
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": -42.315789473684205,
+        "utmos": 0.49006229639053345
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "R1 with one deletion candidate",
+      "provenance": "/workspace/improvement/execution/r1-deletion-development24/source-summary.json",
+      "variant": "adversarial",
+      "count": 24,
+      "substitutions": 179,
+      "deletions": 56,
+      "insertions": 43,
+      "reference_units": 475,
+      "error_percent": 58.526315789473685,
+      "quality": {
+        "dnsmos": 3.177816114854586,
+        "nisqa": 3.995732764403025,
+        "utmos": 3.3497235476970673
+      },
+      "automatic_quality_floors_pass": false,
+      "versus_primary_control": {
+        "source_wer_points": 12.842105263157897,
+        "utmos": -0.3263404965400696
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "R3 untrained seed11 control",
+      "provenance": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-summary.json",
+      "variant": "initial-generator",
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3382760202631268,
+        "nisqa": 4.080785810947418,
+        "utmos": 4.188579797744751
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": -42.10526315789473,
+        "utmos": 0.5125157535076141
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    },
+    {
+      "method": "R3 trained seed11",
+      "provenance": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-summary.json",
+      "variant": "adversarial",
+      "count": 24,
+      "substitutions": 15,
+      "deletions": 1,
+      "insertions": 1,
+      "reference_units": 475,
+      "error_percent": 3.5789473684210527,
+      "quality": {
+        "dnsmos": 3.3318309732616203,
+        "nisqa": 4.083795328934987,
+        "utmos": 4.1885553896427155
+      },
+      "automatic_quality_floors_pass": true,
+      "versus_primary_control": {
+        "source_wer_points": -42.10526315789473,
+        "utmos": 0.5124913454055786
+      },
+      "g1_source_quality_signal": false,
+      "human_content_established": false,
+      "heldout_transfer_established": false
+    }
+  ],
+  "r3_training": {
+    "status": "completed",
+    "interpretation": "one-seed one-hour feasibility; no generalization or transfer claim",
+    "seed": 11,
+    "updates": 1779,
+    "completed_microbatches": 7116,
+    "discarded_partial_microbatches": 0,
+    "stop_reason": "one_hour_wall_time_cap_conservative_reserve",
+    "epochs_started": 25,
+    "training_wall_seconds": 3541.8877668259665,
+    "maximum_training_wall_seconds": 3600,
+    "cuda_event_microbatch_span_seconds": 3049.627779449463,
+    "cuda_timing_note": "Event spans of microbatch work; not hardware-profiler active-kernel occupancy",
+    "peak_allocated_bytes": 4796456960,
+    "peak_reserved_bytes": 6270484480,
+    "mean_microbatch_losses": {
+      "source_sum_nll": 44.42468687481529,
+      "stft_loss": 0.0003854764696212082,
+      "content_loss": 1.3499597790664795e-06
+    },
+    "terminal_checkpoint": {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/terminal.pt",
+      "sha256": "b2a5c5d8eb0589641b5a988491b30e106ff037b0f3bbb95560d2e0c6a6d76a9c"
+    },
+    "selected_checkpoint": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt",
+    "checkpoint_selection": "automatic source-only proxy",
+    "human_admissibility_established": false,
+    "training_manifest_sha256": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d",
+    "trace_sha256": "ac35079c2790e0dd2672486db0de6ec5d5128717dd25c1a753dff3dfb4d6cd95",
+    "cached_q_parity_claimed": false,
+    "weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    },
+    "generator": {
+      "architecture": "six-level Conv1d linear-upsample U-Net",
+      "encoder_channels": [
+        16,
+        32,
+        64,
+        96,
+        128,
+        128
+      ],
+      "decoder_channels": [
+        128,
+        96,
+        64,
+        32,
+        16,
+        16
+      ],
+      "kernel": 15,
+      "encoder_stride": 2,
+      "head_kernel": 1,
+      "skip": "concatenate corresponding encoder output, except final stage",
+      "activation": "GELU; tanh residual head",
+      "bias": true,
+      "linear_upsample_backward": "native CPU derivative with device copies under strict CUDA; native otherwise",
+      "batch_normalization": false,
+      "dropout": false,
+      "padding": "constant-zero right to multiple of 64; exact original-length crop",
+      "sample_rate": 16000,
+      "linf": 0.003,
+      "rms_limit": 0.003,
+      "parameters": 1590833,
+      "parameter_ceiling": 3000000
+    },
+    "training_crops": null
+  },
+  "r3_job": {
+    "status": "complete",
+    "started_at": "2026-10-22T02:10:16.725360+00:00",
+    "command": [
+      "/opt/venv/bin/python",
+      "-u",
+      "/workspace/improvement/r3_real_runner_v2.py",
+      "run",
+      "--name",
+      "r3-waveform-autograd-repair",
+      "--allow-new-content-reference"
+    ],
+    "cwd": "/workspace",
+    "supervisor_pid": 122706,
+    "log": "/workspace/improvement/execution/jobs/r3-waveform-autograd-repair-bounded-run/stage.log",
+    "child_pid": 122707,
+    "exit_code": 0,
+    "finished_at": "2026-10-22T03:11:18.625748+00:00"
+  },
+  "r3_generation_resources": {
+    "count": 24,
+    "generator_forwards_per_clip": 2,
+    "initial_generator_control_included": true,
+    "identity_control_equals_clean": true,
+    "resource": {
+      "wall_seconds": 2.6719808783382177,
+      "peak_allocated_bytes": 210617344,
+      "peak_reserved_bytes": 301989888,
+      "allocated_bytes": 82917376,
+      "reserved_bytes": 301989888
+    },
+    "source_model_calls": 0,
+    "content_model_calls": 0,
+    "vocoder_calls": 0,
+    "generated_manifest_sha256": "d6f0180fa23ea6b152cd7351ead2afa501c5d04b79c6e500bb9f141f1ab6ff93"
+  },
+  "r3_final_evaluation_resources": {
+    "elapsed_wall_seconds": 102.92869545798749,
+    "peak_allocated_bytes": 1178872320,
+    "peak_reserved_bytes": 1600126976
+  },
+  "limits": [
+    "Previously exposed development cohort; no final/confirmation inference.",
+    "One learned seed; training-seed variance is not estimated.",
+    "No human transcription; automatic quality is a proxy.",
+    "No matched per-example waveform-PGD or lifetime-cost superiority claim.",
+    "R1/R2 scientific rejections remain separate from R3 implementation failures."
+  ]
+}

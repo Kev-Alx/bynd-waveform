@@ -1,0 +1,50 @@
+{
+  "pilot_id": "1919-142785-0048",
+  "pilot_audio_sha256": "3ba33cd067218b86bcb78ef76cda37e119008b8f3f660319f1c41cbdf3780a8c",
+  "input_samples": 29440,
+  "features_shape": [
+    91,
+    1024
+  ],
+  "output_samples": 29120,
+  "encoder_checkpoint_normalize": true,
+  "effective_normalize": false,
+  "normalized_vs_raw_features_relative_l2": 0.4570032060146332,
+  "normalized_vs_raw_reconstruction_relative_l2": 5.897632122039795,
+  "native_output_rate": 16000,
+  "encoder_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+  "vocoder_sha256": "f98b760e0e5fd0019cffd3a9d22bab5c4c2fe38491532d7680a8ad07eaf3e8dd",
+  "nll": 2.4338552951812744,
+  "tv_ratio": 1.0,
+  "hf_ratio": 1.4278241395950317,
+  "loss": -0.006031155586242676,
+  "gradient_norm": 0.31293269991874695,
+  "gradient_all_finite": true,
+  "frozen_weights": true,
+  "surrogate_sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+  "transcript_case_sensitivity": {
+    "raw": {
+      "text": "FRENCH FORCEMEAT",
+      "lexical_tokens": 7,
+      "mean_nll": 2.4338552951812744,
+      "sum_nll": 17.0369873046875
+    },
+    "lowercase": {
+      "text": "french forcemeat",
+      "lexical_tokens": 5,
+      "mean_nll": 3.314164638519287,
+      "sum_nll": 16.570823669433594
+    },
+    "sentence_case": {
+      "text": "French forcemeat",
+      "lexical_tokens": 5,
+      "mean_nll": 2.6532986164093018,
+      "sum_nll": 13.26649284362793
+    }
+  },
+  "sample_rate_guard_probe": {
+    "tone_hz_in_actual_16k_audio": 5000,
+    "fraction_with_16k_config": 9.889640119950633e-05,
+    "fraction_with_22050_config": 0.9998853084049917
+  }
+}

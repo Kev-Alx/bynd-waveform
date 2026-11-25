@@ -1,7 +1,7 @@
 import pytest
 import torch
 from torch import nn
-from beyondwaveform.attacks import feature_attack, waveform_attack
+from beyondwaveform.attacks import feature_attack, waveform_attack, learning_rate_at_step
 from beyondwaveform.config import AttackConfig, SpectralConfig
 
 
@@ -76,6 +76,29 @@ def test_all_losses_disabled_is_valid_noop():
     assert result.delta.count_nonzero() == 0
 
 
+@pytest.mark.parametrize("schedule", ["cosine", "two_stage"])
+def test_schedule_endpoints_and_actual_updates(schedule):
+    config = AttackConfig(steps=6, lambda_perc=0, learning_rate=0.005, lr_schedule=schedule, lr_final_ratio=0.1)
+    assert learning_rate_at_step(config, 0) == pytest.approx(0.005)
+    assert learning_rate_at_step(config, 5) == pytest.approx(0.0005)
+    rates = [learning_rate_at_step(config, i) for i in range(6)]
+    assert all(a >= b for a, b in zip(rates, rates[1:]))
+    x, encoder, vocoder, surrogate = fixture()
+    result = feature_attack(x, "text", encoder, vocoder, surrogate, config)
+    assert [r["learning_rate"] for r in result.trace] == rates
+    assert all(r["radius_after_update"] <= 0.100001 for r in result.trace)
+
+
+def test_l2_update_has_declared_relative_step_and_zero_gradient_is_safe():
+    x, encoder, vocoder, surrogate = fixture()
+    config = AttackConfig(steps=1, optimizer="l2_pgd", learning_rate=0.01, lambda_perc=0, eps=1e-12)
+    result = feature_attack(x, "text", encoder, vocoder, surrogate, config)
+    assert result.trace[0]["radius_after_update"] == pytest.approx(0.01, abs=1e-6)
+    noop = feature_attack(x, "text", encoder, vocoder, surrogate,
+                         AttackConfig(steps=2, optimizer="l2_pgd", attack=False, lambda_perc=0))
+    assert noop.delta.count_nonzero() == 0
+
+
 @pytest.mark.parametrize("method", ["pgd", "mi-fgsm", "vmi-fgsm"])
 def test_baseline_bounds_and_direction(method):
     x, _, _, surrogate = fixture()
@@ -84,4 +107,3 @@ def test_baseline_bounds_and_direction(method):
     assert y.abs().max() <= 1
     assert surrogate.nll(y, "text") > surrogate.nll(x, "text")
     assert len(trace) == 3
-

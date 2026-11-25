@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "reviewed_at_taipei": "2026-10-28T13:27:41+08:00",
+  "markdown_files": [
+    "/workspace/improvement/26_research_summary.md",
+    "/workspace/improvement/27_all_runs_comparison.md",
+    "/workspace/improvement/28_data_runtime_and_evidence.md"
+  ],
+  "table_count": 40,
+  "local_links_checked": 70,
+  "conditions_in_all_runs_table": 78,
+  "scored_recording_rows_reconciled": 3192,
+  "historical_baseline_runs": 10,
+  "model_timing_rows": 384,
+  "latest_model_source_quality_eligible": 0,
+  "historical_sources_distinguished_from_new_results": true,
+  "input_files_hashed": 794,
+  "original_experiments_modified": false,
+  "new_gpu_work": false,
+  "outputs_sha256": {
+    "/workspace/improvement/26_research_summary.md": "ea08dddb5fde3516ec41d5df2d4f5835b4ac0281525b119c5570c55f1b7c007a",
+    "/workspace/improvement/27_all_runs_comparison.md": "27342b2cc5ee1175f07146af5277567a4916782e04589584e77f6eb5059e941b",
+    "/workspace/improvement/28_data_runtime_and_evidence.md": "9677d6518ed059b08087beeeb913521c09195b8fb005fb002bf1ae2381f47c59"
+  }
+}

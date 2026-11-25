@@ -1,0 +1,13 @@
+{
+  "created_at_taipei": "2026-10-27T22:18:51.149985+08:00",
+  "priority": "Demonstrate joint improvement; keep directions open. Publication planning deferred.",
+  "maximum_script_seconds": 46800,
+  "queue_wait_counts_against_ceiling": true,
+  "fixed_gate": {
+    "wer_strict_gt": 75,
+    "dnsmos_min": 3,
+    "nisqa_min": 3.75,
+    "utmos_min": 3.5
+  },
+  "all_new_artifacts_root": "/workspace/improvement"
+}

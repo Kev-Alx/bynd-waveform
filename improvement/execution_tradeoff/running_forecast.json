@@ -1,0 +1,13 @@
+{
+  "snapshot_status": "running",
+  "completed_pairs": 19,
+  "elapsed_seconds": 691.533384998329,
+  "paired_loop_seconds_so_far": {
+    "twice": 365.8748541884124,
+    "once": 310.4544897451997
+  },
+  "remaining_paired_loop_seconds_at_observed_mean": 1032.2921565302502,
+  "condition": "rough running forecast; clip durations and scoring remain variable",
+  "all_exact_so_far": true,
+  "no_thresholds_changed": true
+}

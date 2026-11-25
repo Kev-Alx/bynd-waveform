@@ -1,0 +1,30 @@
+{
+  "status": "launched_detached",
+  "wrapper_pid": 200624,
+  "started_at_utc": "2026-10-27T14:59:11.473135+00:00",
+  "hard_ceiling_including_queue_seconds": 46800,
+  "external_term_seconds": 46785,
+  "external_kill_grace_seconds": 15,
+  "maximum_end_at_utc": "2026-10-28T03:59:11.473135+00:00",
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/scripts/run_logged.py",
+    "--log",
+    "/workspace/improvement/execution_model_v1/controller.log",
+    "--status",
+    "/workspace/improvement/execution_model_v1/controller_exit.json",
+    "--",
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=15s",
+    "46785s",
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/execution_model_v1/supervise.py"
+  ],
+  "plan_sha256": "a41d323a8ddbc979f5fb61aed5d1c5a680304907bfd256bbd18959f81af80800",
+  "launcher_sha256": "4d753901e9d45f714160c9385ddf73518a7f2c9d39ffd9e84bc7ab63995a287e",
+  "gpu_must_wait_for_existing_auxiliary_and_continuation_locks": true,
+  "discord_notifications": false
+}

@@ -1,0 +1,275 @@
+{
+  "status": "complete",
+  "phase": "pilot48_cycle_finished",
+  "pilot_count": 48,
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "heartbeat_seconds": 30,
+  "maximum_cycle_wall_seconds": 7200,
+  "supervisor_pid": 128842,
+  "stages": [
+    {
+      "name": "registration48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/pilot48_runner.py",
+        "register"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/registration48/job.json",
+      "started_at_utc": "2026-10-22T05:05:31.061506+00:00",
+      "wrapper_pid": 128844,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:05:32.744658+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:05:31.107004+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/pilot48_runner.py",
+          "register"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 128844,
+        "log": "/workspace/improvement/execution48/jobs/registration48/stage.log",
+        "child_pid": 128845,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:05:32.725827+00:00"
+      }
+    },
+    {
+      "name": "generation48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/pilot48_runner.py",
+        "generate"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/generation48/job.json",
+      "started_at_utc": "2026-10-22T05:05:32.760259+00:00",
+      "wrapper_pid": 128849,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:31:37.496534+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:05:32.801994+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/pilot48_runner.py",
+          "generate"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 128849,
+        "log": "/workspace/improvement/execution48/jobs/generation48/stage.log",
+        "child_pid": 128850,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:31:37.436733+00:00"
+      }
+    },
+    {
+      "name": "native-evaluation48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/source_evaluate48.py",
+        "--name",
+        "mechanism-pilot48",
+        "--output-dir",
+        "/workspace/improvement/execution48/mechanism-pilot48"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/native-evaluation48/job.json",
+      "started_at_utc": "2026-10-22T05:31:37.513178+00:00",
+      "wrapper_pid": 129354,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:39:26.547301+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:31:37.556198+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/source_evaluate48.py",
+          "--name",
+          "mechanism-pilot48",
+          "--output-dir",
+          "/workspace/improvement/execution48/mechanism-pilot48"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 129354,
+        "log": "/workspace/improvement/execution48/jobs/native-evaluation48/stage.log",
+        "child_pid": 129355,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:39:26.513912+00:00"
+      }
+    },
+    {
+      "name": "independent-audit48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution48/audit_pilot48.py"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/independent-audit48/job.json",
+      "started_at_utc": "2026-10-22T05:39:26.569191+00:00",
+      "wrapper_pid": 129514,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:39:30.859314+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:39:26.615399+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/execution48/audit_pilot48.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 129514,
+        "log": "/workspace/improvement/execution48/jobs/independent-audit48/stage.log",
+        "child_pid": 129515,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:39:30.822342+00:00"
+      }
+    },
+    {
+      "name": "report48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/postprocess_pilot48.py"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/report48/job.json",
+      "started_at_utc": "2026-10-22T05:39:30.879708+00:00",
+      "wrapper_pid": 129556,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:39:31.059068+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:39:30.925843+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/postprocess_pilot48.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 129556,
+        "log": "/workspace/improvement/execution48/jobs/report48/stage.log",
+        "child_pid": 129557,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:39:31.043644+00:00"
+      }
+    },
+    {
+      "name": "package-validation48",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/validate_package.py"
+      ],
+      "job_file": "/workspace/improvement/execution48/jobs/package-validation48/job.json",
+      "started_at_utc": "2026-10-22T05:39:31.077949+00:00",
+      "wrapper_pid": 129561,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T05:39:31.356836+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T05:39:31.125198+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/validate_package.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 129561,
+        "log": "/workspace/improvement/execution48/jobs/package-validation48/stage.log",
+        "child_pid": 129562,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T05:39:31.331344+00:00"
+      }
+    }
+  ],
+  "historical_failures": "Earlier R3 cache/autograd preflight failures were resolved; preserved in execution/. Previous R1/R2/R3 scientific screen failures remain negative results.",
+  "started_at_utc": "2026-10-22T05:05:31.057599+00:00",
+  "updated_at": "2026-10-22T13:39:31+08:00",
+  "timezone": "Asia/Taipei",
+  "generation": {
+    "updated_at_utc": "2026-10-22T05:31:36.929622+00:00",
+    "pilot_count": 48,
+    "phase": "generation",
+    "status": "completed",
+    "completed": 48,
+    "total": 48
+  },
+  "scored_variant_waveforms": 336,
+  "total_variant_waveforms": 336,
+  "scientific_results": {
+    "pgd_full": {
+      "source_wer_delta_points": -6.338028169014088,
+      "utmos_delta": 0.3084361255168915,
+      "automatic_quality_floors_pass": true,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          -14.017090881049159,
+          1.0763235724712914
+        ],
+        "utmos_delta": [
+          0.22808424741663838,
+          0.38875825154579285
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    },
+    "pgd_nll": {
+      "source_wer_delta_points": 8.953722334004027,
+      "utmos_delta": -0.011129721999168396,
+      "automatic_quality_floors_pass": false,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          1.0416395681581663,
+          17.01673326673326
+        ],
+        "utmos_delta": [
+          -0.09566846005006693,
+          0.06617760430641398
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    },
+    "r3_trained": {
+      "source_wer_delta_points": -45.774647887323944,
+      "utmos_delta": 0.4469502766927085,
+      "automatic_quality_floors_pass": true,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          -51.68779207773905,
+          -41.09243424287791
+        ],
+        "utmos_delta": [
+          0.3698520894923832,
+          0.5243155540100163
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    }
+  },
+  "independent_audit_status": "pass",
+  "finished_at_utc": "2026-10-22T05:39:31.374037+00:00"
+}

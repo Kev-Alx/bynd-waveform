@@ -1,0 +1,345 @@
+{
+  "status": "pass",
+  "scope": "CPU transform correctness on all frozen pilot48; not model performance evidence",
+  "count": 48,
+  "maximum_identity_roundtrip_error": 5.789795523014618e-07,
+  "wall_seconds": 1.750856234692037,
+  "records": [
+    {
+      "id": "1673-143397-0019",
+      "samples": 250880,
+      "identity_max_abs_error": 1.7881393432617188e-07,
+      "deterministic": true,
+      "candidate_peak": 0.7555968761444092
+    },
+    {
+      "id": "174-50561-0003",
+      "samples": 53120,
+      "identity_max_abs_error": 9.630457498133183e-08,
+      "deterministic": true,
+      "candidate_peak": 0.18563474714756012
+    },
+    {
+      "id": "174-84280-0015",
+      "samples": 219520,
+      "identity_max_abs_error": 1.7525962903164327e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5520538091659546
+    },
+    {
+      "id": "1919-142785-0051",
+      "samples": 148480,
+      "identity_max_abs_error": 7.450580596923828e-08,
+      "deterministic": true,
+      "candidate_peak": 0.5575628876686096
+    },
+    {
+      "id": "2035-147960-0004",
+      "samples": 66560,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.537578284740448
+    },
+    {
+      "id": "2035-147961-0008",
+      "samples": 67840,
+      "identity_max_abs_error": 5.960464477539063e-08,
+      "deterministic": true,
+      "candidate_peak": 0.2898902893066406
+    },
+    {
+      "id": "2035-152373-0013",
+      "samples": 327360,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.801861584186554
+    },
+    {
+      "id": "2412-153954-0006",
+      "samples": 163200,
+      "identity_max_abs_error": 1.574662746861577e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5187172889709473
+    },
+    {
+      "id": "2428-83705-0001",
+      "samples": 109440,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.39462390542030334
+    },
+    {
+      "id": "251-136532-0018",
+      "samples": 109760,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5362047553062439
+    },
+    {
+      "id": "251-137823-0000",
+      "samples": 54720,
+      "identity_max_abs_error": 1.8677292246138677e-07,
+      "deterministic": true,
+      "candidate_peak": 0.4507811367511749
+    },
+    {
+      "id": "2803-161169-0008",
+      "samples": 225920,
+      "identity_max_abs_error": 1.3597309589385986e-07,
+      "deterministic": true,
+      "candidate_peak": 0.24263674020767212
+    },
+    {
+      "id": "3000-15664-0027",
+      "samples": 64640,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.614657998085022
+    },
+    {
+      "id": "3081-166546-0048",
+      "samples": 76800,
+      "identity_max_abs_error": 7.660128176212311e-08,
+      "deterministic": true,
+      "candidate_peak": 0.1648351401090622
+    },
+    {
+      "id": "3752-4944-0015",
+      "samples": 65920,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.5583288669586182
+    },
+    {
+      "id": "6295-64301-0009",
+      "samples": 48000,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.4575962722301483
+    },
+    {
+      "id": "6345-93302-0004",
+      "samples": 70400,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.3803482949733734
+    },
+    {
+      "id": "6345-93302-0028",
+      "samples": 30720,
+      "identity_max_abs_error": 7.353992259595543e-08,
+      "deterministic": true,
+      "candidate_peak": 0.3168865442276001
+    },
+    {
+      "id": "777-126732-0040",
+      "samples": 79680,
+      "identity_max_abs_error": 7.450580596923828e-08,
+      "deterministic": true,
+      "candidate_peak": 0.3047928214073181
+    },
+    {
+      "id": "777-126732-0064",
+      "samples": 93440,
+      "identity_max_abs_error": 7.159542292356491e-08,
+      "deterministic": true,
+      "candidate_peak": 0.2882441580295563
+    },
+    {
+      "id": "7976-110124-0013",
+      "samples": 104640,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.45866337418556213
+    },
+    {
+      "id": "8297-275154-0019",
+      "samples": 125760,
+      "identity_max_abs_error": 1.6310787032125518e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5018309950828552
+    },
+    {
+      "id": "84-121123-0023",
+      "samples": 74880,
+      "identity_max_abs_error": 7.450580596923828e-08,
+      "deterministic": true,
+      "candidate_peak": 0.3299056887626648
+    },
+    {
+      "id": "8842-302196-0004",
+      "samples": 91520,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.5654337406158447
+    },
+    {
+      "id": "2902-9006-0012",
+      "samples": 102400,
+      "identity_max_abs_error": 1.7881393432617188e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5989924073219299
+    },
+    {
+      "id": "652-130726-0016",
+      "samples": 166400,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5930711627006531
+    },
+    {
+      "id": "5694-64038-0009",
+      "samples": 38080,
+      "identity_max_abs_error": 1.8479568097973242e-07,
+      "deterministic": true,
+      "candidate_peak": 0.4509526193141937
+    },
+    {
+      "id": "3081-166546-0077",
+      "samples": 166720,
+      "identity_max_abs_error": 8.736969903111458e-08,
+      "deterministic": true,
+      "candidate_peak": 0.09394744038581848
+    },
+    {
+      "id": "2035-147960-0011",
+      "samples": 69760,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.45888999104499817
+    },
+    {
+      "id": "5536-43359-0015",
+      "samples": 73920,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5558750629425049
+    },
+    {
+      "id": "6313-76958-0008",
+      "samples": 37440,
+      "identity_max_abs_error": 4.470348358154297e-08,
+      "deterministic": true,
+      "candidate_peak": 0.2716869115829468
+    },
+    {
+      "id": "652-129742-0006",
+      "samples": 145600,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.6119484901428223
+    },
+    {
+      "id": "3170-137482-0005",
+      "samples": 139200,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.48398658633232117
+    },
+    {
+      "id": "2078-142845-0042",
+      "samples": 67520,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.35890719294548035
+    },
+    {
+      "id": "652-130726-0025",
+      "samples": 41920,
+      "identity_max_abs_error": 7.450580596923828e-08,
+      "deterministic": true,
+      "candidate_peak": 0.42794251441955566
+    },
+    {
+      "id": "8297-275155-0017",
+      "samples": 142400,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.6117855310440063
+    },
+    {
+      "id": "5536-43363-0012",
+      "samples": 52160,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.3672133982181549
+    },
+    {
+      "id": "3576-138058-0004",
+      "samples": 264640,
+      "identity_max_abs_error": 1.7881393432617188e-07,
+      "deterministic": true,
+      "candidate_peak": 0.6764828562736511
+    },
+    {
+      "id": "8842-302196-0001",
+      "samples": 149440,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.444637656211853
+    },
+    {
+      "id": "3081-166546-0075",
+      "samples": 39360,
+      "identity_max_abs_error": 4.74101398140192e-08,
+      "deterministic": true,
+      "candidate_peak": 0.12466787546873093
+    },
+    {
+      "id": "2035-152373-0005",
+      "samples": 384320,
+      "identity_max_abs_error": 1.7881393432617188e-07,
+      "deterministic": true,
+      "candidate_peak": 0.6528217196464539
+    },
+    {
+      "id": "6241-66616-0019",
+      "samples": 100800,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5785490274429321
+    },
+    {
+      "id": "2428-83699-0028",
+      "samples": 63680,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5353794097900391
+    },
+    {
+      "id": "6313-76958-0022",
+      "samples": 100480,
+      "identity_max_abs_error": 1.1920928955078125e-07,
+      "deterministic": true,
+      "candidate_peak": 0.542707085609436
+    },
+    {
+      "id": "6319-64726-0002",
+      "samples": 194880,
+      "identity_max_abs_error": 1.043081283569336e-07,
+      "deterministic": true,
+      "candidate_peak": 0.43277716636657715
+    },
+    {
+      "id": "1988-148538-0005",
+      "samples": 261440,
+      "identity_max_abs_error": 1.3434328138828278e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5658632516860962
+    },
+    {
+      "id": "1272-128104-0010",
+      "samples": 89280,
+      "identity_max_abs_error": 8.940696716308594e-08,
+      "deterministic": true,
+      "candidate_peak": 0.4791075587272644
+    },
+    {
+      "id": "3000-15664-0005",
+      "samples": 135040,
+      "identity_max_abs_error": 5.789795523014618e-07,
+      "deterministic": true,
+      "candidate_peak": 0.5479342341423035
+    }
+  ]
+}

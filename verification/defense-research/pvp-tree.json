@@ -1,0 +1,131 @@
+{
+  "repository": "blindconf/multi_precision_fusion",
+  "revision": "e8e6f0d8f0b51d288edc1de9da0292ddebb5c8a7",
+  "tree": {
+    "sha": "e8e6f0d8f0b51d288edc1de9da0292ddebb5c8a7",
+    "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/trees/e8e6f0d8f0b51d288edc1de9da0292ddebb5c8a7",
+    "tree": [
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0785dd031ae09eb91b63b7728a58ee7e152e825f",
+        "size": 1066,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/0785dd031ae09eb91b63b7728a58ee7e152e825f"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c45d66c034538c8535d1b1136ef95b8fa6e04cf5",
+        "size": 4903,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/c45d66c034538c8535d1b1136ef95b8fa6e04cf5"
+      },
+      {
+        "path": "data_augm.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2844888263fb1f7fda996b2c4aa09ef24580be00",
+        "size": 4273,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/2844888263fb1f7fda996b2c4aa09ef24580be00"
+      },
+      {
+        "path": "snr.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1c5ddaed7778703a7e0a3f22aa7daaff059d4933",
+        "size": 5147,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/1c5ddaed7778703a7e0a3f22aa7daaff059d4933"
+      },
+      {
+        "path": "train_BPE_5000_adv.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad2d736d696fc34d0e3127f25712a906c3748da6",
+        "size": 13784,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/ad2d736d696fc34d0e3127f25712a906c3748da6"
+      },
+      {
+        "path": "train_adapt_NN.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "328d68c7c15270c1dc97d690c8e4e73438b401b6",
+        "size": 36218,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/328d68c7c15270c1dc97d690c8e4e73438b401b6"
+      },
+      {
+        "path": "train_adapt_distriblock.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "386d65a8a5f3c956894eafa94b3aa71f3a4379ff",
+        "size": 33889,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/386d65a8a5f3c956894eafa94b3aa71f3a4379ff"
+      },
+      {
+        "path": "train_hf_wav2vec_adv.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0158a02c64fde9ec297eef5552c2d5467879a309",
+        "size": 9073,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/0158a02c64fde9ec297eef5552c2d5467879a309"
+      },
+      {
+        "path": "train_hf_whisper_adv.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "50e876165ff96a1caa30c5c94c834ad505e4bcd3",
+        "size": 7852,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/50e876165ff96a1caa30c5c94c834ad505e4bcd3"
+      },
+      {
+        "path": "train_kenansville.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95cb42cd88f70209f017e1ea7567737fd299ae10",
+        "size": 32055,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/95cb42cd88f70209f017e1ea7567737fd299ae10"
+      },
+      {
+        "path": "train_with_seq2seq_adv.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fcdcca900c2aa03e7af081b9b3a4804c22165273",
+        "size": 61397,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/fcdcca900c2aa03e7af081b9b3a4804c22165273"
+      },
+      {
+        "path": "train_with_wav2vec_adaptive.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "02828056dda7d35e032dc3d517838d5b744e54ad",
+        "size": 58160,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/02828056dda7d35e032dc3d517838d5b744e54ad"
+      },
+      {
+        "path": "train_with_wav2vec_adv.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "add8cdae3bfcffbc6ecd5dac4a509d612a819bea",
+        "size": 72202,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/add8cdae3bfcffbc6ecd5dac4a509d612a819bea"
+      },
+      {
+        "path": "train_with_wav2vec_classifier.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e48aef2d19ab80964866fef04d2fe57b37790cd2",
+        "size": 57175,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/e48aef2d19ab80964866fef04d2fe57b37790cd2"
+      },
+      {
+        "path": "train_with_whisper_adv.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1bc195a2265d47f1baff681b6bf9141555cea04",
+        "size": 57885,
+        "url": "https://api.github.com/repos/blindconf/PVP_Precision_varying_prediction/git/blobs/c1bc195a2265d47f1baff681b6bf9141555cea04"
+      }
+    ],
+    "truncated": false
+  }
+}

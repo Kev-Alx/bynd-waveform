@@ -1,0 +1,89 @@
+{
+  "reviewed_at_taipei": "2026-10-28T13:18:08+08:00",
+  "scope": "Independent CPU review of complete saved scores/timings, not a repaired pipeline selection or new experiment",
+  "original_selection_error": "Unique-utterance manifest reader rejected valid repeated IDs across eight latency variants",
+  "per_variant": [
+    {
+      "variant": "initial_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.14242332108551636,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r025",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.14778516707398617,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1412926089251414,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r100",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": false,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1405824480073837,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r025",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.13930222492975494,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1394804926821962,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r100",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1389598860987462,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_shuffled_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.13983712844007337,
+      "peak_allocated_bytes": 2268989440
+    }
+  ],
+  "eligible_candidates": [],
+  "original_exit_receipts_preserved": true
+}

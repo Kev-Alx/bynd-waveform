@@ -36,6 +36,11 @@ class Supervisor:
         self.progress(phase=name, command=command, phase_started_at=now())
         print(f"Starting {name}: {' '.join(command)}", flush=True)
         env = {**os.environ, "OMP_NUM_THREADS": str(threads), "MKL_NUM_THREADS": str(threads), "OPENBLAS_NUM_THREADS": "1"}
+        if env.get("BEYONDWAVEFORM_NOTIFY_DISCORD") == "1":
+            folder = self.output / "phases" / name
+            command = ["/opt/venv/bin/python", "-u", "/workspace/scripts/run_logged.py",
+                       "--log", str(folder / "stage.log"), "--status", str(folder / "job.json"),
+                       "--job-name", name, "--", *command]
         child = subprocess.Popen(command, cwd="/workspace", env=env)
         self.progress(phase_pid=child.pid, cpu_threads=threads)
         started = time.monotonic()
@@ -112,4 +117,3 @@ class GpuAdmission:
                 yield
             finally:
                 fcntl.flock(lock, fcntl.LOCK_UN)
-

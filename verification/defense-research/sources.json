@@ -1,0 +1,62 @@
+[
+  {
+    "path": "verification/defense-research/waveguard/README.md",
+    "url": "https://raw.githubusercontent.com/shehzeen/waveguard_defense/4320cfe12d0452e7f34f2903a4e302780662f5e1/README.md",
+    "sha256": "ee9ea3688a8b518e1ae8b2a2292a7c17a134285c0b2f607e2c6f9c4f320481da"
+  },
+  {
+    "path": "verification/defense-research/waveguard/Defender/defender_multiple.py",
+    "url": "https://raw.githubusercontent.com/shehzeen/waveguard_defense/4320cfe12d0452e7f34f2903a4e302780662f5e1/Defender/defender_multiple.py",
+    "sha256": "2c23c0a53633b699ea338d7480696e58a1db891cecd398a030cdeb563c7a6183"
+  },
+  {
+    "path": "verification/defense-research/waveguard/Defender/audioio.py",
+    "url": "https://raw.githubusercontent.com/shehzeen/waveguard_defense/4320cfe12d0452e7f34f2903a4e302780662f5e1/Defender/audioio.py",
+    "sha256": "d8f15ae7cfc9c49a1c52a247962504dac2ce1088823ac741c4ea726905190384"
+  },
+  {
+    "path": "verification/defense-research/waveguard/evaluate_detector.py",
+    "url": "https://raw.githubusercontent.com/shehzeen/waveguard_defense/4320cfe12d0452e7f34f2903a4e302780662f5e1/evaluate_detector.py",
+    "sha256": "35c37cb637d94cd7a19dc0eef876dae7871824a17ea764ee80caabc8ff7feddd"
+  },
+  {
+    "path": "verification/defense-research/audiopure/README.md",
+    "url": "https://raw.githubusercontent.com/cychomatica/AudioPure/903dd8554473b4fd461919876de2c5ba39747246/README.md",
+    "sha256": "ecadc41da7e6b4f16296f41c84b7b654c0428f45087192084af9bd5e3db610b1"
+  },
+  {
+    "path": "verification/defense-research/audiopure/diffusion_models/DiffWave_Unconditional/README.md",
+    "url": "https://raw.githubusercontent.com/cychomatica/AudioPure/903dd8554473b4fd461919876de2c5ba39747246/diffusion_models/DiffWave_Unconditional/README.md",
+    "sha256": "78f71782488e8713b4360f762cbdc45ab3c92e866fa1a5c1089ac14d8d0ba432"
+  },
+  {
+    "path": "verification/defense-research/audiopure/diffusion_models/diffwave_sde.py",
+    "url": "https://raw.githubusercontent.com/cychomatica/AudioPure/903dd8554473b4fd461919876de2c5ba39747246/diffusion_models/diffwave_sde.py",
+    "sha256": "23c3563076db0e348e32d6a8d792b1b19aa274cbf24c0fe83a136086c6566a28"
+  },
+  {
+    "path": "verification/defense-research/audiopure/configs/config.json",
+    "url": "https://raw.githubusercontent.com/cychomatica/AudioPure/903dd8554473b4fd461919876de2c5ba39747246/configs/config.json",
+    "sha256": "0f9694be3d21e7d16d9cb442ea6a3ce83acbb5705a7a1371cc136a0f07899aa1"
+  },
+  {
+    "path": "verification/defense-research/pvp/README.md",
+    "url": "https://raw.githubusercontent.com/blindconf/multi_precision_fusion/e8e6f0d8f0b51d288edc1de9da0292ddebb5c8a7/README.md",
+    "sha256": "0baf79c6a177a666bd14fc8d3f1cbc446770885505e1df442ba677f31702ab02"
+  },
+  {
+    "path": "verification/defense-research/pvp/train_with_whisper_adv.py",
+    "url": "https://raw.githubusercontent.com/blindconf/multi_precision_fusion/e8e6f0d8f0b51d288edc1de9da0292ddebb5c8a7/train_with_whisper_adv.py",
+    "sha256": "ab26a58d63cb79ad4dc807c5bc1b604eee74723a151bccfea4bd80fff7300c4a"
+  },
+  {
+    "path": "verification/defense-research/audiopure/diffusion_models/diffwave_ddpm.py",
+    "url": "https://raw.githubusercontent.com/cychomatica/AudioPure/903dd8554473b4fd461919876de2c5ba39747246/diffusion_models/diffwave_ddpm.py",
+    "sha256": "e908164084d17bb145e9a23506ba56372db59049ff033948b2b460168952bf55"
+  },
+  {
+    "path": "verification/defense-research/waveguard/requirements.txt",
+    "url": "https://raw.githubusercontent.com/shehzeen/waveguard_defense/4320cfe12d0452e7f34f2903a4e302780662f5e1/requirements.txt",
+    "sha256": "ab1e3fef002aaf679fd59dda16c0e9d106a038aa316cfb5147c940ef5b6bfa5b"
+  }
+]

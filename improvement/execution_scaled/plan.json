@@ -1,0 +1,186 @@
+{
+  "created_at_utc": "2026-10-22T16:12:40.657555+00:00",
+  "authorization": "User explicitly authorized larger models, more data and longer runs to exceed75%WER while preserving transfer and defense persistence; old6h limit superseded",
+  "maximum_cycle_wall_seconds": 172800,
+  "cohorts": {
+    "qualification": {
+      "count": 48,
+      "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+      "variants": [
+        "clean",
+        "fv_reconstruction",
+        "fv_quality50",
+        "bigvgan_reconstruction"
+      ],
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a"
+    },
+    "fvpilot": {
+      "count": 48,
+      "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+      "variants": [
+        "clean",
+        "fv_reconstruction",
+        "fv_quality50",
+        "single_50",
+        "single_150",
+        "single_200",
+        "single_500",
+        "single_600",
+        "single_1500",
+        "ensemble_raw_50",
+        "ensemble_raw_200",
+        "ensemble_raw_500",
+        "ensemble_eot_50",
+        "ensemble_eot_200",
+        "ensemble_eot_500"
+      ],
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a"
+    },
+    "melpilot": {
+      "count": 48,
+      "manifest": "/workspace/improvement/execution48/development-48.jsonl",
+      "variants": [
+        "clean",
+        "bigvgan_reconstruction",
+        "mel_eot_50",
+        "mel_eot_200",
+        "mel_eot_500"
+      ],
+      "sha256": "9a5f56f5cca6c073dbe6e2b6d804971735045ea80c4456bea0d577b7e292748a"
+    },
+    "validation": {
+      "count": 76,
+      "manifest": "/workspace/improvement/execution_refine/validation-76.jsonl",
+      "variants": [
+        "clean",
+        "candidate_reconstruction",
+        "control_reconstruction",
+        "candidate",
+        "control"
+      ],
+      "sha256": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a"
+    }
+  },
+  "source_only": true,
+  "target_models_evaluated": [],
+  "generation_sources": [
+    "Whisper-small",
+    "Whisper-large-v2",
+    "facebook/data2vec-audio-base-960h"
+  ],
+  "source_weights": {
+    "small": 0.5,
+    "large": 0.25,
+    "ctc": 0.25
+  },
+  "checkpoints": [
+    50,
+    200,
+    500
+  ],
+  "single_source_checkpoints": [
+    50,
+    150,
+    200,
+    500,
+    600,
+    1500
+  ],
+  "rho": 0.1,
+  "full_original_tv_hf": true,
+  "fixed_model_gradient_scales": "calibrated once at own clean reconstruction",
+  "transforms": [
+    "identity",
+    "fir6k",
+    "resample8k"
+  ],
+  "eot": "Seeded uniform draw per update shared across sources",
+  "mel_log_box": 0.6931471805599453,
+  "optimizer_lrs": {
+    "feature": 0.1,
+    "mel": 0.01
+  },
+  "target_configs": {
+    "whisper_base": "/workspace/configs/targets/whisper_base.yaml",
+    "whisper_medium": "/workspace/configs/targets/whisper_medium.yaml",
+    "wav2vec2_large": "/workspace/configs/targets/wav2vec2_large.yaml",
+    "hubert_large": "/workspace/configs/targets/hubert_large.yaml"
+  },
+  "selection": "Complete48 source-only >75WER and all original automatic quality floors; highestWER, thenUTMOS, thenfewersteps; freeze before76validation. Candidate may be strong known baseline; no automatic novelty claim.",
+  "transfer_gate": "After fixed candidate also passes76 source>75 and all quality floors, evaluate4sealed targets and exact named preprocessors on identical candidate/control/clean. Do not use outcomes for reselection.",
+  "scientific_limits": "Additional-surrogate/model-pretraining track; known-transform adaptation differs from withheld defense tests; no human study or missing paper defenses claimed.",
+  "bindings": {
+    "/workspace/improvement/scaled_components.py": "d03948f74880cf7cb31637f724928559db3d67b9a23d8f63c211e4478f516c00",
+    "/workspace/improvement/scaled_attack.py": "cb2ef665f36b56ff823c328910b58de684c57eca1b0b3b9624240b008d5d242f",
+    "/workspace/improvement/scaled_scope.py": "5e9eaa7e86a24a477c78a35faa48af15a3871bc76b0214f2d59fc940cd24ced2",
+    "/workspace/improvement/scaled_run.py": "0a7c707549f343d130ebe29168d444bc2a9e5d9d5108d5beecfdfcc6561d7344",
+    "/workspace/improvement/scaled_source_evaluate.py": "64e9cd6562bbb9c4510730a0f710cff1e1f9020df92859c76a951e8f6b643431",
+    "/workspace/improvement/scaled_postprocess.py": "b44bc189b8f2ce23789e6300fafe108895da6046d25e9a4816a2d5dc80713280",
+    "/workspace/improvement/scaled_transfer_evaluate.py": "55ff75edee4d3da82dd904ad3728b4d52ee9ce81381807d27d92555dde44a670",
+    "/workspace/improvement/supervise_scaled.py": "6b76bdeb459e68883fc47f66755cc5e65d078ed8ee7798828a0455137788b38d",
+    "/workspace/improvement/test_scaled_components.py": "f0d7ad56404d62bdff6d2a6c36e4f5a8ed0894604defb421a6d1120d85dc5699",
+    "/workspace/improvement/14_scaled_research_protocol.md": "8642ff36a2ac0f49998075b5a9636a03f03625ac37717efeaeeb8899fa20ccd2",
+    "/workspace/improvement/execution_scaled/audit_scaled.py": "50564bfccad108029aac038977a4cd032fe651f47c71e3702daab684daf69309",
+    "/workspace/improvement/execution_scaled/component-tests.log": "d6d141717efcc29f78a73d0e2656c7fc1dd9d7bec93d8dea2398126acc0ab65b",
+    "/workspace/improvement/execution_scaled/expanded-tests.log": "af7b6b22075d70d564aa735b5fb9227a0eaff924169ba97786a082b8e21482ca",
+    "/workspace/improvement/execution_scaled/assets.json": "691b37b3a46da8f67d213496f91a0b77301d9a244eb34e5b3e6df2983473d13d",
+    "/workspace/improvement/execution_scaled/download_assets.py": "5e6e1dcafe87ffbb76bd3fd1ae077de751bc9852864bb06260321fe48ec1edcf",
+    "/workspace/improvement/execution_scaled/probe-registration.json": "97e7a63a97644a0051766237fdc07eb7238705cb1eaaa91972e48681a3695375",
+    "/workspace/improvement/execution_scaled/probe-result.json": "914f6e0b28600edeb42e5b94dcf3011b267580da26971dc7a29b67ae6f999e05",
+    "/workspace/improvement/scaled_probe.py": "f00ae8bdc12f042295758e59d4b0481c72a266435d05a6d420f1c1af398e8534",
+    "/workspace/improvement/execution_scaled/generative-prior-work.md": "e0e497b4fb8ed3ccd78859608649acb52d153430ab02767b8a2685f68dc50562",
+    "/workspace/improvement/execution_scaled/transfer-defense-prior-work.md": "a951bf93e00086e9cdef82556ad53925c3d4712b64de34e9c06f56d4c6c2d033",
+    "/workspace/improvement/source_evaluate_refine.py": "10ae56bb0bb273321f89172881aaceee3a016863c5f67dc40249a9cc7926f369",
+    "/workspace/improvement/supervise_pilot48.py": "afe00460e1103da4cc3072eabc267efaac476665e278f9e70629c342059d25d5",
+    "/workspace/improvement/execution_refine/audit_refinement.py": "261c8b6329e089c9a5e04dda1be75afa71dadbcb398470ff2062610ab3d15041",
+    "/workspace/improvement/execution48/mechanism-pilot48/generated.jsonl": "0e9a35d5de2adcb1b070cad8fd4bb6a808f9b17d2315052e6468ab710c3c822b",
+    "/workspace/improvement/execution48/mechanism-pilot48/source-summary.json": "c7ead5892c8a40d25973482861f0027e478bd2b015e79a370a7a6cbfc1538fad",
+    "/workspace/artifacts/whisper/large-v2.pt": "81f7c96c852ee8fc832187b0132e569d6c3065a3252ed18e56effd0b6a73e524",
+    "/workspace/scripts/run_logged.py": "9b85ac3d44f420bb26fb10225d07a55f9a04357781d6a068f3c711f8b4ef5669",
+    "/workspace/configs/targets/whisper_base.yaml": "2bcd432c67be72849160e0cc6e247e6dcc62dbf168a361bf006042ecd95c7954",
+    "/workspace/configs/targets/whisper_medium.yaml": "4b9ca1deeaa9c1259dcea0ae8e8702b8f75be0e30232ffbe4ede588670c568ea",
+    "/workspace/configs/targets/wav2vec2_large.yaml": "1f5bdb9a480e44144a13d939ea34c26361346fba6bce0400735bcfa4dccbcfee",
+    "/workspace/configs/targets/hubert_large.yaml": "208061351f8804bd3ded5dc79ff41e26bf5f8e8d6359d72e7a5a996c437a0dad",
+    "/workspace/artifacts/whisper/base.pt": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+    "/workspace/artifacts/whisper/medium.pt": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/config.json": "bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/feature_extractor_config.json": "5415d0e5f57a6893552b1f916d6e9b9ce312a147fff3e65b260fefadd2f77dbf",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/preprocessor_config.json": "c403ce09975b90dff0dd8302c42d422e9de1f166cd7772df23490069893cb0cf",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/pytorch_model.bin": "00b604cf4d28e86559e8adaeb3a186daa89dc37f5ab216771a0a15a26db0de9f",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/special_tokens_map.json": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/tokenizer_config.json": "c9a86ca4c3d72d4cda976512cd786cc65d87fe22afcd4164c8470f1dde7c9758",
+    "/workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119/vocab.json": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/config.json": "f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/preprocessor_config.json": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/pytorch_model.bin": "9cf43abec3f0410ad6854afa4d376c69ccb364b48ddddfd25c4c5aa16398eab0",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/special_tokens_map.json": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/tokenizer_config.json": "d773cde8c2ca89ab86892f0b5e670c5ebed4dc72e20ed647f6cb843ad2c0bd26",
+    "/workspace/artifacts/hf-hub/models--facebook--hubert-large-ls960-ft/snapshots/ece5fabbf034c1073acae96d5401b25be96709d8/vocab.json": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+    "/workspace/improvement/r3_real_runner_v2.py": "fa4dff2b2a08ee455ea8bbe66d65433c81461d5b6bfee6c29135ed557491780d",
+    "/workspace/improvement/r3_encoder_repair.py": "ae7ef8830fd6dc8cc4457d34c0aae56a8a6be16f8d7cebfee6de52d705a74d7d",
+    "/workspace/beyondwaveform/defenses.py": "ccf6255ef56f61d86879fc973bdd5c7a2bcc337efb9124fd5dc57f33682c07b7",
+    "/workspace/improvement/execution_scaled/models/data2vec/README.md": "0520d21d68d9e9e4087d47409b43c742fd723cda2864464de3e89aafe7693c5d",
+    "/workspace/improvement/execution_scaled/models/data2vec/config.json": "b76d8af6dac945cce1fd4c99116d69e38506f29248415f37a7b5d15c296d6c6e",
+    "/workspace/improvement/execution_scaled/models/data2vec/preprocessor_config.json": "ffc72f475cd79680d5d659fbaefc691cdbcee5c9703a15faf708a5e91452a8d8",
+    "/workspace/improvement/execution_scaled/models/data2vec/pytorch_model.bin": "ba0f29b6b713f88df166a3edfe8db2657fcc9f728d32d68793de5109efacc52d",
+    "/workspace/improvement/execution_scaled/models/data2vec/special_tokens_map.json": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+    "/workspace/improvement/execution_scaled/models/data2vec/tokenizer_config.json": "cce0f91f1614fcdac4aa658944f6a4da2fc3077c5dafb861e2d2c501d21008b7",
+    "/workspace/improvement/execution_scaled/models/data2vec/vocab.json": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+    "/workspace/improvement/execution_scaled/models/bigvgan/LICENSE": "90459cd52fc41bd723df7c0c76fac1e4dd60e6bfd644a7e2a93f325bed4f6d95",
+    "/workspace/improvement/execution_scaled/models/bigvgan/README.md": "1ab4fe827dc65913b6745cb0fa7a96fb0a4a89ff32ec143a0eecfac079e03d1e",
+    "/workspace/improvement/execution_scaled/models/bigvgan/activations.py": "3ba94028aebabfc994bcd746bf9cbe92ecace528434c922c480be6ada182cad6",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/cuda/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/cuda/activation1d.py": "54778a4308d359cac8348bc28f5407652982b22732c3c768a6721183c26f5b0e",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/cuda/load.py": "6ee5cbfaedc6b73cf2bff9677f18bcc5a46c91a088523e853bca12805a909e8a",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/torch/__init__.py": "2e3138e1052e377ba2e51ea59c7d5d255a519559001757af21dbec4cb9c22471",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/torch/act.py": "651448005dd5ae0c193da60d1a50c0aa53550a4a3050e29ed7d35cf86410e212",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/torch/filter.py": "acf2257276e617dd3161e53abc0a1582e586a3d2d618a43235c7f83818b4e179",
+    "/workspace/improvement/execution_scaled/models/bigvgan/alias_free_activation/torch/resample.py": "4d7e1bf4169d03f59360f34f33d029c04b99364150f6737563ebfbee0ab49d79",
+    "/workspace/improvement/execution_scaled/models/bigvgan/bigvgan.py": "2b2c5d7bdc818b90ffc2e1a65776823e46030f51a4e0d7a2d42e9b6d05cba101",
+    "/workspace/improvement/execution_scaled/models/bigvgan/bigvgan_generator.pt": "6f9c5715550c9d0f11159ceb8935638da5aeb19e27d1e63677632df095e376f5",
+    "/workspace/improvement/execution_scaled/models/bigvgan/config.json": "d77e2c96583ca2296ac112a56ec7cc6bd5da4bf7681ceff18448bedc4fcf6512",
+    "/workspace/improvement/execution_scaled/models/bigvgan/env.py": "54ae665797fbb20ed3fc9b856be688f6b8a903b0bed8ff7edabff81dd9cdcd33",
+    "/workspace/improvement/execution_scaled/models/bigvgan/meldataset.py": "691e8413fb4c65ee3f603a43b19bdd69652a06a150ce82e72c43363cd268dfc6",
+    "/workspace/improvement/execution_scaled/models/bigvgan/utils.py": "04eee590ca04ca33a6b2b79802a6514bbe7d6867164c72d61f9404ea9b0101c4"
+  }
+}

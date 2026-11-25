@@ -1,0 +1,166 @@
+{
+  "/workspace/beyondwaveform/__init__.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/__init__.py",
+    "sha256": "d9afadfdee47a8824b303793eabb9d2ecb0c8125487c6154e6320c05aeed700d"
+  },
+  "/workspace/beyondwaveform/io.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/io.py",
+    "sha256": "6fe8936c2c66e47c909f2224f1508f38a32fe448a30545dee86084799b215a45"
+  },
+  "/workspace/beyondwaveform/config.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/config.py",
+    "sha256": "247b131f92472123c86acb789b218315fac38b86771861b73d16003e5cd728b9"
+  },
+  "/workspace/beyondwaveform/losses.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/losses.py",
+    "sha256": "065535e8797f4fa61f05a7fbd7b4e570f5fbd2cff25aed952bdeb3401481b534"
+  },
+  "/workspace/beyondwaveform/attacks.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/attacks.py",
+    "sha256": "bca14da423ba3b3bad603fe6b844385f965ff1db0d059a0e08c9e70ed927d7c7"
+  },
+  "/workspace/beyondwaveform/assets.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/assets.py",
+    "sha256": "17d68c98352c5daee6d2a1fc2eada355cefe28c8341acf8f543bd395ae02a14f"
+  },
+  "/workspace/beyondwaveform/data.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/data.py",
+    "sha256": "eacb38acd9cb7e8429c0ffc7272bdb9a9766ce86616f952d1f8a63b76fa0fca3"
+  },
+  "/workspace/beyondwaveform/evaluation.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/evaluation.py",
+    "sha256": "47ffe359ae65d8c1539aac6d5cf2d09999ba7b55413432101134011808ea5655"
+  },
+  "/workspace/beyondwaveform/pipeline.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/pipeline.py",
+    "sha256": "08e96f4f59d5acc41e82ece347709e5248088110750266d1c3bd7d02fc8e342a"
+  },
+  "/workspace/beyondwaveform/selection.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/selection.py",
+    "sha256": "c12f4a5bde8a6116b0f7b5088760e273630dd4f1da9f8fed7e2fbbce6f57945b"
+  },
+  "/workspace/beyondwaveform/training.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/training.py",
+    "sha256": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0"
+  },
+  "/workspace/beyondwaveform/experiments.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/experiments.py",
+    "sha256": "c6c3d98f9c983e0affcb7bffc26c9f955e97b279fecf55c6bdcfb8d2ccc1b127"
+  },
+  "/workspace/beyondwaveform/cli.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/cli.py",
+    "sha256": "56d75a7a86f3a11ad1a68d9bb930f5a2e104752c0fc8632990c17b9a5df6610a"
+  },
+  "/workspace/beyondwaveform/references.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/references.py",
+    "sha256": "13b90498faa84d450bcd9681e05d4102c5e60f2b210d83d218384d118d747e90"
+  },
+  "/workspace/beyondwaveform/defenses.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/defenses.py",
+    "sha256": "ccf6255ef56f61d86879fc973bdd5c7a2bcc337efb9124fd5dc57f33682c07b7"
+  },
+  "/workspace/beyondwaveform/feature_transforms.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/feature_transforms.py",
+    "sha256": "b8dd26ee9832f8b59ffc1835ade14cc2045d7315060d13364d0a3ee3b0b11101"
+  },
+  "/workspace/beyondwaveform/trajectory_diagnostics.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/trajectory_diagnostics.py",
+    "sha256": "0c471bfcd8ca9be2e708f38288475e701b4cd732531e80f92d54ab56ae1ab03d"
+  },
+  "/workspace/beyondwaveform/adam_diagnostics.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/adam_diagnostics.py",
+    "sha256": "acc8a39e6525ad13fb3b2ca168500346fe4f41184f3d4d86276eb8ff7dcc6f6d"
+  },
+  "/workspace/beyondwaveform/deterministic_frontend.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/deterministic_frontend.py",
+    "sha256": "2eaf167deb7aa54b9afee16a5051f227306a86a565e4f75cdbeaa564808eeb5e"
+  },
+  "/workspace/beyondwaveform/hf_pooling_diagnostics.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/hf_pooling_diagnostics.py",
+    "sha256": "d06de9b9ac0a831eb3c5d6cf46fb28ae1d2c961f30996d5707772ec0b3d670ad"
+  },
+  "/workspace/beyondwaveform/coordinate_diagnostics.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/coordinate_diagnostics.py",
+    "sha256": "959871f69a96b49761167c5d0d0027fe20c813ff70a128422b24c1f956ddd4ff"
+  },
+  "/workspace/beyondwaveform/models/__init__.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/models/__init__.py",
+    "sha256": "2ebcaa5b267d2f98d09e6132079d6862b61362d94d30a1113dd2b6f211a640d0"
+  },
+  "/workspace/beyondwaveform/models/feature.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/models/feature.py",
+    "sha256": "5c68f45cf897f232effbae19472403eca2f9fd20aea785f80a4659842b628a61"
+  },
+  "/workspace/beyondwaveform/models/whisper.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/models/whisper.py",
+    "sha256": "731d774eebc282c6533f80c0332f90262744339aabee50da00cb9a0d16cafb55"
+  },
+  "/workspace/beyondwaveform/models/targets.py": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/beyondwaveform/models/targets.py",
+    "sha256": "de8333c2d67c39e38d456c6ed7fcaf2c11be789580cab371e9c664a019c7337f"
+  },
+  "/workspace/configs/english.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/english.yaml",
+    "sha256": "f02702ce0d3114c1499f0d67676b3cfe1d3d16f43e1a436d6ae86c8418a9e3f5"
+  },
+  "/workspace/configs/mandarin_finetune.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/mandarin_finetune.yaml",
+    "sha256": "f75f6480e5fe2cd17a25e5771a74a69d68d0e5dc2207cac8f153de6b2534c913"
+  },
+  "/workspace/configs/english_lr005.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/english_lr005.yaml",
+    "sha256": "93ae1eac73cdcb948840d4f0fe4cbcfc7afff79c708b7684d031119bf5d137a1"
+  },
+  "/workspace/configs/english_selected.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/english_selected.yaml",
+    "sha256": "7a4d61aa1d5d03c36c2d6e3fa2f61303c896b96041a0a3661df6df1e0770f59a"
+  },
+  "/workspace/configs/english_selected.freeze.json": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/english_selected.freeze.json",
+    "sha256": "511138f7b946a68894b412fdf57bb2fccb4a33589281f230c37ff3c7bdb127c6"
+  },
+  "/workspace/configs/targets/whisper_small.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/whisper_small.yaml",
+    "sha256": "f75839f0b45beb738457adf92d71c73fb756eceea37b0c8056e1d393d5fb2fb4"
+  },
+  "/workspace/configs/targets/whisper_large.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/whisper_large.yaml",
+    "sha256": "07eb1c58914a4251601eea9ee2d278ee751b807a1da33a9c4d615988a9c11843"
+  },
+  "/workspace/configs/targets/ctc_template.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/ctc_template.yaml",
+    "sha256": "a3080c1d3fae2ee37049877f2250c33e68af15d07a381331a409ea004c29b14a"
+  },
+  "/workspace/configs/targets/lpf_example.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/lpf_example.yaml",
+    "sha256": "36d063a57baaebad1cbab4f7268cdbe10c81518e5109184a849389852ab720b5"
+  },
+  "/workspace/configs/targets/whisper_tiny.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/whisper_tiny.yaml",
+    "sha256": "ee8b0fce137e343447820072a83bf5e4d28c42b8aeabfc754b3d5cd2873e501b"
+  },
+  "/workspace/configs/targets/whisper_base.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/whisper_base.yaml",
+    "sha256": "2bcd432c67be72849160e0cc6e247e6dcc62dbf168a361bf006042ecd95c7954"
+  },
+  "/workspace/configs/targets/whisper_medium.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/whisper_medium.yaml",
+    "sha256": "4b9ca1deeaa9c1259dcea0ae8e8702b8f75be0e30232ffbe4ede588670c568ea"
+  },
+  "/workspace/configs/targets/wav2vec2_large.yaml.receipt.json": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/wav2vec2_large.yaml.receipt.json",
+    "sha256": "3cabecf2937779497a56373932769307980a1be3f801b11a4705805bc8207e0c"
+  },
+  "/workspace/configs/targets/wav2vec2_large.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/wav2vec2_large.yaml",
+    "sha256": "1f5bdb9a480e44144a13d939ea34c26361346fba6bce0400735bcfa4dccbcfee"
+  },
+  "/workspace/configs/targets/hubert_large.yaml.receipt.json": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/hubert_large.yaml.receipt.json",
+    "sha256": "17ddbc8d352d69e6ebf1335e311d176fb079be1e7f545d16d591b8f66a55f3e9"
+  },
+  "/workspace/configs/targets/hubert_large.yaml": {
+    "snapshot": "/workspace/improvement/baseline_snapshot/configs/targets/hubert_large.yaml",
+    "sha256": "208061351f8804bd3ded5dc79ff41e26bf5f8e8d6359d72e7a5a996c437a0dad"
+  }
+}

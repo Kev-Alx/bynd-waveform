@@ -1,0 +1,17 @@
+{
+  "status": "failed",
+  "checked_at_utc": "2026-10-26T07:50:11.136Z",
+  "checks": [
+    {
+      "name": "Default view: 3 run panels and 48 sentences",
+      "status": "pass"
+    },
+    {
+      "name": "Changing a run updates its mean scores and recording",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "error": "Error: locator.evaluate: NotSupportedError: The element has no supported sources.",
+  "stack": "locator.evaluate: NotSupportedError: The element has no supported sources.\n    at main (/workspace/improvement/audio_browser_qa/check_browser.cjs:24:41)"
+}

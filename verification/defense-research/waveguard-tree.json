@@ -1,0 +1,106 @@
+{
+  "repository": "shehzeen/waveguard_defense",
+  "revision": "4320cfe12d0452e7f34f2903a4e302780662f5e1",
+  "tree": {
+    "sha": "4320cfe12d0452e7f34f2903a4e302780662f5e1",
+    "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/trees/4320cfe12d0452e7f34f2903a4e302780662f5e1",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0d20b6487c61e7d1bde93acf4a14b7a89083a16d",
+        "size": 6,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/0d20b6487c61e7d1bde93acf4a14b7a89083a16d"
+      },
+      {
+        "path": "Defender",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8bd3dcc32d94055e1825ced284905befb9487e26",
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/trees/8bd3dcc32d94055e1825ced284905befb9487e26"
+      },
+      {
+        "path": "Defender/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "Defender/audioio.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe3ae2e59eb45e4211adc07d7b0252512b7b3034",
+        "size": 2586,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/fe3ae2e59eb45e4211adc07d7b0252512b7b3034"
+      },
+      {
+        "path": "Defender/defender_multiple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "84d857840ec0646405d97b32d4685bc9632a251b",
+        "size": 7455,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/84d857840ec0646405d97b32d4685bc9632a251b"
+      },
+      {
+        "path": "Defender/lpc.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c317d1d0153cef2aa50a31a625c3ea7a16f148b",
+        "size": 155385,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/8c317d1d0153cef2aa50a31a625c3ea7a16f148b"
+      },
+      {
+        "path": "Defender/spectral.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6dd6998ed939cbc9a5078a9839b414103cae5f89",
+        "size": 13578,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/6dd6998ed939cbc9a5078a9839b414103cae5f89"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "38dbb6f23deacc74f7a9440927600e8097a8c625",
+        "size": 2286,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/38dbb6f23deacc74f7a9440927600e8097a8c625"
+      },
+      {
+        "path": "evaluate_detector.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ebc78f3a6fcfbab3b671bf3f160adb83761c7191",
+        "size": 3658,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/ebc78f3a6fcfbab3b671bf3f160adb83761c7191"
+      },
+      {
+        "path": "requirements.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f657005fd340c139beb3ec56c259922ea8ec3ffe",
+        "size": 138,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/f657005fd340c139beb3ec56c259922ea8ec3ffe"
+      },
+      {
+        "path": "tf_logits.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de4a844355baf1aba434c507b265ad79fa86967d",
+        "size": 3337,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/de4a844355baf1aba434c507b265ad79fa86967d"
+      },
+      {
+        "path": "transcribe_deepspeech.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be016c8260882b406bc483234a965990690f6753",
+        "size": 3911,
+        "url": "https://api.github.com/repos/shehzeen/waveguard_defense/git/blobs/be016c8260882b406bc483234a965990690f6753"
+      }
+    ],
+    "truncated": false
+  }
+}

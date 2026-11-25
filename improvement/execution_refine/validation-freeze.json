@@ -1,0 +1,66 @@
+{
+  "status": "stop",
+  "candidate": null,
+  "control": "fv50",
+  "selection_scope": "Frozen source-only48-point decision before validation76",
+  "reason": "Primary screen or preregistered mechanism frontier signal; the latter is exploratory, not primary superiority",
+  "findings": {
+    "constrained100": {
+      "source_wer_delta_points": -6.338028169014088,
+      "utmos_delta": 0.308193857471148,
+      "automatic_quality_floors_pass": true,
+      "failures": [],
+      "primary_source_quality_screen": false,
+      "source_gain_vs_full50": 0.0,
+      "utmos_gain_vs_full50": -0.0002422680457434545,
+      "mechanism_frontier_signal": false,
+      "earns_larger_validation": false,
+      "descriptive_speaker_95": {
+        "source_wer_delta": [
+          -14.385623148781047,
+          1.3123503161667154
+        ],
+        "utmos_delta": [
+          0.2278153277117785,
+          0.3884529544694131
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "scope": "Source/cohort variation only; no training/human/transfer inference"
+      }
+    },
+    "weighted100": {
+      "source_wer_delta_points": 3.6217303822937623,
+      "utmos_delta": 0.26009632647037506,
+      "automatic_quality_floors_pass": false,
+      "failures": [],
+      "primary_source_quality_screen": false,
+      "source_gain_vs_full50": 9.95975855130785,
+      "utmos_gain_vs_full50": -0.04833979904651642,
+      "mechanism_frontier_signal": false,
+      "earns_larger_validation": false,
+      "descriptive_speaker_95": {
+        "source_wer_delta": [
+          -4.353341532560663,
+          11.435558790162036
+        ],
+        "utmos_delta": [
+          0.17822150051884528,
+          0.3397861994737348
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "scope": "Source/cohort variation only; no training/human/transfer inference"
+      }
+    }
+  },
+  "created_at_utc": "2026-10-22T09:21:18.692183+00:00",
+  "bindings": {
+    "/workspace/improvement/execution_refine/plan.json": "e7550bf36d566a35597a8ec961b3665bdc68b5886c8e61a70c5cca70736c6ea3",
+    "/workspace/improvement/execution_refine/pilot/source-summary.json": "3db90455b885582f4ea8d5c0546d31587e2abbe5c0e1facf408e979d55b08c17",
+    "/workspace/improvement/execution_refine/pilot/audit.json": "9ade2c0b10342b317cce2670cccbf3ae2b6701beb8d9f301388141e8465dfbec",
+    "/workspace/improvement/execution_refine/pilot/comparison.json": "9ab6557ef4ab6ad93d87075754ea26c70e6d61902e2cfa0e54b3614b60bf72f2",
+    "/workspace/improvement/execution_refine/selection.json": "508119f57ab9811302c2c6625a66ed411b352972004514d8524994a1b1a54efd",
+    "/workspace/improvement/execution_refine/validation-76.jsonl": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a"
+  }
+}

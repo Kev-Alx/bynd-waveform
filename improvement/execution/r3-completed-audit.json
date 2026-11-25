@@ -1,0 +1,787 @@
+{
+  "created_at_utc": "2026-10-22T03:11:30.442035+00:00",
+  "status": "pass",
+  "run": "/workspace/improvement/execution/r3-waveform-autograd-repair",
+  "cpu_only": true,
+  "neural_inference": false,
+  "cuda_initialised": false,
+  "issues": [],
+  "file_sha256": {
+    "/workspace/improvement/execution/data/train-1h.jsonl": "35a374c93963fbd2aad6efee7887e6aefcdd105b4c707d8f8fe9014f3c43b58d",
+    "/workspace/improvement/r3_real_runner_v2.py": "fa4dff2b2a08ee455ea8bbe66d65433c81461d5b6bfee6c29135ed557491780d",
+    "/workspace/improvement/r3_encoder_repair.py": "ae7ef8830fd6dc8cc4457d34c0aae56a8a6be16f8d7cebfee6de52d705a74d7d",
+    "/workspace/improvement/r3_waveform.py": "41f710cebb79a543912f356a051ee1aacbdf8ebe00631f34364a8ba52dc87289",
+    "/workspace/improvement/r3_real_runner.py": "40b4d9c41eab554ceb1141d3b4ffb97475ec65292e8de761d93f2059b464157e",
+    "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d",
+    "/workspace/improvement/source_evaluate.py": "ec2655e5782c6023d09e16759f545231cb6db58b6e11afb6bd132aaee3fddb31",
+    "/workspace/improvement/execution/plan.json": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+    "/workspace/improvement/execution/data/train-1h.receipt.json": "b879bf54b13bbfeddee3b388139c90055e1867e46dfe3086f0a6c713ea7c9178",
+    "/workspace/improvement/execution/development-24.jsonl": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+    "/workspace/improvement/execution/calibration-3.jsonl": "8cf1fb9a5c824993842b3621289ba8083c9fa37b762ea2115109046f7b83a22d",
+    "/workspace/reproduction-runs/feature-delta-diagnostics/parent-audits/pilot.json": "1701decefc9fc9c9520bab45fc5961fa3c75ec570f19346395eb1e88785b027b",
+    "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/run.json": "a561f121bf34ce1c406eff8ade1d7bdf5306b42136a848d486c044c119c62323",
+    "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/generated.jsonl": "2ca50325fcf69cf67f250eb17720c5a1dcc30c56ba6aa0226171b5dccbcc8dfd",
+    "/workspace/improvement/execution/data/final-reserve-200.jsonl": "7ff66bbe89e40e0cbc0a79d524df17ccc28a9fb610c4a9b7b3555890c032f48b",
+    "/workspace/improvement/04_experimental_plan.md": "b052ba2fd86a511d8c8684311535369904550d45f9ffbb2291c341fd62378e08",
+    "/workspace/beyondwaveform/__init__.py": "d9afadfdee47a8824b303793eabb9d2ecb0c8125487c6154e6320c05aeed700d",
+    "/workspace/beyondwaveform/io.py": "6fe8936c2c66e47c909f2224f1508f38a32fe448a30545dee86084799b215a45",
+    "/workspace/beyondwaveform/config.py": "247b131f92472123c86acb789b218315fac38b86771861b73d16003e5cd728b9",
+    "/workspace/beyondwaveform/losses.py": "065535e8797f4fa61f05a7fbd7b4e570f5fbd2cff25aed952bdeb3401481b534",
+    "/workspace/beyondwaveform/attacks.py": "bca14da423ba3b3bad603fe6b844385f965ff1db0d059a0e08c9e70ed927d7c7",
+    "/workspace/beyondwaveform/assets.py": "17d68c98352c5daee6d2a1fc2eada355cefe28c8341acf8f543bd395ae02a14f",
+    "/workspace/beyondwaveform/data.py": "eacb38acd9cb7e8429c0ffc7272bdb9a9766ce86616f952d1f8a63b76fa0fca3",
+    "/workspace/beyondwaveform/evaluation.py": "47ffe359ae65d8c1539aac6d5cf2d09999ba7b55413432101134011808ea5655",
+    "/workspace/beyondwaveform/pipeline.py": "08e96f4f59d5acc41e82ece347709e5248088110750266d1c3bd7d02fc8e342a",
+    "/workspace/beyondwaveform/selection.py": "c12f4a5bde8a6116b0f7b5088760e273630dd4f1da9f8fed7e2fbbce6f57945b",
+    "/workspace/beyondwaveform/training.py": "3fb099a427057c9a7d173a6ceb91bbea6030dc3fa89bb4105d380208cc61a8d0",
+    "/workspace/beyondwaveform/experiments.py": "c6c3d98f9c983e0affcb7bffc26c9f955e97b279fecf55c6bdcfb8d2ccc1b127",
+    "/workspace/beyondwaveform/cli.py": "56d75a7a86f3a11ad1a68d9bb930f5a2e104752c0fc8632990c17b9a5df6610a",
+    "/workspace/beyondwaveform/references.py": "13b90498faa84d450bcd9681e05d4102c5e60f2b210d83d218384d118d747e90",
+    "/workspace/beyondwaveform/defenses.py": "ccf6255ef56f61d86879fc973bdd5c7a2bcc337efb9124fd5dc57f33682c07b7",
+    "/workspace/beyondwaveform/feature_transforms.py": "b8dd26ee9832f8b59ffc1835ade14cc2045d7315060d13364d0a3ee3b0b11101",
+    "/workspace/beyondwaveform/trajectory_diagnostics.py": "0c471bfcd8ca9be2e708f38288475e701b4cd732531e80f92d54ab56ae1ab03d",
+    "/workspace/beyondwaveform/adam_diagnostics.py": "acc8a39e6525ad13fb3b2ca168500346fe4f41184f3d4d86276eb8ff7dcc6f6d",
+    "/workspace/beyondwaveform/deterministic_frontend.py": "2eaf167deb7aa54b9afee16a5051f227306a86a565e4f75cdbeaa564808eeb5e",
+    "/workspace/beyondwaveform/hf_pooling_diagnostics.py": "d06de9b9ac0a831eb3c5d6cf46fb28ae1d2c961f30996d5707772ec0b3d670ad",
+    "/workspace/beyondwaveform/coordinate_diagnostics.py": "959871f69a96b49761167c5d0d0027fe20c813ff70a128422b24c1f956ddd4ff",
+    "/workspace/beyondwaveform/models/__init__.py": "2ebcaa5b267d2f98d09e6132079d6862b61362d94d30a1113dd2b6f211a640d0",
+    "/workspace/beyondwaveform/models/feature.py": "5c68f45cf897f232effbae19472403eca2f9fd20aea785f80a4659842b628a61",
+    "/workspace/beyondwaveform/models/whisper.py": "731d774eebc282c6533f80c0332f90262744339aabee50da00cb9a0d16cafb55",
+    "/workspace/beyondwaveform/models/targets.py": "de8333c2d67c39e38d456c6ed7fcaf2c11be789580cab371e9c664a019c7337f",
+    "/workspace/artifacts/whisper/small.pt": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "/workspace/improvement/execution/r3-waveform-reference-repair/run-failure.json": "f11d6212c33ce348e0a87e0eedc45c1e7872ed389cdcb04d0e6b29469fda6701",
+    "/workspace/improvement/test_r3_encoder_repair.py": "cb9c89234fd49565653ddffc4d8e7613cc1c7e0d116ae365a04e942c5803c422",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/penalty-calibration.json": "8027137506a404e5350781aaba9c978b6cdc2e4cf7d443458d6bf2f46ccc05da",
+    "/workspace/artifacts/checkpoints/WavLM-Large.pt": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/training-trace.jsonl": "ac35079c2790e0dd2672486db0de6ec5d5128717dd25c1a753dff3dfb4d6cd95",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/terminal.pt": "b2a5c5d8eb0589641b5a988491b30e106ff037b0f3bbb95560d2e0c6a6d76a9c",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500.pt": "d58dd0b916f74beaea36bbe9ade77979e4b6d7f9a0d98b2d91ae2fa55f18f1e9",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-summary.json": "9d072876a4868e14c5572e4561f20f8f09243259cd4fa7f0fa49ecf6c7c8af02",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-scores.jsonl": "3b7616462c406684fc0a4890cd832045a61b15dbf9f09f1eb455615ab4a68c3b",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/generated.jsonl": "f9d9ba4f2f93c482ab3aa7b47b5f9b5879905f6c3c664e6d134e04d2fa91c9bd",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000.pt": "32e9c2a8a43063ff6c43f30bfc927a7fb92acd75bd3c222c252fc4765b5d61cf",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-summary.json": "eefbdd7330af0a5c239aa0f3226a3930ad1919f14cf0d7cdb064eca239146d84",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-scores.jsonl": "263d3d2817c772469c25921592f43f52e61e52b70d460cc085955eb6156fde12",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/generated.jsonl": "b018a5df70458771cec5cacc80c078c0d8737aae6a9ae8c671fba1079225d22c",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt": "f66f7cf0f913b20868b6aa7117d0253b039c4bd76c5a915e6df8593fd0c52fb1",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-summary.json": "e3435caf730071c4f85a7dcae4f62b4cacf675ba9784509a41a9751a20193ff9",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-scores.jsonl": "1090b08428f8e0761641c4f1c8554a9ac2627e8ba6257859b66a9da1431a582d",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/generated.jsonl": "0ed72b4bd12d4b9e05f626c20b5cbc32550a1e0fc5469e25102bf49bba788f7a",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/generated.jsonl": "d6f0180fa23ea6b152cd7351ead2afa501c5d04b79c6e500bb9f141f1ab6ff93",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/1673-143397-0019.wav": "bcb1e0eddb7c8c250022a69bb803d397f70d01f948a9577a52b18832f35d55ef",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/1673-143397-0019.wav": "7899789b331cdc9672f1bd9447c8118aa22050e2341f02377a76c09a15885f28",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/1673-143397-0019.wav": "2bfcef150de88735548dda1ab00b2123cde47c92d56fe9238fc27d7c2c5a7a09",
+    "/workspace/data/LibriSpeech/dev-clean/1673/143397/1673-143397-0019.flac": "d24ff2cf91f1a992101841c4f3e96d9904072fd933b3716ce0d8f81a4c245720",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/174-50561-0003.wav": "2e7dd331d4b527bf7ca26ec3bfd3a965f907aff053dfeb964b26bbcac2b3df63",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/174-50561-0003.wav": "736a331140775127575f541c3a5c48a5d59066c56de922ec378db0c75ede4ec7",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/174-50561-0003.wav": "3ee72337965195488dbfbfcd2be1ddfe9fed93c380a711165ae145d137b2f398",
+    "/workspace/data/LibriSpeech/dev-clean/174/50561/174-50561-0003.flac": "e9297505e740f8196d4903ef38414bfbf8082f06a31af4474ad6446a44992faa",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/174-84280-0015.wav": "c199b4e6c27ea79136b8289bb48e581691923a68700cc653563f33db71130ed6",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/174-84280-0015.wav": "439013cf84356102467ba5aea95bc685282fd23db0083e4d4c306e5074db8380",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/174-84280-0015.wav": "36ec328a3d8de455ec3f088ccf1e1a9b8e1bef2ca9b863ce73d1bef00c7369e8",
+    "/workspace/data/LibriSpeech/dev-clean/174/84280/174-84280-0015.flac": "9c044050d125298d54a7186f9771608ad2dc43b5e9605ec8fd6024b0cbb17680",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/1919-142785-0051.wav": "0eb52a6bd0151cd49ecbfbc9a4dc849f22963288535b5b7cc9db4fada7fcd36d",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/1919-142785-0051.wav": "6807592d9371395b6aab1263548de4ba013373cbe268455ac3ce483f25962029",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/1919-142785-0051.wav": "d6ee12de785beae56d1dffbe7cb0d52fe86e081f1bca2fe2eec914e6529c8476",
+    "/workspace/data/LibriSpeech/dev-clean/1919/142785/1919-142785-0051.flac": "1177aa322fd968741c5279d7ac436c875272cba3ae6720b1a5c375e9400341ea",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2035-147960-0004.wav": "94ccee762646c4c3eddc0a07288587fb205c5bd8fd718dde0c27caf71db2ed39",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2035-147960-0004.wav": "8593f749eb44b2c5c0d266eaa6715b4db4fe8b3549006d74fe1dd7f90cae6f36",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2035-147960-0004.wav": "b50a1cc175fdfd4f9fb6cf7cb87f623b944ca5801a48db40fcea3f14dd007a95",
+    "/workspace/data/LibriSpeech/dev-clean/2035/147960/2035-147960-0004.flac": "7a0d780be28f78c1dfc79d24537e9119cea4359a4c4258e0ed47e37529926f7b",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2035-147961-0008.wav": "d4e615d6f4abe2c92c81da2f9616c9803b5a29cc72a7950c2c5989206d4bfddf",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2035-147961-0008.wav": "524dd86e957b7e1ad3181f7d14630c528376793be12c150726b246a26b875447",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2035-147961-0008.wav": "aee4fa0273fccb329df4a897be08ed5fbf55f9b4848433efbbd4a665857c5fff",
+    "/workspace/data/LibriSpeech/dev-clean/2035/147961/2035-147961-0008.flac": "f64db01ded0348fda0972cc32622386e0d2d7ccd889ac2a496597d4d7617fd32",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2035-152373-0013.wav": "7ac9bf676e47d7f7546bc346a206b0322a0dd79790afc6aae9a5a0021ecf0fbb",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2035-152373-0013.wav": "8875009e7ea87c8fe24de7f83e3bba374523c89d31fb987f8d843050936ee9ee",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2035-152373-0013.wav": "c25c570be297f20f73c8ead0383ae1c5d33a9cbc8c6e3cdbbcd6b15b0a7fc776",
+    "/workspace/data/LibriSpeech/dev-clean/2035/152373/2035-152373-0013.flac": "aaa615b41c4e11cf552e2d39cdb06ae733bae2c53cb6ce5fa27a07e9fabb8bb7",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2412-153954-0006.wav": "82612dfaaecb47d3364add804d1c66269dc30f77597ed0959ad66581af31a5bf",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2412-153954-0006.wav": "c0df246a92eac466cc0a993df1afc8354e3176ad8caf0b35a94c43e53edbe56d",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2412-153954-0006.wav": "b7c8bfece9f38a4cb04666d1001bcf0bac5a75e70a87cc64d8bc33dade9ae3c9",
+    "/workspace/data/LibriSpeech/dev-clean/2412/153954/2412-153954-0006.flac": "3feac5890500534685cde5eca5835e47d06bb2b7d0923b2ae3a544f2d68e30d1",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2428-83705-0001.wav": "a46780830ced06fff1199c98c9045f5263db78c8230150db63eb45777220e6af",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2428-83705-0001.wav": "ed0b4460cc71c283fd797e614031f3bc13ee52d8b15661510dd5de5da88f8288",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2428-83705-0001.wav": "3bd91e3ae20af4e6f85c862173ed7f4f7cf8eafe372288b02a593850d9a84729",
+    "/workspace/data/LibriSpeech/dev-clean/2428/83705/2428-83705-0001.flac": "a7cfd2d49bd00d7ade17541a2abf885e295ba9155efcf9e800d65afab9a8c5ca",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/251-136532-0018.wav": "cf854da3378d39550848c3b4e1c35ffa2a0262d24016dfa45fe4d09d96edf05a",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/251-136532-0018.wav": "645f14a5586518f653d872210abb5b358703da1bbb6673bf538b6cda33d5832b",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/251-136532-0018.wav": "6d221ed1fc45384c078f9c6ab6bcfaf9da6a26b8c4ee2e4c7f4fa0114d6349b6",
+    "/workspace/data/LibriSpeech/dev-clean/251/136532/251-136532-0018.flac": "ef7975b40540016f4bad0ba5f01638e2313041ba1994d3efb8ad4a7441324b60",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/251-137823-0000.wav": "83fb3f7ac70b69d8993023c58fb0747069b8f63738335f31207c52188bad8a46",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/251-137823-0000.wav": "235d02ef048e6ae56e2dae5d60e90515daade7364d480294816d22dbc64124db",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/251-137823-0000.wav": "7be13fce9f557a66942f82d3177a4edbe728d0737f53d97696c7920eb42dfa53",
+    "/workspace/data/LibriSpeech/dev-clean/251/137823/251-137823-0000.flac": "0d414255c68f617ca56f32d1c3521e6c22686ed92e99559bb903da5aea5be602",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/2803-161169-0008.wav": "a4f426d297e65d3dc7b2849c9e37edaee66b5a80bcb3156ad88d35fa3fdb34cb",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/2803-161169-0008.wav": "b4722f4f051e9b4757a08feb4d23689e0e306a0e828657d636db4ca4a3789c93",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/2803-161169-0008.wav": "e06bbac9f1872f3b6d91f8e87ec76c3fea562006f02bbfc20067ce3ab59acfaf",
+    "/workspace/data/LibriSpeech/dev-clean/2803/161169/2803-161169-0008.flac": "a8e6541fe83e19d096cf298811bbd5778c2e7c3c86a2e57efa2374611c829af7",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/3000-15664-0027.wav": "95b59b588de0f524f8166916312e7ca5957d1abeffbe0c922bd342b78382b241",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/3000-15664-0027.wav": "0ebbee3cd93860b017391151f964bc5db13b1c26e22468084de23decfe5e9b89",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/3000-15664-0027.wav": "9c31634d8b236799cf49412acdfed577224989344769e8b2c5ae23d719898eeb",
+    "/workspace/data/LibriSpeech/dev-clean/3000/15664/3000-15664-0027.flac": "fc9ee6da5425f794b2e5bf5de50b7c7574ffa9d31917f74a0f7a8cee14c9de8f",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/3081-166546-0048.wav": "eb532452c8e616f340f089a4b61f8905bf66a719fb2554b5676ce98c83b4fa6e",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/3081-166546-0048.wav": "900c8fd8f57923c438ad87e6c185d180395809fe6ada0516c6ce10111cd05c67",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/3081-166546-0048.wav": "20ad047255439215e9264a0af5ad38cfb1366e1b57a06581152f780ea8dd2019",
+    "/workspace/data/LibriSpeech/dev-clean/3081/166546/3081-166546-0048.flac": "30595865552fd32665056354e4e002fc9472e78c9ebbe65d377b14168fe39eee",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/3752-4944-0015.wav": "b6cd9f68d06d9036fae09ba333963f25a6c3acbaabf2baa8f111b30e22e164b0",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/3752-4944-0015.wav": "04a794f18ffaff8f15c8aded4768b31e20f1f219b4cb5d2cbe41d2649911c574",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/3752-4944-0015.wav": "bf33db082608c991dee3e504d5dc6fac6610da3f564cf2a3233ef9e91516de33",
+    "/workspace/data/LibriSpeech/dev-clean/3752/4944/3752-4944-0015.flac": "c1b8b0adadf569873ccb5d6c9717fdb5a5849bfcd7c4e5b87db9404fbf2d47f1",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/6295-64301-0009.wav": "a910b7f599942e6697430eb2ca5026052adefc5ead70d2364833bb8b84af0bf0",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/6295-64301-0009.wav": "8b82b4e0b8805fda2e54c18b373758bcf8b9ea7efacdbba0ecc04939c130f7fa",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/6295-64301-0009.wav": "1c9e3c5dbccbc88328a35ef06e9b130417e8351c0877cdb7ef41b15594ae7844",
+    "/workspace/data/LibriSpeech/dev-clean/6295/64301/6295-64301-0009.flac": "d0393a23285fe4063666362685c384bfcdb56bfd83ecc5eeb1270268ca634d34",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/6345-93302-0004.wav": "9057346243feba2a817c2c68056ec2e5e65d5682ef0087f1dffdc57b24df44b7",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/6345-93302-0004.wav": "3bddca82bf82447e237881ec142f2266f4de26406beacf4dfbc6b13a9d34a22e",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/6345-93302-0004.wav": "d7bf07089c97508ea64f955fe2e7d5a5865fd5b51dd383b773e5e03e7ad42886",
+    "/workspace/data/LibriSpeech/dev-clean/6345/93302/6345-93302-0004.flac": "6286249d34ba7dd1da463bacbe2b1f4f6490750b093abc19276680352dfb9676",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/6345-93302-0028.wav": "c8afdc04bb1a1d7f4e4469dbe66855ab3671dcb889c1c4b868cbfa40565a4e35",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/6345-93302-0028.wav": "e9ff72f3e00f8441f59540572f6b272c590863724ea1ee13958cc5fab9690c0e",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/6345-93302-0028.wav": "5a6374db00e6b760c21672167db729f90b81152b5b7477198f78067e426235a6",
+    "/workspace/data/LibriSpeech/dev-clean/6345/93302/6345-93302-0028.flac": "743d713400a50573dae930e5accc5da524d56e9fb48d1fc4771d3eafe6a933bb",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/777-126732-0040.wav": "c9930c1eb57053080831251fa68aaa63921eb39f1d1dae4fd1b508db7c8f7787",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/777-126732-0040.wav": "99acad0764eea726cd77915d0d00ab727808718df4daa1248ad7ee3428c6babc",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/777-126732-0040.wav": "3e3fd0ba4fa1a4e85eb8eea4c2d511a54f46123411aedd9e12120c66adadd1ae",
+    "/workspace/data/LibriSpeech/dev-clean/777/126732/777-126732-0040.flac": "b18c3bedc9c4f06919959d896de9fbf719934f2339cd010c06b336dc7d592a88",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/777-126732-0064.wav": "0ba54eb0592c6c73e1974de02692a63a70e819dea242deaf94db06282effe440",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/777-126732-0064.wav": "fb1e13d25bc57ce61ad22d5570c02826fd354b7024e5d1d95545bc881a68297e",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/777-126732-0064.wav": "2a80136281bd513f3101a6fa765c0b8562103dcd163c36763036736788e27a92",
+    "/workspace/data/LibriSpeech/dev-clean/777/126732/777-126732-0064.flac": "001aff4f8622c8a7ada9a4b573bd710ff7ecab6970ba789025561921a7fd8481",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/7976-110124-0013.wav": "cb5f0d831f153543f53d0ab0ef69a03dc1159c7f3f75b34730087925d1bce6d8",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/7976-110124-0013.wav": "feaa2c7b4d5f02b352fdf6d869e78a76bca38f4963fe5b65a4404f03626d3652",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/7976-110124-0013.wav": "f1d386e9f0eaa48a5c83c4afdca97c87d4dc92e601492bc5de6f55cef2f5fdff",
+    "/workspace/data/LibriSpeech/dev-clean/7976/110124/7976-110124-0013.flac": "c2dc16808b08d915de18156e2cc69db3596bf4f8a3156a740582f206bc53139a",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/8297-275154-0019.wav": "c0fbdd5912825c7785d5369ad6b585e57595b50bc8e2fcdb6672031af22fc96a",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/8297-275154-0019.wav": "4db436d218e15d5df885c13d71babb5c9d76f32fe9d4a0c663565317b36cf77a",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/8297-275154-0019.wav": "8cd6a6dfb7531e0a1258f6cc6059c2f8625c5c71943f8edc53499b9bd60c2485",
+    "/workspace/data/LibriSpeech/dev-clean/8297/275154/8297-275154-0019.flac": "6557ca40c916bcc774a5219f9d9f7465b43c0497adaf63e9548b3e0b5c2bb27d",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/84-121123-0023.wav": "3bea40fdedc6a86346389ed9d8c3727305c543130c67f7d848497d23d14fb7cf",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/84-121123-0023.wav": "666cce6e16d36637574ec4477ce2f20c03bf008997712f2d727ca880c1de8752",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/84-121123-0023.wav": "b3a710072eec45a1fada79a2f043eb6be24a7a6aa0e4a794c7d50be34883d481",
+    "/workspace/data/LibriSpeech/dev-clean/84/121123/84-121123-0023.flac": "de5ac89fdba6009de9ca8b9cacd6e8d3604c35985d412deb7dc7bb61dc0872c0",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/clean/8842-302196-0004.wav": "ae90bc7cd5231363a903b3f0e8db0849f0c362d4d71cafcb19c8f0085dddf5d3",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/initial-generator/8842-302196-0004.wav": "e17acbedda23e7f022ea5570b36ead898fa14f35f28930d5c57d1926522ab521",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/audio/adversarial/8842-302196-0004.wav": "200a4bf94a41762d33974a4f78963cc0304f424480c9240515ce29915a58a8a5",
+    "/workspace/data/LibriSpeech/dev-clean/8842/302196/8842-302196-0004.flac": "2ce3543f12ba2033a869fbce7434e74f149722db31ed5e494cad6d1bf9462ae4",
+    "/workspace/improvement/execution/r3-waveform-autograd-repair/source-scores.jsonl": "e561ab0714681be37e63903501361e9eaeafb3837361f6ed2c521eebd2d22e94",
+    "/workspace/artifacts/quality-research-scorers/DNSMOS/DNSMOS/sig_bak_ovr.onnx": "269fbebdb513aa23cddfbb593542ecc540284a91849ac50516870e1ac78f6edd",
+    "/workspace/artifacts/quality-research-scorers/DNSMOS/DNSMOS/model_v8.onnx": "9246480c58567bc6affd4200938e77eef49468c8bc7ed3776d109c07456f6e91",
+    "/workspace/artifacts/quality-research-scorers/NISQA/nisqa.tar": "7ec4cf937514dd3f8860b21e66fabd8ca87a168572675ef8d979c4c4ad2e805c",
+    "/workspace/artifacts/torchhub/checkpoints/utmos22_strong_step7459_v1.pt": "38aa51ab79e2a4e09a1449758a4b37e9cbb2e8235a49662a732d33a9ba1e9bff"
+  },
+  "training": {
+    "updates": 1779,
+    "completed_microbatches": 7116,
+    "discarded_partial_microbatches": 0,
+    "epochs_started": 25,
+    "training_wall_seconds": 3541.8877668259665,
+    "maximum_training_wall_seconds": 3600,
+    "cuda_event_microbatch_span_seconds": 3049.627779449463,
+    "peak_allocated_bytes": 4796456960,
+    "peak_reserved_bytes": 6270484480,
+    "stop_reason": "one_hour_wall_time_cap_conservative_reserve",
+    "checkpoint_selection": "automatic source-only proxy",
+    "weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    },
+    "mean_microbatch_losses": {
+      "source_sum_nll": 44.42468687481529,
+      "stft_loss": 0.0003854764696212082,
+      "content_loss": 1.3499597790664795e-06
+    },
+    "trace_rows": 7116,
+    "seeded_manifest_order_independently_replayed": true
+  },
+  "calibration": {
+    "saved_scalar_median_weights": {
+      "stft": 65.08367870148994,
+      "content": 186.6123439723859
+    },
+    "neural_gradients_recomputed": false
+  },
+  "checkpoints": [
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/terminal.pt",
+      "sha256": "b2a5c5d8eb0589641b5a988491b30e106ff037b0f3bbb95560d2e0c6a6d76a9c",
+      "updates": 1779,
+      "microbatches": 7116,
+      "generator_parameters": 1590833,
+      "state_tensors": 26,
+      "best_checkpoint_key": [
+        -3.5789473684210527,
+        0.00017185896471498077,
+        1500
+      ]
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500.pt",
+      "sha256": "d58dd0b916f74beaea36bbe9ade77979e4b6d7f9a0d98b2d91ae2fa55f18f1e9",
+      "updates": 500,
+      "microbatches": 2000,
+      "generator_parameters": 1590833,
+      "state_tensors": 26,
+      "best_checkpoint_key": null
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000.pt",
+      "sha256": "32e9c2a8a43063ff6c43f30bfc927a7fb92acd75bd3c222c252fc4765b5d61cf",
+      "updates": 1000,
+      "microbatches": 4000,
+      "generator_parameters": 1590833,
+      "state_tensors": 26,
+      "best_checkpoint_key": [
+        -3.5789473684210527,
+        0.0005391475253115156,
+        500
+      ]
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt",
+      "sha256": "f66f7cf0f913b20868b6aa7117d0253b039c4bd76c5a915e6df8593fd0c52fb1",
+      "updates": 1500,
+      "microbatches": 6000,
+      "generator_parameters": 1590833,
+      "state_tensors": 26,
+      "best_checkpoint_key": [
+        -3.5789473684210527,
+        0.0004524380622873044,
+        1000
+      ]
+    }
+  ],
+  "checkpoint_selection": {
+    "selected": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt",
+    "expected_selected": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500.pt",
+    "periodic_checkpoints_without_completed_selection_scores": [],
+    "completed_checkpoint_native_evaluations": 3,
+    "selected_sha256": "f66f7cf0f913b20868b6aa7117d0253b039c4bd76c5a915e6df8593fd0c52fb1"
+  },
+  "generated": {
+    "count": 24,
+    "saved_waveforms": 72,
+    "bounds_independently_recomputed": [
+      {
+        "id": "1673-143397-0019",
+        "variant": "initial-generator",
+        "samples": 251120,
+        "linf": 0.00020319223403930664,
+        "rms": 0.00018412785644165928,
+        "peak": 0.8435898423194885
+      },
+      {
+        "id": "1673-143397-0019",
+        "variant": "adversarial",
+        "samples": 251120,
+        "linf": 7.44057324482128e-05,
+        "rms": 1.2718290454301247e-06,
+        "peak": 0.8434149026870728
+      },
+      {
+        "id": "174-50561-0003",
+        "variant": "initial-generator",
+        "samples": 53440,
+        "linf": 0.00018844520673155785,
+        "rms": 0.00018405418685900172,
+        "peak": 0.21594072878360748
+      },
+      {
+        "id": "174-50561-0003",
+        "variant": "adversarial",
+        "samples": 53440,
+        "linf": 9.073124965652823e-05,
+        "rms": 1.6155996382931695e-06,
+        "peak": 0.21576087176799774
+      },
+      {
+        "id": "174-84280-0015",
+        "variant": "initial-generator",
+        "samples": 219680,
+        "linf": 0.00019365549087524414,
+        "rms": 0.00018407114886226204,
+        "peak": 0.5487309694290161
+      },
+      {
+        "id": "174-84280-0015",
+        "variant": "adversarial",
+        "samples": 219680,
+        "linf": 7.445947267115116e-05,
+        "rms": 8.698267349619918e-07,
+        "peak": 0.5485559701919556
+      },
+      {
+        "id": "1919-142785-0051",
+        "variant": "initial-generator",
+        "samples": 148640,
+        "linf": 0.00019292812794446945,
+        "rms": 0.00018406968668296627,
+        "peak": 0.4778745770454407
+      },
+      {
+        "id": "1919-142785-0051",
+        "variant": "adversarial",
+        "samples": 148640,
+        "linf": 7.445766823366284e-05,
+        "rms": 9.040414944245409e-07,
+        "peak": 0.4780541658401489
+      },
+      {
+        "id": "2035-147960-0004",
+        "variant": "initial-generator",
+        "samples": 66720,
+        "linf": 0.00019383616745471954,
+        "rms": 0.00018409415163869774,
+        "peak": 0.6529527902603149
+      },
+      {
+        "id": "2035-147960-0004",
+        "variant": "adversarial",
+        "samples": 66720,
+        "linf": 7.446212111972272e-05,
+        "rms": 1.4501332120823798e-06,
+        "peak": 0.652771532535553
+      },
+      {
+        "id": "2035-147961-0008",
+        "variant": "initial-generator",
+        "samples": 68000,
+        "linf": 0.00018915534019470215,
+        "rms": 0.00018406461909073205,
+        "peak": 0.3033728301525116
+      },
+      {
+        "id": "2035-147961-0008",
+        "variant": "adversarial",
+        "samples": 68000,
+        "linf": 7.443863432854414e-05,
+        "rms": 1.1289514085972108e-06,
+        "peak": 0.30319318175315857
+      },
+      {
+        "id": "2035-152373-0013",
+        "variant": "initial-generator",
+        "samples": 327520,
+        "linf": 0.0001964867115020752,
+        "rms": 0.00018407766931533814,
+        "peak": 0.8095346093177795
+      },
+      {
+        "id": "2035-152373-0013",
+        "variant": "adversarial",
+        "samples": 327520,
+        "linf": 7.445999654009938e-05,
+        "rms": 9.480723382157543e-07,
+        "peak": 0.8093612194061279
+      },
+      {
+        "id": "2412-153954-0006",
+        "variant": "initial-generator",
+        "samples": 163520,
+        "linf": 0.0001938939094543457,
+        "rms": 0.0001840747157025561,
+        "peak": 0.6974785923957825
+      },
+      {
+        "id": "2412-153954-0006",
+        "variant": "adversarial",
+        "samples": 163520,
+        "linf": 9.07315916265361e-05,
+        "rms": 1.1850056234067245e-06,
+        "peak": 0.6976616382598877
+      },
+      {
+        "id": "2428-83705-0001",
+        "variant": "initial-generator",
+        "samples": 109520,
+        "linf": 0.0001952648162841797,
+        "rms": 0.00018407811088278308,
+        "peak": 0.5617603063583374
+      },
+      {
+        "id": "2428-83705-0001",
+        "variant": "adversarial",
+        "samples": 109520,
+        "linf": 7.44583667255938e-05,
+        "rms": 1.0139907154718783e-06,
+        "peak": 0.561589241027832
+      },
+      {
+        "id": "251-136532-0018",
+        "variant": "initial-generator",
+        "samples": 110000,
+        "linf": 0.00019502639770507812,
+        "rms": 0.00018410042253891822,
+        "peak": 0.6328714489936829
+      },
+      {
+        "id": "251-136532-0018",
+        "variant": "adversarial",
+        "samples": 110000,
+        "linf": 7.445830851793289e-05,
+        "rms": 1.4305377075755616e-06,
+        "peak": 0.6326941847801208
+      },
+      {
+        "id": "251-137823-0000",
+        "variant": "initial-generator",
+        "samples": 54960,
+        "linf": 0.00019045546650886536,
+        "rms": 0.00018407744844282215,
+        "peak": 0.45208433270454407
+      },
+      {
+        "id": "251-137823-0000",
+        "variant": "adversarial",
+        "samples": 54960,
+        "linf": 7.445731898769736e-05,
+        "rms": 1.4098020555023951e-06,
+        "peak": 0.4519052803516388
+      },
+      {
+        "id": "2803-161169-0008",
+        "variant": "initial-generator",
+        "samples": 226240,
+        "linf": 0.00018843024736270308,
+        "rms": 0.00018405613724696722,
+        "peak": 0.1930515170097351
+      },
+      {
+        "id": "2803-161169-0008",
+        "variant": "adversarial",
+        "samples": 226240,
+        "linf": 9.072982356883585e-05,
+        "rms": 8.806099372453341e-07,
+        "peak": 0.19323836266994476
+      },
+      {
+        "id": "3000-15664-0027",
+        "variant": "initial-generator",
+        "samples": 64720,
+        "linf": 0.00019818544387817383,
+        "rms": 0.00018408616930433867,
+        "peak": 0.6798983216285706
+      },
+      {
+        "id": "3000-15664-0027",
+        "variant": "adversarial",
+        "samples": 64720,
+        "linf": 7.445586379617453e-05,
+        "rms": 1.315204539713881e-06,
+        "peak": 0.6797196269035339
+      },
+      {
+        "id": "3081-166546-0048",
+        "variant": "initial-generator",
+        "samples": 76960,
+        "linf": 0.00018850323976948857,
+        "rms": 0.00018405410175881064,
+        "peak": 0.13571369647979736
+      },
+      {
+        "id": "3081-166546-0048",
+        "variant": "adversarial",
+        "samples": 76960,
+        "linf": 7.44514400139451e-05,
+        "rms": 9.73790549365192e-07,
+        "peak": 0.13552871346473694
+      },
+      {
+        "id": "3752-4944-0015",
+        "variant": "initial-generator",
+        "samples": 66160,
+        "linf": 0.0001958906650543213,
+        "rms": 0.00018407325528935984,
+        "peak": 0.8671463131904602
+      },
+      {
+        "id": "3752-4944-0015",
+        "variant": "adversarial",
+        "samples": 66160,
+        "linf": 7.448345422744751e-05,
+        "rms": 1.2355733058063308e-06,
+        "peak": 0.8669701218605042
+      },
+      {
+        "id": "6295-64301-0009",
+        "variant": "initial-generator",
+        "samples": 48080,
+        "linf": 0.00019046664237976074,
+        "rms": 0.0001840641665301756,
+        "peak": 0.4269387125968933
+      },
+      {
+        "id": "6295-64301-0009",
+        "variant": "adversarial",
+        "samples": 48080,
+        "linf": 7.445886149071157e-05,
+        "rms": 1.2468868597638824e-06,
+        "peak": 0.4271242320537567
+      },
+      {
+        "id": "6345-93302-0004",
+        "variant": "initial-generator",
+        "samples": 70640,
+        "linf": 0.00019055604934692383,
+        "rms": 0.00018408856090425393,
+        "peak": 0.3847936689853668
+      },
+      {
+        "id": "6345-93302-0004",
+        "variant": "adversarial",
+        "samples": 70640,
+        "linf": 7.446273230016232e-05,
+        "rms": 1.4027698549462432e-06,
+        "peak": 0.38461393117904663
+      },
+      {
+        "id": "6345-93302-0028",
+        "variant": "initial-generator",
+        "samples": 31040,
+        "linf": 0.00019043684005737305,
+        "rms": 0.00018407365611301687,
+        "peak": 0.4161958396434784
+      },
+      {
+        "id": "6345-93302-0028",
+        "variant": "adversarial",
+        "samples": 31040,
+        "linf": 9.073115506907925e-05,
+        "rms": 2.2221548972284455e-06,
+        "peak": 0.4160136878490448
+      },
+      {
+        "id": "777-126732-0040",
+        "variant": "initial-generator",
+        "samples": 79760,
+        "linf": 0.00018838414689525962,
+        "rms": 0.00018406136851203432,
+        "peak": 0.2861296832561493
+      },
+      {
+        "id": "777-126732-0040",
+        "variant": "adversarial",
+        "samples": 79760,
+        "linf": 7.444612128892913e-05,
+        "rms": 1.0219950351743982e-06,
+        "peak": 0.2859508991241455
+      },
+      {
+        "id": "777-126732-0064",
+        "variant": "initial-generator",
+        "samples": 93759,
+        "linf": 0.00018940865993499756,
+        "rms": 0.000184058233863757,
+        "peak": 0.2819492518901825
+      },
+      {
+        "id": "777-126732-0064",
+        "variant": "adversarial",
+        "samples": 93759,
+        "linf": 8.853420149534941e-05,
+        "rms": 1.2422715009833221e-06,
+        "peak": 0.2821353077888489
+      },
+      {
+        "id": "7976-110124-0013",
+        "variant": "initial-generator",
+        "samples": 104880,
+        "linf": 0.00019190926104784012,
+        "rms": 0.00018407459750712697,
+        "peak": 0.4207119345664978
+      },
+      {
+        "id": "7976-110124-0013",
+        "variant": "adversarial",
+        "samples": 104880,
+        "linf": 7.445998198818415e-05,
+        "rms": 1.0949750274488583e-06,
+        "peak": 0.4208979308605194
+      },
+      {
+        "id": "8297-275154-0019",
+        "variant": "initial-generator",
+        "samples": 126080,
+        "linf": 0.0001942366361618042,
+        "rms": 0.00018407066365566638,
+        "peak": 0.6981140971183777
+      },
+      {
+        "id": "8297-275154-0019",
+        "variant": "adversarial",
+        "samples": 126080,
+        "linf": 9.073206456378102e-05,
+        "rms": 1.250302620197475e-06,
+        "peak": 0.6979365944862366
+      },
+      {
+        "id": "84-121123-0023",
+        "variant": "initial-generator",
+        "samples": 74960,
+        "linf": 0.00018845847807824612,
+        "rms": 0.0001840646091961342,
+        "peak": 0.28307750821113586
+      },
+      {
+        "id": "84-121123-0023",
+        "variant": "adversarial",
+        "samples": 74960,
+        "linf": 7.446599192917347e-05,
+        "rms": 1.1062247360478131e-06,
+        "peak": 0.28326335549354553
+      },
+      {
+        "id": "8842-302196-0004",
+        "variant": "initial-generator",
+        "samples": 91840,
+        "linf": 0.00019347667694091797,
+        "rms": 0.00018407697812421775,
+        "peak": 0.616421103477478
+      },
+      {
+        "id": "8842-302196-0004",
+        "variant": "adversarial",
+        "samples": 91840,
+        "linf": 9.072157263290137e-05,
+        "rms": 1.4165834912613974e-06,
+        "peak": 0.6166092753410339
+      }
+    ],
+    "clean_samples_equal_registered_original": true
+  },
+  "final_native_evaluation": {
+    "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/source-summary.json",
+    "score_rows": 72,
+    "summary": {
+      "adversarial": {
+        "count": 24,
+        "substitutions": 15,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_units": 475,
+        "error_percent": 3.5789473684210527,
+        "quality": {
+          "dnsmos": 3.3318309732616194,
+          "nisqa": 4.083795328934987,
+          "utmos": 4.1885553896427155
+        }
+      },
+      "clean": {
+        "count": 24,
+        "substitutions": 15,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_units": 475,
+        "error_percent": 3.5789473684210527,
+        "quality": {
+          "dnsmos": 3.3323443629925404,
+          "nisqa": 4.083788245916367,
+          "utmos": 4.188579469919205
+        }
+      },
+      "initial-generator": {
+        "count": 24,
+        "substitutions": 15,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_units": 475,
+        "error_percent": 3.5789473684210527,
+        "quality": {
+          "dnsmos": 3.338276020263127,
+          "nisqa": 4.080785810947418,
+          "utmos": 4.188579797744751
+        }
+      }
+    },
+    "native_backend_exactly_matches_historical": true
+  },
+  "checkpoint_native_evaluations": [
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-summary.json",
+      "score_rows": 24,
+      "summary": {
+        "adversarial": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3321810866530215,
+            "nisqa": 4.083823800086975,
+            "utmos": 4.188535412152608
+          }
+        }
+      },
+      "native_backend_exactly_matches_historical": true
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-summary.json",
+      "score_rows": 24,
+      "summary": {
+        "adversarial": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.332581253585637,
+            "nisqa": 4.083812961975734,
+            "utmos": 4.188545952240626
+          }
+        }
+      },
+      "native_backend_exactly_matches_historical": true
+    },
+    {
+      "path": "/workspace/improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-summary.json",
+      "score_rows": 24,
+      "summary": {
+        "adversarial": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3318309732616194,
+            "nisqa": 4.083795328934987,
+            "utmos": 4.1885553896427155
+          }
+        }
+      },
+      "native_backend_exactly_matches_historical": true
+    }
+  ],
+  "primary_source_quality_screen": {
+    "control": {
+      "path": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/summary.json",
+      "source_wer_percent": 45.68421052631579,
+      "quality": {
+        "dnsmos": 3.207473259831049,
+        "nisqa": 4.124502023061116,
+        "utmos": 3.676064044237137
+      }
+    },
+    "delta_source_wer_points": -42.10526315789473,
+    "delta_utmos": 0.5124913454055786,
+    "automatic_quality_admissible": true,
+    "source_quality_screen_passes": false,
+    "efficiency_screen_assessed": false,
+    "human_or_heldout_transfer_established": false
+  },
+  "limits": [
+    "Saved-artifact verification only; no neural inference or optimizer replay.",
+    "Trace finiteness verifies reported scalar losses/gradient norms, not all intermediate activation/gradient tensors.",
+    "Checkpoint tensors are loaded weights_only on CPU; terminal hash is producer-bound, while periodic checkpoint hashes are computed at audit time.",
+    "Generation is not reexecuted: checkpoint-to-WAV causal correspondence relies on registered producer code and receipts.",
+    "Source transcript use is constrained by frozen IDs and implementation; full training input transcripts are not repeated in trace rows.",
+    "MOS and source WER do not establish human intelligibility, held-out ASR transfer or improved generalization.",
+    "No final-reserve audio or held-out-target artifact is accessed. The earlier independent cohort audit covers sealed-reserve exclusion."
+  ],
+  "auditor_sha256": "28e7f79449de4f84dbabb0676efbba00718890f1f2b587c0ae1f91f216c2ac57"
+}

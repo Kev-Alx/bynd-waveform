@@ -9,8 +9,28 @@ from ..losses import lexical_nll
 from ..io import digest
 
 
-def teacher_forcing_tokens(tokenizer, text, device):
-    prefix = list(tokenizer.sot_sequence_including_notimestamps)
+def nll_transcript(text, policy="original"):
+    """Explicit attack-target orthography; recognition references stay intact."""
+    text = text.strip()
+    if policy == "original":
+        return text
+    if policy == "lower":
+        return text.lower()
+    if policy == "sentence":
+        return text.lower().capitalize()
+    raise ValueError(f"Unknown NLL transcript policy: {policy}")
+
+
+def teacher_forcing_prefix(tokenizer, timestamp_policy="no_timestamps"):
+    if timestamp_policy == "no_timestamps":
+        return list(tokenizer.sot_sequence_including_notimestamps)
+    if timestamp_policy == "initial_timestamp":
+        return [*tokenizer.sot_sequence, tokenizer.timestamp_begin]
+    raise ValueError(f"Unknown NLL timestamp policy: {timestamp_policy}")
+
+
+def teacher_forcing_tokens(tokenizer, text, device, timestamp_policy="no_timestamps"):
+    prefix = teacher_forcing_prefix(tokenizer, timestamp_policy)
     lexical = tokenizer.encode(text.strip())
     if not lexical or any(token >= tokenizer.eot for token in lexical):
         raise ValueError("Transcript must contain ordinary lexical tokens only")
@@ -22,13 +42,18 @@ def teacher_forcing_tokens(tokenizer, text, device):
 
 
 class WhisperASR(nn.Module):
-    def __init__(self, model, language="en", reduction="mean", decoding=None):
+    def __init__(self, model, language="en", reduction="mean", decoding=None, nll_transcript_policy="original",
+                 nll_timestamp_policy="no_timestamps"):
         super().__init__()
         self.model = model
         self.language = language
         self.reduction = reduction
+        nll_transcript("validation", nll_transcript_policy)
+        self.nll_transcript_policy = nll_transcript_policy
         self.tokenizer = get_tokenizer(model.is_multilingual, num_languages=model.num_languages,
                                        language=language, task="transcribe")
+        teacher_forcing_prefix(self.tokenizer, nll_timestamp_policy)
+        self.nll_timestamp_policy = nll_timestamp_policy
         self.decoding = decoding or {"beam_size": 5, "temperature": 0.0}
 
     def mel(self, audio):
@@ -38,7 +63,8 @@ class WhisperASR(nn.Module):
         return whisper.log_mel_spectrogram(audio, n_mels=self.model.dims.n_mels)[None]
 
     def nll(self, audio, text):
-        inputs, labels, mask = teacher_forcing_tokens(self.tokenizer, text, audio.device)
+        target = nll_transcript(text, self.nll_transcript_policy)
+        inputs, labels, mask = teacher_forcing_tokens(self.tokenizer, target, audio.device, self.nll_timestamp_policy)
         if inputs.shape[-1] > self.model.dims.n_text_ctx:
             raise ValueError("Transcript exceeds Whisper context")
         return lexical_nll(self.model(self.mel(audio), inputs), labels, mask, self.reduction)
@@ -62,10 +88,16 @@ def load_whisper(config, device, trainable=False):
     if not path.exists():
         raise FileNotFoundError(f"Missing local Whisper checkpoint {path}; run download_models.py")
     model = whisper.load_model(str(path), device=device)
-    adapter = WhisperASR(model, config.get("language", "en"), config.get("nll_reduction", "mean"), config.get("decoding"))
+    adapter = WhisperASR(model, config.get("language", "en"), config.get("nll_reduction", "mean"),
+                         config.get("decoding"), config.get("nll_transcript_policy", "original"),
+                         config.get("nll_timestamp_policy", "no_timestamps"))
     adapter.requires_grad_(trainable)
     adapter.train(trainable)
-    return adapter, {"checkpoint": str(path.resolve()), "sha256": digest(path),
+    metadata = {"checkpoint": str(path.resolve()), "sha256": digest(path),
                      "dimensions": vars(model.dims), "language": adapter.language,
                      "nll_reduction": adapter.reduction, "decoding": adapter.decoding}
-
+    if "nll_transcript_policy" in config:
+        metadata["nll_transcript_policy"] = adapter.nll_transcript_policy
+    if "nll_timestamp_policy" in config:
+        metadata["nll_timestamp_policy"] = adapter.nll_timestamp_policy
+    return adapter, metadata

@@ -1,0 +1,73 @@
+{
+  "status": "not_acquired_no_R3_training_run",
+  "track": "T1_added_clean_data",
+  "corpus": "LibriSpeech",
+  "split": "train-clean-100",
+  "sample_rate": 16000,
+  "language": "en",
+  "corpus_currently_local": false,
+  "checked_local_directory": "/workspace/data/LibriSpeech/train-clean-100",
+  "license": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "local_evidence": "/workspace/data/LibriSpeech/LICENSE.TXT",
+    "attribution": "LibriSpeech (c) 2014 by Vassil Panayotov"
+  },
+  "available_loader": {
+    "module": "/workspace/beyondwaveform/assets.py",
+    "function": "download_corpus",
+    "behavior": "downloads and verifies the complete official archive before safe extraction",
+    "indexer": "/workspace/beyondwaveform/data.py:prepare_manifest",
+    "audio_loader": "/workspace/beyondwaveform/io.py:load_audio",
+    "raw_manifest_compatibility": "id,text,audio,audio_sha256,corpus,split,role,language,speaker,sample_rate,samples,duration"
+  },
+  "preferred_acquisition": {
+    "url": "https://www.openslr.org/resources/12/train-clean-100.tar.gz",
+    "published_md5": "2a93770f6d5c6c964bc36631d331a522",
+    "md5_local_source": "/workspace/data/downloads/librispeech-md5sum.txt",
+    "destination_root": "/workspace/improvement/r3_data",
+    "download_bytes": "approximately 6.3 GB; exact server length must be recorded before acquisition",
+    "policy": "The official gzip tar is not a random-access one-hour dataset. Do not claim that saving only selected extracted clips eliminates full archive transfer. Acquisition has not started.",
+    "receipt": "Record resolved URL, byte count, published MD5 verification, archive SHA256, extraction tool/version, and license/metadata hashes. Keep all acquired files and receipts inside improvement/r3_data."
+  },
+  "lower_transfer_options": [
+    {
+      "option": "Existing local or institution-hosted verified official archive",
+      "requirements": "If available, independently verify the published MD5, record original source and archive SHA256, then reuse without downloading. No such copy has been established."
+    },
+    {
+      "option": "Pinned per-utterance mirror or streaming dataset",
+      "requirements": "First establish immutable revision, complete train-clean-100 metadata inventory, CC-BY-4.0 provenance, exact official utterance mapping, speaker/source IDs, decoded-audio hashes, and round-trip transcript agreement. Preselect IDs from metadata without ASR/attack/quality outcomes before fetching audio. Record total transferred bytes including skipped stream/shard data. This is conditional and unverified, not a silently interchangeable dataset."
+    }
+  ],
+  "selection_preregistration": {
+    "seed": 11,
+    "selection_inputs": "Complete official metadata/audio inventory plus frozen source-development, inherited history, confirmation, and final-reserve inventories; no attack, ASR or quality outcomes",
+    "duration_seconds": {"minimum": 0.045, "maximum": 30.0},
+    "audio_policy": "Native mono 16 kHz, finite samples in [-1,1], original full transcript. No transcript-unaligned crops, resampling, normalization, or outcome-based exclusion.",
+    "speaker_balance": "Sort eligible speakers by SHA256('r3-train-seed11|' + speaker). Within each speaker sort eligible utterances by ascending duration, then SHA256('r3-train-seed11|' + utterance_id). Emit one utterance per speaker per round until exhausted. This freezes a duration-first speaker-balanced stream without performance outcomes.",
+    "nested_sizes": "Select the smallest prefix reaching at least 3600 seconds for the one-hour subset, and the smallest prefix reaching at least 36000 seconds for the ten-hour subset. Permit at most one original-utterance overshoot of <=30 seconds; record exact durations. One-hour IDs must be a subset of ten-hour IDs. Do not crop to an exact hour.",
+    "exclusions_before_selection": [
+      "Reject speakers and source-recording identities occurring in any known development, confirmation, or final pool.",
+      "Reject matching corpus/utterance IDs and exact audio file hashes.",
+      "Reject exact normalized transcript duplicates after Unicode NFKC, case folding, punctuation removal and whitespace normalization; inspect source chapters/books for repeated passages.",
+      "Run a declared near-duplicate/resampled/cropped-audio similarity audit and source/speaker identity review; exact hashes alone are insufficient.",
+      "Verify duration/language/sample-rate metadata from decoded audio; archive every exclusion reason before training."
+    ],
+    "freeze_outputs": [
+      "one-hour and ten-hour JSONL manifests with original transcript, speaker/chapter/book/source identities, decoded samples/duration, file and canonical decoded-audio hashes",
+      "metadata inventory SHA256, speaker order, selection code SHA256, selection seed, exclusions and duplicate-audit report",
+      "corpus/source version, archive receipts, license, metadata hashes, overlap/pretraining disclosure",
+      "per-speaker duration/count distributions and nested-subset verification"
+    ],
+    "future_final_reserve": "Any later acquired final reserve must exclude training speakers/source identities and audio/text duplicates. If adequate provenance cannot be verified, results remain development-only."
+  },
+  "implementation_registration": {
+    "generator_parameters": 1590833,
+    "parameter_ceiling": 3000000,
+    "dependency_changes": "none; existing PyTorch stack only",
+    "training_seeds": [11,29,47],
+    "lean_test": "One seed, at most one measured GPU-hour of training after manifest and calibration freeze; feasibility only.",
+    "full_seed_budget": "At most 12000 optimizer updates or 8 measured GPU-hours, whichever occurs first; source checkpoint selection every500 optimizer updates.",
+    "memory": "Model parameters are about6.36 MB in float32; generator parameters+gradients+two AdamW moments about25.45 MB, excluding all activations, source Whisper-small, frozen WavLM, CUDA context and workspaces. Full GPU fit is unmeasured. Sequential backward recomputation separates source/content activation graphs; batch1 accumulation4."
+  }
+}

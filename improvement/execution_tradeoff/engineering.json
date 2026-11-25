@@ -1,0 +1,157 @@
+{
+  "status": "pass",
+  "id": "6345-93302-0028",
+  "audio_seconds": 1.94,
+  "engineering_only": true,
+  "performance_pilot": false,
+  "delta_equal": true,
+  "audio_equal": true,
+  "maximum_delta_difference": 0.0,
+  "twice": {
+    "once": false,
+    "steps": 5,
+    "wall_seconds": 1.3480060352012515,
+    "phase_wall_seconds": {
+      "decoder_no_grad": 0.1060826014727354,
+      "decoder_graph": 0.11109159048646688,
+      "source_forward_backward": 0.8828442469239235,
+      "decoder_vjp_penalties": 0.22279376909136772,
+      "optimizer_projection": 0.001628948375582695,
+      "final_render": 0.021079949103295803
+    },
+    "phase_gpu_event_seconds": {
+      "decoder_no_grad": 0.10605033683776854,
+      "decoder_graph": 0.11105567932128907,
+      "source_forward_backward": 0.882735824584961,
+      "decoder_vjp_penalties": 0.22271561813354493,
+      "optimizer_projection": 0.0015923199951648713,
+      "final_render": 0.021073375701904297
+    },
+    "gpu_event_seconds": 1.345223154574633,
+    "peak_allocated_bytes": 1650917888,
+    "peak_reserved_bytes": 2260729856,
+    "source_forward_backward_pairs": 5,
+    "decoder_forwards": 11,
+    "decoder_backwards": 5,
+    "trace": [
+      {
+        "step": 1,
+        "nll": 24.923025131225586,
+        "tv": 1.0,
+        "hf": 1.5498342514038086,
+        "gradient_norm": 4.8298159401581975
+      },
+      {
+        "step": 2,
+        "nll": 31.03091812133789,
+        "tv": 1.0037034749984741,
+        "hf": 1.0695111751556396,
+        "gradient_norm": 1.9829445548417417
+      },
+      {
+        "step": 3,
+        "nll": 36.08551788330078,
+        "tv": 1.0093684196472168,
+        "hf": 0.7735087275505066,
+        "gradient_norm": 1.9838295816718976
+      },
+      {
+        "step": 4,
+        "nll": 40.09153747558594,
+        "tv": 1.015552043914795,
+        "hf": 0.6325245499610901,
+        "gradient_norm": 4.526034906921238
+      },
+      {
+        "step": 5,
+        "nll": 43.8282470703125,
+        "tv": 1.0218662023544312,
+        "hf": 0.5231185555458069,
+        "gradient_norm": 0.9915579103464263
+      }
+    ]
+  },
+  "once": {
+    "once": true,
+    "steps": 5,
+    "wall_seconds": 1.2476281467825174,
+    "phase_wall_seconds": {
+      "decoder_no_grad": 0.0,
+      "decoder_graph": 0.10704090725630522,
+      "source_forward_backward": 0.8877253830432892,
+      "decoder_vjp_penalties": 0.2276549581438303,
+      "optimizer_projection": 0.0014712968841195107,
+      "final_render": 0.02134876511991024
+    },
+    "phase_gpu_event_seconds": {
+      "decoder_no_grad": 0.0,
+      "decoder_graph": 0.10700672149658202,
+      "source_forward_backward": 0.8876210174560548,
+      "decoder_vjp_penalties": 0.2275798454284668,
+      "optimizer_projection": 0.0014352320134639741,
+      "final_render": 0.021342496871948242
+    },
+    "gpu_event_seconds": 1.2449853132665158,
+    "peak_allocated_bytes": 2112330240,
+    "peak_reserved_bytes": 2262827008,
+    "source_forward_backward_pairs": 5,
+    "decoder_forwards": 6,
+    "decoder_backwards": 5,
+    "trace": [
+      {
+        "step": 1,
+        "nll": 24.923025131225586,
+        "tv": 1.0,
+        "hf": 1.5498342514038086,
+        "gradient_norm": 4.8298159401581975
+      },
+      {
+        "step": 2,
+        "nll": 31.03091812133789,
+        "tv": 1.0037034749984741,
+        "hf": 1.0695111751556396,
+        "gradient_norm": 1.9829445548417417
+      },
+      {
+        "step": 3,
+        "nll": 36.08551788330078,
+        "tv": 1.0093684196472168,
+        "hf": 0.7735087275505066,
+        "gradient_norm": 1.9838295816718976
+      },
+      {
+        "step": 4,
+        "nll": 40.09153747558594,
+        "tv": 1.015552043914795,
+        "hf": 0.6325245499610901,
+        "gradient_norm": 4.526034906921238
+      },
+      {
+        "step": 5,
+        "nll": 43.8282470703125,
+        "tv": 1.0218662023544312,
+        "hf": 0.5231185555458069,
+        "gradient_norm": 0.9915579103464263
+      }
+    ]
+  },
+  "speed_ratio": 1.080454972643569,
+  "backend": {
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "flash_sdp_enabled": false,
+    "efficient_sdp_enabled": false,
+    "math_sdp_enabled": true,
+    "cudnn_sdp_enabled": false,
+    "whisper_use_sdpa": true,
+    "whisper_sdpa_available": true,
+    "float32_matmul_precision": "highest",
+    "cublas_workspace_config": ":4096:8",
+    "cpu_threads": 4,
+    "interop_threads": 16
+  }
+}

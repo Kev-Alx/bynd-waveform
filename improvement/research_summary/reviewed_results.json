@@ -1,0 +1,2933 @@
+{
+  "compiled_at_taipei": "2026-10-28T13:18:08+08:00",
+  "catalogue_conditions": 78,
+  "catalogue_score_rows": 3192,
+  "catalogue_rows": [
+    {
+      "study": "Word-risk objective",
+      "name": "Word-risk with deletion candidate",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "58.526315789473685",
+      "dnsmos": "3.177816114854586",
+      "nisqa": "3.995732764403025",
+      "utmos": "3.3497235476970673",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "179",
+      "deletions": "56",
+      "insertions": "43",
+      "sourceFile": "improvement/execution/r1-deletion-development24/source-summary.json"
+    },
+    {
+      "study": "Word-risk objective",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788245916367",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r1-deletion-development24/source-summary.json"
+    },
+    {
+      "study": "Word-risk objective",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.331731573490439",
+      "nisqa": "4.212428530057271",
+      "utmos": "4.166711787382762",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r1-deletion-development24/source-summary.json"
+    },
+    {
+      "study": "Local feature mixtures",
+      "name": "Local feature mixtures",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.3684210526315788",
+      "dnsmos": "3.332028333830355",
+      "nisqa": "4.214219321807225",
+      "utmos": "4.16612634062767",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "14",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json"
+    },
+    {
+      "study": "Local feature mixtures",
+      "name": "Local-mixture amplitude control",
+      "variant": "baseline_attenuated",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "4.842105263157895",
+      "dnsmos": "3.3019925637163214",
+      "nisqa": "4.19263822833697",
+      "utmos": "4.083689133326213",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "20",
+      "deletions": "2",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json"
+    },
+    {
+      "study": "Local feature mixtures",
+      "name": "Original strong control \u00b7 50 steps \u00b7 LR 0.1",
+      "variant": "baseline_frozen",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "74.73684210526316",
+      "dnsmos": "3.1640392160891886",
+      "nisqa": "4.034993400176366",
+      "utmos": "3.318611820538839",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "258",
+      "deletions": "24",
+      "insertions": "73",
+      "sourceFile": "improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json"
+    },
+    {
+      "study": "Local feature mixtures",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788245916367",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json"
+    },
+    {
+      "study": "Local feature mixtures",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.331731573490439",
+      "nisqa": "4.212428530057271",
+      "utmos": "4.166711787382762",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r2-canonical-zero-uniform-dev24/source-summary.json"
+    },
+    {
+      "study": "Generator checkpoint \u00b7 500 updates",
+      "name": "Generator \u00b7 trained \u00b7 500 updates",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3321810866530215",
+      "nisqa": "4.083823800086975",
+      "utmos": "4.188535412152608",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/checkpoints/update-00500-evaluation/native-source/source-summary.json"
+    },
+    {
+      "study": "Generator checkpoint \u00b7 1000 updates",
+      "name": "Generator \u00b7 trained \u00b7 1000 updates",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3325812535856376",
+      "nisqa": "4.083812961975734",
+      "utmos": "4.188545952240626",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01000-evaluation/native-source/source-summary.json"
+    },
+    {
+      "study": "Generator checkpoint \u00b7 1500 updates",
+      "name": "Generator \u00b7 trained \u00b7 1500 updates",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3318309732616203",
+      "nisqa": "4.083795328934987",
+      "utmos": "4.1885553896427155",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/checkpoints/update-01500-evaluation/native-source/source-summary.json"
+    },
+    {
+      "study": "Learned waveform generator",
+      "name": "Generator \u00b7 trained",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3318309732616203",
+      "nisqa": "4.083795328934987",
+      "utmos": "4.1885553896427155",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/source-summary.json"
+    },
+    {
+      "study": "Learned waveform generator",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788245916367",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/source-summary.json"
+    },
+    {
+      "study": "Learned waveform generator",
+      "name": "Generator \u00b7 untrained",
+      "variant": "initial-generator",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3382760202631268",
+      "nisqa": "4.080785810947418",
+      "utmos": "4.188579797744751",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "improvement/execution/r3-waveform-autograd-repair/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "fv_quality",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "49.798792756539235",
+      "dnsmos": "3.1738890871498",
+      "nisqa": "4.069769814610481",
+      "utmos": "3.5789116074641547",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "379",
+      "deletions": "32",
+      "insertions": "84",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Waveform PGD \u00b7 weighted loss \u00b7 50 steps",
+      "variant": "pgd_full",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "43.46076458752515",
+      "dnsmos": "3.1656259200244037",
+      "nisqa": "3.7775716384251914",
+      "utmos": "3.887347732981046",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "332",
+      "deletions": "34",
+      "insertions": "66",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Waveform PGD \u00b7 recognition loss only",
+      "variant": "pgd_nll",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "58.75251509054326",
+      "dnsmos": "3.0025187431404565",
+      "nisqa": "3.436720156421264",
+      "utmos": "3.5677818854649863",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "NISQA",
+      "substitutions": "420",
+      "deletions": "43",
+      "insertions": "121",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Generator \u00b7 untrained",
+      "variant": "r3_initial",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.270004508301976",
+      "nisqa": "4.055737326542537",
+      "utmos": "4.0258748307824135",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "Generator \u00b7 trained",
+      "variant": "r3_trained",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.2716796231285623",
+      "nisqa": "4.0532931337753935",
+      "utmos": "4.025861884156863",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "33",
+      "deletions": "4",
+      "insertions": "3",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Waveform mechanism pilot",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.300238960915245",
+      "nisqa": "4.171609789133072",
+      "utmos": "4.013134936491649",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution48/mechanism-pilot48/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Uniformly attenuated waveform control",
+      "variant": "attenuated_global_nll50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "39.93963782696177",
+      "dnsmos": "3.111230292707484",
+      "nisqa": "3.7016804019610086",
+      "utmos": "3.7635613506038985",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "NISQA",
+      "substitutions": "289",
+      "deletions": "44",
+      "insertions": "64",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Quiet-region budget \u00b7 weighted loss",
+      "variant": "envelope_full50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "19.41649899396378",
+      "dnsmos": "3.2709532086700492",
+      "nisqa": "4.064990535378456",
+      "utmos": "4.0045319472750025",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "151",
+      "deletions": "19",
+      "insertions": "23",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Quiet-region budget \u00b7 recognition loss only",
+      "variant": "envelope_nll50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "29.175050301810867",
+      "dnsmos": "3.275206651152819",
+      "nisqa": "4.02936905125777",
+      "utmos": "3.9140474324425063",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "220",
+      "deletions": "25",
+      "insertions": "45",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "fv50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "49.798792756539235",
+      "dnsmos": "3.1738890871498",
+      "nisqa": "4.069769814610481",
+      "utmos": "3.5789116074641547",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "379",
+      "deletions": "32",
+      "insertions": "84",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Waveform PGD \u00b7 weighted loss \u00b7 50 steps",
+      "variant": "global_full50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "43.46076458752515",
+      "dnsmos": "3.1656259200244037",
+      "nisqa": "3.7775716384251914",
+      "utmos": "3.887347732981046",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "332",
+      "deletions": "34",
+      "insertions": "66",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Quiet-region protection",
+      "name": "Waveform PGD \u00b7 recognition loss only",
+      "variant": "global_nll50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "58.75251509054326",
+      "dnsmos": "3.0025187431404565",
+      "nisqa": "3.436720156421264",
+      "utmos": "3.5677818854649863",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "NISQA",
+      "substitutions": "420",
+      "deletions": "43",
+      "insertions": "121",
+      "sourceFile": "improvement/execution_envelope/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "initial r050",
+      "variant": "initial_r050",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.325955734406438",
+      "dnsmos": "3.302505749177012",
+      "nisqa": "4.182726226747036",
+      "utmos": "4.017659584681193",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "36",
+      "deletions": "5",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "source r025",
+      "variant": "source_r025",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "3.9235412474849096",
+      "dnsmos": "3.2931964881915974",
+      "nisqa": "4.110562967757384",
+      "utmos": "3.8986365546782813",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "32",
+      "deletions": "5",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "source r050",
+      "variant": "source_r050",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.2665347344109694",
+      "nisqa": "4.038715749979019",
+      "utmos": "3.6630098869403205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "source r100",
+      "variant": "source_r100",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "8.35010060362173",
+      "dnsmos": "3.2005334543085113",
+      "nisqa": "3.891512860854467",
+      "utmos": "2.7783268516262374",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "58",
+      "deletions": "8",
+      "insertions": "17",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "quality r025",
+      "variant": "quality_r025",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "3.9235412474849096",
+      "dnsmos": "3.289003304013225",
+      "nisqa": "4.211652497450511",
+      "utmos": "4.007223213712375",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "33",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "quality r050",
+      "variant": "quality_r050",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "3.8229376257545273",
+      "dnsmos": "3.290773839217222",
+      "nisqa": "4.219768740236759",
+      "utmos": "3.9104405591885247",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "31",
+      "deletions": "5",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "quality r100",
+      "variant": "quality_r100",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.124748490945674",
+      "dnsmos": "3.2307892145506383",
+      "nisqa": "4.205107716222604",
+      "utmos": "3.6824930161237717",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "5",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Learned speech-feature model",
+      "name": "quality shuffled r050",
+      "variant": "quality_shuffled_r050",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.289645268763369",
+      "nisqa": "4.215773470699787",
+      "utmos": "3.9657697627941766",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "33",
+      "deletions": "5",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_model_v1/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Waveform PGD \u00b7 hard constraints \u00b7 100 steps",
+      "variant": "constrained100",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "43.46076458752515",
+      "dnsmos": "3.1654774259409564",
+      "nisqa": "3.7770956779519715",
+      "utmos": "3.8871054649353027",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "328",
+      "deletions": "33",
+      "insertions": "71",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Waveform PGD \u00b7 weighted loss \u00b7 50 steps",
+      "variant": "full50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "43.46076458752515",
+      "dnsmos": "3.1656259200244037",
+      "nisqa": "3.7775716384251914",
+      "utmos": "3.887347732981046",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "332",
+      "deletions": "34",
+      "insertions": "66",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Original feature method \u00b7 100 steps",
+      "variant": "fv100",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "65.49295774647888",
+      "dnsmos": "3.088811762227479",
+      "nisqa": "4.005691173175971",
+      "utmos": "3.3105370650688806",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "494",
+      "deletions": "37",
+      "insertions": "120",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "fv50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "49.798792756539235",
+      "dnsmos": "3.1738890871498",
+      "nisqa": "4.069769814610481",
+      "utmos": "3.5789116074641547",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "379",
+      "deletions": "32",
+      "insertions": "84",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Waveform refinement",
+      "name": "Waveform PGD \u00b7 weighted continuation \u00b7 100 steps",
+      "variant": "weighted100",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "53.420523138833",
+      "dnsmos": "3.1157860637699106",
+      "nisqa": "3.5936950196822486",
+      "utmos": "3.8390079339345298",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "NISQA",
+      "substitutions": "395",
+      "deletions": "34",
+      "insertions": "102",
+      "sourceFile": "improvement/execution_refine/pilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble + transforms \u00b7 200 steps",
+      "variant": "ensemble_eot_200",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "81.7907444668008",
+      "dnsmos": "3.170772466096276",
+      "nisqa": "4.067204395929973",
+      "utmos": "3.2345118348797164",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "604",
+      "deletions": "44",
+      "insertions": "165",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble + transforms \u00b7 50 steps",
+      "variant": "ensemble_eot_50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "64.68812877263582",
+      "dnsmos": "3.174841361558608",
+      "nisqa": "4.092136000593503",
+      "utmos": "3.3770904491345086",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "495",
+      "deletions": "39",
+      "insertions": "109",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble + transforms \u00b7 500 steps",
+      "variant": "ensemble_eot_500",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "89.53722334004024",
+      "dnsmos": "3.1476342911885156",
+      "nisqa": "4.021122269332409",
+      "utmos": "3.084961660206318",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "678",
+      "deletions": "37",
+      "insertions": "175",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble \u00b7 200 steps",
+      "variant": "ensemble_raw_200",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "81.99195171026157",
+      "dnsmos": "3.0532461573165004",
+      "nisqa": "3.951745331287384",
+      "utmos": "3.16360209385554",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "615",
+      "deletions": "32",
+      "insertions": "168",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble \u00b7 50 steps",
+      "variant": "ensemble_raw_50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "68.30985915492958",
+      "dnsmos": "3.126972579121953",
+      "nisqa": "4.0664650822679205",
+      "utmos": "3.3671043068170547",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "517",
+      "deletions": "31",
+      "insertions": "131",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Three-model feature ensemble \u00b7 500 steps",
+      "variant": "ensemble_raw_500",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "90.44265593561369",
+      "dnsmos": "3.099689564392096",
+      "nisqa": "3.929499271015326",
+      "utmos": "3.0556989113489785",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "670",
+      "deletions": "41",
+      "insertions": "188",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "fv_quality50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "49.798792756539235",
+      "dnsmos": "3.1738890871498",
+      "nisqa": "4.069769814610481",
+      "utmos": "3.5789116074641547",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "379",
+      "deletions": "32",
+      "insertions": "84",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "fv_reconstruction",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.300238960915245",
+      "nisqa": "4.171609789133072",
+      "utmos": "4.013134936491649",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 150 steps \u00b7 LR 0.1",
+      "variant": "single_150",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "97.1830985915493",
+      "dnsmos": "3.0512396058753954",
+      "nisqa": "3.9500466684500375",
+      "utmos": "3.086575319369634",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "605",
+      "deletions": "80",
+      "insertions": "281",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 1500 steps \u00b7 LR 0.1",
+      "variant": "single_1500",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "101.40845070422536",
+      "dnsmos": "3.0195675386613066",
+      "nisqa": "3.8260260969400406",
+      "utmos": "2.9436830108364425",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "710",
+      "deletions": "89",
+      "insertions": "209",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 200 steps \u00b7 LR 0.1",
+      "variant": "single_200",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "95.97585513078471",
+      "dnsmos": "3.064070803836062",
+      "nisqa": "3.918692797422409",
+      "utmos": "3.0560419062773385",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "610",
+      "deletions": "84",
+      "insertions": "260",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.1",
+      "variant": "single_50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "83.90342052313883",
+      "dnsmos": "3.1055698029400935",
+      "nisqa": "3.976609687010447",
+      "utmos": "3.198076764742533",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "520",
+      "deletions": "82",
+      "insertions": "232",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 500 steps \u00b7 LR 0.1",
+      "variant": "single_500",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "100.50301810865191",
+      "dnsmos": "3.0539545977168028",
+      "nisqa": "3.7787585432330766",
+      "utmos": "2.984609474738439",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "672",
+      "deletions": "58",
+      "insertions": "269",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "Larger models and longer feature runs",
+      "name": "Original feature method \u00b7 600 steps \u00b7 LR 0.1",
+      "variant": "single_600",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "93.36016096579476",
+      "dnsmos": "3.07704693048262",
+      "nisqa": "3.861433021724224",
+      "utmos": "2.9859264716506004",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "688",
+      "deletions": "52",
+      "insertions": "188",
+      "sourceFile": "improvement/execution_scaled/fvpilot/source-summary.json"
+    },
+    {
+      "study": "BigVGAN mel-space pilot",
+      "name": "BigVGAN reconstruction",
+      "variant": "bigvgan_reconstruction",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "3.9235412474849096",
+      "dnsmos": "3.2981456364730732",
+      "nisqa": "4.052118137478828",
+      "utmos": "3.9868271996577582",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "32",
+      "deletions": "4",
+      "insertions": "3",
+      "sourceFile": "improvement/execution_scaled/melpilot/source-summary.json"
+    },
+    {
+      "study": "BigVGAN mel-space pilot",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_scaled/melpilot/source-summary.json"
+    },
+    {
+      "study": "BigVGAN mel-space pilot",
+      "name": "BigVGAN mel ensemble + transforms \u00b7 200 steps",
+      "variant": "mel_eot_200",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "80.18108651911469",
+      "dnsmos": "2.882655486661872",
+      "nisqa": "3.309120610356331",
+      "utmos": "2.2950601801276207",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "DNSMOS, NISQA, UTMOS",
+      "substitutions": "500",
+      "deletions": "51",
+      "insertions": "246",
+      "sourceFile": "improvement/execution_scaled/melpilot/source-summary.json"
+    },
+    {
+      "study": "BigVGAN mel-space pilot",
+      "name": "BigVGAN mel ensemble + transforms \u00b7 50 steps",
+      "variant": "mel_eot_50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "33.903420523138834",
+      "dnsmos": "3.123613105761591",
+      "nisqa": "3.754864700138569",
+      "utmos": "3.250829870502154",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "246",
+      "deletions": "42",
+      "insertions": "49",
+      "sourceFile": "improvement/execution_scaled/melpilot/source-summary.json"
+    },
+    {
+      "study": "BigVGAN mel-space pilot",
+      "name": "BigVGAN mel ensemble + transforms \u00b7 500 steps",
+      "variant": "mel_eot_500",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "78.77263581488934",
+      "dnsmos": "2.6037602847753147",
+      "nisqa": "2.7068347881237664",
+      "utmos": "1.6527891208728154",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "DNSMOS, NISQA, UTMOS",
+      "substitutions": "600",
+      "deletions": "62",
+      "insertions": "121",
+      "sourceFile": "improvement/execution_scaled/melpilot/source-summary.json"
+    },
+    {
+      "study": "Decoder qualification",
+      "name": "BigVGAN reconstruction",
+      "variant": "bigvgan_reconstruction",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "3.9235412474849096",
+      "dnsmos": "3.2981456364730732",
+      "nisqa": "4.052118137478828",
+      "utmos": "3.9868271996577582",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "32",
+      "deletions": "4",
+      "insertions": "3",
+      "sourceFile": "improvement/execution_scaled/qualification/source-summary.json"
+    },
+    {
+      "study": "Decoder qualification",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.272059979671612",
+      "nisqa": "4.053286008536816",
+      "utmos": "4.025875141223271",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_scaled/qualification/source-summary.json"
+    },
+    {
+      "study": "Decoder qualification",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "fv_quality50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "49.798792756539235",
+      "dnsmos": "3.1738890871498",
+      "nisqa": "4.069769814610481",
+      "utmos": "3.5789116074641547",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "379",
+      "deletions": "32",
+      "insertions": "84",
+      "sourceFile": "improvement/execution_scaled/qualification/source-summary.json"
+    },
+    {
+      "study": "Decoder qualification",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "fv_reconstruction",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "4.0241448692152915",
+      "dnsmos": "3.300238960915245",
+      "nisqa": "4.171609789133072",
+      "utmos": "4.013134936491649",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "34",
+      "deletions": "4",
+      "insertions": "2",
+      "sourceFile": "improvement/execution_scaled/qualification/source-summary.json"
+    },
+    {
+      "study": "Quality and efficiency pilot",
+      "name": "FV50 \u00b7 decoder graph reused",
+      "variant": "raw50",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "83.90342052313883",
+      "dnsmos": "3.1055698029400935",
+      "nisqa": "3.976609687010447",
+      "utmos": "3.198076764742533",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "520",
+      "deletions": "82",
+      "insertions": "232",
+      "sourceFile": "improvement/execution_tradeoff/pilot/source-summary.json"
+    },
+    {
+      "study": "Quality and efficiency pilot",
+      "name": "FV50 \u00b7 STFT round-trip control",
+      "variant": "stft_identity",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "83.90342052313883",
+      "dnsmos": "3.1055730907295556",
+      "nisqa": "3.976609746615092",
+      "utmos": "3.198075369000435",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "520",
+      "deletions": "82",
+      "insertions": "232",
+      "sourceFile": "improvement/execution_tradeoff/pilot/source-summary.json"
+    },
+    {
+      "study": "Quality and efficiency pilot",
+      "name": "FV50 \u00b7 25% reconstruction-spectrum anchor",
+      "variant": "anchor25",
+      "count": "48",
+      "referenceWords": "994",
+      "wer": "72.83702213279678",
+      "dnsmos": "3.158020484243632",
+      "nisqa": "4.027246907353401",
+      "utmos": "3.3604292745391526",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "466",
+      "deletions": "39",
+      "insertions": "219",
+      "sourceFile": "improvement/execution_tradeoff/pilot/source-summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.02",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788265784581",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.02",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.331731573490439",
+      "nisqa": "4.212428420782089",
+      "utmos": "4.166711787382762",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.02",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.02",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "45.68421052631579",
+      "dnsmos": "3.207473259831049",
+      "nisqa": "4.124502023061116",
+      "utmos": "3.676064044237137",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "168",
+      "deletions": "12",
+      "insertions": "37",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.05",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788265784581",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.05",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.331731573490439",
+      "nisqa": "4.212428420782089",
+      "utmos": "4.166711787382762",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.05",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.05",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "71.78947368421052",
+      "dnsmos": "3.127320141234494",
+      "nisqa": "4.077831387519836",
+      "utmos": "3.4033972918987274",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "257",
+      "deletions": "15",
+      "insertions": "69",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.1",
+      "name": "Clean speech",
+      "variant": "clean",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.3323443629925413",
+      "nisqa": "4.083788265784581",
+      "utmos": "4.188579469919205",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.1",
+      "name": "HiFi-GAN reconstruction",
+      "variant": "reconstruction",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "3.5789473684210527",
+      "dnsmos": "3.331731573490439",
+      "nisqa": "4.212428420782089",
+      "utmos": "4.166711787382762",
+      "qualityPass": "True",
+      "goalPass": "False",
+      "failedMetrics": "",
+      "substitutions": "15",
+      "deletions": "1",
+      "insertions": "1",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation/summary.json"
+    },
+    {
+      "study": "Historical original control \u00b7 LR 0.1",
+      "name": "Original feature method \u00b7 50 steps \u00b7 LR 0.1",
+      "variant": "adversarial",
+      "count": "24",
+      "referenceWords": "475",
+      "wer": "74.73684210526316",
+      "dnsmos": "3.1640392160891886",
+      "nisqa": "4.034993310769399",
+      "utmos": "3.318611820538839",
+      "qualityPass": "False",
+      "goalPass": "False",
+      "failedMetrics": "UTMOS",
+      "substitutions": "258",
+      "deletions": "24",
+      "insertions": "73",
+      "sourceFile": "reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation/summary.json"
+    }
+  ],
+  "legacy_runs": [
+    {
+      "name": "historical-selected-999",
+      "run": "/workspace/reproduction-runs/english-feature-test-999",
+      "evaluation": "/workspace/reproduction-runs/english-feature-test-999/surrogate-eval",
+      "count": 999,
+      "config": {
+        "seed": 2026,
+        "method": "feature",
+        "save_delta": false,
+        "features": {
+          "artifact_root": "artifacts",
+          "layer": 6,
+          "normalize": false,
+          "vocoder_variant": "regular"
+        },
+        "surrogate": {
+          "checkpoint": "artifacts/whisper/small.pt",
+          "language": "en",
+          "nll_reduction": "mean",
+          "decoding": {
+            "beam_size": 5,
+            "temperature": 0.0
+          }
+        },
+        "attack": {
+          "steps": 50,
+          "rho": 0.5,
+          "lambda_perc": 0.1,
+          "alpha_hf": 1.0,
+          "eps": 1e-08,
+          "optimizer": "adam",
+          "learning_rate": 0.05,
+          "initialization": "zero",
+          "init_fraction": 0.01,
+          "attack": true,
+          "temporal": true,
+          "high_frequency": true
+        },
+        "spectral": {
+          "sample_rate": 16000,
+          "cutoff_hz": 6000.0,
+          "n_fft": 1024,
+          "hop_length": 256,
+          "win_length": 1024,
+          "center": true
+        }
+      },
+      "roles": [
+        "test"
+      ],
+      "manifest": "/workspace/data/manifests/english-test-999.jsonl",
+      "manifest_sha256": "3ad09278b9a5160add8ad37a81fafd6cfbf5510ae164b3ffefef17e6fbf32148",
+      "fingerprint": "020f4b6423e61ff82b87ea466622ad62bdb34b9beb0f55bf5a0bdb3fcb6173da",
+      "aggregates": {
+        "clean": {
+          "count": 999,
+          "substitutions": 581,
+          "deletions": 106,
+          "insertions": 118,
+          "reference_units": 20310,
+          "error_percent": 3.96356474643033,
+          "quality": {
+            "dnsmos": 3.264184002980712,
+            "nisqa": 4.029122992440148,
+            "utmos": 4.084511429697901
+          },
+          "all_quality_above_2_5": 982,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 5,
+            "nisqa": 11,
+            "utmos": 1
+          }
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 575,
+          "deletions": 102,
+          "insertions": 80,
+          "reference_units": 20310,
+          "error_percent": 3.727227966518956,
+          "quality": {
+            "dnsmos": 3.2723379281758143,
+            "nisqa": 4.141564767759244,
+            "utmos": 4.0283984390942305
+          },
+          "all_quality_above_2_5": 986,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 7,
+            "nisqa": 6,
+            "utmos": 3
+          }
+        },
+        "adversarial": {
+          "count": 999,
+          "substitutions": 11294,
+          "deletions": 796,
+          "insertions": 2961,
+          "reference_units": 20310,
+          "error_percent": 74.10635155096011,
+          "quality": {
+            "dnsmos": 2.963822380765211,
+            "nisqa": 3.8711315010403013,
+            "utmos": 2.7923767282678797
+          },
+          "all_quality_above_2_5": 747,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 58,
+            "nisqa": 15,
+            "utmos": 209
+          }
+        }
+      },
+      "independent_edit_distance_rows": 2997,
+      "trace_updates_checked": 49950,
+      "final_radius_from_saved_trace": {
+        "min": 0.12435390800237656,
+        "median": 0.16680236160755157,
+        "max": 0.1916331797838211
+      },
+      "generation_seconds_sum": 13592.241403304972,
+      "saved_verification_receipts": {
+        "status": "passed",
+        "count": 999,
+        "scope": "Frozen protocol, complete test IDs/control pairs, references, edit counts, corpus WER/MOS aggregates, generation records, finite projected traces; source/WAV contents and WAV headers when hash_audio=True. ASR and quality models were not rerun."
+      }
+    },
+    {
+      "name": "paper-budget-mean-999",
+      "run": "/workspace/reproduction-runs/paper-quality-research/paper-setting-test-999",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-research/paper-setting-test-999/evaluation",
+      "count": 999,
+      "config": {
+        "seed": 2026,
+        "method": "feature",
+        "save_delta": true,
+        "features": {
+          "artifact_root": "artifacts",
+          "layer": 6,
+          "normalize": false,
+          "vocoder_variant": "regular"
+        },
+        "surrogate": {
+          "checkpoint": "artifacts/whisper/small.pt",
+          "language": "en",
+          "nll_reduction": "mean",
+          "decoding": {
+            "beam_size": 5,
+            "temperature": 0.0
+          }
+        },
+        "attack": {
+          "steps": 50,
+          "rho": 0.1,
+          "lambda_perc": 1.0,
+          "alpha_hf": 1.0,
+          "eps": 1e-08,
+          "optimizer": "adam",
+          "learning_rate": 0.05,
+          "initialization": "zero",
+          "init_fraction": 0.01,
+          "attack": true,
+          "temporal": true,
+          "high_frequency": true
+        },
+        "spectral": {
+          "sample_rate": 16000,
+          "cutoff_hz": 6000.0,
+          "n_fft": 1024,
+          "hop_length": 256,
+          "win_length": 1024,
+          "center": true
+        }
+      },
+      "roles": [
+        "test"
+      ],
+      "manifest": "/workspace/data/manifests/english-test-999.jsonl",
+      "manifest_sha256": "3ad09278b9a5160add8ad37a81fafd6cfbf5510ae164b3ffefef17e6fbf32148",
+      "fingerprint": "decedc45cc7f89085b8835bf4b4ccb8b9b31868dd5da49354897e23c835e60ed",
+      "aggregates": {
+        "clean": {
+          "count": 999,
+          "substitutions": 581,
+          "deletions": 106,
+          "insertions": 118,
+          "reference_units": 20310,
+          "error_percent": 3.96356474643033,
+          "quality": {
+            "dnsmos": 3.264184002980712,
+            "nisqa": 4.0291229896955905,
+            "utmos": 4.084511504874931
+          },
+          "all_quality_above_2_5": 982,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 5,
+            "nisqa": 11,
+            "utmos": 1
+          }
+        },
+        "reconstruction": {
+          "count": 999,
+          "substitutions": 575,
+          "deletions": 102,
+          "insertions": 80,
+          "reference_units": 20310,
+          "error_percent": 3.727227966518956,
+          "quality": {
+            "dnsmos": 3.2723379281758143,
+            "nisqa": 4.141564767997902,
+            "utmos": 4.028398510691401
+          },
+          "all_quality_above_2_5": 986,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 7,
+            "nisqa": 6,
+            "utmos": 3
+          }
+        },
+        "adversarial": {
+          "count": 999,
+          "substitutions": 9957,
+          "deletions": 728,
+          "insertions": 2464,
+          "reference_units": 20310,
+          "error_percent": 64.74150664697194,
+          "quality": {
+            "dnsmos": 3.126203853707586,
+            "nisqa": 3.9542390666566454,
+            "utmos": 3.358174245159428
+          },
+          "all_quality_above_2_5": 963,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 16,
+            "nisqa": 10,
+            "utmos": 15
+          }
+        }
+      },
+      "independent_edit_distance_rows": 2997,
+      "trace_updates_checked": 49950,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999998658895493,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": 13467.555834194645,
+      "saved_verification_receipts": {
+        "count": 999
+      }
+    },
+    {
+      "name": "strong-sum-lr-0.1",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/strong-sum-lr-0.1/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "86c7ed083cda4f423a36b2b2c225e7be217f700ded2e545b88869dd04bd4f46f",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 258,
+          "deletions": 24,
+          "insertions": 73,
+          "reference_units": 475,
+          "error_percent": 74.73684210526316,
+          "quality": {
+            "dnsmos": 3.1640392160891886,
+            "nisqa": 4.034993310769399,
+            "utmos": 3.318611820538839
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 1,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999999403953552,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Three previously studied settings on the existing fixed 24-clip development pilot. Explicit reflected padding and strict math generation; native saved-audio ASR and fixed MOS scorers. No learning-rate grid, subset changes, automatic promotion, fresh confirmation or 999-clip test. Cached native scores are descriptive context, not paired same-run controls.",
+        "checked_projected_iterates": 1200,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "quality-sum-lr-0.02",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/quality-sum-lr-0.02/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.02,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "84ad06c6332496ede56892e6e9062184fa8c870ba7fe5fb097b9c5e4d0fae5a1",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 168,
+          "deletions": 12,
+          "insertions": 37,
+          "reference_units": 475,
+          "error_percent": 45.68421052631579,
+          "quality": {
+            "dnsmos": 3.207473259831048,
+            "nisqa": 4.124502023061116,
+            "utmos": 3.676064044237137
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.07423431426286697,
+        "median": 0.08420951664447784,
+        "max": 0.0949978455901146
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Three previously studied settings on the existing fixed 24-clip development pilot. Explicit reflected padding and strict math generation; native saved-audio ASR and fixed MOS scorers. No learning-rate grid, subset changes, automatic promotion, fresh confirmation or 999-clip test. Cached native scores are descriptive context, not paired same-run controls.",
+        "checked_projected_iterates": 1200,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "timestamp-sum-lr-0.05",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-execution/pilot/timestamp-sum-lr-0.05/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            },
+            "nll_timestamp_policy": "initial_timestamp"
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.05,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "b1b22ca91d8e47a5a9864cf46df197c786a07dbe8d6ed65650f5f2595f967ff0",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 257,
+          "deletions": 15,
+          "insertions": 69,
+          "reference_units": 475,
+          "error_percent": 71.78947368421052,
+          "quality": {
+            "dnsmos": 3.127320141234494,
+            "nisqa": 4.077831387519836,
+            "utmos": 3.4033972918987274
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999998658895493,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Three previously studied settings on the existing fixed 24-clip development pilot. Explicit reflected padding and strict math generation; native saved-audio ASR and fixed MOS scorers. No learning-rate grid, subset changes, automatic promotion, fresh confirmation or 999-clip test. Cached native scores are descriptive context, not paired same-run controls.",
+        "checked_projected_iterates": 1200,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "without-tv",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-tv",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-tv/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": false,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "64807d6fd82c9c4e96ffff8f6643157d1d6bcfbd5ab62c40e024cfa1977ce692",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 270,
+          "deletions": 19,
+          "insertions": 72,
+          "reference_units": 475,
+          "error_percent": 76.0,
+          "quality": {
+            "dnsmos": 3.1530052732787586,
+            "nisqa": 4.0398292144139605,
+            "utmos": 3.322596997022629
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999999403953552,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Full-trajectory diagnostic ablations on the same fixed 24 development clips: remove TV, remove HF, remove both perceptual terms. Fixed rho=.1, lambda=1, alpha=1, Adam LR=.1, fifty updates, native references/decoder/scorers and strict explicit-reflection generation. Cached repeatable full-objective control; no parameter selection, candidate promotion, fresh48 or 999 test. Ablated objectives cannot establish reproduction of the full paper objective.",
+        "checked_projected_iterates": 1200,
+        "active_terms": {
+          "asr": true,
+          "tv": false,
+          "hf": true
+        },
+        "disabled_terms_verified_zero": true,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "without-hf",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-hf",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-hf/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": false
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "85db9306f11a1494cd886ceaaedfce0290f30c4c5ccc5fc1f83fd3c693e1e247",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 269,
+          "deletions": 12,
+          "insertions": 74,
+          "reference_units": 475,
+          "error_percent": 74.73684210526316,
+          "quality": {
+            "dnsmos": 3.135111305037722,
+            "nisqa": 4.002822786569595,
+            "utmos": 3.3057884176572165
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999999403953552,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Full-trajectory diagnostic ablations on the same fixed 24 development clips: remove TV, remove HF, remove both perceptual terms. Fixed rho=.1, lambda=1, alpha=1, Adam LR=.1, fifty updates, native references/decoder/scorers and strict explicit-reflection generation. Cached repeatable full-objective control; no parameter selection, candidate promotion, fresh48 or 999 test. Ablated objectives cannot establish reproduction of the full paper objective.",
+        "checked_projected_iterates": 1200,
+        "active_terms": {
+          "asr": true,
+          "tv": true,
+          "hf": false
+        },
+        "disabled_terms_verified_zero": true,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "without-perceptual",
+      "run": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-perceptual",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-stable-ablations/pilot/without-perceptual/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": false,
+            "high_frequency": false
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "eb92c5548d5a99d8c3bbef132c28da3804c8206f492817082708c0dc31b28bf5",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 273,
+          "deletions": 19,
+          "insertions": 82,
+          "reference_units": 475,
+          "error_percent": 78.73684210526316,
+          "quality": {
+            "dnsmos": 3.156372407618807,
+            "nisqa": 4.0863483051459,
+            "utmos": 3.350446254014969
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.10000000149011612,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Full-trajectory diagnostic ablations on the same fixed 24 development clips: remove TV, remove HF, remove both perceptual terms. Fixed rho=.1, lambda=1, alpha=1, Adam LR=.1, fifty updates, native references/decoder/scorers and strict explicit-reflection generation. Cached repeatable full-objective control; no parameter selection, candidate promotion, fresh48 or 999 test. Ablated objectives cannot establish reproduction of the full paper objective.",
+        "checked_projected_iterates": 1200,
+        "active_terms": {
+          "asr": true,
+          "tv": false,
+          "hf": false
+        },
+        "disabled_terms_verified_zero": true,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "time_energy",
+      "run": "/workspace/reproduction-runs/paper-quality-coordinate-research/pilot/time_energy",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-coordinate-research/pilot/time_energy/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          },
+          "optimization_coordinates": {
+            "kind": "time_energy",
+            "floor_relative_to_max": 0.1,
+            "normalization": "unit RMS in CPU float64, then cast to q dtype",
+            "time_window_samples": 400,
+            "time_hop_samples": 320,
+            "channel_std_correction": 0,
+            "zero_statistic": "identity weights",
+            "mapping": "delta = weights * theta; optimize theta with Adam",
+            "projection": "radial projection of physical delta onto original q-relative L2 ball"
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "adc97573aff3ec0764aec0a82d5ff804e9a1d52bd9c00961c895f12800455bb2",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 248,
+          "deletions": 20,
+          "insertions": 73,
+          "reference_units": 475,
+          "error_percent": 71.78947368421052,
+          "quality": {
+            "dnsmos": 3.1436236659896477,
+            "nisqa": 4.087134167551994,
+            "utmos": 2.90447769065698
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 1,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999999403953552,
+        "median": 0.10000000149011612,
+        "max": 0.10000000894069672
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Two predefined clean-statistic optimizer coordinates on the fixed 24 development clips. Matched raw WavLM layer-6/regular HiFi-GAN, original sum NLL/full perceptual loss, rho=.1, lambda=1, alpha=1, fc=6000, zero initialization, Adam LR=.1, fifty updates. Positive weights change Adam coordinates, not the physical feasible set or loss. Native references/decoding/scorers and strict explicit-reflection differentiation retained. The pilot is repeatedly used development data. No sample selection, weight grid, automatic fresh48/999 evaluation or claim of author-recipe recovery or human sound quality.",
+        "checked_projected_iterates": 1200,
+        "active_terms": {
+          "asr": true,
+          "tv": true,
+          "hf": true
+        },
+        "disabled_terms_verified_zero": true,
+        "coordinate_kind": "time_energy",
+        "coordinate_weights_rebuilt": 24,
+        "theta_delta_pairs_verified": 1200,
+        "original_physical_ball_verified": true,
+        "exact_control_score_rows": 48,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    },
+    {
+      "name": "channel_std",
+      "run": "/workspace/reproduction-runs/paper-quality-coordinate-research/pilot/channel_std",
+      "evaluation": "/workspace/reproduction-runs/paper-quality-coordinate-research/pilot/channel_std/evaluation",
+      "count": 24,
+      "config": {
+        "method": "feature_explicit_reflection_execution",
+        "parent_config": {
+          "seed": 2026,
+          "method": "feature",
+          "save_delta": true,
+          "features": {
+            "artifact_root": "artifacts",
+            "layer": 6,
+            "normalize": false,
+            "vocoder_variant": "regular"
+          },
+          "surrogate": {
+            "checkpoint": "artifacts/whisper/small.pt",
+            "language": "en",
+            "nll_reduction": "sum",
+            "decoding": {
+              "beam_size": 5,
+              "temperature": 0.0
+            }
+          },
+          "attack": {
+            "steps": 50,
+            "rho": 0.1,
+            "lambda_perc": 1.0,
+            "alpha_hf": 1.0,
+            "eps": 1e-08,
+            "optimizer": "adam",
+            "learning_rate": 0.1,
+            "initialization": "zero",
+            "init_fraction": 0.01,
+            "attack": true,
+            "temporal": true,
+            "high_frequency": true
+          },
+          "spectral": {
+            "sample_rate": 16000,
+            "cutoff_hz": 6000.0,
+            "n_fft": 1024,
+            "hop_length": 256,
+            "win_length": 1024,
+            "center": true
+          },
+          "optimization_coordinates": {
+            "kind": "channel_std",
+            "floor_relative_to_max": 0.1,
+            "normalization": "unit RMS in CPU float64, then cast to q dtype",
+            "time_window_samples": 400,
+            "time_hop_samples": 320,
+            "channel_std_correction": 0,
+            "zero_statistic": "identity weights",
+            "mapping": "delta = weights * theta; optimize theta with Adam",
+            "projection": "radial projection of physical delta onto original q-relative L2 ball"
+          }
+        },
+        "generation_execution": {
+          "mode": "strict_math",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "explicit_reflection": true
+        },
+        "returned_delta": "projected update 50",
+        "actual_updates": 50
+      },
+      "roles": [
+        "pilot"
+      ],
+      "manifest": "/workspace/reproduction-runs/paper-quality-overnight/data/pilot-24.jsonl",
+      "manifest_sha256": "e995de2ffb454736e80483a0a4121db03e08eebd6f92b818cfb36eb8f9521cc3",
+      "fingerprint": "add47ba45f3bb8f66acf6d5e3bd0033fae0641f082f86a056de02af27523d38b",
+      "aggregates": {
+        "clean": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3323443629925404,
+            "nisqa": 4.083788265784581,
+            "utmos": 4.188579469919205
+          },
+          "all_quality_above_2_5": 22,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 2,
+            "utmos": 0
+          }
+        },
+        "reconstruction": {
+          "count": 24,
+          "substitutions": 15,
+          "deletions": 1,
+          "insertions": 1,
+          "reference_units": 475,
+          "error_percent": 3.5789473684210527,
+          "quality": {
+            "dnsmos": 3.3317315734904405,
+            "nisqa": 4.212428420782089,
+            "utmos": 4.166711787382762
+          },
+          "all_quality_above_2_5": 24,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 0,
+            "nisqa": 0,
+            "utmos": 0
+          }
+        },
+        "adversarial": {
+          "count": 24,
+          "substitutions": 267,
+          "deletions": 19,
+          "insertions": 66,
+          "reference_units": 475,
+          "error_percent": 74.10526315789474,
+          "quality": {
+            "dnsmos": 3.1864163265423553,
+            "nisqa": 4.064101189374924,
+            "utmos": 3.3989032904307046
+          },
+          "all_quality_above_2_5": 23,
+          "quality_at_or_below_2_5": {
+            "dnsmos": 1,
+            "nisqa": 0,
+            "utmos": 1
+          }
+        }
+      },
+      "independent_edit_distance_rows": 72,
+      "trace_updates_checked": 1200,
+      "final_radius_from_saved_trace": {
+        "min": 0.09999998658895493,
+        "median": 0.10000000149011612,
+        "max": 0.10000001639127731
+      },
+      "generation_seconds_sum": null,
+      "saved_verification_receipts": {
+        "status": "complete",
+        "count": 24,
+        "scope": "Two predefined clean-statistic optimizer coordinates on the fixed 24 development clips. Matched raw WavLM layer-6/regular HiFi-GAN, original sum NLL/full perceptual loss, rho=.1, lambda=1, alpha=1, fc=6000, zero initialization, Adam LR=.1, fifty updates. Positive weights change Adam coordinates, not the physical feasible set or loss. Native references/decoding/scorers and strict explicit-reflection differentiation retained. The pilot is repeatedly used development data. No sample selection, weight grid, automatic fresh48/999 evaluation or claim of author-recipe recovery or human sound quality.",
+        "checked_projected_iterates": 1200,
+        "active_terms": {
+          "asr": true,
+          "tv": true,
+          "hf": true
+        },
+        "disabled_terms_verified_zero": true,
+        "coordinate_kind": "channel_std",
+        "coordinate_weights_rebuilt": 24,
+        "theta_delta_pairs_verified": 1200,
+        "original_physical_ball_verified": true,
+        "exact_control_score_rows": 48,
+        "resynthesis_count": 24,
+        "reported_max_abs_error": 0.0
+      }
+    }
+  ],
+  "latest_model_gate_review": [
+    {
+      "variant": "initial_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.14242332108551636,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r025",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.14778516707398617,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1412926089251414,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "source_r100",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": false,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1405824480073837,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r025",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.13930222492975494,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1394804926821962,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_r100",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.1389598860987462,
+      "peak_allocated_bytes": 2268989440
+    },
+    {
+      "variant": "quality_shuffled_r050",
+      "count": 48,
+      "wer_pass": false,
+      "quality_pass": true,
+      "efficiency_pass": true,
+      "joint_pass": false,
+      "mean_generation_seconds": 0.13983712844007337,
+      "peak_allocated_bytes": 2268989440
+    }
+  ],
+  "latest_model_status": {
+    "status": "failed_execution",
+    "queue_wait_seconds": 7007.501756714657,
+    "active_wall_seconds": 16303.895654574968,
+    "overall_wall_seconds": 23392.81994436402,
+    "delivery_status": "complete"
+  },
+  "interface": {
+    "conditions": 78,
+    "scored_recordings": 3192,
+    "unique_recordings": 48,
+    "unique_audio_assets": 2082
+  }
+}

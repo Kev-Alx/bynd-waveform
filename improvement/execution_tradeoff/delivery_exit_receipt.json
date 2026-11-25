@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-26T09:31:13.475261+00:00",
+  "pid": 179868,
+  "maximum_delivery_wall_seconds": 3600,
+  "heartbeat_seconds": 30,
+  "stages": [
+    {
+      "stage": "analysis",
+      "started_at_utc": "2026-10-26T09:59:15.451828+00:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_tradeoff/analyze.py"
+      ],
+      "pid": 181949,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T09:59:18.463724+00:00",
+      "wall_seconds": 3.008340708911419
+    },
+    {
+      "stage": "prepared_data_forecast",
+      "started_at_utc": "2026-10-26T09:59:18.466412+00:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_tradeoff/forecast_prepared_data.py"
+      ],
+      "pid": 181950,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T09:59:21.477760+00:00",
+      "wall_seconds": 3.0083055859431624
+    },
+    {
+      "stage": "report",
+      "started_at_utc": "2026-10-26T09:59:21.481126+00:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_tradeoff/write_report.py"
+      ],
+      "pid": 181951,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T09:59:24.493219+00:00",
+      "wall_seconds": 3.009196985512972
+    },
+    {
+      "stage": "reviewed_catalogue",
+      "started_at_utc": "2026-10-26T09:59:24.496471+00:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_tradeoff/refresh_interface.py"
+      ],
+      "pid": 181952,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T09:59:57.610958+00:00",
+      "wall_seconds": 33.111685967072845
+    },
+    {
+      "stage": "atomic_interface_build",
+      "started_at_utc": "2026-10-26T09:59:57.614941+00:00",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_tradeoff/build_interface.py"
+      ],
+      "pid": 181964,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T10:00:27.712988+00:00",
+      "wall_seconds": 30.095000557601452
+    },
+    {
+      "stage": "browser_QA",
+      "started_at_utc": "2026-10-26T10:00:27.717293+00:00",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/improvement/execution_tradeoff/check_browser.cjs"
+      ],
+      "pid": 181996,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-26T10:00:43.011023+00:00",
+      "wall_seconds": 15.290431783534586
+    }
+  ],
+  "updated_at_utc": "2026-10-26T10:00:43.015070+00:00",
+  "experiment": {
+    "status": "running",
+    "pid": 178926,
+    "started_at_utc": "2026-10-26T09:16:23.141898+00:00",
+    "maximum_wall_seconds": 2700,
+    "heartbeat_seconds": 30,
+    "stages": [
+      {
+        "stage": "generation",
+        "started_at_utc": "2026-10-26T09:16:23.141956+00:00",
+        "status": "complete",
+        "wrapper_pid": 178927,
+        "exit_code": 0,
+        "wall_seconds": 1776.0166246071458,
+        "finished_at_utc": "2026-10-26T09:45:59.158592+00:00"
+      },
+      {
+        "stage": "evaluation",
+        "started_at_utc": "2026-10-26T09:45:59.162251+00:00",
+        "status": "running",
+        "wrapper_pid": 181226
+      }
+    ],
+    "updated_at_utc": "2026-10-26T09:58:30.869862+00:00",
+    "elapsed_wall_seconds": 2527.730049652979,
+    "stage": "evaluation",
+    "progress": {
+      "updated_at_utc": "2026-10-26T09:58:23.528730+00:00",
+      "stage": "evaluation",
+      "completed": 47,
+      "total": 48
+    }
+  },
+  "stage": "browser_QA",
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-26T10:00:43.015060+00:00",
+  "elapsed_wall_seconds": 1769.5398138854653
+}

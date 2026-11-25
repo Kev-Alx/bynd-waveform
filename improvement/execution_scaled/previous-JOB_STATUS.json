@@ -1,0 +1,236 @@
+{
+  "status": "complete",
+  "phase": "no_candidate_earned_validation",
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "maximum_cycle_wall_seconds": 7200,
+  "heartbeat_seconds": 30,
+  "supervisor_pid": 146623,
+  "stages": [
+    {
+      "name": "registration",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/envelope_experiment.py",
+        "register"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/registration/job.json",
+      "started_at_utc": "2026-10-22T14:20:04.045109+00:00",
+      "wrapper_pid": 146625,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:20:05.786918+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:20:04.097210+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/envelope_experiment.py",
+          "register"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 146625,
+        "log": "/workspace/improvement/execution_envelope/jobs/registration/stage.log",
+        "child_pid": 146626,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:20:05.733414+00:00"
+      }
+    },
+    {
+      "name": "pilot-generation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/envelope_experiment.py",
+        "generate",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/pilot-generation/job.json",
+      "started_at_utc": "2026-10-22T14:20:05.818726+00:00",
+      "wrapper_pid": 146632,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:35:05.980901+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:20:05.869788+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/envelope_experiment.py",
+          "generate",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 146632,
+        "log": "/workspace/improvement/execution_envelope/jobs/pilot-generation/stage.log",
+        "child_pid": 146633,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:35:05.939744+00:00"
+      }
+    },
+    {
+      "name": "pilot-native-evaluation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "-u",
+        "/workspace/improvement/source_evaluate_envelope.py",
+        "--name",
+        "pilot",
+        "--output-dir",
+        "/workspace/improvement/execution_envelope/pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/pilot-native-evaluation/job.json",
+      "started_at_utc": "2026-10-22T14:35:05.998418+00:00",
+      "wrapper_pid": 146921,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:43:00.195822+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:35:06.043643+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "-u",
+          "/workspace/improvement/source_evaluate_envelope.py",
+          "--name",
+          "pilot",
+          "--output-dir",
+          "/workspace/improvement/execution_envelope/pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 146921,
+        "log": "/workspace/improvement/execution_envelope/jobs/pilot-native-evaluation/stage.log",
+        "child_pid": 146922,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:43:00.176872+00:00"
+      }
+    },
+    {
+      "name": "pilot-independent-audit",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/execution_envelope/audit_envelope.py",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/pilot-independent-audit/job.json",
+      "started_at_utc": "2026-10-22T14:43:00.218444+00:00",
+      "wrapper_pid": 147022,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:43:06.111123+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:43:00.263530+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/execution_envelope/audit_envelope.py",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 147022,
+        "log": "/workspace/improvement/execution_envelope/jobs/pilot-independent-audit/stage.log",
+        "child_pid": 147023,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:43:06.075369+00:00"
+      }
+    },
+    {
+      "name": "pilot-selection",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/postprocess_envelope.py",
+        "--cohort",
+        "pilot"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/pilot-selection/job.json",
+      "started_at_utc": "2026-10-22T14:43:06.131539+00:00",
+      "wrapper_pid": 147030,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:43:06.359005+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:43:06.172816+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/postprocess_envelope.py",
+          "--cohort",
+          "pilot"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 147030,
+        "log": "/workspace/improvement/execution_envelope/jobs/pilot-selection/stage.log",
+        "child_pid": 147031,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:43:06.307266+00:00"
+      }
+    },
+    {
+      "name": "package-validation",
+      "status": "complete",
+      "command": [
+        "/opt/venv/bin/python",
+        "/workspace/improvement/validate_package.py"
+      ],
+      "job_file": "/workspace/improvement/execution_envelope/jobs/package-validation/job.json",
+      "started_at_utc": "2026-10-22T14:43:06.377288+00:00",
+      "wrapper_pid": 147035,
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-22T14:43:06.705112+00:00",
+      "receipt": {
+        "status": "complete",
+        "started_at": "2026-10-22T14:43:06.416273+00:00",
+        "command": [
+          "/opt/venv/bin/python",
+          "/workspace/improvement/validate_package.py"
+        ],
+        "cwd": "/workspace",
+        "supervisor_pid": 147035,
+        "log": "/workspace/improvement/execution_envelope/jobs/package-validation/stage.log",
+        "child_pid": 147036,
+        "exit_code": 0,
+        "finished_at": "2026-10-22T14:43:06.657714+00:00"
+      }
+    }
+  ],
+  "started_at_utc": "2026-10-22T14:20:04.041354+00:00",
+  "updated_at": "2026-10-22T22:43:06+08:00",
+  "timezone": "Asia/Taipei",
+  "cohort": "pilot",
+  "count": 48,
+  "generation": {
+    "updated_at_utc": "2026-10-22T14:35:05.531717+00:00",
+    "cohort": "pilot",
+    "total": 48,
+    "status": "completed",
+    "completed": 48
+  },
+  "scored_variant_waveforms": 336,
+  "total_variant_waveforms": 336,
+  "independent_audit_status": "pass",
+  "selection": {
+    "status": "stop",
+    "candidate": "envelope_nll50",
+    "control": "fv50",
+    "findings": {
+      "automatic_quality_floors_pass": true,
+      "failures": [],
+      "primary_source_quality_screen": false,
+      "exploratory_shape_signal": false,
+      "earns_larger_validation": false,
+      "source_wer_delta_points": -20.62374245472837,
+      "utmos_delta": 0.3351358249783516,
+      "source_wer_delta_vs_rms_matched": -10.764587525150905,
+      "nisqa_delta_vs_global_full50": 0.25179741283257817
+    },
+    "created_at_utc": "2026-10-22T14:43:06.275980+00:00",
+    "scope": "Fixed primary candidate; mechanism-only continuation is exploratory, not primary superiority"
+  },
+  "scientific_status": "No qualifying improvement; stop this method rather than repeat pilots"
+}

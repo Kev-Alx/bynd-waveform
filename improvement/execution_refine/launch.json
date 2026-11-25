@@ -1,0 +1,16 @@
+{
+  "status": "launched",
+  "pid": 138912,
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/supervise_refinement.py"
+  ],
+  "started_at_utc": "2026-10-22T08:05:23.678477+00:00",
+  "detached": true,
+  "stdout": "/workspace/improvement/execution_refine/supervisor.log",
+  "status_files": [
+    "/workspace/improvement/JOB_STATUS.json",
+    "/workspace/improvement/JOB_STATUS.md"
+  ]
+}

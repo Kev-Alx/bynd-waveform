@@ -4,10 +4,11 @@ model:
   checkpoint: artifacts/whisper/small.pt
   language: zh
   nll_reduction: mean
-  decoding: {beam_size: 5, temperature: 0.0}
+  # Supervised fine-tuning conditions text on <|notimestamps|>; inference must
+  # use the same prefix to avoid timestamp-mode repetition after fine-tuning.
+  decoding: {beam_size: 5, temperature: 0.0, without_timestamps: true}
 learning_rate: 1.0e-5
 weight_decay: 0.01
 gradient_accumulation: 8
 epochs: 3
 max_grad_norm: 1.0
-

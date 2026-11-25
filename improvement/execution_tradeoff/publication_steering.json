@@ -1,0 +1,14 @@
+{
+  "received_at_utc": "2026-10-26T09:36:58.791012+00:00",
+  "instruction": "Aim for a defensible novel speech/NLP research contribution that could support peer-reviewed publication in the ACL theme. Do not treat decoder reuse, spectral blending, larger models or longer runs alone as sufficient novelty.",
+  "priorities_retained": [
+    "WER strictly above75",
+    "unchanged three MOS floors",
+    "quality and runtime equally important",
+    "transfer and defense retention measured after source gate",
+    "total teacher/preprocessing/training/inference/evaluation cost"
+  ],
+  "registered_pilot_changed": false,
+  "evidence_plan": "Nearest-prior-work audit, falsifiable mechanism, compute-fair baselines and ablations, held-out transfer/defense and human intelligibility before paper-level claims",
+  "source_audit_path": "/workspace/improvement/22_publication_positioning.md"
+}

@@ -1,0 +1,17 @@
+{
+  "pid": 148115,
+  "detached": true,
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/scripts/run_logged.py",
+    "--log",
+    "/workspace/improvement/execution_scaled/jobs/engineering-probe/stage.log",
+    "--status",
+    "/workspace/improvement/execution_scaled/jobs/engineering-probe/job.json",
+    "--",
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/scaled_probe.py"
+  ]
+}

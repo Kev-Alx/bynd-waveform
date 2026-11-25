@@ -27,12 +27,12 @@ def atomic_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
+    tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n", encoding="utf-8")
     tmp.replace(path)
 
 
 def read_jsonl(path):
-    records = [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
+    records = [json.loads(line) for line in Path(path).read_text(encoding="utf-8").splitlines() if line.strip()]
     ids = [record["id"] for record in records]
     if len(set(ids)) != len(ids):
         raise ValueError(f"Duplicate utterance IDs: {path}")
@@ -48,7 +48,7 @@ def write_jsonl(path, records):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    with tmp.open("w") as stream:
+    with tmp.open("w", encoding="utf-8") as stream:
         for record in records:
             stream.write(json.dumps(record, ensure_ascii=False, allow_nan=False) + "\n")
     tmp.replace(path)
@@ -104,4 +104,3 @@ def environment():
             packages[name] = None
     return {"packages": packages, "cuda": torch.version.cuda,
             "gpu": torch.cuda.get_device_name() if torch.cuda.is_available() else None}
-

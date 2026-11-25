@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "registered_bindings_match": true,
+  "controller_alive": true,
+  "queued_without_gpu_children": true,
+  "heartbeat_at_utc": "2026-10-27T15:00:26.740842+00:00",
+  "no_performance_claim": true,
+  "cpu_critical_tests_passed": 4,
+  "maximum_end_at_utc": "2026-10-28T03:59:11.473135+00:00"
+}

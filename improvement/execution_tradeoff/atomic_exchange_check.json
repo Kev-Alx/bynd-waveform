@@ -1,0 +1,7 @@
+{
+  "directory_exchange_supported": false,
+  "errno": 22,
+  "filesystem": "NFS",
+  "atomic_file_replace_supported": true,
+  "chosen_delivery": "stage immutable audio/sidecars, preserve all old resources, then atomic index replacement"
+}

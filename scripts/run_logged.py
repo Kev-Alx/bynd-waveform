@@ -21,6 +21,10 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--log", required=True)
     parser.add_argument("--status", required=True)
+    parser.add_argument("--notify-discord", action="store_true",
+                        default=os.environ.get("BEYONDWAVEFORM_NOTIFY_DISCORD") == "1")
+    parser.add_argument("--discord-config", type=Path, default=Path(__file__).resolve().parents[1] / ".discord-gpu.json")
+    parser.add_argument("--job-name")
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args(argv)
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
@@ -34,7 +38,7 @@ def main(argv=None):
 
     def save_status():
         temporary = status_path.with_suffix(status_path.suffix + ".tmp")
-        temporary.write_text(json.dumps(state, indent=2) + "\n")
+        temporary.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
         temporary.replace(status_path)
 
     def interrupt(signum, frame):
@@ -82,6 +86,15 @@ def main(argv=None):
             state["finished_at"] = now()
             save_status()
         emit(f"\nJob {state['status']} at {state['finished_at']}; exit code {state['exit_code']}\n".encode())
+        if args.notify_discord:
+            try:
+                from discord_gpu_report import send_job
+                send_job(args.discord_config, status_path, args.job_name)
+                emit(b"Discord completion notification delivered.\n")
+            except Exception as error:
+                # Do not echo arbitrary network exceptions, command arguments,
+                # or credentials. Notification failure must not change compute exit.
+                emit(f"Discord notification failed ({type(error).__name__}); check the job's .discord.json receipt.\n".encode())
     return state["exit_code"]
 
 

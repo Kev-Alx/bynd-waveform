@@ -1,0 +1,66 @@
+{
+  "id": "1089-134686-0000",
+  "purpose": "Integration smoke only; settings already predeclared, no selection",
+  "gpu": "NVIDIA TITAN RTX",
+  "native_bf16": true,
+  "target_artifacts": {
+    "checkpoint": "/workspace/artifacts/whisper/small.pt",
+    "sha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "dimensions": {
+      "n_mels": 80,
+      "n_audio_ctx": 1500,
+      "n_audio_state": 768,
+      "n_audio_head": 12,
+      "n_audio_layer": 12,
+      "n_vocab": 51865,
+      "n_text_ctx": 448,
+      "n_text_state": 768,
+      "n_text_head": 12,
+      "n_text_layer": 12
+    },
+    "language": "en",
+    "nll_reduction": "mean",
+    "decoding": {
+      "beam_size": 5,
+      "temperature": 0.0
+    }
+  },
+  "conditions": [
+    {
+      "downsample_hz": 8000,
+      "variant": "clean",
+      "input_samples": 166960,
+      "output_samples": 166960,
+      "finite": true,
+      "peak": 0.6605224609375,
+      "hypothesis": "He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick, peppered, flour-fattened sauce."
+    },
+    {
+      "downsample_hz": 8000,
+      "variant": "adversarial",
+      "input_samples": 166720,
+      "output_samples": 166720,
+      "finite": true,
+      "peak": 0.77850341796875,
+      "hypothesis": "He hoped there would be stouver dinner, town-ups in care-eps and bruised batillos, and that motton-fleeces to the layled-ouch, and fig-pippered, flovered that, and sort it, and, and, and so on, and so on, and so on, and so on, and so on, and so on, and so on, and so on, and"
+    },
+    {
+      "downsample_hz": 2000,
+      "variant": "clean",
+      "input_samples": 166960,
+      "output_samples": 166960,
+      "finite": true,
+      "peak": 0.53533935546875,
+      "hypothesis": "He hoped there would be stews of dinner, cornips and carrots and bruised potatoes and soft mutton pieces to be ladled out in thick, peppered, sour, fat and sauce."
+    },
+    {
+      "downsample_hz": 2000,
+      "variant": "adversarial",
+      "input_samples": 166720,
+      "output_samples": 166720,
+      "finite": true,
+      "peak": 0.588958740234375,
+      "hypothesis": "He hoped they would be skeeved in it, coming up in 12 X's and bruised the pillars, and flattened back in places to be layered out and fixed, tippered, slathered back and soft."
+    }
+  ]
+}

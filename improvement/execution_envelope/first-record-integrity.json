@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-22T14:21:16.919386+00:00",
+  "id": "1673-143397-0019",
+  "scope": "First saved recording only; complete native scoring and full audit remain queued",
+  "issues": [],
+  "checks": [
+    {
+      "variant": "envelope_nll50",
+      "frames": 1568,
+      "largest_frame_residual_to_clean_energy": 0.0009249954456052546,
+      "maximum_pointwise_excess": 2.098083496087505e-08,
+      "roundoff": "4*float32eps*(abs(clean_sample)+bound_sample), zero at true silent caps",
+      "actual_bounds": {
+        "linf": 0.003000020980834961,
+        "rms": 0.0011993138142971957,
+        "peak": 0.8417345285415649
+      }
+    },
+    {
+      "variant": "envelope_full50",
+      "frames": 1568,
+      "largest_frame_residual_to_clean_energy": 0.0008860199442491963,
+      "maximum_pointwise_excess": 2.098083496087505e-08,
+      "roundoff": "4*float32eps*(abs(clean_sample)+bound_sample), zero at true silent caps",
+      "actual_bounds": {
+        "linf": 0.003000020980834961,
+        "rms": 0.0008360159105331325,
+        "peak": 0.8416221141815186
+      }
+    }
+  ],
+  "attenuation": {
+    "uniform_attenuation": 0.6808327840573016,
+    "target_rms": 0.0011993138142971957,
+    "reference_rms": 0.0017615394592929246,
+    "actual_rms": 0.001199313752980932,
+    "source": "frozen global NLL50 output",
+    "selection_uses_decode_or_quality": false
+  }
+}

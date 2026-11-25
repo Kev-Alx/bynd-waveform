@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-10-21T12:40:01.994936+00:00",
+  "version": "v2 logging only; scientific execution remains frozen v1",
+  "stage": "development",
+  "wrapper": {
+    "path": "/workspace/improvement/r1_real_runner_v2.py",
+    "sha256": "ee239d7241ecc9a5d65351a0785890c8ac1753ab7408d6438e50ce97263d96bc"
+  },
+  "frozen_runner": {
+    "path": "/workspace/improvement/r1_real_runner.py",
+    "sha256": "12058d6a3a7f37c62db27f55fef86e766d7a99b090d0b75e5edf17b887e477fe"
+  },
+  "preserved_v1_copy": {
+    "path": "/workspace/improvement/r1_real_runner_v1.py",
+    "sha256": "12058d6a3a7f37c62db27f55fef86e766d7a99b090d0b75e5edf17b887e477fe"
+  },
+  "calibration_bindings": {
+    "plan_sha256": "0806ef1eb4ab282add53c11c36192426dedb278c1d3bf91c89e58dda934fc691",
+    "baseline_preflight_sha256": "f4bde1faee5ba368245419d9744b3752849c768ed328f40881113d6e87fe8cb4",
+    "code_hashes": {
+      "/workspace/improvement/r1_real_runner.py": "12058d6a3a7f37c62db27f55fef86e766d7a99b090d0b75e5edf17b887e477fe",
+      "/workspace/improvement/r1_sequence.py": "38004ce812f8a47f9630491c562e407219ef59965712188281857923922ae411",
+      "/workspace/improvement/execution_runtime.py": "4a4eccc531371a5ae80c3a9f8bc36e23388d511871ff8aa97921f40f9781cc0d"
+    }
+  },
+  "frozen_scale": 355.8228728875952,
+  "pilot_result_sha256": "788676ad0a7618becc492cd0033ad4dcb50dedc022bef90b5219ab8a5df311c5",
+  "changes": [
+    "Archive latest detached candidate set when canonical optimization raises DegenerateRiskError"
+  ],
+  "scientific_changes": [],
+  "user_data_scope": "same registered development cohort; no confirmation or final inference"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "stop",
+  "created_at_utc": "2026-10-24T14:02:54.095303+00:00",
+  "candidate": null,
+  "control": {
+    "name": "fv_quality50",
+    "method": "quality",
+    "step": 50,
+    "phase": "fvpilot",
+    "score": {
+      "count": 48,
+      "substitutions": 379,
+      "deletions": 32,
+      "insertions": 84,
+      "reference_units": 994,
+      "error_percent": 49.798792756539235,
+      "quality": {
+        "dnsmos": 3.1738890871498,
+        "nisqa": 4.069769814610481,
+        "utmos": 3.5789116074641547
+      }
+    }
+  },
+  "candidate_is_known_baseline": false,
+  "methods": {},
+  "quality_admissible_points": [],
+  "reason": "Complete-cohort sourceWER strictly above75 and unchanged quality floors; no target outcomes used",
+  "primary_source_only": true,
+  "target_models_evaluated": [],
+  "bindings": {
+    "/workspace/improvement/execution_scaled/plan.json": "f15afd889ad4ce4e165884ead5bb112458a6f96ccd88454802656a6bd10937a9",
+    "/workspace/improvement/execution_scaled/selection.json": "d2925f2946441dd2546c28382c43d39c7628e5c4703fef18edba5639d623b2b7",
+    "/workspace/improvement/execution_scaled/decoder-decision.json": "5db4e5c1a3921188a71654a6daee81f1801593beee8c1a334aea4666ebfde95e",
+    "/workspace/improvement/execution_refine/validation-76.jsonl": "3747ca5b726ef899c24bc8f92e83ba44f086a537bffcf98b9bcd52cba71df30a",
+    "/workspace/improvement/execution_scaled/qualification/source-summary.json": "f3944402c9c85737132449e63578675e9009824c2addb67c4be10dc7d5b42ec5",
+    "/workspace/improvement/execution_scaled/qualification/audit.json": "62b46f9739269eea7b9271527400e36008f6f69a9a94ccdfb0f80a2d9c72886c",
+    "/workspace/improvement/execution_scaled/fvpilot/source-summary.json": "618e52fb5dec6bb657994ae741e3723155d3fe9f6acc7b1660666ab3af2c9d26",
+    "/workspace/improvement/execution_scaled/fvpilot/audit.json": "8d7bb2bbeb454caa502571cf7a4c3ba324d10b1d44aae13686fed42fc53086ed",
+    "/workspace/improvement/execution_scaled/melpilot/source-summary.json": "f0730a91492f8a4374bdb1a3f1c6e34c6a6085d291b86fce6c40ca0ea253f3aa",
+    "/workspace/improvement/execution_scaled/melpilot/audit.json": "ec8e39096c92615799b1aa9eba5f39415264794c5efcd97489551c550d9785e3"
+  }
+}

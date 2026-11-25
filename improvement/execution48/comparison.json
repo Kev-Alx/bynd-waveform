@@ -1,0 +1,178 @@
+{
+  "status": "complete",
+  "updated_at_utc": "2026-10-22T05:39:31.019034+00:00",
+  "pilot_count": 48,
+  "speakers": 30,
+  "source_only": true,
+  "target_models_evaluated": [],
+  "confirmation_or_final_inference": false,
+  "summaries": {
+    "clean": {
+      "count": 48,
+      "substitutions": 34,
+      "deletions": 4,
+      "insertions": 2,
+      "reference_units": 994,
+      "error_percent": 4.0241448692152915,
+      "quality": {
+        "dnsmos": 3.272059979671612,
+        "nisqa": 4.053286008536816,
+        "utmos": 4.025875141223271
+      }
+    },
+    "fv_quality": {
+      "count": 48,
+      "substitutions": 379,
+      "deletions": 32,
+      "insertions": 84,
+      "reference_units": 994,
+      "error_percent": 49.798792756539235,
+      "quality": {
+        "dnsmos": 3.1738890871498,
+        "nisqa": 4.069769814610481,
+        "utmos": 3.5789116074641547
+      }
+    },
+    "pgd_full": {
+      "count": 48,
+      "substitutions": 332,
+      "deletions": 34,
+      "insertions": 66,
+      "reference_units": 994,
+      "error_percent": 43.46076458752515,
+      "quality": {
+        "dnsmos": 3.1656259200244037,
+        "nisqa": 3.7775716384251914,
+        "utmos": 3.887347732981046
+      }
+    },
+    "pgd_nll": {
+      "count": 48,
+      "substitutions": 420,
+      "deletions": 43,
+      "insertions": 121,
+      "reference_units": 994,
+      "error_percent": 58.75251509054326,
+      "quality": {
+        "dnsmos": 3.0025187431404565,
+        "nisqa": 3.436720156421264,
+        "utmos": 3.5677818854649863
+      }
+    },
+    "r3_initial": {
+      "count": 48,
+      "substitutions": 34,
+      "deletions": 4,
+      "insertions": 2,
+      "reference_units": 994,
+      "error_percent": 4.0241448692152915,
+      "quality": {
+        "dnsmos": 3.270004508301976,
+        "nisqa": 4.055737326542537,
+        "utmos": 4.0258748307824135
+      }
+    },
+    "r3_trained": {
+      "count": 48,
+      "substitutions": 33,
+      "deletions": 4,
+      "insertions": 3,
+      "reference_units": 994,
+      "error_percent": 4.0241448692152915,
+      "quality": {
+        "dnsmos": 3.2716796231285623,
+        "nisqa": 4.0532931337753935,
+        "utmos": 4.025861884156863
+      }
+    },
+    "reconstruction": {
+      "count": 48,
+      "substitutions": 34,
+      "deletions": 4,
+      "insertions": 2,
+      "reference_units": 994,
+      "error_percent": 4.0241448692152915,
+      "quality": {
+        "dnsmos": 3.300238960915245,
+        "nisqa": 4.171609789133072,
+        "utmos": 4.013134936491649
+      }
+    }
+  },
+  "findings": {
+    "pgd_full": {
+      "source_wer_delta_points": -6.338028169014088,
+      "utmos_delta": 0.3084361255168915,
+      "automatic_quality_floors_pass": true,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          -14.017090881049159,
+          1.0763235724712914
+        ],
+        "utmos_delta": [
+          0.22808424741663838,
+          0.38875825154579285
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    },
+    "pgd_nll": {
+      "source_wer_delta_points": 8.953722334004027,
+      "utmos_delta": -0.011129721999168396,
+      "automatic_quality_floors_pass": false,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          1.0416395681581663,
+          17.01673326673326
+        ],
+        "utmos_delta": [
+          -0.09566846005006693,
+          0.06617760430641398
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    },
+    "r3_trained": {
+      "source_wer_delta_points": -45.774647887323944,
+      "utmos_delta": 0.4469502766927085,
+      "automatic_quality_floors_pass": true,
+      "primary_control_quality_pass": true,
+      "mathematical_failures": [],
+      "g1_source_quality_signal": false,
+      "descriptive_speaker_bootstrap_95": {
+        "source_wer_delta_points": [
+          -51.68779207773905,
+          -41.09243424287791
+        ],
+        "utmos_delta": [
+          0.3698520894923832,
+          0.5243155540100163
+        ],
+        "replicates": 10000,
+        "seed": 20261022,
+        "speakers": 30,
+        "scope": "Exposed-development/source sampling only; no training-seed, human or transfer inference"
+      }
+    }
+  },
+  "generation_wall_seconds": 1562.8198565067723,
+  "evaluation_resources": {
+    "elapsed_wall_seconds": 466.82169740926474,
+    "peak_allocated_bytes": 1211034624,
+    "peak_reserved_bytes": 1600126976
+  },
+  "audit_status": "pass",
+  "no_new_generator_training": true
+}

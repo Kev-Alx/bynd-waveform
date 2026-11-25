@@ -1,0 +1,18 @@
+name: facebook/wav2vec2-large-960h-lv60-self
+kind: ctc
+model_id: /workspace/artifacts/hf-hub/models--facebook--wav2vec2-large-960h-lv60-self/snapshots/54074b1c16f4de6a5ad59affb4caa8f2ea03a119
+revision: 54074b1c16f4de6a5ad59affb4caa8f2ea03a119
+repo_id: facebook/wav2vec2-large-960h-lv60-self
+language: en
+sample_rate: 16000
+decoding:
+  kind: greedy
+  external_language_model: false
+artifact_hashes:
+  config.json: bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797
+  feature_extractor_config.json: 5415d0e5f57a6893552b1f916d6e9b9ce312a147fff3e65b260fefadd2f77dbf
+  preprocessor_config.json: c403ce09975b90dff0dd8302c42d422e9de1f166cd7772df23490069893cb0cf
+  pytorch_model.bin: 00b604cf4d28e86559e8adaeb3a186daa89dc37f5ab216771a0a15a26db0de9f
+  special_tokens_map.json: bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675
+  tokenizer_config.json: c9a86ca4c3d72d4cda976512cd786cc65d87fe22afcd4164c8470f1dde7c9758
+  vocab.json: 19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64

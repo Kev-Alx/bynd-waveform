@@ -1,0 +1,18 @@
+{
+  "created_at_taipei": "2026-10-22T16:56:21.194717+08:00",
+  "status": "pass",
+  "errors": [],
+  "artifact_files_hashed": 12,
+  "json_files_parsed": 2,
+  "local_links_checked": 37,
+  "primary_source_entries": 39,
+  "audited_inputs_unchanged": 39,
+  "scope": "Containment, required artifacts, Python syntax, JSON, local links, provenance and unchanged input hashes.",
+  "not_performed": [
+    "Neural inference",
+    "Defense implementation/training",
+    "Model test suite",
+    "Fresh audio/lexical audit",
+    "New online verification of every cited URL"
+  ]
+}

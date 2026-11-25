@@ -1,0 +1,51 @@
+{
+  "status": "failed",
+  "checked_at_utc": "2026-10-26T07:48:17.774Z",
+  "checks": [
+    {
+      "name": "Default view: 3 run panels and 48 sentences",
+      "status": "pass"
+    },
+    {
+      "name": "Changing a run updates its mean scores and recording",
+      "status": "pass"
+    },
+    {
+      "name": "Original FLOAT WAV playback and linked A/B/C switching",
+      "status": "pass",
+      "media": [
+        {
+          "paused": true,
+          "time": 0.315746
+        },
+        {
+          "paused": true,
+          "time": 0
+        },
+        {
+          "paused": false,
+          "time": 0.459974
+        }
+      ]
+    },
+    {
+      "name": "Stop-all and accessible seek control",
+      "status": "pass"
+    },
+    {
+      "name": "Playback speed applies to all loaded panels",
+      "status": "pass"
+    },
+    {
+      "name": "One, two or three comparison panels",
+      "status": "pass"
+    },
+    {
+      "name": "Absent-cohort message, shared-sentence filter and search reset",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Cohort', { exact: true })\u001b[22m\n",
+  "stack": "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Cohort', { exact: true })\u001b[22m\n\n    at main (/workspace/improvement/audio_browser_qa/check_browser.cjs:61:50)"
+}

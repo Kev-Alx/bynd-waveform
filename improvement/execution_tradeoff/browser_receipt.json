@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-26T10:00:40.292Z",
+  "checks": [
+    {
+      "name": "Default view: 3 run panels and 48 sentences",
+      "status": "pass"
+    },
+    {
+      "name": "Changing a run updates its mean scores and recording",
+      "status": "pass"
+    },
+    {
+      "name": "Original FLOAT WAV playback and linked A/B/C switching",
+      "status": "pass",
+      "media": [
+        {
+          "paused": true,
+          "time": 0.315397
+        },
+        {
+          "paused": true,
+          "time": 0
+        },
+        {
+          "paused": false,
+          "time": 0.44052
+        }
+      ]
+    },
+    {
+      "name": "Stop-all and accessible seek control",
+      "status": "pass"
+    },
+    {
+      "name": "Playback speed applies to all loaded panels",
+      "status": "pass"
+    },
+    {
+      "name": "One, two or three comparison panels",
+      "status": "pass"
+    },
+    {
+      "name": "Absent-cohort message, shared-sentence filter and search reset",
+      "status": "pass"
+    },
+    {
+      "name": "Cohort, study and quality filters reconcile and reset",
+      "status": "pass"
+    },
+    {
+      "name": "WER sorting and CSV export match visible rows",
+      "status": "pass"
+    },
+    {
+      "name": "Plain-language explanation and future steps load",
+      "status": "pass"
+    },
+    {
+      "name": "Narrow layout: contained horizontal panel scrolling",
+      "status": "pass",
+      "geometry": {
+        "viewport": 390,
+        "width": 375,
+        "panels": 3
+      }
+    },
+    {
+      "name": "New spectrum-repair recording plays with reconciled cohort metrics",
+      "status": "pass"
+    },
+    {
+      "name": "Runtime rows, measured phase bars, forecast, downloadable receipts and narrow layout reconcile",
+      "status": "pass",
+      "runtimeGeometry": {
+        "viewport": 390,
+        "width": 375
+      }
+    },
+    {
+      "name": "No uncaught browser errors",
+      "status": "pass"
+    }
+  ],
+  "errors": []
+}

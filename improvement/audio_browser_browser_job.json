@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-26T07:47:41.292034+00:00",
+  "command": [
+    "node",
+    "/workspace/improvement/audio_browser_qa/check_browser.cjs"
+  ],
+  "cwd": "/workspace",
+  "supervisor_pid": 175393,
+  "log": "/workspace/improvement/audio_browser_browser.log",
+  "child_pid": 175395,
+  "exit_code": 1,
+  "finished_at": "2026-10-26T07:48:17.785629+00:00"
+}

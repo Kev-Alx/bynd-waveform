@@ -1,0 +1,23 @@
+{
+  "status": "scientific_stop_no_joint_pass",
+  "candidate": null,
+  "gates": {
+    "raw50": {
+      "quality_pass": false,
+      "wer_above75": true,
+      "joint_pass": false
+    },
+    "stft_identity": {
+      "quality_pass": false,
+      "wer_above75": true,
+      "joint_pass": false
+    },
+    "anchor25": {
+      "quality_pass": false,
+      "wer_above75": false,
+      "joint_pass": false
+    }
+  },
+  "selection_is_source_only": true,
+  "validation_or_transfer_launched": false
+}

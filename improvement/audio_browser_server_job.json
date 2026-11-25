@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "started_at": "2026-10-26T07:41:53.737293+00:00",
+  "command": [
+    "/opt/venv/bin/python",
+    "-u",
+    "/workspace/improvement/serve_audio_browser.py"
+  ],
+  "cwd": "/workspace",
+  "supervisor_pid": 174740,
+  "log": "/workspace/improvement/audio_browser_server.log",
+  "child_pid": 174742
+}
